@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6: Probability Basics | Grade 10 Mathematics</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 4px solid #9b59b6;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #8e44ad;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #16a085;
+        }
+        .concept-box {
+            background-color: #f4ecf7;
+            border-left: 5px solid #9b59b6;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .example-box {
+            background-color: #fff9e6;
+            border-left: 5px solid #f39c12;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .practice-box {
+            background-color: #e8f8f5;
+            border-left: 5px solid #1abc9c;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .formula {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .svg-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #9b59b6;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .probability-scale {
+            background: linear-gradient(to right, #e74c3c, #f39c12, #27ae60);
+            height: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lesson 6: Probability Basics</h1>
+
+        <h2>Learning Objectives</h2>
+        <ul>
+            <li>Understand probability as a measure of likelihood</li>
+            <li>Calculate theoretical and experimental probability</li>
+            <li>Apply probability to gaming, sports, and real-world scenarios</li>
+            <li>Use probability rules for compound events</li>
+        </ul>
+
+        <h2>1. Introduction to Probability</h2>
+
+        <div class="concept-box">
+            <h3>What is Probability?</h3>
+            <p>Probability is a number between 0 and 1 that represents how likely an event is to occur.</p>
+            <ul>
+                <li><strong>P = 0</strong>: Impossible event (will never happen)</li>
+                <li><strong>P = 0.5</strong>: Equally likely to happen or not happen</li>
+                <li><strong>P = 1</strong>: Certain event (will definitely happen)</li>
+            </ul>
+
+            <div class="formula">
+                Probability = Number of favorable outcomes / Total number of possible outcomes
+            </div>
+        </div>
+
+        <div class="svg-container">
+            <svg width="700" height="150" viewBox="0 0 700 150">
+                <!-- Title -->
+                <text x="350" y="25" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+                    Probability Scale
+                </text>
+
+                <!-- Gradient bar -->
+                <defs>
+                    <linearGradient id="probGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#f39c12;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+
+                <rect x="50" y="50" width="600" height="40" fill="url(#probGradient)" rx="20"/>
+
+                <!-- Scale markers -->
+                <line x1="50" y1="95" x2="50" y2="110" stroke="#333" stroke-width="2"/>
+                <text x="50" y="125" font-size="14" text-anchor="middle" font-weight="bold">0</text>
+                <text x="50" y="140" font-size="11" text-anchor="middle">Impossible</text>
+
+                <line x1="200" y1="95" x2="200" y2="110" stroke="#333" stroke-width="2"/>
+                <text x="200" y="125" font-size="14" text-anchor="middle">0.25</text>
+                <text x="200" y="140" font-size="11" text-anchor="middle">Unlikely</text>
+
+                <line x1="350" y1="95" x2="350" y2="110" stroke="#333" stroke-width="2"/>
+                <text x="350" y="125" font-size="14" text-anchor="middle" font-weight="bold">0.5</text>
+                <text x="350" y="140" font-size="11" text-anchor="middle">Even chance</text>
+
+                <line x1="500" y1="95" x2="500" y2="110" stroke="#333" stroke-width="2"/>
+                <text x="500" y="125" font-size="14" text-anchor="middle">0.75</text>
+                <text x="500" y="140" font-size="11" text-anchor="middle">Likely</text>
+
+                <line x1="650" y1="95" x2="650" y2="110" stroke="#333" stroke-width="2"/>
+                <text x="650" y="125" font-size="14" text-anchor="middle" font-weight="bold">1</text>
+                <text x="650" y="140" font-size="11" text-anchor="middle">Certain</text>
+            </svg>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 1: Gaming Loot Box</h3>
+            <p>A video game loot box contains:</p>
+            <ul>
+                <li>50 common items (gray)</li>
+                <li>30 uncommon items (green)</li>
+                <li>15 rare items (blue)</li>
+                <li>4 epic items (purple)</li>
+                <li>1 legendary item (gold)</li>
+            </ul>
+
+            <p><strong>Total items = 100</strong></p>
+
+            <h4>Calculate probabilities:</h4>
+            <div class="formula">
+                P(Common) = 50/100 = 0.50 or 50%<br>
+                P(Uncommon) = 30/100 = 0.30 or 30%<br>
+                P(Rare) = 15/100 = 0.15 or 15%<br>
+                P(Epic) = 4/100 = 0.04 or 4%<br>
+                P(Legendary) = 1/100 = 0.01 or 1%
+            </div>
+
+            <p><strong>What's the probability of getting at least a rare item (rare, epic, or legendary)?</strong></p>
+            <div class="formula">
+                P(At least rare) = P(Rare) + P(Epic) + P(Legendary)<br>
+                = 0.15 + 0.04 + 0.01 = 0.20 or 20%
+            </div>
+        </div>
+
+        <div class="svg-container">
+            <svg width="600" height="350" viewBox="0 0 600 350">
+                <!-- Title -->
+                <text x="300" y="25" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+                    Loot Box Probability Distribution
+                </text>
+
+                <!-- Pie chart -->
+                <!-- Common (50%) - 180 degrees -->
+                <path d="M 300 180 L 300 80 A 100 100 0 0 1 387 243 Z" fill="#95a5a6" stroke="white" stroke-width="2"/>
+                <!-- Uncommon (30%) - 108 degrees -->
+                <path d="M 300 180 L 387 243 A 100 100 0 0 1 223 265 Z" fill="#27ae60" stroke="white" stroke-width="2"/>
+                <!-- Rare (15%) - 54 degrees -->
+                <path d="M 300 180 L 223 265 A 100 100 0 0 1 164 195 Z" fill="#3498db" stroke="white" stroke-width="2"/>
+                <!-- Epic (4%) - 14.4 degrees -->
+                <path d="M 300 180 L 164 195 A 100 100 0 0 1 160 175 Z" fill="#9b59b6" stroke="white" stroke-width="2"/>
+                <!-- Legendary (1%) - 3.6 degrees -->
+                <path d="M 300 180 L 160 175 A 100 100 0 0 1 160 169 Z" fill="#f39c12" stroke="white" stroke-width="2"/>
+                <!-- Back to start -->
+                <path d="M 300 180 L 160 169 A 100 100 0 0 1 300 80 Z" fill="#f39c12" stroke="white" stroke-width="2"/>
+
+                <!-- Labels -->
+                <text x="340" y="130" font-size="16" font-weight="bold" fill="white">50%</text>
+                <text x="340" y="145" font-size="12" fill="white">Common</text>
+
+                <text x="320" y="240" font-size="14" font-weight="bold" fill="white">30%</text>
+                <text x="305" y="255" font-size="11" fill="white">Uncommon</text>
+
+                <text x="210" y="235" font-size="12" font-weight="bold" fill="white">15%</text>
+                <text x="200" y="248" font-size="10" fill="white">Rare</text>
+
+                <text x="150" y="185" font-size="10" fill="white">4% Epic</text>
+                <text x="140" y="165" font-size="9" fill="white">1% Legendary</text>
+
+                <!-- Legend -->
+                <rect x="50" y="290" width="20" height="20" fill="#95a5a6"/>
+                <text x="75" y="305" font-size="12">Common (50%)</text>
+
+                <rect x="200" y="290" width="20" height="20" fill="#27ae60"/>
+                <text x="225" y="305" font-size="12">Uncommon (30%)</text>
+
+                <rect x="370" y="290" width="20" height="20" fill="#3498db"/>
+                <text x="395" y="305" font-size="12">Rare (15%)</text>
+
+                <rect x="50" y="320" width="20" height="20" fill="#9b59b6"/>
+                <text x="75" y="335" font-size="12">Epic (4%)</text>
+
+                <rect x="200" y="320" width="20" height="20" fill="#f39c12"/>
+                <text x="225" y="335" font-size="12">Legendary (1%)</text>
+            </svg>
+        </div>
+
+        <h2>2. Experimental vs. Theoretical Probability</h2>
+
+        <div class="concept-box">
+            <h3>Two Types of Probability</h3>
+            <p><strong>Theoretical Probability:</strong> What we expect to happen based on mathematical reasoning</p>
+            <p><strong>Experimental Probability:</strong> What actually happens when we conduct experiments</p>
+
+            <div class="formula">
+                Experimental Probability = Number of times event occurred / Total number of trials
+            </div>
+
+            <p>As the number of trials increases, experimental probability approaches theoretical probability (Law of Large Numbers).</p>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 2: Free Throw Success Rate</h3>
+            <p>A basketball player practices free throws. Here's their performance:</p>
+
+            <table>
+                <tr>
+                    <th>Practice Session</th>
+                    <th>Shots Made</th>
+                    <th>Total Shots</th>
+                    <th>Success Rate</th>
+                </tr>
+                <tr>
+                    <td>Session 1 (small sample)</td>
+                    <td>7</td>
+                    <td>10</td>
+                    <td>70%</td>
+                </tr>
+                <tr>
+                    <td>Session 2</td>
+                    <td>16</td>
+                    <td>20</td>
+                    <td>80%</td>
+                </tr>
+                <tr>
+                    <td>Session 3</td>
+                    <td>38</td>
+                    <td>50</td>
+                    <td>76%</td>
+                </tr>
+                <tr>
+                    <td>Session 4 (large sample)</td>
+                    <td>152</td>
+                    <td>200</td>
+                    <td>76%</td>
+                </tr>
+                <tr style="background-color: #d5f4e6;">
+                    <th>Overall</th>
+                    <th>213</th>
+                    <th>280</th>
+                    <th>76.1%</th>
+                </tr>
+            </table>
+
+            <p><strong>Conclusion:</strong> Based on experimental data, the player has about a 76% probability of making a free throw. This is their experimental probability, which stabilized after many attempts.</p>
+        </div>
+
+        <h2>3. Compound Events</h2>
+
+        <div class="concept-box">
+            <h3>Probability Rules for Multiple Events</h3>
+
+            <p><strong>AND Rule (Independent Events):</strong></p>
+            <div class="formula">
+                P(A AND B) = P(A) × P(B)
+            </div>
+            <p>Use when both events must happen.</p>
+
+            <p><strong>OR Rule (Mutually Exclusive Events):</strong></p>
+            <div class="formula">
+                P(A OR B) = P(A) + P(B)
+            </div>
+            <p>Use when either event can happen, but not both.</p>
+
+            <p><strong>Complement Rule:</strong></p>
+            <div class="formula">
+                P(NOT A) = 1 - P(A)
+            </div>
+            <p>The probability that an event doesn't happen.</p>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 3: Gaming Streak Probability</h3>
+            <p>A gamer wins 60% of their matches. What's the probability they win the next 3 matches in a row?</p>
+
+            <div class="formula">
+                P(Win match 1) = 0.60<br>
+                P(Win match 2) = 0.60<br>
+                P(Win match 3) = 0.60<br><br>
+
+                P(Win all 3) = 0.60 × 0.60 × 0.60<br>
+                P(Win all 3) = 0.216 or <strong>21.6%</strong>
+            </div>
+
+            <p><strong>What's the probability they lose at least one match?</strong></p>
+            <div class="formula">
+                P(Lose at least one) = 1 - P(Win all 3)<br>
+                = 1 - 0.216 = 0.784 or <strong>78.4%</strong>
+            </div>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 4: Rolling Dice - OR Probability</h3>
+            <p>You roll a standard six-sided die. What's the probability of rolling a 5 OR a 6?</p>
+
+            <div class="formula">
+                P(Roll 5) = 1/6<br>
+                P(Roll 6) = 1/6<br><br>
+
+                P(5 OR 6) = P(5) + P(6)<br>
+                = 1/6 + 1/6 = 2/6 = 1/3 ≈ <strong>33.3%</strong>
+            </div>
+
+            <p>These are mutually exclusive events (you can't roll both a 5 and 6 on one die), so we add the probabilities.</p>
+        </div>
+
+        <div class="svg-container">
+            <svg width="700" height="300" viewBox="0 0 700 300">
+                <!-- Title -->
+                <text x="350" y="25" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+                    Dice Rolling Probabilities
+                </text>
+
+                <!-- Die faces -->
+                <!-- Face 1 -->
+                <rect x="40" y="60" width="80" height="80" fill="white" stroke="#2c3e50" stroke-width="2" rx="5"/>
+                <circle cx="80" cy="100" r="6" fill="#2c3e50"/>
+                <text x="80" y="165" font-size="12" text-anchor="middle">P = 1/6</text>
+
+                <!-- Face 2 -->
+                <rect x="150" y="60" width="80" height="80" fill="white" stroke="#2c3e50" stroke-width="2" rx="5"/>
+                <circle cx="165" cy="75" r="6" fill="#2c3e50"/>
+                <circle cx="215" cy="125" r="6" fill="#2c3e50"/>
+                <text x="190" y="165" font-size="12" text-anchor="middle">P = 1/6</text>
+
+                <!-- Face 3 -->
+                <rect x="260" y="60" width="80" height="80" fill="white" stroke="#2c3e50" stroke-width="2" rx="5"/>
+                <circle cx="275" cy="75" r="6" fill="#2c3e50"/>
+                <circle cx="300" cy="100" r="6" fill="#2c3e50"/>
+                <circle cx="325" cy="125" r="6" fill="#2c3e50"/>
+                <text x="300" y="165" font-size="12" text-anchor="middle">P = 1/6</text>
+
+                <!-- Face 4 -->
+                <rect x="370" y="60" width="80" height="80" fill="white" stroke="#2c3e50" stroke-width="2" rx="5"/>
+                <circle cx="385" cy="75" r="6" fill="#2c3e50"/>
+                <circle cx="435" cy="75" r="6" fill="#2c3e50"/>
+                <circle cx="385" cy="125" r="6" fill="#2c3e50"/>
+                <circle cx="435" cy="125" r="6" fill="#2c3e50"/>
+                <text x="410" y="165" font-size="12" text-anchor="middle">P = 1/6</text>
+
+                <!-- Face 5 (highlighted) -->
+                <rect x="480" y="60" width="80" height="80" fill="#f39c12" stroke="#e67e22" stroke-width="3" rx="5"/>
+                <circle cx="495" cy="75" r="6" fill="white"/>
+                <circle cx="545" cy="75" r="6" fill="white"/>
+                <circle cx="520" cy="100" r="6" fill="white"/>
+                <circle cx="495" cy="125" r="6" fill="white"/>
+                <circle cx="545" cy="125" r="6" fill="white"/>
+                <text x="520" y="165" font-size="12" text-anchor="middle" fill="#e67e22" font-weight="bold">P = 1/6</text>
+
+                <!-- Face 6 (highlighted) -->
+                <rect x="590" y="60" width="80" height="80" fill="#f39c12" stroke="#e67e22" stroke-width="3" rx="5"/>
+                <circle cx="605" cy="75" r="6" fill="white"/>
+                <circle cx="655" cy="75" r="6" fill="white"/>
+                <circle cx="605" cy="100" r="6" fill="white"/>
+                <circle cx="655" cy="100" r="6" fill="white"/>
+                <circle cx="605" cy="125" r="6" fill="white"/>
+                <circle cx="655" cy="125" r="6" fill="white"/>
+                <text x="630" y="165" font-size="12" text-anchor="middle" fill="#e67e22" font-weight="bold">P = 1/6</text>
+
+                <!-- Result -->
+                <rect x="150" y="200" width="400" height="60" fill="#d5f4e6" stroke="#27ae60" stroke-width="2" rx="5"/>
+                <text x="350" y="225" font-size="16" text-anchor="middle" font-weight="bold" fill="#27ae60">
+                    P(Rolling 5 OR 6) = 1/6 + 1/6 = 2/6 = 1/3
+                </text>
+                <text x="350" y="250" font-size="14" text-anchor="middle" fill="#27ae60">
+                    Approximately 33.3% chance
+                </text>
+            </svg>
+        </div>
+
+        <h2>4. Tree Diagrams</h2>
+
+        <div class="concept-box">
+            <h3>Visualizing Compound Events</h3>
+            <p>Tree diagrams help us visualize all possible outcomes and calculate probabilities for compound events.</p>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 5: Two Coin Flips</h3>
+            <p>What are all the possible outcomes when flipping a coin twice?</p>
+        </div>
+
+        <div class="svg-container">
+            <svg width="600" height="350" viewBox="0 0 600 350">
+                <!-- Title -->
+                <text x="300" y="25" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+                    Tree Diagram: Two Coin Flips
+                </text>
+
+                <!-- Start -->
+                <circle cx="300" cy="60" r="20" fill="#3498db" stroke="#2c3e50" stroke-width="2"/>
+                <text x="300" y="67" font-size="14" text-anchor="middle" fill="white" font-weight="bold">Start</text>
+
+                <!-- First flip branches -->
+                <line x1="300" y1="80" x2="200" y2="140" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="300" y1="80" x2="400" y2="140" stroke="#2c3e50" stroke-width="2"/>
+
+                <text x="240" y="110" font-size="12" fill="#2c3e50">1/2</text>
+                <text x="360" y="110" font-size="12" fill="#2c3e50">1/2</text>
+
+                <!-- First flip outcomes -->
+                <circle cx="200" cy="150" r="20" fill="#f39c12"/>
+                <text x="200" y="157" font-size="14" text-anchor="middle" fill="white" font-weight="bold">H</text>
+                <text x="200" y="185" font-size="11" text-anchor="middle">Heads</text>
+
+                <circle cx="400" cy="150" r="20" fill="#95a5a6"/>
+                <text x="400" y="157" font-size="14" text-anchor="middle" fill="white" font-weight="bold">T</text>
+                <text x="400" y="185" font-size="11" text-anchor="middle">Tails</text>
+
+                <!-- Second flip branches from H -->
+                <line x1="200" y1="170" x2="130" y2="240" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="200" y1="170" x2="270" y2="240" stroke="#2c3e50" stroke-width="2"/>
+
+                <text x="155" y="210" font-size="11" fill="#2c3e50">1/2</text>
+                <text x="245" y="210" font-size="11" fill="#2c3e50">1/2</text>
+
+                <!-- Second flip branches from T -->
+                <line x1="400" y1="170" x2="330" y2="240" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="400" y1="170" x2="470" y2="240" stroke="#2c3e50" stroke-width="2"/>
+
+                <text x="355" y="210" font-size="11" fill="#2c3e50">1/2</text>
+                <text x="445" y="210" font-size="11" fill="#2c3e50">1/2</text>
+
+                <!-- Final outcomes -->
+                <circle cx="130" cy="250" r="18" fill="#f39c12"/>
+                <text x="130" y="257" font-size="12" text-anchor="middle" fill="white" font-weight="bold">HH</text>
+                <text x="130" y="285" font-size="11" text-anchor="middle">P = 1/4</text>
+
+                <circle cx="270" cy="250" r="18" fill="#9b59b6"/>
+                <text x="270" y="257" font-size="12" text-anchor="middle" fill="white" font-weight="bold">HT</text>
+                <text x="270" y="285" font-size="11" text-anchor="middle">P = 1/4</text>
+
+                <circle cx="330" cy="250" r="18" fill="#9b59b6"/>
+                <text x="330" y="257" font-size="12" text-anchor="middle" fill="white" font-weight="bold">TH</text>
+                <text x="330" y="285" font-size="11" text-anchor="middle">P = 1/4</text>
+
+                <circle cx="470" cy="250" r="18" fill="#95a5a6"/>
+                <text x="470" y="257" font-size="12" text-anchor="middle" fill="white" font-weight="bold">TT</text>
+                <text x="470" y="285" font-size="11" text-anchor="middle">P = 1/4</text>
+
+                <!-- Summary -->
+                <rect x="50" y="310" width="500" height="30" fill="#ecf0f1" rx="5"/>
+                <text x="300" y="330" font-size="12" text-anchor="middle" fill="#2c3e50">
+                    P(Exactly 1 head) = P(HT) + P(TH) = 1/4 + 1/4 = <tspan font-weight="bold">1/2 or 50%</tspan>
+                </text>
+            </svg>
+        </div>
+
+        <div class="practice-box">
+            <h3>Practice Problems</h3>
+
+            <p><strong>1.</strong> A spinner has 8 equal sections: 3 red, 3 blue, 1 green, 1 yellow.</p>
+            <ul>
+                <li>What's P(red)?</li>
+                <li>What's P(blue or green)?</li>
+                <li>What's P(not yellow)?</li>
+            </ul>
+
+            <p><strong>2.</strong> A video game has a 15% chance of dropping a rare weapon. If you play 3 times:</p>
+            <ul>
+                <li>What's the probability you get the weapon on your first try?</li>
+                <li>What's the probability you get it all 3 times?</li>
+                <li>What's the probability you don't get it all 3 times?</li>
+            </ul>
+
+            <p><strong>3.</strong> A soccer player scores on 40% of their penalty kicks. In a shootout with 5 penalties:</p>
+            <ul>
+                <li>What's the probability they score the first two?</li>
+                <li>What's the probability they miss the first two?</li>
+                <li>What's the probability they score at least once in two attempts?</li>
+            </ul>
+
+            <p><strong>4.</strong> A bag contains 5 red marbles, 3 blue marbles, and 2 green marbles. You draw one marble:</p>
+            <ul>
+                <li>What's P(red)?</li>
+                <li>What's P(blue or green)?</li>
+                <li>If you draw a red marble and don't replace it, what's P(red on second draw)?</li>
+            </ul>
+
+            <p><strong>5.</strong> Create a tree diagram for flipping a coin and rolling a die. Calculate P(Heads AND even number).</p>
+        </div>
+
+        <h2>Key Takeaways</h2>
+        <ul>
+            <li>Probability always falls between 0 (impossible) and 1 (certain)</li>
+            <li>For independent events happening together, multiply probabilities (AND rule)</li>
+            <li>For mutually exclusive events, add probabilities (OR rule)</li>
+            <li>Experimental probability approaches theoretical probability with more trials</li>
+            <li>Tree diagrams help visualize all possible outcomes in compound events</li>
+            <li>The complement rule: P(not A) = 1 - P(A)</li>
+        </ul>
+
+        <div style="margin-top: 30px; padding: 20px; background-color: #ecf0f1; border-radius: 5px;">
+            <h3>Next Steps</h3>
+            <p>In Lesson 7, we'll learn how to create and interpret statistical graphs to visualize data effectively!</p>
+        </div>
+    </div>
+</body>
+</html>

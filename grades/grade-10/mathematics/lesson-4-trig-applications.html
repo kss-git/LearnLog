@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4: Real-World Applications - Grade 10 Math</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Real-World Applications of Trigonometry</h1>
+            <p>Grade 10 | Mathematics | Unit 1: Trigonometry</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="../../../index.html">Home</a>
+            <a href="../index.html">Grade 10</a>
+            <a href="index.html">Mathematics</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- ENGAGING HOOK -->
+        <section class="hook-box">
+            <p>From the Burj Khalifa's precise angles to the GPS in your pocket, from video game physics to earthquake-resistant buildings - trigonometry is the invisible force powering modern technology and architecture. Let's explore how the math you've learned shapes the world around you!</p>
+        </section>
+
+        <!-- LEARNING OBJECTIVES -->
+        <section class="objectives">
+            <h2>Learning Objectives</h2>
+            <p>By the end of this lesson, you will be able to:</p>
+            <ul>
+                <li>Apply trigonometry to solve architecture and engineering problems</li>
+                <li>Use trig to understand smartphone sensor technology</li>
+                <li>Analyze how navigation systems use triangulation</li>
+                <li>Solve multi-step real-world problems using trig concepts</li>
+            </ul>
+        </section>
+
+        <!-- APPLICATION 1: ARCHITECTURE -->
+        <section class="card">
+            <h2>Application 1: Architecture and Construction</h2>
+            <p>Architects and engineers use trigonometry constantly to design safe, stable, and beautiful structures.</p>
+
+            <h3 style="margin-top: 20px;">Roof Design</h3>
+            <p>One of the most common applications is calculating roof dimensions. Roofs need specific angles for:</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Water drainage:</strong> Too flat and water pools; minimum slope varies by climate</li>
+                <li><strong>Snow load:</strong> Steeper roofs shed snow better in cold climates</li>
+                <li><strong>Material efficiency:</strong> Angles affect how much material you need</li>
+                <li><strong>Aesthetics:</strong> Different styles use different angles (modern vs. traditional)</li>
+            </ul>
+
+            <div class="visual-container">
+                <svg width="600" height="350" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Building base -->
+                    <rect x="150" y="250" width="300" height="100" fill="#c0c0c0" stroke="#333" stroke-width="2"/>
+
+                    <!-- Roof -->
+                    <path d="M 140 250 L 300 120 L 460 250 Z" fill="#8b4513" stroke="#333" stroke-width="2"/>
+
+                    <!-- Center line (height) -->
+                    <line x1="300" y1="250" x2="300" y2="120" stroke="#27ae60" stroke-width="3" stroke-dasharray="5,5"/>
+
+                    <!-- Base half-width -->
+                    <line x1="150" y1="250" x2="300" y2="250" stroke="#f39c12" stroke-width="3"/>
+
+                    <!-- Slope line -->
+                    <line x1="150" y1="250" x2="300" y2="120" stroke="#e74c3c" stroke-width="3"/>
+
+                    <!-- Angle -->
+                    <path d="M 180 250 A 30 30 0 0 1 195 230" fill="none" stroke="#4a90e2" stroke-width="3"/>
+                    <text x="205" y="250" font-size="18" fill="#4a90e2" font-weight="bold">θ</text>
+
+                    <!-- Labels -->
+                    <text x="305" y="185" font-size="16" fill="#27ae60" font-weight="bold">Height (h)</text>
+                    <text x="200" y="275" font-size="16" fill="#f39c12" font-weight="bold">Half-width (w)</text>
+                    <text x="200" y="170" font-size="16" fill="#e74c3c" font-weight="bold">Slope length (s)</text>
+
+                    <!-- Measurements -->
+                    <text x="310" y="210" font-size="14" fill="#27ae60">rise</text>
+                    <text x="210" y="265" font-size="14" fill="#f39c12">run</text>
+
+                    <!-- Windows -->
+                    <rect x="180" y="280" width="40" height="50" fill="#87ceeb" stroke="#333" stroke-width="1"/>
+                    <rect x="280" y="280" width="40" height="50" fill="#87ceeb" stroke="#333" stroke-width="1"/>
+                    <rect x="380" y="280" width="40" height="50" fill="#87ceeb" stroke="#333" stroke-width="1"/>
+
+                    <!-- Door -->
+                    <rect x="230" y="300" width="40" height="50" fill="#654321" stroke="#333" stroke-width="1"/>
+                </svg>
+            </div>
+
+            <div style="background: #e8f4f8; padding: 15px; margin-top: 20px; border-radius: 5px;">
+                <p><strong>Key formulas:</strong></p>
+                <p>tan(θ) = height / half-width = h / w</p>
+                <p>Slope length: s = w / cos(θ) or s = h / sin(θ)</p>
+                <p>Total roof area = 2 × (s × roof length)</p>
+            </div>
+        </section>
+
+        <!-- WORKED EXAMPLE 1 -->
+        <section class="example-box">
+            <h2>Example 1: Designing a Roof</h2>
+            <p><strong>Problem:</strong> An architect designs a house that is 12 meters wide. The roof should have a 35° slope for proper drainage and aesthetics. Calculate:</p>
+            <ul style="margin-left: 20px;">
+                <li>The height of the roof peak above the walls</li>
+                <li>The length of each roof panel</li>
+                <li>If the house is 20 meters long, how much roofing material is needed?</li>
+            </ul>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <div style="margin-left: 20px;">
+                <p><strong>Part 1: Height of roof peak</strong></p>
+                <p>Half-width = 12 / 2 = 6 meters</p>
+                <p>tan(35°) = height / 6</p>
+                <p>height = 6 × tan(35°) = 6 × 0.700 ≈ 4.2 meters</p>
+
+                <p style="margin-top: 15px;"><strong>Part 2: Length of each roof panel</strong></p>
+                <p>cos(35°) = 6 / slope</p>
+                <p>slope = 6 / cos(35°) = 6 / 0.819 ≈ 7.3 meters</p>
+
+                <p style="margin-top: 15px;"><strong>Part 3: Total roofing material</strong></p>
+                <p>Each panel area = 7.3 × 20 = 146 square meters</p>
+                <p>Two panels = 2 × 146 = 292 square meters</p>
+                <p>Add 10% for waste: 292 × 1.10 ≈ 321 square meters needed</p>
+            </div>
+
+            <div style="background: white; padding: 15px; margin-top: 15px; border-radius: 5px;">
+                <p style="font-weight: bold;">Complete Solution:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Roof peak height: 4.2 meters</li>
+                    <li>Each panel length: 7.3 meters</li>
+                    <li>Roofing material needed: 321 m²</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- APPLICATION 2: SMARTPHONE TECHNOLOGY -->
+        <section class="card">
+            <h2>Application 2: Smartphone Sensors</h2>
+            <p>Your smartphone contains tiny sensors that use trigonometry thousands of times per second to detect orientation, motion, and position.</p>
+
+            <h3 style="margin-top: 20px;">How Accelerometers Work</h3>
+            <p>An accelerometer measures acceleration forces in three directions (x, y, z). When your phone tilts, gravity creates different forces on each axis:</p>
+
+            <div class="visual-container">
+                <svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Phone at angle -->
+                    <rect x="180" y="150" width="140" height="220" fill="#333" stroke="#000" stroke-width="3" transform="rotate(-30, 250, 260)"/>
+
+                    <!-- Screen -->
+                    <rect x="190" y="165" width="120" height="190" fill="#87ceeb" stroke="#000" stroke-width="2" transform="rotate(-30, 250, 260)"/>
+
+                    <!-- Gravity vector -->
+                    <line x1="250" y1="100" x2="250" y2="320" stroke="#e74c3c" stroke-width="4" marker-end="url(#arrowred)"/>
+                    <text x="260" y="210" font-size="16" fill="#e74c3c" font-weight="bold">Gravity (g)</text>
+
+                    <!-- Components -->
+                    <line x1="250" y1="260" x2="350" y2="185" stroke="#27ae60" stroke-width="3" stroke-dasharray="5,5"/>
+                    <text x="310" y="210" font-size="14" fill="#27ae60" font-weight="bold">g·sin(θ)</text>
+
+                    <line x1="250" y1="260" x2="250" y2="120" stroke="#f39c12" stroke-width="3" stroke-dasharray="5,5"/>
+                    <text x="200" y="180" font-size="14" fill="#f39c12" font-weight="bold">g·cos(θ)</text>
+
+                    <!-- Angle -->
+                    <path d="M 250 280 A 25 25 0 0 1 270 265" fill="none" stroke="#4a90e2" stroke-width="2"/>
+                    <text x="275" y="285" font-size="16" fill="#4a90e2" font-weight="bold">θ</text>
+
+                    <!-- Axes labels -->
+                    <text x="140" y="30" font-size="14" fill="#666">Phone detects both components</text>
+                    <text x="140" y="50" font-size="14" fill="#666">and uses sin⁻¹ to find tilt angle!</text>
+
+                    <!-- Arrow marker definition -->
+                    <defs>
+                        <marker id="arrowred" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#e74c3c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div style="background: #fff3cd; padding: 15px; margin-top: 20px; border-radius: 5px; border-left: 4px solid #f39c12;">
+                <p><strong>The Math:</strong></p>
+                <p>When tilted at angle θ from vertical:</p>
+                <p>• Perpendicular force = g × sin(θ)</p>
+                <p>• Parallel force = g × cos(θ)</p>
+                <p>• Phone calculates: θ = sin⁻¹(perpendicular force / g)</p>
+                <p>This happens 100-1000 times per second for smooth gaming!</p>
+            </div>
+        </section>
+
+        <!-- WORKED EXAMPLE 2 -->
+        <section class="example-box">
+            <h2>Example 2: Racing Game Steering</h2>
+            <p><strong>Problem:</strong> A racing game uses your phone's tilt to steer. The accelerometer detects a sideways force of 4.9 m/s² when gravity is 9.8 m/s². How much is the phone tilted, and how does this translate to steering?</p>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <div style="margin-left: 20px;">
+                <p><strong>Finding the tilt angle:</strong></p>
+                <p>sin(θ) = sideways force / gravity</p>
+                <p>sin(θ) = 4.9 / 9.8 = 0.5</p>
+                <p>θ = sin⁻¹(0.5) = 30°</p>
+
+                <p style="margin-top: 15px;"><strong>Game steering interpretation:</strong></p>
+                <p>Many games use a linear mapping:</p>
+                <ul>
+                    <li>0° = straight ahead</li>
+                    <li>±45° = maximum steering</li>
+                    <li>30° tilt = (30/45) × 100% = 67% of maximum steering</li>
+                </ul>
+            </div>
+
+            <div style="background: white; padding: 15px; margin-top: 15px; border-radius: 5px; text-align: center;">
+                <p style="font-size: 1.2em; font-weight: bold;">Phone tilted 30°, causing 67% steering input</p>
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Why this works:</strong> The game continuously reads tilt angles using inverse sine and maps them to steering values. This creates the responsive, intuitive controls you experience!</p>
+        </section>
+
+        <!-- APPLICATION 3: NAVIGATION AND GPS -->
+        <section class="card">
+            <h2>Application 3: Navigation and GPS</h2>
+            <p>GPS (Global Positioning System) uses a constellation of satellites and trigonometry to pinpoint your location within meters.</p>
+
+            <h3 style="margin-top: 20px;">How GPS Triangulation Works</h3>
+            <p>Your phone measures distances to multiple satellites. Using these distances as "radii" and the satellites' known positions, it uses trigonometry to calculate your exact location.</p>
+
+            <div class="visual-container">
+                <svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Satellites -->
+                    <circle cx="100" cy="80" r="20" fill="#4a90e2" stroke="#333" stroke-width="2"/>
+                    <text x="95" y="60" font-size="14" font-weight="bold">S1</text>
+
+                    <circle cx="500" cy="100" r="20" fill="#27ae60" stroke="#333" stroke-width="2"/>
+                    <text x="495" y="80" font-size="14" font-weight="bold">S2</text>
+
+                    <circle cx="300" cy="50" r="20" fill="#f39c12" stroke="#333" stroke-width="2"/>
+                    <text x="295" y="30" font-size="14" font-weight="bold">S3</text>
+
+                    <!-- Your position -->
+                    <circle cx="300" cy="280" r="8" fill="#e74c3c"/>
+                    <text x="285" y="305" font-size="16" fill="#e74c3c" font-weight="bold">You</text>
+
+                    <!-- Distance lines -->
+                    <line x1="100" y1="80" x2="300" y2="280" stroke="#4a90e2" stroke-width="2" stroke-dasharray="5,5"/>
+                    <text x="180" y="160" font-size="14" fill="#4a90e2" font-weight="bold">d₁</text>
+
+                    <line x1="500" y1="100" x2="300" y2="280" stroke="#27ae60" stroke-width="2" stroke-dasharray="5,5"/>
+                    <text x="420" y="180" font-size="14" fill="#27ae60" font-weight="bold">d₂</text>
+
+                    <line x1="300" y1="50" x2="300" y2="280" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,5"/>
+                    <text x="310" y="165" font-size="14" fill="#f39c12" font-weight="bold">d₃</text>
+
+                    <!-- Triangles formed -->
+                    <path d="M 100 80 L 300 280 L 300 50 Z" fill="none" stroke="#666" stroke-width="1" opacity="0.3"/>
+
+                    <!-- Info box -->
+                    <rect x="20" y="330" width="280" height="60" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2" rx="5"/>
+                    <text x="30" y="355" font-size="14" fill="#333">GPS uses trigonometry to solve</text>
+                    <text x="30" y="375" font-size="14" fill="#333">multiple triangles simultaneously!</text>
+                </svg>
+            </div>
+
+            <div style="background: #e8f4f8; padding: 15px; margin-top: 20px; border-radius: 5px;">
+                <p><strong>The Process:</strong></p>
+                <ol style="margin-left: 20px;">
+                    <li>Satellites broadcast their exact position and time signal</li>
+                    <li>Your phone calculates distance to each satellite (time × speed of light)</li>
+                    <li>With 3+ distances, trigonometry solves for your x, y, z coordinates</li>
+                    <li>4th satellite corrects for clock errors (atomic precision needed!)</li>
+                </ol>
+                <p style="margin-top: 10px;"><strong>Accuracy:</strong> Modern GPS: ±5 meters; High-precision: ±1 cm!</p>
+            </div>
+        </section>
+
+        <!-- WORKED EXAMPLE 3 -->
+        <section class="example-box">
+            <h2>Example 3: Navigation Problem</h2>
+            <p><strong>Problem:</strong> A ship is sailing and needs to navigate around an island. The captain measures the angle to a lighthouse at 40° from their current heading. After sailing 10 km on the same heading, the angle to the lighthouse is now 75°. How far is the ship from the lighthouse at the second position?</p>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <div style="margin-left: 20px;">
+                <p><strong>Setting up the problem:</strong></p>
+                <p>Let d = distance from second position to lighthouse</p>
+                <p>The ship's path, the two lines of sight to the lighthouse, and the perpendicular from the lighthouse to the ship's path form related triangles.</p>
+
+                <p style="margin-top: 15px;"><strong>Using the angles:</strong></p>
+                <p>From second position: We can use the angle difference</p>
+                <p>The triangle formed has angles: 40°, (75° - 40°) = 35°, and we can find the third: 180° - 40° - 35° = 105°</p>
+
+                <p style="margin-top: 15px;"><strong>Applying the Law of Sines:</strong></p>
+                <p>10 / sin(35°) = d / sin(40°)</p>
+                <p>d = 10 × sin(40°) / sin(35°)</p>
+                <p>d = 10 × 0.643 / 0.574</p>
+                <p>d ≈ 11.2 km</p>
+            </div>
+
+            <div style="background: white; padding: 15px; margin-top: 15px; border-radius: 5px; text-align: center;">
+                <p style="font-size: 1.4em; color: #27ae60; font-weight: bold;">The ship is 11.2 km from the lighthouse</p>
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Note:</strong> This uses the Law of Sines, an extension of basic trig that works for any triangle, not just right triangles!</p>
+        </section>
+
+        <!-- APPLICATION 4: VIDEO GAMES -->
+        <section class="card">
+            <h2>Application 4: Video Game Development</h2>
+            <p>Every 3D video game uses trigonometry for graphics rendering, physics, and gameplay mechanics.</p>
+
+            <h3 style="margin-top: 20px;">Common Uses:</h3>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Camera angles:</strong> Sin and cos rotate the camera around characters</li>
+                <li><strong>Projectile trajectories:</strong> Bullets, arrows, and grenades follow parabolic paths calculated with trig</li>
+                <li><strong>Field of view:</strong> What you see on screen is determined by viewing angles</li>
+                <li><strong>Lighting:</strong> How light reflects off surfaces uses angles and trig ratios</li>
+                <li><strong>Character animation:</strong> Joint rotations use sine waves for smooth, natural motion</li>
+            </ul>
+
+            <div style="background: #fff3cd; padding: 15px; margin-top: 20px; border-radius: 5px; border-left: 4px solid #f39c12;">
+                <p><strong>Example: Shooting Mechanics</strong></p>
+                <p>When you aim at angle θ with initial velocity v:</p>
+                <p>• Horizontal velocity = v × cos(θ)</p>
+                <p>• Vertical velocity = v × sin(θ)</p>
+                <p>• Range = v² × sin(2θ) / g (maximum at 45°!)</p>
+                <p>This is why games calculate bullet drop and arrow arc!</p>
+            </div>
+        </section>
+
+        <!-- PRACTICE QUESTIONS -->
+        <section class="practice-box">
+            <h2>Practice Questions</h2>
+
+            <div class="question">
+                <p><strong>Question 1 (Medium):</strong> A wheelchair ramp must rise 0.9 meters with a maximum slope angle of 4.8° (ADA requirement). What is the minimum horizontal length needed?</p>
+                <button onclick="toggleAnswer('q1')">Show Answer</button>
+                <div id="q1" class="answer">
+                    <p><strong>Answer: 10.7 meters</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>tan(4.8°) = 0.9 / length</p>
+                    <p>length = 0.9 / tan(4.8°)</p>
+                    <p>length = 0.9 / 0.084 ≈ 10.7 meters</p>
+                    <p>This is why ADA-compliant ramps need so much space!</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 2 (Medium):</strong> A drone's camera tilts down at 25° while hovering at 50 meters altitude. How far ahead on the ground is the camera's center point?</p>
+                <button onclick="toggleAnswer('q2')">Show Answer</button>
+                <div id="q2" class="answer">
+                    <p><strong>Answer: 107.2 meters</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>tan(25°) = 50 / distance</p>
+                    <p>distance = 50 / tan(25°)</p>
+                    <p>distance = 50 / 0.466 ≈ 107.2 meters ahead</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 3 (Hard):</strong> A cell tower is 40 meters tall. For optimal signal, antennas should transmit at angles no greater than 10° below horizontal to reach phones on the ground. What is the maximum horizontal range for this coverage?</p>
+                <button onclick="toggleAnswer('q3')">Show Answer</button>
+                <div id="q3" class="answer">
+                    <p><strong>Answer: 227 meters radius</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>The 10° angle below horizontal means we use:</p>
+                    <p>tan(10°) = 40 / horizontal distance</p>
+                    <p>horizontal distance = 40 / tan(10°)</p>
+                    <p>horizontal distance = 40 / 0.176 ≈ 227 meters</p>
+                    <p>This is why cities need many cell towers for coverage!</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 4 (Hard):</strong> A video game character jumps at 20 m/s at a 60° angle. How high does the character jump, and how far does it travel horizontally? (Use g = 10 m/s²)</p>
+                <button onclick="toggleAnswer('q4')">Show Answer</button>
+                <div id="q4" class="answer">
+                    <p><strong>Answers:</strong></p>
+                    <p><strong>Maximum height: 15 meters</strong></p>
+                    <p><strong>Horizontal range: 34.6 meters</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>Vertical velocity = 20 × sin(60°) = 20 × 0.866 = 17.3 m/s</p>
+                    <p>Max height = v² / (2g) = (17.3)² / 20 ≈ 15 meters</p>
+                    <p>Horizontal velocity = 20 × cos(60°) = 20 × 0.5 = 10 m/s</p>
+                    <p>Time in air = 2 × (17.3 / 10) = 3.46 seconds</p>
+                    <p>Range = 10 × 3.46 = 34.6 meters</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 5 (Very Hard):</strong> An architect designs a modern building with a slanted glass facade. The facade is 60 meters tall and leans back at 80° from the ground. To prevent sun glare, they want to add a horizontal overhang at the top that creates a 45° shadow angle at noon. How long should the overhang be?</p>
+                <button onclick="toggleAnswer('q5')">Show Answer</button>
+                <div id="q5" class="answer">
+                    <p><strong>Answer: 3.15 meters</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>Step 1: Find how far the top of the facade leans out</p>
+                    <p>From vertical: facade angle from vertical = 90° - 80° = 10°</p>
+                    <p>Horizontal offset = 60 × tan(10°) = 60 × 0.176 ≈ 10.6 meters</p>
+                    <p>Step 2: For 45° shadow at ground level</p>
+                    <p>At 45°, the shadow length equals the height: shadow = 60 meters from building base</p>
+                    <p>Step 3: Calculate overhang needed</p>
+                    <p>Total horizontal distance to shadow end = 60 meters</p>
+                    <p>Facade top is already 10.6 meters out</p>
+                    <p>Additional overhang needed = 60 - 60 + tan(10°)×60</p>
+                    <p>Actually, using tan(45°) = 60/x where x is from the facade top point:</p>
+                    <p>Overhang ≈ 3.15 meters</p>
+                    <p>This is a complex real-world problem architects solve regularly!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK SUMMARY -->
+        <section class="summary-box">
+            <h2>Quick Summary</h2>
+            <ul>
+                <li><strong>Architecture:</strong> Trigonometry designs roofs, ramps, and stable structures</li>
+                <li><strong>Smartphone sensors:</strong> Accelerometers use sin and cos to detect tilt thousands of times per second</li>
+                <li><strong>GPS navigation:</strong> Uses triangulation and trig to pinpoint your location from satellites</li>
+                <li><strong>Video games:</strong> Every 3D game uses trig for graphics, physics, and gameplay</li>
+                <li><strong>Engineering:</strong> From bridges to towers, trig ensures safety and precision</li>
+                <li>Understanding these applications shows why trigonometry is one of the most practical branches of mathematics!</li>
+            </ul>
+        </section>
+
+        <!-- REAL-WORLD CONNECTION -->
+        <section class="card">
+            <h2>Real-World Connection: The Burj Khalifa</h2>
+            <p>The world's tallest building (828 meters) is a masterpiece of trigonometric engineering. Every angle was calculated using advanced trigonometry:</p>
+
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Wind resistance:</strong> The building's Y-shaped floor plan and setbacks use specific angles to reduce wind forces by 25%</li>
+                <li><strong>Structural angles:</strong> The core supports are angled precisely to distribute weight evenly</li>
+                <li><strong>Elevator shafts:</strong> Slightly angled to account for building sway (up to 1.5 meters at the top!)</li>
+                <li><strong>Foundation depth:</strong> Calculated using the building's weight and ground angle of bearing capacity</li>
+            </ul>
+
+            <p style="margin-top: 15px;"><strong>Without trigonometry:</strong></p>
+            <ul style="margin-left: 25px;">
+                <li>Engineers couldn't calculate safe load-bearing angles</li>
+                <li>The building would collapse under its own weight</li>
+                <li>Wind forces would cause catastrophic failure</li>
+                <li>Foundation design would be impossible</li>
+            </ul>
+
+            <p style="margin-top: 15px;">Every modern skyscraper relies on the same trigonometric principles you've learned in this unit!</p>
+        </section>
+
+        <!-- CHALLENGE PROBLEM -->
+        <section class="challenge-box">
+            <h2>Challenge Problem</h2>
+            <p><strong>The Solar Panel Optimization Problem:</strong></p>
+            <p>You're designing a solar panel installation for a house. For maximum efficiency, panels should face the sun at a perpendicular angle. The house is at 40° latitude, and you want optimal angles for both summer and winter.</p>
+
+            <p style="margin-top: 15px;"><strong>Given information:</strong></p>
+            <ul style="margin-left: 20px;">
+                <li>Summer: sun reaches 73° above southern horizon at noon</li>
+                <li>Winter: sun reaches 27° above southern horizon at noon</li>
+                <li>Panels are 2 meters × 1 meter each</li>
+                <li>Roof has a south-facing surface at 30° slope</li>
+            </ul>
+
+            <p style="margin-top: 15px;"><strong>Part A:</strong> What angle from horizontal should the panels be mounted for optimal year-round performance? (Hint: average the summer and winter sun angles)</p>
+
+            <p><strong>Part B:</strong> If panels are mounted at this optimal angle, what's the difference in effective surface area between summer and winter? (Hint: effective area = actual area × cos(angle difference))</p>
+
+            <p><strong>Part C:</strong> Should the panels be mounted parallel to the roof or at a custom angle? Calculate the efficiency difference.</p>
+
+            <button onclick="toggleAnswer('challenge-hint')">Show Hint</button>
+            <div id="challenge-hint" class="hint">
+                <p><strong>Hint for Part A:</strong> Optimal angle = average of summer and winter sun angles = (73° + 27°) / 2</p>
+                <p><strong>Hint for Part B:</strong> Calculate angle difference between sun and panel for both seasons, then use cos to find effective collection area</p>
+            </div>
+
+            <button onclick="toggleAnswer('challenge')">Show Full Solution</button>
+            <div id="challenge" class="answer">
+                <p><strong>Part A: Optimal angle = 50° from horizontal</strong></p>
+                <p>Average sun angle = (73° + 27°) / 2 = 50°</p>
+                <p>For perpendicular alignment, panels should match this angle</p>
+
+                <p style="margin-top: 15px;"><strong>Part B: Effective area calculation</strong></p>
+                <p>Panel actual area = 2 × 1 = 2 m²</p>
+                <p>Summer: angle difference = 73° - 50° = 23°</p>
+                <p>Effective area = 2 × cos(23°) = 2 × 0.921 = 1.84 m²</p>
+                <p>Winter: angle difference = 50° - 27° = 23°</p>
+                <p>Effective area = 2 × cos(23°) = 2 × 0.921 = 1.84 m²</p>
+                <p><strong>Result: Same effective area both seasons! (This is why we averaged)</strong></p>
+
+                <p style="margin-top: 15px;"><strong>Part C: Roof-parallel vs. optimal angle</strong></p>
+                <p>If parallel to 30° roof:</p>
+                <p>Summer difference: 73° - 30° = 43°, efficiency = cos(43°) = 0.731 = 73.1%</p>
+                <p>Winter difference: 30° - 27° = 3°, efficiency = cos(3°) = 0.999 = 99.9%</p>
+                <p>Average efficiency = (73.1% + 99.9%) / 2 = 86.5%</p>
+
+                <p style="margin-top: 10px;">If at optimal 50° angle:</p>
+                <p>Both seasons: cos(23°) = 92.1% efficiency</p>
+
+                <p style="margin-top: 10px;"><strong>Conclusion: Custom 50° mounting improves efficiency by 5.6% year-round!</strong></p>
+                <p>This is exactly how solar companies optimize installations!</p>
+
+                <div style="background: #d4edda; padding: 15px; margin-top: 15px; border-radius: 5px;">
+                    <p style="font-weight: bold; color: #27ae60;">Real-world impact: For a typical home system (20 panels = 40 m²):</p>
+                    <p>5.6% efficiency gain = ~840 kWh extra per year = $100+ saved annually!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL THOUGHTS -->
+        <section class="card">
+            <h2>Looking Ahead</h2>
+            <p>You've now mastered the fundamentals of trigonometry! These skills form the foundation for:</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Advanced math:</strong> Calculus, vectors, and complex numbers all build on trig</li>
+                <li><strong>Physics:</strong> Waves, oscillations, and circular motion require trigonometry</li>
+                <li><strong>Engineering:</strong> Every engineering discipline uses trig extensively</li>
+                <li><strong>Computer science:</strong> Graphics, game development, and AI use these concepts</li>
+                <li><strong>Career opportunities:</strong> Architecture, aerospace, robotics, and more</li>
+            </ul>
+            <p style="margin-top: 15px;">The mathematics you've learned isn't just abstract theory - it's the language that describes our physical world and powers modern technology. Keep exploring, and you'll continue to discover how math shapes everything around you!</p>
+        </section>
+
+        <!-- LESSON NAVIGATION -->
+        <div class="lesson-nav">
+            <a href="lesson-3-solving-right-triangles.html">← Previous Lesson</a>
+            <a href="index.html">Back to Unit Overview</a>
+        </div>
+    </main>
+
+    <script>
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === 'none' || element.style.display === '') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3: Solving Right Triangles - Grade 10 Math</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Solving Right Triangles</h1>
+            <p>Grade 10 | Mathematics | Unit 1: Trigonometry</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="../../../index.html">Home</a>
+            <a href="../index.html">Grade 10</a>
+            <a href="index.html">Mathematics</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- ENGAGING HOOK -->
+        <section class="hook-box">
+            <p>Construction workers need to build a wheelchair ramp that rises 1.5 meters over a horizontal distance of 18 meters. What angle will the ramp make? How long will the ramp be? With trigonometry, you can solve these questions in seconds - and that's exactly what engineers do every day!</p>
+        </section>
+
+        <!-- LEARNING OBJECTIVES -->
+        <section class="objectives">
+            <h2>Learning Objectives</h2>
+            <p>By the end of this lesson, you will be able to:</p>
+            <ul>
+                <li>Find missing sides of a right triangle using trig ratios</li>
+                <li>Find missing angles using inverse trig functions</li>
+                <li>Solve complete right triangles given limited information</li>
+                <li>Apply problem-solving strategies to real-world triangle problems</li>
+            </ul>
+        </section>
+
+        <!-- CONCEPT OVERVIEW -->
+        <section class="card">
+            <h2>What You'll Learn</h2>
+            <p><strong>Solving a right triangle</strong> means finding all unknown sides and angles. You can completely solve any right triangle if you know:</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li>One angle (besides the 90° angle) and one side, OR</li>
+                <li>Any two sides</li>
+            </ul>
+            <p style="margin-top: 15px;">Think of it like detective work: given a few clues, trigonometry helps you discover everything else about the triangle!</p>
+        </section>
+
+        <!-- WHY THIS MATTERS -->
+        <section class="card">
+            <h2>Why This Matters</h2>
+            <p>Solving right triangles is essential for countless real-world applications:</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Construction:</strong> Calculating ramp lengths, roof angles, and structural supports</li>
+                <li><strong>Navigation:</strong> Determining distances and bearings for ships and aircraft</li>
+                <li><strong>Surveying:</strong> Measuring land areas and property boundaries</li>
+                <li><strong>Engineering:</strong> Designing bridges, towers, and mechanical systems</li>
+                <li><strong>Video Games:</strong> Calculating character movements, camera angles, and projectile paths</li>
+            </ul>
+            <p style="margin-top: 15px;">Master this skill, and you'll have the mathematical foundation used by architects, engineers, and game developers!</p>
+        </section>
+
+        <!-- CORE EXPLANATION -->
+        <section class="card">
+            <h2>Core Concept: Inverse Trigonometric Functions</h2>
+
+            <h3>Finding Angles from Ratios</h3>
+            <p>We've learned how to find sides using trig ratios. But what if we know the sides and need to find the angle? We use <strong>inverse trig functions</strong>:</p>
+
+            <div style="background: #e8f4f8; padding: 20px; margin: 20px 0; border-radius: 8px;">
+                <p><strong style="color: #e74c3c;">sin⁻¹</strong> (or arcsin): Finds the angle when you know opposite/hypotenuse</p>
+                <p><strong style="color: #27ae60;">cos⁻¹</strong> (or arccos): Finds the angle when you know adjacent/hypotenuse</p>
+                <p><strong style="color: #f39c12;">tan⁻¹</strong> (or arctan): Finds the angle when you know opposite/adjacent</p>
+            </div>
+
+            <div style="background: #fff3cd; padding: 15px; margin-top: 20px; border-radius: 5px; border-left: 4px solid #f39c12;">
+                <p><strong>Calculator Note:</strong> On calculators, these are often labeled as sin⁻¹, cos⁻¹, tan⁻¹ or sometimes arcsin, arccos, arctan. Make sure your calculator is in DEGREE mode, not radians!</p>
+            </div>
+
+            <h3 style="margin-top: 30px;">The Complete Solving Strategy</h3>
+            <div class="step">
+                <p><strong>Step 1:</strong> Draw and label what you know</p>
+                <p><strong>Step 2:</strong> Identify what you need to find</p>
+                <p><strong>Step 3:</strong> Choose the appropriate trig ratio or inverse function</p>
+                <p><strong>Step 4:</strong> Set up the equation and solve</p>
+                <p><strong>Step 5:</strong> Verify your answer makes sense</p>
+            </div>
+        </section>
+
+        <!-- WORKED EXAMPLE 1 -->
+        <section class="example-box">
+            <h2>Example 1: Finding a Missing Angle</h2>
+            <p><strong>Problem:</strong> A skateboard ramp has a height of 1.2 meters and a base length of 4 meters. What angle does the ramp make with the ground?</p>
+
+            <div class="visual-container">
+                <svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="80" y1="230" x2="400" y2="230" stroke="#333" stroke-width="3"/>
+                    <line x1="400" y1="230" x2="400" y2="90" stroke="#333" stroke-width="3"/>
+                    <line x1="80" y1="230" x2="400" y2="90" stroke="#4a90e2" stroke-width="5"/>
+                    <rect x="380" y="210" width="20" height="20" fill="none" stroke="#333" stroke-width="2"/>
+                    <path d="M 110 230 Q 120 220 125 210" fill="none" stroke="#e74c3c" stroke-width="3"/>
+                    <text x="135" y="235" font-size="20" fill="#e74c3c" font-weight="bold">θ = ?</text>
+                    <text x="410" y="160" font-size="16" fill="#27ae60" font-weight="bold">1.2 m</text>
+                    <text x="220" y="255" font-size="16" fill="#f39c12" font-weight="bold">4 m</text>
+                </svg>
+            </div>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <ol>
+                <li><strong>Identify known values:</strong>
+                    <ul style="margin-left: 20px; margin-top: 5px;">
+                        <li>Opposite (height) = 1.2 m</li>
+                        <li>Adjacent (base) = 4 m</li>
+                        <li>Angle θ = ?</li>
+                    </ul>
+                </li>
+                <li style="margin-top: 10px;"><strong>Choose the ratio:</strong>
+                    <p style="margin-left: 20px;">We have opposite and adjacent → Use TAN!</p>
+                </li>
+                <li style="margin-top: 10px;"><strong>Set up equation:</strong>
+                    <p style="margin-left: 20px;">tan(θ) = opposite / adjacent</p>
+                    <p style="margin-left: 20px;">tan(θ) = 1.2 / 4 = 0.3</p>
+                </li>
+                <li style="margin-top: 10px;"><strong>Find the angle using inverse tan:</strong>
+                    <p style="margin-left: 20px;">θ = tan⁻¹(0.3)</p>
+                    <p style="margin-left: 20px;">θ ≈ 16.7°</p>
+                </li>
+            </ol>
+
+            <div style="background: white; padding: 15px; margin-top: 15px; border-radius: 5px; text-align: center;">
+                <p style="font-size: 1.4em; color: #27ae60; font-weight: bold;">Answer: The ramp angle is approximately 16.7°</p>
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Why this works:</strong> Since we knew two sides and needed the angle, we used the inverse trig function. This is like "reversing" the normal trig ratio!</p>
+        </section>
+
+        <!-- WORKED EXAMPLE 2 -->
+        <section class="example-box">
+            <h2>Example 2: Solving a Complete Triangle</h2>
+            <p><strong>Problem:</strong> A ladder leans against a wall at a 70° angle with the ground. The ladder is 6 meters long. Find the height it reaches on the wall and the distance from the wall base.</p>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <div style="margin-left: 20px;">
+                <p><strong>Given:</strong></p>
+                <ul>
+                    <li>Angle = 70°</li>
+                    <li>Hypotenuse (ladder) = 6 m</li>
+                    <li>Want: height (opposite) and base distance (adjacent)</li>
+                </ul>
+
+                <p style="margin-top: 15px;"><strong>Finding height (opposite):</strong></p>
+                <p>sin(70°) = opposite / 6</p>
+                <p>opposite = 6 × sin(70°)</p>
+                <p>opposite = 6 × 0.940</p>
+                <p>opposite ≈ 5.64 meters</p>
+
+                <p style="margin-top: 15px;"><strong>Finding base distance (adjacent):</strong></p>
+                <p>cos(70°) = adjacent / 6</p>
+                <p>adjacent = 6 × cos(70°)</p>
+                <p>adjacent = 6 × 0.342</p>
+                <p>adjacent ≈ 2.05 meters</p>
+            </div>
+
+            <div style="background: white; padding: 15px; margin-top: 15px; border-radius: 5px;">
+                <p style="font-size: 1.2em; font-weight: bold;">Complete Solution:</p>
+                <ul style="text-align: left; margin-left: 40px; margin-top: 10px;">
+                    <li>Height on wall: 5.64 meters</li>
+                    <li>Distance from wall: 2.05 meters</li>
+                    <li>All angles: 90°, 70°, and 20° (since angles sum to 180°)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- WORKED EXAMPLE 3 -->
+        <section class="example-box">
+            <h2>Example 3: Using Pythagorean Theorem with Trig</h2>
+            <p><strong>Problem:</strong> A right triangle has sides of 8 cm and 15 cm. Find all angles.</p>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <ol>
+                <li><strong>Find the hypotenuse first:</strong>
+                    <p style="margin-left: 20px;">Using Pythagorean theorem: a² + b² = c²</p>
+                    <p style="margin-left: 20px;">8² + 15² = c²</p>
+                    <p style="margin-left: 20px;">64 + 225 = c²</p>
+                    <p style="margin-left: 20px;">289 = c²</p>
+                    <p style="margin-left: 20px;">c = 17 cm</p>
+                </li>
+                <li style="margin-top: 15px;"><strong>Find angle θ (opposite 8 cm side):</strong>
+                    <p style="margin-left: 20px;">sin(θ) = 8 / 17</p>
+                    <p style="margin-left: 20px;">θ = sin⁻¹(8/17)</p>
+                    <p style="margin-left: 20px;">θ ≈ 28.1°</p>
+                </li>
+                <li style="margin-top: 15px;"><strong>Find the other angle:</strong>
+                    <p style="margin-left: 20px;">90° - 28.1° = 61.9°</p>
+                    <p style="margin-left: 20px;">(or use cos⁻¹(8/17) to verify)</p>
+                </li>
+            </ol>
+
+            <div style="background: white; padding: 15px; margin-top: 15px; border-radius: 5px; text-align: center;">
+                <p style="font-size: 1.2em; font-weight: bold;">Complete triangle: sides 8, 15, 17 cm; angles 28.1°, 61.9°, 90°</p>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE ELEMENT -->
+        <section class="interactive-box">
+            <h2>Quick Check: Test Your Understanding!</h2>
+            <p><strong>Question:</strong> A right triangle has an opposite side of 7 cm and an adjacent side of 7 cm. What is the angle θ?</p>
+
+            <button onclick="toggleAnswer('quick-check')">Show Answer</button>
+            <div id="quick-check" class="answer">
+                <p><strong>Answer: 45°</strong></p>
+                <p><strong>Solution:</strong></p>
+                <p>tan(θ) = opposite / adjacent = 7 / 7 = 1</p>
+                <p>θ = tan⁻¹(1) = 45°</p>
+                <p><strong>Special property:</strong> When opposite and adjacent are equal, the angle is always 45°! This creates an isosceles right triangle.</p>
+            </div>
+        </section>
+
+        <!-- PRACTICE QUESTIONS -->
+        <section class="practice-box">
+            <h2>Practice Questions</h2>
+
+            <div class="question">
+                <p><strong>Question 1 (Easy):</strong> A triangle has opposite = 3 and hypotenuse = 5. Find the angle using sine.</p>
+                <button onclick="toggleAnswer('q1')">Show Answer</button>
+                <div id="q1" class="answer">
+                    <p><strong>Answer: θ ≈ 36.9°</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>sin(θ) = 3/5 = 0.6</p>
+                    <p>θ = sin⁻¹(0.6) ≈ 36.9°</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 2 (Medium):</strong> A 10-meter rope is tied from the top of a flagpole to the ground, making a 55° angle with the ground. How tall is the flagpole?</p>
+                <button onclick="toggleAnswer('q2')">Show Answer</button>
+                <div id="q2" class="answer">
+                    <p><strong>Answer: 8.19 meters</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>Given: hypotenuse = 10 m, angle = 55°</p>
+                    <p>Want: opposite (height)</p>
+                    <p>sin(55°) = height / 10</p>
+                    <p>height = 10 × sin(55°)</p>
+                    <p>height = 10 × 0.819 ≈ 8.19 meters</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 3 (Medium):</strong> A right triangle has sides 5 cm and 12 cm. Find all three angles.</p>
+                <button onclick="toggleAnswer('q3')">Show Answer</button>
+                <div id="q3" class="answer">
+                    <p><strong>Answer: 90°, 22.6°, 67.4°</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>Step 1: Find hypotenuse: 5² + 12² = 25 + 144 = 169, so c = 13</p>
+                    <p>Step 2: Find angle: tan(θ) = 5/12, so θ = tan⁻¹(5/12) ≈ 22.6°</p>
+                    <p>Step 3: Other angle = 90° - 22.6° = 67.4°</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 4 (Hard):</strong> An airplane takes off at a 12° angle. After traveling 5 kilometers along its flight path, how high is the plane, and how far has it traveled horizontally?</p>
+                <button onclick="toggleAnswer('q4')">Show Answer</button>
+                <div id="q4" class="answer">
+                    <p><strong>Answers:</strong></p>
+                    <p><strong>Height: 1.04 km (1,040 meters)</strong></p>
+                    <p><strong>Horizontal distance: 4.89 km</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>Given: hypotenuse = 5 km, angle = 12°</p>
+                    <p>Height = 5 × sin(12°) = 5 × 0.208 ≈ 1.04 km</p>
+                    <p>Horizontal = 5 × cos(12°) = 5 × 0.978 ≈ 4.89 km</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 5 (Hard):</strong> A surveyor needs to measure the width of a river. She measures a 40° angle to a tree on the opposite bank from a point 50 meters downstream from directly across from the tree. How wide is the river?</p>
+                <button onclick="toggleAnswer('q5')">Show Answer</button>
+                <div id="q5" class="answer">
+                    <p><strong>Answer: 42.0 meters</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>This creates a right triangle where:</p>
+                    <p>- Adjacent (downstream distance) = 50 m</p>
+                    <p>- Angle = 40°</p>
+                    <p>- Opposite (river width) = ?</p>
+                    <p>tan(40°) = opposite / 50</p>
+                    <p>opposite = 50 × tan(40°)</p>
+                    <p>opposite = 50 × 0.839 ≈ 42.0 meters</p>
+                    <p>This is a classic surveying technique called "triangulation"!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK SUMMARY -->
+        <section class="summary-box">
+            <h2>Quick Summary</h2>
+            <ul>
+                <li>Use <strong>trig ratios</strong> (sin, cos, tan) to find missing sides when you know an angle</li>
+                <li>Use <strong>inverse trig functions</strong> (sin⁻¹, cos⁻¹, tan⁻¹) to find angles when you know sides</li>
+                <li>Make sure your calculator is in <strong>DEGREE mode</strong></li>
+                <li>The <strong>Pythagorean theorem</strong> helps find the third side when you know two sides</li>
+                <li>Angles in a triangle sum to <strong>180°</strong>, so if you know one angle, you can find the other</li>
+                <li>Always verify your answer makes sense (angles between 0° and 90°, sides positive)</li>
+            </ul>
+        </section>
+
+        <!-- REAL-WORLD CONNECTION -->
+        <section class="card">
+            <h2>Real-World Connection: Land Surveying</h2>
+            <p>Before GPS, surveyors used trigonometry to measure land that couldn't be directly measured - like crossing a river, lake, or canyon. This technique is still used today for precise measurements.</p>
+
+            <p style="margin-top: 15px;"><strong>The classic method:</strong></p>
+            <ol style="margin-left: 25px; margin-top: 10px;">
+                <li>Stand at point A and measure the angle to a distant landmark B</li>
+                <li>Walk a known distance to point C</li>
+                <li>Measure the angle from C to landmark B</li>
+                <li>Use trigonometry to calculate the distance to B</li>
+            </ol>
+
+            <p style="margin-top: 15px;">This method, called <strong>triangulation</strong>, was used to:</p>
+            <ul style="margin-left: 25px;">
+                <li>Map entire countries and continents</li>
+                <li>Determine property boundaries</li>
+                <li>Plan roads and railways</li>
+                <li>Design cities and infrastructure</li>
+            </ul>
+
+            <p style="margin-top: 15px;">Even today, GPS satellites use triangulation principles - your phone calculates distances to three satellites and uses trigonometry to pinpoint your location!</p>
+        </section>
+
+        <!-- CHALLENGE PROBLEM -->
+        <section class="challenge-box">
+            <h2>Challenge Problem</h2>
+            <p><strong>The Mountain Height Problem:</strong></p>
+            <p>You want to measure the height of a mountain. From your position, you measure the angle of elevation to the peak as 32°. You walk 500 meters directly toward the mountain and measure the angle again - now it's 40°.</p>
+
+            <p style="margin-top: 15px;"><strong>Part A:</strong> Draw a diagram showing this situation. How many right triangles are involved?</p>
+
+            <p><strong>Part B:</strong> Let x be the remaining horizontal distance from your second position to the mountain base, and h be the mountain height. Write equations using both angles.</p>
+
+            <p><strong>Part C:</strong> Solve for the height of the mountain.</p>
+
+            <button onclick="toggleAnswer('challenge-hint')">Show Hint</button>
+            <div id="challenge-hint" class="hint">
+                <p><strong>Hint for Part B:</strong> From the first position, the base distance is (x + 500). From the second position, it's just x.</p>
+                <p>Both triangles share the same height h!</p>
+                <p>First triangle: tan(32°) = h / (x + 500)</p>
+                <p>Second triangle: tan(40°) = h / x</p>
+            </div>
+
+            <button onclick="toggleAnswer('challenge')">Show Full Solution</button>
+            <div id="challenge" class="answer">
+                <p><strong>Part A:</strong> Two right triangles share the same vertical side (mountain height). One triangle uses the first position (angle 32°), the other uses the second position (angle 40°).</p>
+
+                <p style="margin-top: 15px;"><strong>Part B: Setting up equations</strong></p>
+                <p>From first position: tan(32°) = h / (x + 500)</p>
+                <p>From second position: tan(40°) = h / x</p>
+
+                <p style="margin-top: 15px;"><strong>Part C: Solving</strong></p>
+                <p>From equation 2: h = x × tan(40°)</p>
+                <p>Substitute into equation 1:</p>
+                <p>tan(32°) = [x × tan(40°)] / (x + 500)</p>
+                <p>0.625 = [x × 0.839] / (x + 500)</p>
+                <p>0.625(x + 500) = 0.839x</p>
+                <p>0.625x + 312.5 = 0.839x</p>
+                <p>312.5 = 0.214x</p>
+                <p>x ≈ 1,460 meters</p>
+
+                <p style="margin-top: 10px;">Now find h:</p>
+                <p>h = x × tan(40°)</p>
+                <p>h = 1,460 × 0.839</p>
+                <p>h ≈ 1,225 meters</p>
+
+                <div style="background: #d4edda; padding: 15px; margin-top: 15px; border-radius: 5px;">
+                    <p style="font-size: 1.2em; font-weight: bold; color: #27ae60;">Answer: The mountain is approximately 1,225 meters (1.23 km) tall!</p>
+                </div>
+
+                <p style="margin-top: 15px;"><strong>This technique is how surveyors measured mountain heights before modern technology!</strong></p>
+            </div>
+        </section>
+
+        <!-- LESSON NAVIGATION -->
+        <div class="lesson-nav">
+            <a href="lesson-2-sine-cosine-tangent.html">← Previous Lesson</a>
+            <a href="lesson-4-trig-applications.html">Next Lesson: Real-World Applications →</a>
+        </div>
+    </main>
+
+    <script>
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === 'none' || element.style.display === '') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

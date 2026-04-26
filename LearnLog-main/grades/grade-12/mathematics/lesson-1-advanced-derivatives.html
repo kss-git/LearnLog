@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1: Advanced Derivatives - Grade 12 Mathematics</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Advanced Derivatives</h1>
+            <p>Lesson 1 - Advanced Calculus</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="../../../index.html">Home</a>
+            <a href="../index.html">Grade 12</a>
+            <a href="index.html">Mathematics</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="card">
+            <h2>Introduction to Advanced Derivatives</h2>
+            <p>While basic derivatives measure instantaneous rates of change, advanced derivative techniques allow us to analyze complex relationships, model physical systems, and solve problems where variables are interconnected. This lesson explores implicit differentiation, related rates, and higher-order derivatives with real-world applications in physics and engineering.</p>
+        </section>
+
+        <section class="card">
+            <h2>1. Implicit Differentiation</h2>
+            <p>When equations define relationships implicitly (y cannot be easily isolated), we differentiate both sides with respect to x and solve for dy/dx.</p>
+
+            <h3>Example: Circle Equation</h3>
+            <p>Find dy/dx for the circle x² + y² = 25</p>
+            <div class="example-box">
+                <p><strong>Solution:</strong></p>
+                <p>Differentiate both sides: 2x + 2y(dy/dx) = 0</p>
+                <p>Solve for dy/dx: dy/dx = -x/y</p>
+                <p>At point (3, 4): dy/dx = -3/4</p>
+            </div>
+
+            <h3>Application: Elliptical Orbit</h3>
+            <p>For a planet in an elliptical orbit described by x²/a² + y²/b² = 1, the instantaneous velocity direction is perpendicular to the radius vector, found using implicit differentiation.</p>
+
+            <svg viewBox="0 0 400 300" style="max-width: 500px; margin: 20px auto; display: block;">
+                <ellipse cx="200" cy="150" rx="150" ry="100" fill="none" stroke="#2c3e50" stroke-width="2"/>
+                <circle cx="200" cy="150" r="3" fill="#e74c3c"/>
+                <line x1="200" y1="150" x2="320" y2="100" stroke="#3498db" stroke-width="2"/>
+                <line x1="320" y1="100" x2="260" y2="70" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,5"/>
+                <circle cx="320" cy="100" r="5" fill="#3498db"/>
+                <text x="330" y="100" font-size="14" fill="#2c3e50">Planet</text>
+                <text x="190" y="140" font-size="14" fill="#2c3e50">Focus</text>
+                <text x="270" y="65" font-size="12" fill="#e74c3c">Tangent (velocity)</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>2. Related Rates</h2>
+            <p>Related rates problems involve finding how fast one quantity changes by using information about how fast related quantities change.</p>
+
+            <h3>Example: Expanding Balloon</h3>
+            <p>A spherical balloon is being inflated at 100 cm³/s. How fast is the radius increasing when r = 5 cm?</p>
+
+            <div class="example-box">
+                <p><strong>Solution:</strong></p>
+                <p>Volume of sphere: V = (4/3)πr³</p>
+                <p>Differentiate with respect to time: dV/dt = 4πr²(dr/dt)</p>
+                <p>Given: dV/dt = 100 cm³/s, r = 5 cm</p>
+                <p>100 = 4π(25)(dr/dt)</p>
+                <p>dr/dt = 100/(100π) = 1/π ≈ 0.318 cm/s</p>
+            </div>
+
+            <h3>Application: Radar Tracking</h3>
+            <p>A car travels east at 80 km/h. A police radar 20 km north of the road tracks the car. How fast is the distance between the car and radar changing when the car is 15 km past the radar's latitude?</p>
+
+            <svg viewBox="0 0 400 300" style="max-width: 500px; margin: 20px auto; display: block;">
+                <line x1="50" y1="250" x2="350" y2="250" stroke="#34495e" stroke-width="3"/>
+                <line x1="150" y1="250" x2="150" y2="100" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,5"/>
+                <line x1="150" y1="100" x2="270" y2="250" stroke="#3498db" stroke-width="2"/>
+                <circle cx="150" cy="100" r="5" fill="#e74c3c"/>
+                <rect x="260" y="240" width="20" height="15" fill="#2c3e50"/>
+                <path d="M 270 245 L 290 240 L 290 250 Z" fill="#2c3e50"/>
+                <text x="155" y="95" font-size="14" fill="#e74c3c">Radar</text>
+                <text x="280" y="240" font-size="14" fill="#2c3e50">Car</text>
+                <text x="100" y="180" font-size="12" fill="#666">20 km</text>
+                <text x="200" y="265" font-size="12" fill="#666">15 km</text>
+                <text x="190" y="165" font-size="12" fill="#3498db">d</text>
+                <path d="M 280 235 L 300 235 M 290 230 L 300 235 L 290 240" stroke="#2c3e50" stroke-width="2" fill="none"/>
+            </svg>
+
+            <div class="example-box">
+                <p><strong>Solution:</strong></p>
+                <p>Let x = horizontal distance from radar's latitude, d = distance to car</p>
+                <p>By Pythagorean theorem: d² = x² + 20²</p>
+                <p>Differentiate: 2d(dd/dt) = 2x(dx/dt)</p>
+                <p>When x = 15: d = √(225 + 400) = 25 km</p>
+                <p>Given dx/dt = 80 km/h:</p>
+                <p>dd/dt = (15 × 80)/25 = 48 km/h</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>3. Higher-Order Derivatives</h2>
+            <p>The second derivative (d²y/dx²) measures the rate of change of the rate of change, indicating concavity and acceleration.</p>
+
+            <h3>Physical Interpretation</h3>
+            <ul>
+                <li><strong>Position:</strong> s(t) - location of object</li>
+                <li><strong>Velocity:</strong> v(t) = s'(t) - rate of change of position</li>
+                <li><strong>Acceleration:</strong> a(t) = v'(t) = s''(t) - rate of change of velocity</li>
+                <li><strong>Jerk:</strong> j(t) = a'(t) = s'''(t) - rate of change of acceleration</li>
+            </ul>
+
+            <h3>Example: Projectile Motion</h3>
+            <p>A ball is thrown upward with position s(t) = -4.9t² + 20t + 2 meters (where t is in seconds).</p>
+
+            <svg viewBox="0 0 400 300" style="max-width: 500px; margin: 20px auto; display: block;">
+                <path d="M 50 280 Q 200 50 350 280" stroke="#3498db" stroke-width="2" fill="none"/>
+                <circle cx="50" cy="280" r="8" fill="#e74c3c"/>
+                <circle cx="200" cy="50" r="8" fill="#2ecc71"/>
+                <circle cx="350" cy="280" r="8" fill="#e74c3c"/>
+                <line x1="200" y1="50" x2="200" y2="20" stroke="#2c3e50" stroke-width="2"/>
+                <text x="180" y="15" font-size="12" fill="#2c3e50">v = 0</text>
+                <line x1="50" y1="280" x2="80" y2="230" stroke="#e67e22" stroke-width="2"/>
+                <path d="M 75 235 L 85 230 L 80 240" fill="#e67e22"/>
+                <text x="85" y="255" font-size="12" fill="#e67e22">v₀ = 20 m/s</text>
+                <line x1="350" y1="280" x2="380" y2="230" stroke="#e74c3c" stroke-width="2"/>
+                <path d="M 375 235 L 385 240 L 380 230" fill="#e74c3c"/>
+                <text x="320" y="265" font-size="12" fill="#2c3e50">Landing</text>
+                <text x="180" y="40" font-size="12" fill="#2ecc71">Max height</text>
+            </svg>
+
+            <div class="example-box">
+                <p><strong>Analysis:</strong></p>
+                <p>Velocity: v(t) = s'(t) = -9.8t + 20 m/s</p>
+                <p>Acceleration: a(t) = s''(t) = -9.8 m/s² (gravity)</p>
+                <p>Maximum height at v(t) = 0: -9.8t + 20 = 0 → t ≈ 2.04 seconds</p>
+                <p>Maximum height: s(2.04) ≈ 22.4 meters</p>
+            </div>
+
+            <h3>Concavity and Inflection Points</h3>
+            <p>The second derivative determines the shape of a curve:</p>
+            <ul>
+                <li><strong>f''(x) > 0:</strong> Concave up (curve bends upward)</li>
+                <li><strong>f''(x) < 0:</strong> Concave down (curve bends downward)</li>
+                <li><strong>f''(x) = 0:</strong> Possible inflection point (concavity changes)</li>
+            </ul>
+
+            <svg viewBox="0 0 400 200" style="max-width: 500px; margin: 20px auto; display: block;">
+                <line x1="50" y1="100" x2="350" y2="100" stroke="#bdc3c7" stroke-width="1"/>
+                <path d="M 50 150 Q 120 80 200 100 T 350 50" stroke="#3498db" stroke-width="3" fill="none"/>
+                <circle cx="200" cy="100" r="5" fill="#e74c3c"/>
+                <text x="190" y="120" font-size="12" fill="#e74c3c">Inflection</text>
+                <text x="80" y="70" font-size="12" fill="#2c3e50">f'' < 0</text>
+                <text x="260" y="70" font-size="12" fill="#2c3e50">f'' > 0</text>
+                <path d="M 100 130 A 30 30 0 0 0 130 130" stroke="#e67e22" stroke-width="2" fill="none"/>
+                <text x="110" y="155" font-size="10" fill="#e67e22">Concave down</text>
+                <path d="M 270 80 A 30 30 0 0 1 300 80" stroke="#2ecc71" stroke-width="2" fill="none"/>
+                <text x="265" y="60" font-size="10" fill="#2ecc71">Concave up</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>4. Applications in Economics</h2>
+
+            <h3>Marginal Analysis</h3>
+            <p>In economics, derivatives represent marginal quantities:</p>
+            <ul>
+                <li><strong>Marginal Cost:</strong> C'(x) - cost of producing one more unit</li>
+                <li><strong>Marginal Revenue:</strong> R'(x) - revenue from selling one more unit</li>
+                <li><strong>Marginal Profit:</strong> P'(x) = R'(x) - C'(x)</li>
+            </ul>
+
+            <h3>Example: Production Optimization</h3>
+            <p>Cost function: C(x) = 1000 + 50x + 0.1x² dollars (x units produced)</p>
+            <p>Revenue function: R(x) = 100x - 0.2x² dollars</p>
+
+            <div class="example-box">
+                <p><strong>Find optimal production level:</strong></p>
+                <p>Profit: P(x) = R(x) - C(x) = -1000 + 50x - 0.3x²</p>
+                <p>Marginal profit: P'(x) = 50 - 0.6x</p>
+                <p>Maximum when P'(x) = 0: x ≈ 83 units</p>
+                <p>Verify with second derivative: P''(x) = -0.6 < 0 (confirms maximum)</p>
+            </div>
+
+            <svg viewBox="0 0 400 300" style="max-width: 500px; margin: 20px auto; display: block;">
+                <line x1="50" y1="250" x2="350" y2="250" stroke="#34495e" stroke-width="2"/>
+                <line x1="50" y1="250" x2="50" y2="50" stroke="#34495e" stroke-width="2"/>
+                <path d="M 50 240 Q 150 120 250 200" stroke="#e74c3c" stroke-width="2" fill="none"/>
+                <path d="M 50 220 L 350 100" stroke="#3498db" stroke-width="2" fill="none"/>
+                <path d="M 50 200 Q 200 50 350 190" stroke="#2ecc71" stroke-width="2" fill="none"/>
+                <circle cx="170" cy="105" r="5" fill="#2c3e50"/>
+                <line x1="170" y1="105" x2="170" y2="250" stroke="#95a5a6" stroke-width="1" stroke-dasharray="3,3"/>
+                <text x="350" y="100" font-size="12" fill="#3498db">Revenue</text>
+                <text x="350" y="190" font-size="12" fill="#2ecc71">Cost</text>
+                <text x="260" y="200" font-size="12" fill="#e74c3c">Profit</text>
+                <text x="155" y="270" font-size="12" fill="#2c3e50">x ≈ 83</text>
+                <text x="30" y="40" font-size="12" fill="#2c3e50">$</text>
+                <text x="360" y="270" font-size="12" fill="#2c3e50">Units</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>Practice Problems</h2>
+
+            <div class="example-box">
+                <h3>Problem 1: Implicit Differentiation</h3>
+                <p>Find dy/dx for x³ + y³ = 6xy</p>
+            </div>
+
+            <div class="example-box">
+                <h3>Problem 2: Related Rates</h3>
+                <p>A 5-meter ladder leans against a wall. The bottom slides away at 0.5 m/s. How fast is the top sliding down when the bottom is 3 meters from the wall?</p>
+            </div>
+
+            <div class="example-box">
+                <h3>Problem 3: Motion Analysis</h3>
+                <p>An object's position is s(t) = t³ - 9t² + 24t meters. Find when the object is momentarily at rest and determine if it's speeding up or slowing down at t = 4 seconds.</p>
+            </div>
+
+            <div class="example-box">
+                <h3>Problem 4: Optimization</h3>
+                <p>A farmer has 200 meters of fence to enclose a rectangular field along a river (one side needs no fence). What dimensions maximize the area?</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>Implicit differentiation handles equations where y cannot be easily isolated</li>
+                <li>Related rates connect the rates of change of multiple variables</li>
+                <li>Higher-order derivatives reveal acceleration, concavity, and optimization</li>
+                <li>Second derivative test: f''(x) > 0 indicates local minimum, f''(x) < 0 indicates local maximum</li>
+                <li>Applications span physics (motion), economics (marginal analysis), and engineering (optimization)</li>
+            </ul>
+        </section>
+
+        <nav class="lesson-nav">
+            <a href="index.html">← Back to Mathematics</a>
+            <a href="lesson-2-integration-techniques.html">Next Lesson: Integration Techniques →</a>
+        </nav>
+    </main>
+</body>
+</html>

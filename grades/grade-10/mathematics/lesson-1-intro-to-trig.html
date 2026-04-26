@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1: Introduction to Trigonometry - Grade 10 Math</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Introduction to Trigonometry</h1>
+            <p>Grade 10 | Mathematics | Unit 1: Trigonometry</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="../../../index.html">Home</a>
+            <a href="../index.html">Grade 10</a>
+            <a href="index.html">Mathematics</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- ENGAGING HOOK -->
+        <section class="hook-box">
+            <p>How do architects design towering skyscrapers that don't collapse? How does your smartphone know exactly where you are on a map? The answer: <strong>trigonometry</strong> - the mathematics of triangles that powers everything from GPS satellites to video game graphics!</p>
+        </section>
+
+        <!-- LEARNING OBJECTIVES -->
+        <section class="objectives">
+            <h2>Learning Objectives</h2>
+            <p>By the end of this lesson, you will be able to:</p>
+            <ul>
+                <li>Understand what trigonometry is and why it matters</li>
+                <li>Identify the parts of a right triangle (hypotenuse, opposite, adjacent)</li>
+                <li>Recognize angles and their measurements in degrees</li>
+                <li>Explain real-world applications of trigonometry</li>
+            </ul>
+        </section>
+
+        <!-- CONCEPT OVERVIEW -->
+        <section class="card">
+            <h2>What You'll Learn</h2>
+            <p><strong>Trigonometry</strong> (from Greek: trigonon = "triangle" + metron = "measure") is the study of relationships between angles and sides of triangles. While that sounds simple, these relationships are incredibly powerful tools for solving real-world problems.</p>
+            <p style="margin-top: 15px;">Think of trigonometry as a mathematical superpower that lets you find unknown measurements using just a few pieces of information. Know one angle and one side? Trig can help you find everything else!</p>
+        </section>
+
+        <!-- WHY THIS MATTERS -->
+        <section class="card">
+            <h2>Why This Matters</h2>
+            <p>Trigonometry is everywhere in modern technology and engineering:</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Architecture:</strong> Designing stable roofs, calculating load-bearing angles for bridges</li>
+                <li><strong>Navigation:</strong> GPS systems use trigonometry to triangulate your exact position from satellites</li>
+                <li><strong>Smartphones:</strong> Your phone's accelerometer and gyroscope use trig to detect orientation and motion</li>
+                <li><strong>Video Games:</strong> Every 3D game uses trigonometry to render graphics and calculate physics</li>
+                <li><strong>Engineering:</strong> From aerospace to robotics, trig helps engineers design precise systems</li>
+                <li><strong>Music Production:</strong> Sound waves are analyzed using trigonometric functions</li>
+            </ul>
+            <p style="margin-top: 15px;">Without trigonometry, we wouldn't have airplanes, smartphones, GPS, or even accurate maps!</p>
+        </section>
+
+        <!-- CORE EXPLANATION -->
+        <section class="card">
+            <h2>Core Concept: The Right Triangle</h2>
+
+            <h3>Parts of a Right Triangle</h3>
+            <p>A <strong>right triangle</strong> has one 90-degree angle (marked with a small square). It has three sides, and each one has a special name relative to a chosen angle:</p>
+
+            <div class="visual-container">
+                <svg width="500" height="350" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Triangle -->
+                    <line x1="100" y1="280" x2="400" y2="280" stroke="#333" stroke-width="3"/>
+                    <line x1="400" y1="280" x2="400" y2="80" stroke="#333" stroke-width="3"/>
+                    <line x1="100" y1="280" x2="400" y2="80" stroke="#e74c3c" stroke-width="3"/>
+
+                    <!-- Right angle marker -->
+                    <rect x="380" y="260" width="20" height="20" fill="none" stroke="#333" stroke-width="2"/>
+
+                    <!-- Angle θ -->
+                    <path d="M 130 280 Q 140 270 145 260" fill="none" stroke="#4a90e2" stroke-width="2"/>
+                    <text x="155" y="275" font-size="20" fill="#4a90e2" font-weight="bold">θ</text>
+
+                    <!-- Labels -->
+                    <text x="240" y="160" font-size="16" fill="#e74c3c" font-weight="bold">Hypotenuse</text>
+                    <text x="220" y="180" font-size="14" fill="#e74c3c">(longest side)</text>
+
+                    <text x="410" y="180" font-size="16" fill="#27ae60" font-weight="bold">Opposite</text>
+                    <text x="410" y="200" font-size="14" fill="#27ae60">(across from θ)</text>
+
+                    <text x="220" y="310" font-size="16" fill="#f39c12" font-weight="bold">Adjacent</text>
+                    <text x="220" y="330" font-size="14" fill="#f39c12">(next to θ)</text>
+
+                    <!-- Side coloring highlights -->
+                    <line x1="400" y1="280" x2="400" y2="80" stroke="#27ae60" stroke-width="6" opacity="0.3"/>
+                    <line x1="100" y1="280" x2="400" y2="280" stroke="#f39c12" stroke-width="6" opacity="0.3"/>
+                </svg>
+            </div>
+
+            <div class="step" style="margin-top: 20px;">
+                <p><strong>1. Hypotenuse:</strong> The longest side, always opposite the right angle (90°)</p>
+                <p><strong>2. Opposite:</strong> The side across from the angle we're focusing on (θ)</p>
+                <p><strong>3. Adjacent:</strong> The side next to the angle we're focusing on (θ), but not the hypotenuse</p>
+            </div>
+
+            <div style="background: #fff3cd; padding: 15px; margin-top: 20px; border-radius: 5px; border-left: 4px solid #f39c12;">
+                <p><strong>Important Note:</strong> The "opposite" and "adjacent" sides change depending on which angle you're looking at! The hypotenuse never changes - it's always the longest side.</p>
+            </div>
+        </section>
+
+        <!-- VISUAL DIAGRAM -->
+        <section class="visual-container">
+            <h2>Visual: Real-World Triangle Example</h2>
+            <p style="margin-bottom: 15px;">Imagine a ladder leaning against a building:</p>
+
+            <svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+                <!-- Building -->
+                <rect x="400" y="50" width="150" height="300" fill="#95a5a6" opacity="0.3"/>
+                <rect x="415" y="70" width="30" height="40" fill="#3498db" opacity="0.5"/>
+                <rect x="460" y="70" width="30" height="40" fill="#3498db" opacity="0.5"/>
+                <rect x="505" y="70" width="30" height="40" fill="#3498db" opacity="0.5"/>
+
+                <!-- Ground -->
+                <line x1="50" y1="350" x2="600" y2="350" stroke="#7f8c8d" stroke-width="4"/>
+
+                <!-- Ladder (hypotenuse) -->
+                <line x1="150" y1="350" x2="400" y2="110" stroke="#e74c3c" stroke-width="8"/>
+
+                <!-- Height line (opposite) -->
+                <line x1="400" y1="350" x2="400" y2="110" stroke="#27ae60" stroke-width="4" stroke-dasharray="5,5"/>
+
+                <!-- Ground distance (adjacent) -->
+                <line x1="150" y1="350" x2="400" y2="350" stroke="#f39c12" stroke-width="4" stroke-dasharray="5,5"/>
+
+                <!-- Angle -->
+                <path d="M 180 350 Q 190 340 195 330" fill="none" stroke="#4a90e2" stroke-width="3"/>
+                <text x="205" y="345" font-size="18" fill="#4a90e2" font-weight="bold">θ</text>
+
+                <!-- Labels -->
+                <text x="240" y="210" font-size="16" fill="#e74c3c" font-weight="bold" transform="rotate(-70, 240, 210)">Ladder Length</text>
+                <text x="420" y="230" font-size="16" fill="#27ae60" font-weight="bold">Building Height</text>
+                <text x="250" y="380" font-size="16" fill="#f39c12" font-weight="bold">Ground Distance</text>
+
+                <!-- Right angle marker -->
+                <rect x="380" y="330" width="20" height="20" fill="none" stroke="#333" stroke-width="2"/>
+
+                <!-- Measurements -->
+                <text x="220" y="180" font-size="14" fill="white" font-weight="bold" style="text-shadow: 2px 2px 4px #000;">13 m</text>
+                <text x="410" y="230" font-size="14" fill="#27ae60" font-weight="bold">12 m</text>
+                <text x="260" y="370" font-size="14" fill="#f39c12" font-weight="bold">5 m</text>
+            </svg>
+
+            <p style="margin-top: 15px; color: #666;">In this example: If you know the angle θ and one side length, trigonometry can help you find the other measurements!</p>
+        </section>
+
+        <!-- WORKED EXAMPLE 1 -->
+        <section class="example-box">
+            <h2>Example 1: Identifying Triangle Parts</h2>
+            <p><strong>Problem:</strong> A ramp is built to help wheelchair users access a building. The ramp makes a 15° angle with the ground. Label the parts of this right triangle from the perspective of the 15° angle.</p>
+
+            <div class="visual-container">
+                <svg width="500" height="250" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Ground -->
+                    <line x1="50" y1="200" x2="450" y2="200" stroke="#333" stroke-width="3"/>
+
+                    <!-- Ramp -->
+                    <line x1="50" y1="200" x2="400" y2="80" stroke="#3498db" stroke-width="5"/>
+
+                    <!-- Height -->
+                    <line x1="400" y1="200" x2="400" y2="80" stroke="#333" stroke-width="3"/>
+
+                    <!-- Angle -->
+                    <path d="M 80 200 Q 85 195 90 190" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                    <text x="95" y="205" font-size="16" fill="#e74c3c" font-weight="bold">15°</text>
+
+                    <!-- Right angle -->
+                    <rect x="380" y="180" width="20" height="20" fill="none" stroke="#333" stroke-width="2"/>
+                </svg>
+            </div>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <ul style="margin-left: 20px;">
+                <li><strong>Hypotenuse:</strong> The ramp itself (the slanted line) - it's the longest side</li>
+                <li><strong>Opposite:</strong> The vertical height of the ramp (across from the 15° angle)</li>
+                <li><strong>Adjacent:</strong> The horizontal ground distance (next to the 15° angle)</li>
+            </ul>
+
+            <p style="margin-top: 15px;"><strong>Why this works:</strong> We always identify sides relative to the angle we're focusing on. The hypotenuse is always the same, but opposite and adjacent depend on which angle we choose!</p>
+        </section>
+
+        <!-- WORKED EXAMPLE 2 -->
+        <section class="example-box">
+            <h2>Example 2: Understanding Angle Perspective</h2>
+            <p><strong>Problem:</strong> In the same triangle, if we focus on the angle at the TOP of the ramp instead of the bottom, how do the labels change?</p>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <div style="margin-left: 20px;">
+                <p><strong>When looking at the TOP angle:</strong></p>
+                <ul>
+                    <li><strong>Hypotenuse:</strong> Still the ramp (never changes!)</li>
+                    <li><strong>Opposite:</strong> Now the horizontal ground distance</li>
+                    <li><strong>Adjacent:</strong> Now the vertical height</li>
+                </ul>
+            </div>
+
+            <div style="background: #e8f4f8; padding: 15px; margin-top: 15px; border-radius: 5px;">
+                <p><strong>Key Insight:</strong> The opposite and adjacent sides "swap" when you change which angle you're looking at. This is why we always specify "with respect to angle θ" in trigonometry!</p>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE ELEMENT -->
+        <section class="interactive-box">
+            <h2>Quick Check: Test Your Understanding!</h2>
+            <p><strong>Question:</strong> Your smartphone is tilted at an angle. If the screen is the hypotenuse, what represents the "opposite" side when measuring the tilt angle from the table surface?</p>
+
+            <button onclick="toggleAnswer('quick-check')">Show Answer</button>
+            <div id="quick-check" class="answer">
+                <p><strong>Answer: The vertical height of the phone above the table</strong></p>
+                <p><strong>Explanation:</strong> The opposite side is always across from the angle you're measuring. If you're measuring the tilt angle from the table, the height of the phone (how far the top is lifted) is opposite to that angle.</p>
+            </div>
+        </section>
+
+        <!-- PRACTICE QUESTIONS -->
+        <section class="practice-box">
+            <h2>Practice Questions</h2>
+
+            <div class="question">
+                <p><strong>Question 1 (Easy):</strong> In a right triangle, which side is always the longest?</p>
+                <p>A) Opposite<br>B) Adjacent<br>C) Hypotenuse<br>D) It depends on the angle</p>
+                <button onclick="toggleAnswer('q1')">Show Answer</button>
+                <div id="q1" class="answer">
+                    <p><strong>Answer: C) Hypotenuse</strong></p>
+                    <p>The hypotenuse is always the longest side in a right triangle. It's always opposite the 90° angle.</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 2 (Medium):</strong> A drone is flying above a landing pad. From the perspective of the angle at the landing pad, which side is "opposite"?</p>
+                <button onclick="toggleAnswer('q2')">Show Answer</button>
+                <div id="q2" class="answer">
+                    <p><strong>Answer: The height of the drone above the landing pad</strong></p>
+                    <p><strong>Explanation:</strong> The opposite side is across from the angle we're measuring. If we're measuring the angle from the landing pad, the drone's height is the opposite side.</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 3 (Medium):</strong> True or False: The opposite and adjacent sides can change depending on which angle you're looking at.</p>
+                <button onclick="toggleAnswer('q3')">Show Answer</button>
+                <div id="q3" class="answer">
+                    <p><strong>Answer: True</strong></p>
+                    <p>The opposite and adjacent sides are defined relative to a specific angle. If you change which angle you're focusing on, these labels swap. Only the hypotenuse stays the same.</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 4 (Hard):</strong> An engineer needs to design a roof with a 30° slope. She knows the building is 12 meters wide. Draw and label a right triangle representing this situation, identifying the hypotenuse, opposite, and adjacent sides from the perspective of the 30° angle.</p>
+                <button onclick="toggleAnswer('q4')">Show Answer</button>
+                <div id="q4" class="answer">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li><strong>30° angle:</strong> At the base of the roof where it meets the edge of the building</li>
+                        <li><strong>Adjacent:</strong> Half the building width (6 meters) - the horizontal distance from center to edge</li>
+                        <li><strong>Opposite:</strong> The vertical height of the roof peak above the edge</li>
+                        <li><strong>Hypotenuse:</strong> The slanted roof surface from edge to peak</li>
+                    </ul>
+                    <p>Note: Since the roof has two sides, we focus on one triangle from the center to the edge.</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 5 (Hard):</strong> Why do you think ancient civilizations developed trigonometry, even without computers or calculators?</p>
+                <button onclick="toggleAnswer('q5')">Show Answer</button>
+                <div id="q5" class="answer">
+                    <p><strong>Answer: Practical needs drove the invention of trigonometry:</strong></p>
+                    <ul>
+                        <li><strong>Astronomy:</strong> Tracking stars and planets for navigation and calendars</li>
+                        <li><strong>Architecture:</strong> Building pyramids, temples, and other structures with precise angles</li>
+                        <li><strong>Surveying:</strong> Measuring land and distances that couldn't be walked directly</li>
+                        <li><strong>Navigation:</strong> Sailors needed to determine their position using celestial bodies</li>
+                    </ul>
+                    <p>The ancient Egyptians, Babylonians, and Greeks all developed trigonometric methods to solve these real-world problems!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK SUMMARY -->
+        <section class="summary-box">
+            <h2>Quick Summary</h2>
+            <ul>
+                <li><strong>Trigonometry</strong> is the study of relationships between angles and sides of triangles</li>
+                <li>A <strong>right triangle</strong> has one 90° angle and three sides: hypotenuse, opposite, and adjacent</li>
+                <li>The <strong>hypotenuse</strong> is always the longest side, opposite the right angle</li>
+                <li>The <strong>opposite</strong> and <strong>adjacent</strong> sides are defined relative to a chosen angle</li>
+                <li>Trigonometry powers modern technology from GPS to video games to architecture</li>
+            </ul>
+        </section>
+
+        <!-- REAL-WORLD CONNECTION -->
+        <section class="card">
+            <h2>Real-World Connection: How GPS Uses Triangles</h2>
+            <p>Your smartphone's GPS works by measuring distances to at least three satellites orbiting Earth. Using trigonometry, your phone calculates the angles and distances to create triangles, allowing it to pinpoint your exact location.</p>
+
+            <p style="margin-top: 15px;"><strong>Here's how it works:</strong></p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Step 1:</strong> Your phone receives signals from multiple GPS satellites</li>
+                <li><strong>Step 2:</strong> It measures the time delay to calculate distance to each satellite</li>
+                <li><strong>Step 3:</strong> Using trigonometry and the known positions of satellites, it creates triangles</li>
+                <li><strong>Step 4:</strong> The intersection of these triangles reveals your precise location!</li>
+            </ul>
+
+            <p style="margin-top: 15px;">This process, called <strong>trilateration</strong>, happens in milliseconds every time you check your maps app. Without trigonometry, GPS simply wouldn't work!</p>
+        </section>
+
+        <!-- CHALLENGE PROBLEM -->
+        <section class="challenge-box">
+            <h2>Challenge Problem</h2>
+            <p><strong>The Cell Tower Problem:</strong></p>
+            <p>A telecommunications company is installing a new cell tower. Engineers need to attach support cables from the top of the 50-meter tower to the ground. For safety, the cables must make a 60° angle with the ground.</p>
+
+            <p style="margin-top: 15px;"><strong>Part A:</strong> Draw a diagram of this situation and label all parts of the right triangle from the perspective of the 60° angle.</p>
+
+            <p><strong>Part B:</strong> Which side represents the cable length?</p>
+
+            <p><strong>Part C:</strong> Why might engineers care about the angle the cable makes with the ground?</p>
+
+            <button onclick="toggleAnswer('challenge-hint')">Show Hint</button>
+            <div id="challenge-hint" class="hint">
+                <p><strong>Hint:</strong> The tower height is vertical (50m), the ground distance is horizontal, and the cable connects the top to a ground anchor point. Think about what "makes a 60° angle with the ground" means!</p>
+            </div>
+
+            <button onclick="toggleAnswer('challenge')">Show Full Solution</button>
+            <div id="challenge" class="answer">
+                <p><strong>Part A - Triangle labels from the 60° angle perspective:</strong></p>
+                <ul>
+                    <li><strong>60° angle:</strong> At the ground anchor point where the cable meets the ground</li>
+                    <li><strong>Opposite:</strong> The vertical tower height (50 meters)</li>
+                    <li><strong>Adjacent:</strong> The horizontal ground distance from tower to anchor</li>
+                    <li><strong>Hypotenuse:</strong> The support cable itself</li>
+                </ul>
+
+                <p style="margin-top: 15px;"><strong>Part B Answer:</strong> The cable length is the hypotenuse.</p>
+                <p>The hypotenuse connects the top of the tower to the ground anchor point - that's exactly what the cable does!</p>
+
+                <p style="margin-top: 15px;"><strong>Part C Answer:</strong> Engineers care about the cable angle for several reasons:</p>
+                <ul>
+                    <li><strong>Tension forces:</strong> Steeper angles create different tension forces in the cable</li>
+                    <li><strong>Stability:</strong> The angle affects how well the cable stabilizes the tower</li>
+                    <li><strong>Space requirements:</strong> The angle determines how far from the tower base the anchors must be placed</li>
+                    <li><strong>Safety codes:</strong> Building regulations often specify minimum or maximum angles for support structures</li>
+                </ul>
+                <p>A 60° angle is commonly used because it provides good stability while keeping the cable length reasonable!</p>
+            </div>
+        </section>
+
+        <!-- LESSON NAVIGATION -->
+        <div class="lesson-nav">
+            <a href="index.html">← Back to Unit</a>
+            <a href="lesson-2-sine-cosine-tangent.html">Next Lesson: Sine, Cosine, and Tangent →</a>
+        </div>
+    </main>
+
+    <script>
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === 'none' || element.style.display === '') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

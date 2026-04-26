@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5: Sentence Structure - Grammar Essentials</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        h2 {
+            color: #764ba2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #667eea;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .example-box {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .wrong {
+            background: #ffe6e6;
+            border-left: 4px solid #ff4444;
+        }
+
+        .right {
+            background: #e6ffe6;
+            border-left: 4px solid #44ff44;
+        }
+
+        .text-fail {
+            background: #fff3e6;
+            border-left: 4px solid #ff9800;
+        }
+
+        .label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .red { color: #ff4444; }
+        .green { color: #22aa22; }
+        .orange { color: #ff9800; }
+
+        .diagram-container {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .interactive-box {
+            background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .sentence-parts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .part {
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .subject { background: #ffeb3b; color: #333; }
+        .verb { background: #4caf50; color: white; }
+        .object { background: #2196f3; color: white; }
+        .modifier { background: #ff9800; color: white; }
+        .conjunction { background: #9c27b0; color: white; }
+
+        .practice-section {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .tip {
+            background: #fff9e6;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .tip strong {
+            color: #f57c00;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lesson 5: Sentence Structure</h1>
+        <p class="subtitle">Building Clear and Effective Sentences</p>
+
+        <h2>The Four Types of Sentence Structures</h2>
+
+        <h3>1. Simple Sentences</h3>
+        <p>One independent clause with a subject and predicate.</p>
+
+        <div class="sentence-parts">
+            <span class="part subject">Subject</span>
+            <span class="part verb">Verb</span>
+        </div>
+
+        <div class="example-box right">
+            <div class="label green">Text Message:</div>
+            <p>"Just arrived" → <strong>I just arrived.</strong></p>
+        </div>
+
+        <div class="example-box right">
+            <div class="label green">Complete Simple Sentences:</div>
+            <ul>
+                <li>The email arrived.</li>
+                <li>Sarah posted a new story.</li>
+                <li>My phone died during the meeting.</li>
+            </ul>
+        </div>
+
+        <div class="diagram-container">
+            <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+                <text x="200" y="30" text-anchor="middle" font-size="18" font-weight="bold">My phone died</text>
+                <line x1="200" y1="35" x2="200" y2="60" stroke="#333" stroke-width="2"/>
+                <line x1="100" y1="60" x2="300" y2="60" stroke="#333" stroke-width="2"/>
+                <line x1="100" y1="60" x2="100" y2="85" stroke="#333" stroke-width="2"/>
+                <line x1="300" y1="60" x2="300" y2="85" stroke="#333" stroke-width="2"/>
+                <text x="100" y="100" text-anchor="middle" font-size="14" fill="#f57c00">Subject: My phone</text>
+                <text x="300" y="100" text-anchor="middle" font-size="14" fill="#4caf50">Verb: died</text>
+            </svg>
+        </div>
+
+        <h3>2. Compound Sentences</h3>
+        <p>Two or more independent clauses joined by a conjunction or semicolon.</p>
+
+        <div class="sentence-parts">
+            <span class="part subject">Independent Clause</span>
+            <span class="part conjunction">Conjunction</span>
+            <span class="part subject">Independent Clause</span>
+        </div>
+
+        <div class="example-box text-fail">
+            <div class="label orange">Social Media Fail:</div>
+            <p>"I sent the email I didn't hear back"</p>
+        </div>
+
+        <div class="example-box right">
+            <div class="label green">Fixed:</div>
+            <p><strong>I sent the email, but I didn't hear back.</strong></p>
+            <p><strong>I sent the email; I didn't hear back.</strong></p>
+        </div>
+
+        <div class="diagram-container">
+            <svg viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="25" text-anchor="middle" font-size="16" font-weight="bold">I sent the email, but I didn't hear back</text>
+                <line x1="300" y1="30" x2="300" y2="50" stroke="#333" stroke-width="2"/>
+                <line x1="150" y1="50" x2="450" y2="50" stroke="#333" stroke-width="2"/>
+                <line x1="150" y1="50" x2="150" y2="70" stroke="#333" stroke-width="2"/>
+                <line x1="300" y1="50" x2="300" y2="70" stroke="#333" stroke-width="2"/>
+                <line x1="450" y1="50" x2="450" y2="70" stroke="#333" stroke-width="2"/>
+
+                <rect x="70" y="75" width="160" height="35" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="5"/>
+                <text x="150" y="97" text-anchor="middle" font-size="13" fill="#1976d2">I sent the email</text>
+
+                <ellipse cx="300" cy="92" rx="40" ry="20" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+                <text x="300" y="97" text-anchor="middle" font-size="13" fill="#7b1fa2">but</text>
+
+                <rect x="370" y="75" width="160" height="35" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="5"/>
+                <text x="450" y="97" text-anchor="middle" font-size="13" fill="#1976d2">I didn't hear back</text>
+            </svg>
+        </div>
+
+        <div class="tip">
+            <strong>Pro Tip:</strong> Use FANBOYS to remember coordinating conjunctions: <strong>F</strong>or, <strong>A</strong>nd, <strong>N</strong>or, <strong>B</strong>ut, <strong>O</strong>r, <strong>Y</strong>et, <strong>S</strong>o
+        </div>
+
+        <h3>3. Complex Sentences</h3>
+        <p>One independent clause + one or more dependent clauses.</p>
+
+        <div class="example-box text-fail">
+            <div class="label orange">Email Mistake:</div>
+            <p>"Because I was late the meeting started without me"</p>
+        </div>
+
+        <div class="example-box right">
+            <div class="label green">Professional Version:</div>
+            <p><strong>Because I was late, the meeting started without me.</strong></p>
+            <p><strong>The meeting started without me because I was late.</strong></p>
+        </div>
+
+        <div class="diagram-container">
+            <svg viewBox="0 0 600 140" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="25" text-anchor="middle" font-size="16" font-weight="bold">Because I was late, the meeting started</text>
+                <line x1="300" y1="30" x2="300" y2="55" stroke="#333" stroke-width="2"/>
+                <line x1="180" y1="55" x2="420" y2="55" stroke="#333" stroke-width="2"/>
+                <line x1="180" y1="55" x2="180" y2="75" stroke="#333" stroke-width="2"/>
+                <line x1="420" y1="55" x2="420" y2="75" stroke="#333" stroke-width="2"/>
+
+                <rect x="100" y="80" width="160" height="45" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="5"/>
+                <text x="180" y="97" text-anchor="middle" font-size="12" fill="#e65100">Dependent Clause:</text>
+                <text x="180" y="115" text-anchor="middle" font-size="13" fill="#333">Because I was late</text>
+
+                <rect x="340" y="80" width="160" height="45" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="5"/>
+                <text x="420" y="97" text-anchor="middle" font-size="12" fill="#1976d2">Independent Clause:</text>
+                <text x="420" y="115" text-anchor="middle" font-size="13" fill="#333">the meeting started</text>
+            </svg>
+        </div>
+
+        <div class="interactive-box">
+            <h4>Common Subordinating Conjunctions:</h4>
+            <p><strong>Time:</strong> when, while, before, after, until, since</p>
+            <p><strong>Cause:</strong> because, since, as</p>
+            <p><strong>Condition:</strong> if, unless, whether</p>
+            <p><strong>Contrast:</strong> although, though, even though, whereas</p>
+        </div>
+
+        <h3>4. Compound-Complex Sentences</h3>
+        <p>Multiple independent clauses + at least one dependent clause.</p>
+
+        <div class="example-box right">
+            <div class="label green">Professional Email Example:</div>
+            <p><strong>Although the server crashed, I recovered the data, and the presentation went smoothly.</strong></p>
+        </div>
+
+        <div class="example-box">
+            <p><span class="modifier" style="padding: 5px 10px; border-radius: 5px;">Although the server crashed</span> (dependent),</p>
+            <p><span class="subject" style="padding: 5px 10px; border-radius: 5px;">I recovered the data</span> (independent),</p>
+            <p>and <span class="object" style="padding: 5px 10px; border-radius: 5px;">the presentation went smoothly</span> (independent).</p>
+        </div>
+
+        <h2>Common Sentence Structure Mistakes</h2>
+
+        <h3>Fragments (Incomplete Sentences)</h3>
+
+        <div class="example-box wrong">
+            <div class="label red">Text Fail:</div>
+            <p>"Walking to the store."</p>
+            <p>"Because I said so."</p>
+            <p>"After the meeting ended."</p>
+        </div>
+
+        <div class="example-box right">
+            <div class="label green">Complete Sentences:</div>
+            <p><strong>I am walking to the store.</strong></p>
+            <p><strong>You should do it because I said so.</strong></p>
+            <p><strong>We grabbed lunch after the meeting ended.</strong></p>
+        </div>
+
+        <h3>Run-on Sentences</h3>
+
+        <div class="example-box wrong">
+            <div class="label red">Social Media Fail:</div>
+            <p>"I need to finish this report it's due tomorrow I haven't even started the research this is bad"</p>
+        </div>
+
+        <div class="example-box right">
+            <div class="label green">Fixed Options:</div>
+            <p><strong>I need to finish this report. It's due tomorrow, and I haven't even started the research. This is bad.</strong></p>
+            <p><strong>I need to finish this report; it's due tomorrow. I haven't even started the research, which is bad.</strong></p>
+        </div>
+
+        <h3>Comma Splices</h3>
+
+        <div class="example-box wrong">
+            <div class="label red">Email Mistake:</div>
+            <p>"The client called, they want a refund, I don't know what to do."</p>
+        </div>
+
+        <div class="example-box right">
+            <div class="label green">Professional Fix:</div>
+            <p><strong>The client called. They want a refund, and I don't know what to do.</strong></p>
+            <p><strong>The client called; they want a refund. I don't know what to do.</strong></p>
+        </div>
+
+        <h2>Real-World Applications</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Context</th>
+                    <th>Best Structure</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Quick text message</td>
+                    <td>Simple</td>
+                    <td>"Running 10 minutes late."</td>
+                </tr>
+                <tr>
+                    <td>Professional email</td>
+                    <td>Complex/Compound</td>
+                    <td>"Although I'm still waiting for approval, I've prepared the documents, and we can proceed once confirmed."</td>
+                </tr>
+                <tr>
+                    <td>Social media post</td>
+                    <td>Simple/Compound</td>
+                    <td>"Just finished the project, and I'm exhausted but happy!"</td>
+                </tr>
+                <tr>
+                    <td>Formal report</td>
+                    <td>Compound-Complex</td>
+                    <td>"While sales increased by 15%, costs rose simultaneously, so profit margins remained stable."</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="practice-section">
+            <h3>Practice Exercise</h3>
+            <p><strong>Fix these common texting/social media mistakes:</strong></p>
+            <ol>
+                <li>"cant make it tonight something came up sorry"</li>
+                <li>"The wifi is down I can't join the zoom call I'm trying to hotspot"</li>
+                <li>"Because the file was too large."</li>
+                <li>"Meeting at 3, bring your laptop, we'll work on the presentation"</li>
+            </ol>
+
+            <details style="margin-top: 15px;">
+                <summary style="cursor: pointer; font-weight: bold; color: #667eea;">Show Answers</summary>
+                <div style="margin-top: 10px; padding: 10px; background: white; border-radius: 5px;">
+                    <ol>
+                        <li>"I can't make it tonight. Something came up. Sorry!"</li>
+                        <li>"The wifi is down, so I can't join the Zoom call. I'm trying to hotspot."</li>
+                        <li>"I couldn't send it because the file was too large."</li>
+                        <li>"The meeting is at 3. Bring your laptop, and we'll work on the presentation."</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+        <div class="tip">
+            <strong>Remember:</strong> Good sentence structure makes your writing clear and professional. Whether you're texting a friend or emailing your boss, complete sentences show you care about communication!
+        </div>
+
+        <a href="../index.html" class="back-link">← Back to English Skills</a>
+    </div>
+</body>
+</html>

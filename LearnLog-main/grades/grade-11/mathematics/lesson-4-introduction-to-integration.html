@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4: Introduction to Integration - Grade 11 Mathematics</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>📐 Lesson 4: Introduction to Integration</h1>
+            <p>The Reverse of Differentiation and Area Under Curves</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <a href="index.html" class="btn">← Back to Mathematics</a>
+            <h2>What is Integration?</h2>
+            <p>Integration is the reverse process of differentiation. While derivatives measure rates of change, integrals measure accumulation - total distance from velocity, total area under a curve, or total quantity from a rate.</p>
+            <p><strong>Two main types:</strong></p>
+            <ul style="margin-left: 30px;">
+                <li><strong>Indefinite Integral:</strong> ∫f(x)dx - finds the antiderivative (reverse of derivative)</li>
+                <li><strong>Definite Integral:</strong> ∫<sub>a</sub><sup>b</sup>f(x)dx - finds the area under the curve from a to b</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>📊 Area Under a Curve</h2>
+            <p>The definite integral represents the signed area between the curve and the x-axis.</p>
+
+            <svg width="100%" height="350" viewBox="0 0 600 350" style="max-width: 700px; margin: 20px auto; display: block; background: #f8f9fa; border-radius: 8px;">
+                <!-- Axes -->
+                <line x1="50" y1="280" x2="550" y2="280" stroke="#333" stroke-width="2"/>
+                <line x1="50" y1="50" x2="50" y2="280" stroke="#333" stroke-width="2"/>
+
+                <!-- Curve -->
+                <path d="M 100,260 Q 200,150 300,180 T 500,220" stroke="#667eea" stroke-width="3" fill="none"/>
+
+                <!-- Shaded area under curve -->
+                <path d="M 200,280 L 200,168 Q 300,180 400,195 L 400,280 Z" fill="#667eea" opacity="0.3"/>
+
+                <!-- Vertical lines at bounds -->
+                <line x1="200" y1="168" x2="200" y2="280" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="5,5"/>
+                <line x1="400" y1="195" x2="400" y2="280" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="5,5"/>
+
+                <!-- Labels -->
+                <text x="190" y="300" font-size="14" fill="#ff6b6b" font-weight="bold">a</text>
+                <text x="390" y="300" font-size="14" fill="#ff6b6b" font-weight="bold">b</text>
+                <text x="300" y="240" font-size="16" fill="#667eea" font-weight="bold">Area = ∫ᵇₐf(x)dx</text>
+
+                <!-- Function label -->
+                <text x="420" y="210" font-size="14" fill="#667eea">y = f(x)</text>
+
+                <!-- Axes labels -->
+                <text x="560" y="285" font-size="14" fill="#333">x</text>
+                <text x="55" y="40" font-size="14" fill="#333">y</text>
+
+                <!-- Title -->
+                <text x="300" y="30" font-size="16" fill="#333" text-anchor="middle" font-weight="bold">Definite Integral as Area</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>🔄 The Fundamental Theorem of Calculus</h2>
+            <p>This theorem connects derivatives and integrals - they are inverse operations!</p>
+
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 8px; margin: 20px 0; text-align: center;">
+                <h3 style="color: #2e7d32; margin-top: 0;">If F'(x) = f(x), then ∫ᵇₐf(x)dx = F(b) - F(a)</h3>
+            </div>
+
+            <p><strong>In plain English:</strong> To find the area under f(x), find its antiderivative F(x), then subtract F(a) from F(b).</p>
+        </section>
+
+        <section class="card">
+            <h2>📐 Power Rule for Integration</h2>
+            <p>Just like derivatives have a power rule, so do integrals:</p>
+
+            <div style="background: #f0f7ff; padding: 20px; border-radius: 8px; margin: 20px 0; text-align: center;">
+                <h3 style="color: #667eea; margin-top: 0;">∫xⁿdx = (xⁿ⁺¹)/(n+1) + C</h3>
+                <p style="margin-top: 10px; color: #666;">(where n ≠ -1, and C is the constant of integration)</p>
+            </div>
+
+            <div style="display: grid; gap: 15px; margin-top: 20px;">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                    <p><strong>Example 1:</strong> ∫x⁴dx = x⁵/5 + C</p>
+                </div>
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                    <p><strong>Example 2:</strong> ∫(3x² + 2x - 5)dx = x³ + x² - 5x + C</p>
+                </div>
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                    <p><strong>Example 3:</strong> ∫₁³x²dx = [x³/3]₁³ = 27/3 - 1/3 = 26/3</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>🚗 Real-World: Distance from Velocity</h2>
+            <p>A car's velocity is v(t) = 2t + 3 m/s. How far does it travel between t = 0 and t = 5 seconds?</p>
+
+            <svg width="100%" height="320" viewBox="0 0 550 320" style="max-width: 650px; margin: 20px auto; display: block; background: #f8f9fa; border-radius: 8px;">
+                <!-- Axes -->
+                <line x1="50" y1="270" x2="500" y2="270" stroke="#333" stroke-width="2"/>
+                <line x1="50" y1="50" x2="50" y2="270" stroke="#333" stroke-width="2"/>
+
+                <!-- Velocity line -->
+                <line x1="50" y1="240" x2="450" y2="40" stroke="#667eea" stroke-width="3"/>
+
+                <!-- Shaded area (trapezoid) -->
+                <path d="M 50,270 L 50,240 L 450,40 L 450,270 Z" fill="#4ecdc4" opacity="0.3"/>
+
+                <!-- Grid lines -->
+                <line x1="50" y1="240" x2="450" y2="240" stroke="#ccc" stroke-width="1" stroke-dasharray="3,3"/>
+                <line x1="450" y1="40" x2="450" y2="270" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="5,5"/>
+
+                <!-- Labels -->
+                <text x="45" y="250" font-size="12" fill="#666" text-anchor="end">3</text>
+                <text x="45" y="50" font-size="12" fill="#666" text-anchor="end">13</text>
+                <text x="45" y="295" font-size="12" fill="#666" text-anchor="end">0</text>
+                <text x="250" y="160" font-size="16" fill="#4ecdc4" font-weight="bold">Distance = ∫₀⁵v(t)dt</text>
+
+                <!-- Time markers -->
+                <text x="45" y="290" font-size="12" fill="#666">0</text>
+                <text x="445" y="290" font-size="12" fill="#666">5</text>
+
+                <!-- Axes labels -->
+                <text x="510" y="275" font-size="14" fill="#333">t (s)</text>
+                <text x="30" y="45" font-size="14" fill="#333">v (m/s)</text>
+                <text x="480" y="35" font-size="12" fill="#667eea">v(t) = 2t + 3</text>
+            </svg>
+
+            <div style="background: #f0f7ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <p><strong>Solution:</strong></p>
+                <p>Distance = ∫₀⁵(2t + 3)dt</p>
+                <p>= [t² + 3t]₀⁵</p>
+                <p>= (25 + 15) - (0 + 0)</p>
+                <p>= <strong>40 meters</strong></p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>📈 Area Between Curves</h2>
+            <p>To find the area between two curves f(x) and g(x) where f(x) ≥ g(x):</p>
+
+            <div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0; text-align: center;">
+                <h3 style="color: #e65100; margin-top: 0;">Area = ∫ᵇₐ[f(x) - g(x)]dx</h3>
+            </div>
+
+            <svg width="100%" height="300" viewBox="0 0 500 300" style="max-width: 600px; margin: 20px auto; display: block; background: #f8f9fa; border-radius: 8px;">
+                <!-- Axes -->
+                <line x1="50" y1="250" x2="450" y2="250" stroke="#333" stroke-width="2"/>
+                <line x1="50" y1="50" x2="50" y2="250" stroke="#333" stroke-width="2"/>
+
+                <!-- Upper curve -->
+                <path d="M 100,200 Q 250,100 400,180" stroke="#667eea" stroke-width="3" fill="none"/>
+
+                <!-- Lower curve -->
+                <path d="M 100,230 Q 250,220 400,225" stroke="#ff6b6b" stroke-width="3" fill="none"/>
+
+                <!-- Shaded region between curves -->
+                <path d="M 100,200 Q 250,100 400,180 Q 250,220 100,230 Z" fill="#ffd700" opacity="0.4"/>
+
+                <!-- Vertical bounds -->
+                <line x1="100" y1="200" x2="100" y2="250" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
+                <line x1="400" y1="180" x2="400" y2="250" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
+
+                <!-- Labels -->
+                <text x="320" y="130" font-size="14" fill="#667eea">f(x)</text>
+                <text x="320" y="235" font-size="14" fill="#ff6b6b">g(x)</text>
+                <text x="250" y="170" font-size="14" fill="#e65100" font-weight="bold">Area</text>
+                <text x="95" y="270" font-size="12" fill="#666">a</text>
+                <text x="395" y="270" font-size="12" fill="#666">b</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>🎯 Practice Problems</h2>
+
+            <div style="background: #fff9e6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                <h4 style="margin-top: 0;">Problem 1: Indefinite Integral</h4>
+                <p>Find: ∫(x³ - 4x + 7)dx</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #667eea; font-weight: bold;">Show Solution</summary>
+                    <p style="margin-top: 10px;">Apply power rule to each term:</p>
+                    <p>∫(x³ - 4x + 7)dx = x⁴/4 - 2x² + 7x + C</p>
+                </details>
+            </div>
+
+            <div style="background: #fff9e6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                <h4 style="margin-top: 0;">Problem 2: Definite Integral</h4>
+                <p>Evaluate: ∫₁⁴(2x - 1)dx</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #667eea; font-weight: bold;">Show Solution</summary>
+                    <div style="margin-top: 10px;">
+                        <p>∫₁⁴(2x - 1)dx = [x² - x]₁⁴</p>
+                        <p>= (16 - 4) - (1 - 1)</p>
+                        <p>= 12 - 0 = <strong>12</strong></p>
+                    </div>
+                </details>
+            </div>
+
+            <div style="background: #fff9e6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                <h4 style="margin-top: 0;">Problem 3: Area Under Curve</h4>
+                <p>Find the area under y = x² from x = 0 to x = 3.</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #667eea; font-weight: bold;">Show Solution</summary>
+                    <div style="margin-top: 10px;">
+                        <p>Area = ∫₀³x²dx = [x³/3]₀³</p>
+                        <p>= 27/3 - 0 = <strong>9 square units</strong></p>
+                    </div>
+                </details>
+            </div>
+
+            <div style="background: #fff9e6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                <h4 style="margin-top: 0;">Problem 4: Total Distance</h4>
+                <p>A particle's velocity is v(t) = 6t² - 4t m/s. Find the distance traveled from t = 1 to t = 3 seconds.</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #667eea; font-weight: bold;">Show Solution</summary>
+                    <div style="margin-top: 10px;">
+                        <p>Distance = ∫₁³(6t² - 4t)dt = [2t³ - 2t²]₁³</p>
+                        <p>= (2·27 - 2·9) - (2·1 - 2·1)</p>
+                        <p>= (54 - 18) - (2 - 2)</p>
+                        <p>= 36 - 0 = <strong>36 meters</strong></p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>🌟 Challenge Problem</h2>
+            <div style="background: #ffe6e6; padding: 20px; border-radius: 8px;">
+                <p><strong>Advanced:</strong> Find the area between the curves y = x² and y = 2x from x = 0 to x = 2.</p>
+                <details style="margin-top: 15px;">
+                    <summary style="cursor: pointer; color: #ff6b6b; font-weight: bold;">Show Solution</summary>
+                    <div style="margin-top: 10px;">
+                        <p>First, determine which function is on top. At x = 1: 2(1) = 2 > 1² = 1, so 2x is above x².</p>
+                        <p>Area = ∫₀²(2x - x²)dx</p>
+                        <p>= [x² - x³/3]₀²</p>
+                        <p>= (4 - 8/3) - (0 - 0)</p>
+                        <p>= 12/3 - 8/3 = <strong>4/3 square units</strong></p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>🔄 Derivatives vs. Integrals</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px;">
+                    <h3 style="color: #1976d2; margin-top: 0;">Derivative</h3>
+                    <ul style="margin-left: 20px;">
+                        <li>Rate of change</li>
+                        <li>Slope of tangent</li>
+                        <li>Velocity from position</li>
+                        <li>Makes functions smaller power</li>
+                    </ul>
+                    <p style="text-align: center; margin-top: 15px; font-size: 18px;">f(x) → f'(x)</p>
+                </div>
+                <div style="background: #f3e5f5; padding: 20px; border-radius: 8px;">
+                    <h3 style="color: #7b1fa2; margin-top: 0;">Integral</h3>
+                    <ul style="margin-left: 20px;">
+                        <li>Accumulation</li>
+                        <li>Area under curve</li>
+                        <li>Position from velocity</li>
+                        <li>Makes functions bigger power</li>
+                    </ul>
+                    <p style="text-align: center; margin-top: 15px; font-size: 18px;">f(x) → ∫f(x)dx</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>🔑 Key Takeaways</h2>
+            <ul style="margin-left: 30px; margin-top: 15px;">
+                <li>Integration is the reverse of differentiation</li>
+                <li>Definite integrals calculate area under curves</li>
+                <li>Indefinite integrals find antiderivatives (don't forget +C!)</li>
+                <li>Power Rule for Integration: ∫xⁿdx = xⁿ⁺¹/(n+1) + C</li>
+                <li>Applications: total distance, area between curves, accumulated quantities</li>
+            </ul>
+            <div style="margin-top: 20px;">
+                <a href="lesson-3-applications-of-derivatives.html" class="btn">← Previous: Applications</a>
+            </div>
+        </section>
+
+        <section class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+            <h2>🎓 Congratulations!</h2>
+            <p>You've completed Unit 1: Introduction to Calculus! You now understand:</p>
+            <ul style="margin-left: 30px; margin-top: 15px;">
+                <li>Limits - the foundation of calculus</li>
+                <li>Derivatives - rates of change and slopes</li>
+                <li>Applications - optimization and real-world problem solving</li>
+                <li>Integration - area and accumulation</li>
+            </ul>
+            <p style="margin-top: 20px; font-size: 1.1em;">These tools will serve you in physics, engineering, economics, and beyond. Keep practicing!</p>
+        </section>
+    </main>
+</body>
+</html>

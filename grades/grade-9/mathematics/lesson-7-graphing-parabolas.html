@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7: Graphing Parabolas - Grade 9 Math</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <style>
+        .parabola-hero {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 30px;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .graph-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background: white;
+            border: 2px solid #4facfe;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .vertex-form-box {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            padding: 20px;
+            border-radius: 10px;
+            color: #333;
+            margin: 20px 0;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .comparison-table th {
+            background: #4facfe;
+            color: white;
+        }
+        .example-card {
+            background: #f0f9ff;
+            border-left: 4px solid #4facfe;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .interactive-controls {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .slider-group {
+            margin: 15px 0;
+        }
+        .slider-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .slider-group input[type="range"] {
+            width: 100%;
+        }
+        .value-display {
+            display: inline-block;
+            background: #34495e;
+            padding: 5px 10px;
+            border-radius: 3px;
+            margin-left: 10px;
+        }
+        .practice-problem {
+            background: #fff8e1;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 10px 0;
+        }
+        .solution {
+            display: none;
+            background: #d4edda;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .show-solution {
+            background: #4facfe;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lesson 7: Graphing Parabolas</h1>
+        <p>Visualizing Quadratic Functions</p>
+    </header>
+
+    <main>
+        <section class="lesson-intro">
+            <div class="parabola-hero">
+                <h2>What is a Parabola?</h2>
+                <p>A parabola is the U-shaped curve created by graphing a quadratic function</p>
+                <p style="font-size: 1.5em; margin-top: 20px;"><strong>y = ax² + bx + c</strong></p>
+            </div>
+
+            <div class="graph-container">
+                <h3>Basic Parabola: y = x²</h3>
+                <svg width="400" height="400" viewBox="-10 -10 20 20" style="border: 1px solid #ddd;">
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+                        </marker>
+                    </defs>
+
+                    <line x1="-10" y1="0" x2="10" y2="0" stroke="#666" stroke-width="0.1" marker-end="url(#arrowhead)"/>
+                    <line x1="0" y1="10" x2="0" y2="-10" stroke="#666" stroke-width="0.1" marker-end="url(#arrowhead)"/>
+
+                    <text x="9" y="1" font-size="1" fill="#666">x</text>
+                    <text x="0.5" y="-8.5" font-size="1" fill="#666">y</text>
+
+                    <path d="M -6 7.2 Q 0 0 6 7.2" stroke="#4facfe" stroke-width="0.3" fill="none"/>
+
+                    <circle cx="0" cy="0" r="0.3" fill="#fa709a"/>
+                    <text x="0.5" y="0.5" font-size="0.8" fill="#fa709a">Vertex (0,0)</text>
+                </svg>
+                <p>The simplest parabola opens upward with vertex at the origin</p>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h2>Key Features of a Parabola</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🎯 Vertex</h3>
+                    <p>The highest or lowest point on the parabola</p>
+                    <p><strong>Formula:</strong> x = -b/2a</p>
+                    <p>Substitute to find y-coordinate</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📏 Axis of Symmetry</h3>
+                    <p>Vertical line through the vertex</p>
+                    <p><strong>Equation:</strong> x = -b/2a</p>
+                    <p>Parabola mirrors on both sides</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>↕️ Direction</h3>
+                    <p>Determined by coefficient a:</p>
+                    <p><strong>a > 0:</strong> Opens upward ∪</p>
+                    <p><strong>a < 0:</strong> Opens downward ∩</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📍 Y-Intercept</h3>
+                    <p>Where parabola crosses y-axis</p>
+                    <p><strong>Point:</strong> (0, c)</p>
+                    <p>Found by setting x = 0</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🎪 X-Intercepts (Roots)</h3>
+                    <p>Where parabola crosses x-axis</p>
+                    <p>Found by solving ax² + bx + c = 0</p>
+                    <p>Can be 0, 1, or 2 intercepts</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📐 Width</h3>
+                    <p>Determined by |a|:</p>
+                    <p><strong>|a| > 1:</strong> Narrow</p>
+                    <p><strong>|a| < 1:</strong> Wide</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h2>Effect of Coefficient 'a'</h2>
+            <div class="graph-container">
+                <h3>Comparing Different Values of 'a'</h3>
+                <svg width="500" height="400" viewBox="-12 -10 24 20">
+                    <line x1="-12" y1="0" x2="12" y2="0" stroke="#666" stroke-width="0.1"/>
+                    <line x1="0" y1="10" x2="0" y2="-10" stroke="#666" stroke-width="0.1"/>
+
+                    <path d="M -4 8 Q 0 0 4 8" stroke="#e74c3c" stroke-width="0.25" fill="none"/>
+                    <text x="5" y="8" font-size="1" fill="#e74c3c">y = 2x² (narrow)</text>
+
+                    <path d="M -6 6 Q 0 0 6 6" stroke="#3498db" stroke-width="0.25" fill="none"/>
+                    <text x="-11" y="6" font-size="1" fill="#3498db">y = x²</text>
+
+                    <path d="M -8 6.4 Q 0 0 8 6.4" stroke="#2ecc71" stroke-width="0.25" fill="none"/>
+                    <text x="-11" y="7.5" font-size="1" fill="#2ecc71">y = 0.5x² (wide)</text>
+
+                    <path d="M -6 -6 Q 0 0 6 -6" stroke="#9b59b6" stroke-width="0.25" fill="none"/>
+                    <text x="5" y="-6" font-size="1" fill="#9b59b6">y = -x² (down)</text>
+                </svg>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h2>Standard Form vs. Vertex Form</h2>
+            <div class="vertex-form-box">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Form</th>
+                            <th>Equation</th>
+                            <th>Best For</th>
+                            <th>Shows Directly</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Standard Form</strong></td>
+                            <td>y = ax² + bx + c</td>
+                            <td>Finding y-intercept</td>
+                            <td>Y-intercept: (0, c)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vertex Form</strong></td>
+                            <td>y = a(x - h)² + k</td>
+                            <td>Finding vertex, graphing</td>
+                            <td>Vertex: (h, k)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h2>Step-by-Step Graphing Examples</h2>
+
+            <div class="example-card">
+                <h3>Example 1: y = x² - 4x + 3</h3>
+                <p><strong>Step 1:</strong> Find the vertex</p>
+                <p>x = -b/2a = -(-4)/2(1) = 4/2 = 2</p>
+                <p>y = (2)² - 4(2) + 3 = 4 - 8 + 3 = -1</p>
+                <p><strong>Vertex: (2, -1)</strong></p>
+
+                <p><strong>Step 2:</strong> Find y-intercept (set x = 0)</p>
+                <p>y = 0² - 4(0) + 3 = 3</p>
+                <p><strong>Y-intercept: (0, 3)</strong></p>
+
+                <p><strong>Step 3:</strong> Find x-intercepts (solve y = 0)</p>
+                <p>x² - 4x + 3 = 0</p>
+                <p>(x - 1)(x - 3) = 0</p>
+                <p><strong>X-intercepts: (1, 0) and (3, 0)</strong></p>
+
+                <p><strong>Step 4:</strong> Note that a = 1 > 0, so parabola opens upward</p>
+
+                <div class="graph-container">
+                    <svg width="400" height="400" viewBox="-2 -6 10 12">
+                        <line x1="-2" y1="0" x2="8" y2="0" stroke="#666" stroke-width="0.1"/>
+                        <line x1="0" y1="-6" x2="0" y2="6" stroke="#666" stroke-width="0.1"/>
+
+                        <path d="M -1 8 Q 2 -1 5 8" stroke="#e74c3c" stroke-width="0.2" fill="none"/>
+
+                        <circle cx="2" cy="-1" r="0.2" fill="#9b59b6"/>
+                        <text x="2.5" y="-0.5" font-size="0.8" fill="#9b59b6">Vertex (2,-1)</text>
+
+                        <circle cx="0" cy="3" r="0.15" fill="#2ecc71"/>
+                        <circle cx="1" cy="0" r="0.15" fill="#3498db"/>
+                        <circle cx="3" cy="0" r="0.15" fill="#3498db"/>
+
+                        <line x1="2" y1="-6" x2="2" y2="6" stroke="#999" stroke-width="0.05" stroke-dasharray="0.2,0.2"/>
+                        <text x="2.3" y="5" font-size="0.7" fill="#999">x = 2</text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h3>Example 2: y = -2x² + 4x + 1</h3>
+                <p><strong>Step 1:</strong> Vertex</p>
+                <p>x = -4/2(-2) = -4/-4 = 1</p>
+                <p>y = -2(1)² + 4(1) + 1 = -2 + 4 + 1 = 3</p>
+                <p><strong>Vertex: (1, 3)</strong></p>
+
+                <p><strong>Step 2:</strong> Y-intercept: (0, 1)</p>
+
+                <p><strong>Step 3:</strong> Direction: a = -2 < 0, opens downward</p>
+
+                <p><strong>Step 4:</strong> Width: |a| = 2 > 1, narrower than y = x²</p>
+
+                <div class="graph-container">
+                    <svg width="400" height="400" viewBox="-2 -2 8 10">
+                        <line x1="-2" y1="0" x2="6" y2="0" stroke="#666" stroke-width="0.1"/>
+                        <line x1="0" y1="-2" x2="0" y2="8" stroke="#666" stroke-width="0.1"/>
+
+                        <path d="M -0.5 -4 Q 1 3 2.5 -4" stroke="#e74c3c" stroke-width="0.2" fill="none"/>
+
+                        <circle cx="1" cy="3" r="0.2" fill="#9b59b6"/>
+                        <text x="1.5" y="3.5" font-size="0.8" fill="#9b59b6">Vertex (1,3)</text>
+
+                        <circle cx="0" cy="1" r="0.15" fill="#2ecc71"/>
+
+                        <line x1="1" y1="-2" x2="1" y2="8" stroke="#999" stroke-width="0.05" stroke-dasharray="0.2,0.2"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h2>Real-World Application: Basketball Shot</h2>
+            <div class="parabola-hero">
+                <h3>🏀 Modeling a Basketball Trajectory</h3>
+                <p>Height equation: h(d) = -0.1d² + 0.8d + 2</p>
+                <p>where d is horizontal distance in meters</p>
+            </div>
+
+            <div class="example-card">
+                <h3>Analysis</h3>
+                <p><strong>Initial Height (release point):</strong> h(0) = 2 meters</p>
+                <p><strong>Maximum Height (vertex):</strong></p>
+                <p>d = -0.8/2(-0.1) = -0.8/-0.2 = 4 meters</p>
+                <p>h(4) = -0.1(16) + 0.8(4) + 2 = -1.6 + 3.2 + 2 = 3.6 meters</p>
+                <p><strong>Peak is at (4, 3.6)</strong></p>
+
+                <div class="graph-container">
+                    <h4>Basketball Trajectory</h4>
+                    <svg width="500" height="300" viewBox="-1 -1 12 8">
+                        <rect x="-1" y="6.5" width="12" height="0.1" fill="#8B4513"/>
+                        <text x="5" y="7.5" font-size="0.6" fill="#666" text-anchor="middle">Ground</text>
+
+                        <path d="M 0 2 Q 4 3.6 8.9 0" stroke="#ff6b35" stroke-width="0.15" fill="none"/>
+
+                        <circle cx="0" cy="2" r="0.2" fill="#2ecc71"/>
+                        <text x="0.3" y="1.5" font-size="0.6" fill="#2ecc71">Release (0, 2m)</text>
+
+                        <circle cx="4" cy="3.6" r="0.2" fill="#9b59b6"/>
+                        <text x="4.3" y="3.2" font-size="0.6" fill="#9b59b6">Peak (4m, 3.6m)</text>
+
+                        <circle cx="10" cy="3.05" r="0.3" fill="none" stroke="#e74c3c" stroke-width="0.1"/>
+                        <text x="10.3" y="3.5" font-size="0.6" fill="#e74c3c">Hoop (10m, 3.05m)</text>
+
+                        <line x1="4" y1="0" x2="4" y2="6.5" stroke="#999" stroke-width="0.05" stroke-dasharray="0.1,0.1"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h2>Interactive Parabola Explorer</h2>
+            <div class="interactive-controls">
+                <h3>y = ax² + bx + c</h3>
+
+                <div class="slider-group">
+                    <label>a: <span class="value-display" id="a-value">1</span></label>
+                    <input type="range" id="a-slider" min="-3" max="3" step="0.5" value="1" oninput="updateGraph()">
+                </div>
+
+                <div class="slider-group">
+                    <label>b: <span class="value-display" id="b-value">0</span></label>
+                    <input type="range" id="b-slider" min="-5" max="5" step="0.5" value="0" oninput="updateGraph()">
+                </div>
+
+                <div class="slider-group">
+                    <label>c: <span class="value-display" id="c-value">0</span></label>
+                    <input type="range" id="c-slider" min="-5" max="5" step="0.5" value="0" oninput="updateGraph()">
+                </div>
+
+                <div class="graph-container">
+                    <svg id="interactive-graph" width="500" height="400" viewBox="-10 -10 20 20">
+                        <line x1="-10" y1="0" x2="10" y2="0" stroke="#666" stroke-width="0.1"/>
+                        <line x1="0" y1="10" x2="0" y2="-10" stroke="#666" stroke-width="0.1"/>
+                        <path id="parabola-path" d="" stroke="#4facfe" stroke-width="0.2" fill="none"/>
+                        <circle id="vertex-point" cx="0" cy="0" r="0.25" fill="#fa709a"/>
+                    </svg>
+                    <p id="vertex-info">Vertex: (0, 0)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="practice-section">
+            <h2>Practice Problems</h2>
+
+            <div class="practice-problem">
+                <h3>Problem 1: Find Key Features</h3>
+                <p>For y = x² - 6x + 8, find the vertex, axis of symmetry, and intercepts.</p>
+                <button class="show-solution" onclick="toggleSolution('sol1')">Show Solution</button>
+                <div id="sol1" class="solution">
+                    <p><strong>Vertex:</strong> x = -(-6)/2(1) = 3, y = 9 - 18 + 8 = -1 → (3, -1)</p>
+                    <p><strong>Axis of symmetry:</strong> x = 3</p>
+                    <p><strong>Y-intercept:</strong> (0, 8)</p>
+                    <p><strong>X-intercepts:</strong> (x - 2)(x - 4) = 0 → (2, 0) and (4, 0)</p>
+                </div>
+            </div>
+
+            <div class="practice-problem">
+                <h3>Problem 2: Direction and Width</h3>
+                <p>Does y = -0.5x² + 2x - 1 open up or down? Is it wider or narrower than y = x²?</p>
+                <button class="show-solution" onclick="toggleSolution('sol2')">Show Solution</button>
+                <div id="sol2" class="solution">
+                    <p><strong>Direction:</strong> a = -0.5 < 0, opens downward</p>
+                    <p><strong>Width:</strong> |a| = 0.5 < 1, wider than y = x²</p>
+                </div>
+            </div>
+
+            <div class="practice-problem">
+                <h3>Problem 3: Application</h3>
+                <p>A fountain's water height is h(d) = -d² + 4d, where d is horizontal distance. What's the maximum height?</p>
+                <button class="show-solution" onclick="toggleSolution('sol3')">Show Solution</button>
+                <div id="sol3" class="solution">
+                    <p>Vertex: d = -4/2(-1) = 2</p>
+                    <p>h(2) = -(2)² + 4(2) = -4 + 8 = 4</p>
+                    <p><strong>Maximum height: 4 meters at d = 2 meters</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-summary">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>Parabolas are U-shaped curves from quadratic functions</li>
+                <li>The vertex is found at x = -b/2a</li>
+                <li>Coefficient 'a' determines direction (up/down) and width</li>
+                <li>Y-intercept is always (0, c)</li>
+                <li>X-intercepts are found by solving ax² + bx + c = 0</li>
+                <li>Parabolas model many real-world phenomena: projectiles, arches, satellite dishes</li>
+            </ul>
+        </section>
+
+        <div class="navigation">
+            <a href="lesson-6-quadratic-formula.html" class="nav-button">← Previous: Quadratic Formula</a>
+            <a href="lesson-8-quadratic-applications.html" class="nav-button">Next: Applications →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LearnLog. Grade 9 Mathematics - Unit 2: Quadratic Equations</p>
+    </footer>
+
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function updateGraph() {
+            const a = parseFloat(document.getElementById('a-slider').value);
+            const b = parseFloat(document.getElementById('b-slider').value);
+            const c = parseFloat(document.getElementById('c-slider').value);
+
+            document.getElementById('a-value').textContent = a;
+            document.getElementById('b-value').textContent = b;
+            document.getElementById('c-value').textContent = c;
+
+            if (a === 0) return;
+
+            const vertexX = -b / (2 * a);
+            const vertexY = a * vertexX * vertexX + b * vertexX + c;
+
+            let pathData = 'M ';
+            for (let x = -8; x <= 8; x += 0.5) {
+                const y = a * x * x + b * x + c;
+                if (y >= -10 && y <= 10) {
+                    pathData += `${x} ${-y} `;
+                }
+            }
+
+            document.getElementById('parabola-path').setAttribute('d', pathData);
+            document.getElementById('vertex-point').setAttribute('cx', vertexX);
+            document.getElementById('vertex-point').setAttribute('cy', -vertexY);
+            document.getElementById('vertex-info').textContent =
+                `Vertex: (${vertexX.toFixed(2)}, ${vertexY.toFixed(2)})`;
+        }
+
+        updateGraph();
+    </script>
+</body>
+</html>

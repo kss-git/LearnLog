@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2: Integration Techniques - Grade 12 Mathematics</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Integration Techniques</h1>
+            <p>Lesson 2 - Advanced Calculus</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="../../../index.html">Home</a>
+            <a href="../index.html">Grade 12</a>
+            <a href="index.html">Mathematics</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="card">
+            <h2>Introduction to Advanced Integration</h2>
+            <p>While basic integration reverses differentiation, advanced techniques allow us to integrate complex functions, solve area and volume problems, and model accumulation in physics and economics. This lesson covers integration by parts, partial fractions, trigonometric substitution, and numerical methods.</p>
+        </section>
+
+        <section class="card">
+            <h2>1. Integration by Parts</h2>
+            <p>Based on the product rule, integration by parts is used when integrating products of functions:</p>
+            <p><strong>Formula:</strong> ∫u dv = uv - ∫v du</p>
+
+            <h3>Strategy: LIATE Rule</h3>
+            <p>Choose u in this priority order:</p>
+            <ul>
+                <li><strong>L</strong>ogarithmic functions: ln(x), log(x)</li>
+                <li><strong>I</strong>nverse trig functions: arcsin(x), arctan(x)</li>
+                <li><strong>A</strong>lgebraic functions: x², x + 1</li>
+                <li><strong>T</strong>rigonometric functions: sin(x), cos(x)</li>
+                <li><strong>E</strong>xponential functions: eˣ, 2ˣ</li>
+            </ul>
+
+            <h3>Example 1: ∫x·eˣ dx</h3>
+            <div class="example-box">
+                <p><strong>Solution:</strong></p>
+                <p>Let u = x (algebraic), dv = eˣ dx</p>
+                <p>Then du = dx, v = eˣ</p>
+                <p>∫x·eˣ dx = x·eˣ - ∫eˣ dx = x·eˣ - eˣ + C = eˣ(x - 1) + C</p>
+            </div>
+
+            <h3>Example 2: ∫ln(x) dx</h3>
+            <div class="example-box">
+                <p><strong>Solution:</strong></p>
+                <p>Let u = ln(x), dv = dx</p>
+                <p>Then du = (1/x)dx, v = x</p>
+                <p>∫ln(x) dx = x·ln(x) - ∫x·(1/x) dx = x·ln(x) - x + C</p>
+            </div>
+
+            <h3>Application: Electric Circuit</h3>
+            <p>The charge Q(t) stored in a capacitor in an RC circuit with voltage V(t) = te⁻ᵗ satisfies:</p>
+            <p>Q(t) = ∫te⁻ᵗ dt</p>
+
+            <svg viewBox="0 0 400 250" style="max-width: 500px; margin: 20px auto; display: block;">
+                <path d="M 50 180 Q 100 50 150 100 Q 200 150 250 80 Q 300 10 350 100" stroke="#3498db" stroke-width="2" fill="none"/>
+                <line x1="50" y1="200" x2="350" y2="200" stroke="#34495e" stroke-width="2"/>
+                <line x1="50" y1="30" x2="50" y2="210" stroke="#34495e" stroke-width="2"/>
+                <text x="350" y="220" font-size="12" fill="#2c3e50">t</text>
+                <text x="30" y="30" font-size="12" fill="#2c3e50">Q(t)</text>
+                <text x="180" y="30" font-size="14" fill="#3498db">Charge accumulation</text>
+                <circle cx="150" cy="100" r="3" fill="#e74c3c"/>
+                <text x="155" y="95" font-size="11" fill="#e74c3c">Peak charge</text>
+            </svg>
+
+            <div class="example-box">
+                <p>Using integration by parts:</p>
+                <p>Q(t) = -te⁻ᵗ - e⁻ᵗ + C = -(t + 1)e⁻ᵗ + C</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>2. Partial Fraction Decomposition</h2>
+            <p>Used to integrate rational functions by breaking them into simpler fractions.</p>
+
+            <h3>Example: ∫(3x + 5)/((x + 1)(x + 2)) dx</h3>
+            <div class="example-box">
+                <p><strong>Step 1:</strong> Decompose into partial fractions</p>
+                <p>(3x + 5)/((x + 1)(x + 2)) = A/(x + 1) + B/(x + 2)</p>
+                <p>3x + 5 = A(x + 2) + B(x + 1)</p>
+                <p>Setting x = -1: -3 + 5 = A(1) → A = 2</p>
+                <p>Setting x = -2: -6 + 5 = B(-1) → B = 1</p>
+                <p><strong>Step 2:</strong> Integrate</p>
+                <p>∫[2/(x + 1) + 1/(x + 2)] dx = 2ln|x + 1| + ln|x + 2| + C</p>
+            </div>
+
+            <h3>Application: Population Growth Model</h3>
+            <p>A logistic growth model with carrying capacity K:</p>
+            <p>dP/dt = kP(1 - P/K)</p>
+            <p>Separating variables and using partial fractions:</p>
+
+            <div class="example-box">
+                <p>∫dP/(P(K - P)) = ∫(k/K) dt</p>
+                <p>Using partial fractions: 1/(P(K - P)) = 1/(KP) + 1/(K(K - P))</p>
+                <p>Solution: P(t) = K/(1 + Ae⁻ᵏᵗ)</p>
+            </div>
+
+            <svg viewBox="0 0 400 300" style="max-width: 500px; margin: 20px auto; display: block;">
+                <line x1="50" y1="250" x2="350" y2="250" stroke="#34495e" stroke-width="2"/>
+                <line x1="50" y1="250" x2="50" y2="50" stroke="#34495e" stroke-width="2"/>
+                <line x1="50" y1="100" x2="350" y2="100" stroke="#e74c3c" stroke-width="1" stroke-dasharray="5,5"/>
+                <path d="M 50 240 Q 150 200 200 130 T 350 105" stroke="#3498db" stroke-width="3" fill="none"/>
+                <text x="360" y="105" font-size="12" fill="#e74c3c">K (carrying capacity)</text>
+                <text x="360" y="270" font-size="12" fill="#2c3e50">Time</text>
+                <text x="20" y="40" font-size="12" fill="#2c3e50">Population</text>
+                <text x="180" y="180" font-size="12" fill="#3498db">Logistic growth</text>
+                <circle cx="60" cy="235" r="3" fill="#2ecc71"/>
+                <text x="65" y="240" font-size="11" fill="#2ecc71">P₀</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>3. Trigonometric Substitution</h2>
+            <p>Used for integrals involving √(a² - x²), √(a² + x²), or √(x² - a²).</p>
+
+            <h3>Substitution Guide</h3>
+            <ul>
+                <li><strong>√(a² - x²):</strong> Use x = a·sin(θ)</li>
+                <li><strong>√(a² + x²):</strong> Use x = a·tan(θ)</li>
+                <li><strong>√(x² - a²):</strong> Use x = a·sec(θ)</li>
+            </ul>
+
+            <h3>Example: ∫√(4 - x²) dx</h3>
+            <div class="example-box">
+                <p><strong>Solution:</strong></p>
+                <p>Let x = 2sin(θ), dx = 2cos(θ)dθ</p>
+                <p>√(4 - x²) = √(4 - 4sin²θ) = 2cos(θ)</p>
+                <p>∫√(4 - x²) dx = ∫2cos(θ)·2cos(θ) dθ = 4∫cos²(θ) dθ</p>
+                <p>Using cos²(θ) = (1 + cos(2θ))/2:</p>
+                <p>= 2∫(1 + cos(2θ)) dθ = 2θ + sin(2θ) + C</p>
+                <p>= 2arcsin(x/2) + (x/2)√(4 - x²) + C</p>
+            </div>
+
+            <h3>Application: Circular Motion</h3>
+            <p>Finding the area under a semicircle of radius 2:</p>
+
+            <svg viewBox="0 0 400 250" style="max-width: 500px; margin: 20px auto; display: block;">
+                <path d="M 100 200 A 100 100 0 0 1 300 200" stroke="#3498db" stroke-width="3" fill="rgba(52, 152, 219, 0.2)"/>
+                <line x1="50" y1="200" x2="350" y2="200" stroke="#34495e" stroke-width="2"/>
+                <line x1="200" y1="50" x2="200" y2="210" stroke="#34495e" stroke-width="2"/>
+                <text x="350" y="220" font-size="12" fill="#2c3e50">x</text>
+                <text x="180" y="40" font-size="12" fill="#2c3e50">y</text>
+                <line x1="100" y1="200" x2="100" y2="210" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="300" y1="200" x2="300" y2="210" stroke="#2c3e50" stroke-width="2"/>
+                <text x="95" y="225" font-size="12" fill="#2c3e50">-2</text>
+                <text x="300" y="225" font-size="12" fill="#2c3e50">2</text>
+                <text x="180" y="140" font-size="14" fill="#3498db">Area = 2π</text>
+            </svg>
+
+            <div class="example-box">
+                <p>Area = ∫₋₂² √(4 - x²) dx = 2π (half the area of circle with radius 2)</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>4. Numerical Integration</h2>
+            <p>When analytical integration is difficult or impossible, numerical methods approximate definite integrals.</p>
+
+            <h3>Trapezoidal Rule</h3>
+            <p>∫ₐᵇ f(x) dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]</p>
+            <p>where Δx = (b - a)/n</p>
+
+            <svg viewBox="0 0 400 250" style="max-width: 500px; margin: 20px auto; display: block;">
+                <line x1="50" y1="200" x2="350" y2="200" stroke="#34495e" stroke-width="2"/>
+                <path d="M 60 180 Q 150 80 240 120 Q 300 140 340 90" stroke="#3498db" stroke-width="2" fill="none"/>
+                <line x1="80" y1="170" x2="80" y2="200" stroke="#e74c3c" stroke-width="2"/>
+                <line x1="140" y1="115" x2="140" y2="200" stroke="#e74c3c" stroke-width="2"/>
+                <line x1="200" y1="120" x2="200" y2="200" stroke="#e74c3c" stroke-width="2"/>
+                <line x1="260" y1="130" x2="260" y2="200" stroke="#e74c3c" stroke-width="2"/>
+                <line x1="320" y1="100" x2="320" y2="200" stroke="#e74c3c" stroke-width="2"/>
+                <line x1="80" y1="170" x2="140" y2="115" stroke="#2ecc71" stroke-width="2"/>
+                <line x1="140" y1="115" x2="200" y2="120" stroke="#2ecc71" stroke-width="2"/>
+                <line x1="200" y1="120" x2="260" y2="130" stroke="#2ecc71" stroke-width="2"/>
+                <line x1="260" y1="130" x2="320" y2="100" stroke="#2ecc71" stroke-width="2"/>
+                <text x="180" y="230" font-size="12" fill="#2c3e50">Trapezoids approximate curve</text>
+            </svg>
+
+            <h3>Simpson's Rule</h3>
+            <p>More accurate, using parabolic approximations:</p>
+            <p>∫ₐᵇ f(x) dx ≈ (Δx/3)[f(x₀) + 4f(x₁) + 2f(x₂) + 4f(x₃) + ... + f(xₙ)]</p>
+
+            <h3>Example: Estimating ∫₀¹ e^(-x²) dx</h3>
+            <p>This integral has no elementary antiderivative, so numerical methods are essential.</p>
+
+            <div class="example-box">
+                <p><strong>Using Trapezoidal Rule with n = 4:</strong></p>
+                <p>Δx = 1/4 = 0.25</p>
+                <p>Points: x₀ = 0, x₁ = 0.25, x₂ = 0.5, x₃ = 0.75, x₄ = 1</p>
+                <p>f(x₀) = 1, f(x₁) ≈ 0.9394, f(x₂) ≈ 0.7788, f(x₃) ≈ 0.5698, f(x₄) ≈ 0.3679</p>
+                <p>Approximation: (0.25/2)[1 + 2(0.9394) + 2(0.7788) + 2(0.5698) + 0.3679] ≈ 0.7430</p>
+                <p>Actual value ≈ 0.7468 (error about 0.5%)</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>5. Applications in Physics and Engineering</h2>
+
+            <h3>Work Done by Variable Force</h3>
+            <p>Work = ∫ₐᵇ F(x) dx</p>
+
+            <h3>Example: Spring Compression</h3>
+            <p>A spring with constant k = 500 N/m is compressed from x = 0 to x = 0.2 m. Find the work done.</p>
+
+            <svg viewBox="0 0 400 200" style="max-width: 500px; margin: 20px auto; display: block;">
+                <rect x="50" y="80" width="40" height="40" fill="#7f8c8d"/>
+                <path d="M 90 100 Q 110 100 120 90 Q 130 100 140 90 Q 150 100 160 90 Q 170 100 180 90 Q 190 100 200 100" stroke="#34495e" stroke-width="3" fill="none"/>
+                <line x1="200" y1="50" x2="200" y2="150" stroke="#34495e" stroke-width="4"/>
+                <path d="M 60 140 L 180 140" stroke="#e74c3c" stroke-width="2"/>
+                <path d="M 60 135 L 60 145 M 180 135 L 180 145" stroke="#e74c3c" stroke-width="2"/>
+                <text x="110" y="160" font-size="12" fill="#e74c3c">x = 0.2 m</text>
+                <path d="M 35 100 L 15 100" stroke="#3498db" stroke-width="3"/>
+                <path d="M 20 95 L 15 100 L 20 105" fill="#3498db"/>
+                <text x="10" y="85" font-size="12" fill="#3498db">F</text>
+            </svg>
+
+            <div class="example-box">
+                <p><strong>Solution:</strong></p>
+                <p>Hooke's Law: F(x) = kx = 500x</p>
+                <p>Work = ∫₀^0.2 500x dx = 250x²|₀^0.2 = 250(0.04) = 10 Joules</p>
+            </div>
+
+            <h3>Center of Mass</h3>
+            <p>For a continuous distribution with density ρ(x):</p>
+            <p>x̄ = ∫x·ρ(x) dx / ∫ρ(x) dx</p>
+        </section>
+
+        <section class="card">
+            <h2>6. Economic Applications</h2>
+
+            <h3>Consumer Surplus</h3>
+            <p>The difference between what consumers are willing to pay and what they actually pay.</p>
+
+            <svg viewBox="0 0 400 300" style="max-width: 500px; margin: 20px auto; display: block;">
+                <line x1="50" y1="250" x2="350" y2="250" stroke="#34495e" stroke-width="2"/>
+                <line x1="50" y1="250" x2="50" y2="50" stroke="#34495e" stroke-width="2"/>
+                <path d="M 70 80 L 320 230" stroke="#3498db" stroke-width="2"/>
+                <line x1="50" y1="170" x2="350" y2="170" stroke="#e74c3c" stroke-width="1" stroke-dasharray="5,5"/>
+                <line x1="200" y1="170" x2="200" y2="250" stroke="#95a5a6" stroke-width="1" stroke-dasharray="3,3"/>
+                <path d="M 70 80 L 200 170 L 200 80 Z" fill="rgba(46, 204, 113, 0.3)" stroke="#2ecc71" stroke-width="2"/>
+                <text x="350" y="270" font-size="12" fill="#2c3e50">Quantity</text>
+                <text x="20" y="40" font-size="12" fill="#2c3e50">Price</text>
+                <text x="330" y="235" font-size="12" fill="#3498db">Demand</text>
+                <text x="320" y="165" font-size="12" fill="#e74c3c">Market price</text>
+                <text x="110" y="120" font-size="12" fill="#2ecc71">Consumer Surplus</text>
+                <circle cx="200" cy="170" r="4" fill="#e74c3c"/>
+                <text x="195" y="265" font-size="11" fill="#2c3e50">Q*</text>
+            </svg>
+
+            <div class="example-box">
+                <p>If demand function is p = D(q) and equilibrium is (Q*, P*):</p>
+                <p>Consumer Surplus = ∫₀^Q* D(q) dq - P*·Q*</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Practice Problems</h2>
+
+            <div class="example-box">
+                <h3>Problem 1: Integration by Parts</h3>
+                <p>Evaluate ∫x²·sin(x) dx</p>
+            </div>
+
+            <div class="example-box">
+                <h3>Problem 2: Partial Fractions</h3>
+                <p>Evaluate ∫(2x + 3)/((x - 1)(x + 2)) dx</p>
+            </div>
+
+            <div class="example-box">
+                <h3>Problem 3: Trigonometric Substitution</h3>
+                <p>Evaluate ∫₀² x²√(4 - x²) dx</p>
+            </div>
+
+            <div class="example-box">
+                <h3>Problem 4: Applied Problem</h3>
+                <p>A force F(x) = 2x + 3 N moves an object from x = 1 m to x = 5 m. Calculate the work done.</p>
+            </div>
+
+            <div class="example-box">
+                <h3>Problem 5: Numerical Integration</h3>
+                <p>Use the Trapezoidal Rule with n = 4 to approximate ∫₁² (1/x) dx and compare with the exact value ln(2).</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>Integration by parts reverses the product rule: ∫u dv = uv - ∫v du</li>
+                <li>Partial fractions decompose rational functions into simpler integrable terms</li>
+                <li>Trigonometric substitution handles radicals like √(a² - x²)</li>
+                <li>Numerical methods (Trapezoidal, Simpson's) approximate integrals when exact solutions are impossible</li>
+                <li>Applications include work, area, volume, center of mass, and economic surplus</li>
+                <li>Choose the right technique based on the integrand's form</li>
+            </ul>
+        </section>
+
+        <nav class="lesson-nav">
+            <a href="lesson-1-advanced-derivatives.html">← Previous: Advanced Derivatives</a>
+            <a href="lesson-3-differential-equations.html">Next Lesson: Differential Equations →</a>
+        </nav>
+    </main>
+</body>
+</html>

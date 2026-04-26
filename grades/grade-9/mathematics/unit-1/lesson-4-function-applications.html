@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4: Function Applications - Grade 9 Math</title>
+    <link rel="stylesheet" href="../../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Lesson 4: Function Applications</h1>
+            <p>Solving Real Problems with Functions</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="../../../../index.html">Home</a>
+            <a href="../../index.html">Grade 9</a>
+            <a href="../index.html">Mathematics</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="card">
+            <h2>Functions in the Real World</h2>
+            <p>Now that you understand functions, let's apply them to solve actual problems in gaming, business, technology, and finance. These are the same types of calculations that app developers, game designers, and financial analysts use every day.</p>
+        </section>
+
+        <section class="card">
+            <h2>Application 1: Gaming Revenue Model</h2>
+            <p>A popular mobile game uses a freemium model with in-app purchases.</p>
+
+            <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 25px; border-radius: 8px; margin: 20px 0;">
+                <h3>Mobile Game Economics</h3>
+                <p><strong>Problem:</strong> The game has a $5 battle pass and sells loot boxes for $2 each. Write a function for total spending based on loot boxes purchased (assuming you bought the battle pass).</p>
+
+                <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-family: monospace; font-size: 18px;"><strong>C(x) = 2x + 5</strong></p>
+                    <p>where x = loot boxes purchased</p>
+                </div>
+
+                <p><strong>Questions to solve:</strong></p>
+                <ol>
+                    <li>How much did you spend if you bought 10 loot boxes?</li>
+                    <li>If you spent $25 total, how many loot boxes did you buy?</li>
+                    <li>Graph this function for 0 to 15 loot boxes</li>
+                </ol>
+
+                <details style="margin-top: 15px;">
+                    <summary style="cursor: pointer; background: rgba(255,255,255,0.2); padding: 10px; border-radius: 5px;">Show Solutions</summary>
+                    <div style="margin-top: 10px; padding: 15px; background: rgba(255,255,255,0.9); color: #333; border-radius: 5px;">
+                        <p><strong>1.</strong> C(10) = 2(10) + 5 = $25</p>
+                        <p><strong>2.</strong> 25 = 2x + 5 → 20 = 2x → x = 10 loot boxes</p>
+                        <p><strong>3.</strong> Graph: straight line starting at (0, 5) with slope 2</p>
+                    </div>
+                </details>
+            </div>
+
+            <svg width="100%" height="350" style="background: white; border: 1px solid #ddd; border-radius: 8px; margin: 20px 0;">
+                <line x1="50" y1="300" x2="550" y2="300" stroke="#333" stroke-width="2"/>
+                <line x1="50" y1="300" x2="50" y2="50" stroke="#333" stroke-width="2"/>
+
+                <text x="300" y="330" text-anchor="middle" font-size="14">Loot Boxes Purchased (x)</text>
+                <text x="20" y="175" text-anchor="middle" font-size="14" transform="rotate(-90 20 175)">Total Cost ($)</text>
+
+                <line x1="50" y1="270" x2="500" y2="70" stroke="#f5576c" stroke-width="3"/>
+
+                <circle cx="50" cy="270" r="6" fill="#f5576c"/>
+                <text x="60" y="275" font-size="12" fill="#f5576c">$5 (battle pass only)</text>
+
+                <circle cx="200" cy="210" r="6" fill="#f5576c"/>
+                <circle cx="350" cy="150" r="6" fill="#f5576c"/>
+                <circle cx="500" cy="90" r="6" fill="#f5576c"/>
+
+                <text x="150" y="310" text-anchor="middle" font-size="12">5</text>
+                <text x="275" y="310" text-anchor="middle" font-size="12">10</text>
+                <text x="400" y="310" text-anchor="middle" font-size="12">15</text>
+
+                <text x="40" y="274" text-anchor="end" font-size="11">5</text>
+                <text x="40" y="214" text-anchor="end" font-size="11">15</text>
+                <text x="40" y="154" text-anchor="end" font-size="11">25</text>
+                <text x="40" y="94" text-anchor="end" font-size="11">35</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>Application 2: YouTube Creator Earnings</h2>
+            <p>Understanding how content creators make money through ad revenue.</p>
+
+            <div style="background: #ff0000; color: white; padding: 25px; border-radius: 8px; margin: 20px 0;">
+                <h3>Ad Revenue Calculator</h3>
+                <p><strong>Problem:</strong> A YouTuber earns $0.003 per view on average (CPM model). Write a function for monthly earnings.</p>
+
+                <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-family: monospace; font-size: 18px;"><strong>E(v) = 0.003v</strong></p>
+                    <p>where v = total views</p>
+                </div>
+
+                <table style="width: 100%; margin: 15px 0; background: rgba(255,255,255,0.95); color: #333; border-radius: 8px; overflow: hidden;">
+                    <tr style="background: #cc0000; color: white;">
+                        <th style="padding: 12px; text-align: left;">Views</th>
+                        <th style="padding: 12px; text-align: left;">Calculation</th>
+                        <th style="padding: 12px; text-align: left;">Earnings</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">100,000</td>
+                        <td style="padding: 10px;">0.003 × 100,000</td>
+                        <td style="padding: 10px; font-weight: bold;">$300</td>
+                    </tr>
+                    <tr style="background: #f5f5f5;">
+                        <td style="padding: 10px;">500,000</td>
+                        <td style="padding: 10px;">0.003 × 500,000</td>
+                        <td style="padding: 10px; font-weight: bold;">$1,500</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">1,000,000</td>
+                        <td style="padding: 10px;">0.003 × 1,000,000</td>
+                        <td style="padding: 10px; font-weight: bold;">$3,000</td>
+                    </tr>
+                </table>
+
+                <p><strong>Challenge:</strong> How many views do you need to earn $2,000/month?</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; background: rgba(255,255,255,0.2); padding: 10px; border-radius: 5px;">Show Solution</summary>
+                    <div style="margin-top: 10px; padding: 15px; background: rgba(255,255,255,0.9); color: #333; border-radius: 5px;">
+                        <p>2000 = 0.003v</p>
+                        <p>v = 2000 ÷ 0.003 = 666,667 views</p>
+                        <p>You need about 667,000 views to earn $2,000</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Application 3: E-commerce Profit Analysis</h2>
+            <p>How online stores calculate profit from sales.</p>
+
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 8px; margin: 20px 0;">
+                <h3>Shopify Store Profits</h3>
+                <p><strong>Scenario:</strong> You sell custom phone cases for $25 each. Each case costs you $10 to make and ship. Your monthly platform fees are $30.</p>
+
+                <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-family: monospace; font-size: 18px;"><strong>P(x) = 15x - 30</strong></p>
+                    <p>where:</p>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li>x = cases sold</li>
+                        <li>$15 profit per case ($25 - $10)</li>
+                        <li>-$30 monthly overhead</li>
+                    </ul>
+                </div>
+
+                <p><strong>Key Questions:</strong></p>
+                <ol>
+                    <li>How many cases must you sell to break even (profit = $0)?</li>
+                    <li>What's your profit if you sell 20 cases?</li>
+                    <li>How many cases for $500 profit?</li>
+                </ol>
+
+                <details style="margin-top: 15px;">
+                    <summary style="cursor: pointer; background: rgba(255,255,255,0.2); padding: 10px; border-radius: 5px;">Show Solutions</summary>
+                    <div style="margin-top: 10px; padding: 15px; background: rgba(255,255,255,0.9); color: #333; border-radius: 5px;">
+                        <p><strong>1. Break even:</strong></p>
+                        <p>0 = 15x - 30 → 15x = 30 → x = 2 cases</p>
+                        <p>You need to sell 2 cases just to cover fees</p>
+
+                        <p><strong>2. Profit at 20 cases:</strong></p>
+                        <p>P(20) = 15(20) - 30 = 300 - 30 = $270</p>
+
+                        <p><strong>3. Cases needed for $500:</strong></p>
+                        <p>500 = 15x - 30 → 530 = 15x → x ≈ 35.3</p>
+                        <p>Need to sell 36 cases (round up)</p>
+                    </div>
+                </details>
+            </div>
+
+            <svg width="100%" height="350" style="background: white; border: 1px solid #ddd; border-radius: 8px; margin: 20px 0;">
+                <line x1="50" y1="200" x2="550" y2="200" stroke="#333" stroke-width="2"/>
+                <line x1="50" y1="300" x2="50" y2="50" stroke="#333" stroke-width="2"/>
+
+                <text x="300" y="330" text-anchor="middle" font-size="14">Cases Sold (x)</text>
+                <text x="20" y="175" text-anchor="middle" font-size="14" transform="rotate(-90 20 175)">Profit ($)</text>
+
+                <line x1="50" y1="230" x2="500" y2="80" stroke="#667eea" stroke-width="3"/>
+
+                <rect x="0" y="195" width="550" height="10" fill="rgba(239,68,68,0.1)"/>
+                <text x="560" y="203" font-size="12" fill="#ef4444">Break-even line</text>
+
+                <circle cx="75" cy="218" r="7" fill="#10b981"/>
+                <text x="85" y="215" font-size="12" fill="#10b981">Break even (2, 0)</text>
+
+                <circle cx="50" cy="230" r="6" fill="#ef4444"/>
+                <text x="60" y="245" font-size="11" fill="#ef4444">Loss zone</text>
+
+                <circle cx="300" cy="130" r="6" fill="#10b981"/>
+                <circle cx="450" cy="90" r="6" fill="#10b981"/>
+
+                <text x="100" y="310" text-anchor="middle" font-size="12">5</text>
+                <text x="200" y="310" text-anchor="middle" font-size="12">10</text>
+                <text x="300" y="310" text-anchor="middle" font-size="12">15</text>
+                <text x="400" y="310" text-anchor="middle" font-size="12">20</text>
+
+                <text x="40" y="204" text-anchor="end" font-size="11">0</text>
+                <text x="40" y="154" text-anchor="end" font-size="11">150</text>
+                <text x="40" y="104" text-anchor="end" font-size="11">300</text>
+                <text x="40" y="234" text-anchor="end" font-size="11">-30</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>Application 4: Ride-Share Cost Calculator</h2>
+            <p>Understanding Uber/Lyft pricing models.</p>
+
+            <div style="background: #000000; color: white; padding: 25px; border-radius: 8px; margin: 20px 0;">
+                <h3>Uber Pricing Function</h3>
+                <p><strong>Pricing Model:</strong> $3 base fare + $1.50 per mile</p>
+
+                <div style="background: #333; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-family: monospace; font-size: 18px;"><strong>C(m) = 1.5m + 3</strong></p>
+                    <p>where m = miles traveled</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
+                    <div style="background: #1a1a1a; padding: 15px; border-radius: 8px;">
+                        <h4>Example Trip 1</h4>
+                        <p>Distance: 5 miles</p>
+                        <p>C(5) = 1.5(5) + 3 = $10.50</p>
+                    </div>
+                    <div style="background: #1a1a1a; padding: 15px; border-radius: 8px;">
+                        <h4>Example Trip 2</h4>
+                        <p>Distance: 12 miles</p>
+                        <p>C(12) = 1.5(12) + 3 = $21</p>
+                    </div>
+                </div>
+
+                <p><strong>Your turn:</strong> You have $18 budget. What's the maximum distance you can travel?</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; background: #333; padding: 10px; border-radius: 5px;">Show Solution</summary>
+                    <div style="margin-top: 10px; padding: 15px; background: white; color: #333; border-radius: 5px;">
+                        <p>18 = 1.5m + 3</p>
+                        <p>15 = 1.5m</p>
+                        <p>m = 15 ÷ 1.5 = 10 miles</p>
+                        <p>With $18, you can travel up to 10 miles</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Application 5: Video Game Leveling System</h2>
+            <p>Many games use exponential-like progression, but let's model a linear leveling system.</p>
+
+            <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 25px; border-radius: 8px; margin: 20px 0;">
+                <h3>RPG Experience Points</h3>
+                <p><strong>Game Mechanic:</strong> Each level requires 1,000 XP more than the previous. Level 1 requires 1,000 XP.</p>
+
+                <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-family: monospace; font-size: 18px; color: #333; font-weight: bold;">XP(L) = 1000L</p>
+                    <p style="color: #333;">where L = level number</p>
+                </div>
+
+                <table style="width: 100%; margin: 15px 0; background: rgba(255,255,255,0.95); border-radius: 8px; overflow: hidden;">
+                    <tr style="background: #fa709a; color: white;">
+                        <th style="padding: 12px;">Level</th>
+                        <th style="padding: 12px;">XP Required</th>
+                        <th style="padding: 12px;">Total XP</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; text-align: center;">1</td>
+                        <td style="padding: 10px; text-align: center;">1,000</td>
+                        <td style="padding: 10px; text-align: center;">1,000</td>
+                    </tr>
+                    <tr style="background: #f9f9f9;">
+                        <td style="padding: 10px; text-align: center;">5</td>
+                        <td style="padding: 10px; text-align: center;">5,000</td>
+                        <td style="padding: 10px; text-align: center;">15,000</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; text-align: center;">10</td>
+                        <td style="padding: 10px; text-align: center;">10,000</td>
+                        <td style="padding: 10px; text-align: center;">55,000</td>
+                    </tr>
+                    <tr style="background: #f9f9f9;">
+                        <td style="padding: 10px; text-align: center;">20</td>
+                        <td style="padding: 10px; text-align: center;">20,000</td>
+                        <td style="padding: 10px; text-align: center;">210,000</td>
+                    </tr>
+                </table>
+
+                <p style="color: #333;"><strong>Problem:</strong> If you earn 500 XP per hour, how many hours to reach level 15?</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 5px; color: #333;">Show Solution</summary>
+                    <div style="margin-top: 10px; padding: 15px; background: white; color: #333; border-radius: 5px;">
+                        <p>Total XP for Level 15 = 1000+2000+...+15000</p>
+                        <p>Sum = (15 × 16 × 1000)/2 = 120,000 XP</p>
+                        <p>Hours = 120,000 ÷ 500 = 240 hours</p>
+                        <p>(That's 10 full days of playing!)</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Comprehensive Challenge Problem</h2>
+
+            <div style="background: #1e293b; color: white; padding: 25px; border-radius: 8px; margin: 20px 0;">
+                <h3>Multi-Step Real-World Scenario: Streaming Platform Launch</h3>
+                <p>You're launching a streaming service competitor to Netflix. Here's your business model:</p>
+
+                <ul>
+                    <li>Monthly subscription: $12/user</li>
+                    <li>Server costs: $5,000 fixed + $2 per user</li>
+                    <li>Content licensing: $10,000/month flat fee</li>
+                </ul>
+
+                <p><strong>Part A:</strong> Write a function R(u) for monthly revenue (u = users)</p>
+                <p><strong>Part B:</strong> Write a function C(u) for monthly costs</p>
+                <p><strong>Part C:</strong> Write a profit function P(u) = R(u) - C(u)</p>
+                <p><strong>Part D:</strong> How many users needed to break even?</p>
+                <p><strong>Part E:</strong> What's your profit with 2,000 subscribers?</p>
+
+                <details style="margin-top: 20px;">
+                    <summary style="cursor: pointer; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 5px;">Show Complete Solution</summary>
+                    <div style="margin-top: 15px; padding: 20px; background: white; color: #333; border-radius: 5px;">
+                        <h4>Part A: Revenue Function</h4>
+                        <p style="font-family: monospace; background: #f0f7ff; padding: 10px; border-radius: 4px;">
+                            <strong>R(u) = 12u</strong>
+                        </p>
+                        <p>Each user pays $12/month</p>
+
+                        <h4 style="margin-top: 15px;">Part B: Cost Function</h4>
+                        <p style="font-family: monospace; background: #f0f7ff; padding: 10px; border-radius: 4px;">
+                            <strong>C(u) = 2u + 15,000</strong>
+                        </p>
+                        <p>$2 per user + $5,000 servers + $10,000 content = $15,000 fixed costs</p>
+
+                        <h4 style="margin-top: 15px;">Part C: Profit Function</h4>
+                        <p style="font-family: monospace; background: #f0f7ff; padding: 10px; border-radius: 4px;">
+                            <strong>P(u) = 12u - (2u + 15,000) = 10u - 15,000</strong>
+                        </p>
+
+                        <h4 style="margin-top: 15px;">Part D: Break-Even Point</h4>
+                        <p>0 = 10u - 15,000</p>
+                        <p>10u = 15,000</p>
+                        <p><strong>u = 1,500 users</strong></p>
+                        <p>Need 1,500 subscribers to break even</p>
+
+                        <h4 style="margin-top: 15px;">Part E: Profit at 2,000 users</h4>
+                        <p>P(2000) = 10(2000) - 15,000</p>
+                        <p>P(2000) = 20,000 - 15,000</p>
+                        <p><strong>Profit = $5,000/month</strong></p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>Functions model real-world scenarios in business, gaming, and technology</li>
+                <li>Revenue = (price per unit) × (number of units)</li>
+                <li>Profit = Revenue - Costs</li>
+                <li>Break-even point: where profit = 0 (revenue = costs)</li>
+                <li>Every app, game, and business uses these mathematical models to make decisions</li>
+                <li>Understanding functions helps you analyze deals, costs, and growth as a consumer and creator</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Final Project Ideas</h2>
+            <div style="background: #f0f7ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3>Choose one to demonstrate your mastery:</h3>
+                <ol>
+                    <li><strong>Create Your Own App Pricing Model:</strong> Design a subscription service with at least 3 pricing tiers and calculate revenue projections</li>
+                    <li><strong>Gaming Economy Analysis:</strong> Research a real game's XP system and model it with functions</li>
+                    <li><strong>Social Media Growth Tracker:</strong> Track real follower growth on any platform for 2 weeks and create a function model</li>
+                    <li><strong>Small Business Simulator:</strong> Plan a hypothetical online store with products, costs, and profit analysis</li>
+                </ol>
+            </div>
+        </section>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+            <a href="lesson-3-graphing-functions.html" class="card" style="padding: 15px 30px; text-decoration: none;">
+                ← Previous: Graphing Functions
+            </a>
+            <a href="../index.html" class="card" style="padding: 15px 30px; text-decoration: none;">
+                Back to Unit Overview
+            </a>
+        </div>
+    </main>
+</body>
+</html>

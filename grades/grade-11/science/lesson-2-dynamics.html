@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2: Dynamics - Grade 11 Science</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Dynamics</h1>
+            <p>Grade 11 | Science | Unit 1: Advanced Physics</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="../../../index.html">Home</a>
+            <a href="../index.html">Grade 11</a>
+            <a href="index.html">Science</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hook-box">
+            <p>A 1,500 kg roller coaster car plunges down a 60-meter drop, then whips through a loop-the-loop. How fast is it going at the bottom? Will riders experience weightlessness at the top? These aren't guesses - dynamics gives us exact answers using Newton's laws and force analysis.</p>
+        </section>
+
+        <section class="objectives">
+            <h2>Learning Objectives</h2>
+            <p>By the end of this lesson, you will be able to:</p>
+            <ul>
+                <li>Apply Newton's three laws of motion to real-world scenarios</li>
+                <li>Draw and analyze free-body diagrams</li>
+                <li>Calculate net force and predict object acceleration</li>
+                <li>Understand friction, normal force, and tension in systems</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>What You'll Learn</h2>
+            <p><strong>Dynamics</strong> is the study of forces and how they cause motion. While kinematics told us how objects move, dynamics tells us why they move. Every acceleration, every turn, every collision happens because forces are acting.</p>
+            <p style="margin-top: 15px;">Master dynamics and you'll understand why seatbelts save lives, how airplanes stay airborne, and why your coffee spills when you brake too hard.</p>
+        </section>
+
+        <section class="card">
+            <h2>Why This Matters</h2>
+            <p>Dynamics is the foundation of mechanical engineering:</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Roller Coaster Design:</strong> Engineers calculate g-forces to ensure thrilling yet safe rides</li>
+                <li><strong>Car Safety:</strong> Crumple zones designed to absorb impact forces during collisions</li>
+                <li><strong>Sports Performance:</strong> Optimize force application in sprinting, jumping, throwing</li>
+                <li><strong>Aerospace:</strong> Calculate thrust needed for liftoff and orbital maneuvers</li>
+                <li><strong>Structural Engineering:</strong> Ensure buildings withstand wind, earthquakes, and loads</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Core Concept: Newton's Three Laws</h2>
+
+            <h3>Newton's First Law: Inertia</h3>
+            <p><strong>"An object at rest stays at rest, and an object in motion stays in motion at constant velocity, unless acted upon by a net force."</strong></p>
+            <div class="step">
+                <strong>Example:</strong> When a car suddenly stops, you lurch forward. It's not that a force pushed you - your body wanted to keep moving at the car's original speed (inertia). The seatbelt applies the force to stop you.
+            </div>
+
+            <h3 style="margin-top: 25px;">Newton's Second Law: F = ma</h3>
+            <p><strong>"The net force on an object equals its mass times its acceleration."</strong></p>
+            <div class="step">
+                <strong>Formula:</strong> ΣF = ma (sum of all forces = mass × acceleration)
+                <p style="margin-top: 10px;"><strong>Example:</strong> A 1,200 kg car accelerates at 3 m/s². The net force is F = (1200)(3) = 3,600 N.</p>
+            </div>
+
+            <h3 style="margin-top: 25px;">Newton's Third Law: Action-Reaction</h3>
+            <p><strong>"For every action, there is an equal and opposite reaction."</strong></p>
+            <div class="step">
+                <strong>Example:</strong> When you walk, your foot pushes backward on the ground. The ground pushes forward on your foot with equal force, propelling you forward. These forces are equal in magnitude but opposite in direction.
+            </div>
+        </section>
+
+        <section class="visual-container">
+            <h2>Visual: Free-Body Diagram - Car on a Slope</h2>
+            <svg width="700" height="500" xmlns="http://www.w3.org/2000/svg">
+                <text x="350" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Free-Body Diagram: Car on Inclined Plane</text>
+
+                <!-- Inclined plane -->
+                <line x1="100" y1="400" x2="550" y2="200" stroke="#666" stroke-width="4"/>
+                <line x1="100" y1="400" x2="600" y2="400" stroke="#333" stroke-width="2"/>
+
+                <!-- Angle arc -->
+                <path d="M 150 400 Q 170 395, 180 380" stroke="#e74c3c" stroke-width="2" fill="none"/>
+                <text x="190" y="395" font-size="16" fill="#e74c3c" font-weight="bold">θ = 30°</text>
+
+                <!-- Car (represented as a box) -->
+                <rect x="280" y="250" width="80" height="50" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+                <text x="320" y="280" text-anchor="middle" font-size="14" fill="white" font-weight="bold">CAR</text>
+
+                <!-- Force vectors -->
+                <!-- Weight (downward) -->
+                <line x1="320" y1="300" x2="320" y2="420" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrow-red)"/>
+                <text x="340" y="370" font-size="16" fill="#e74c3c" font-weight="bold">F_g (Weight)</text>
+                <text x="340" y="390" font-size="14" fill="#e74c3c">mg = 10,000 N</text>
+
+                <!-- Normal force (perpendicular to surface) -->
+                <line x1="320" y1="300" x2="260" y2="190" stroke="#27ae60" stroke-width="3" marker-end="url(#arrow-green)"/>
+                <text x="200" y="180" font-size="16" fill="#27ae60" font-weight="bold">F_N (Normal)</text>
+
+                <!-- Component parallel to slope -->
+                <line x1="320" y1="300" x2="450" y2="240" stroke="#9b59b6" stroke-width="3" marker-end="url(#arrow-purple)"/>
+                <text x="460" y="245" font-size="16" fill="#9b59b6" font-weight="bold">mg sin θ</text>
+                <text x="460" y="265" font-size="14" fill="#9b59b6">(down slope)</text>
+
+                <!-- Friction force (up the slope) -->
+                <line x1="320" y1="300" x2="190" y2="360" stroke="#f39c12" stroke-width="3" marker-end="url(#arrow-orange)"/>
+                <text x="120" y="365" font-size="16" fill="#f39c12" font-weight="bold">F_friction</text>
+
+                <!-- Coordinate system -->
+                <line x1="520" y1="180" x2="600" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrow-black)"/>
+                <text x="610" y="145" font-size="14" fill="#333">x (up slope)</text>
+                <line x1="520" y1="180" x2="460" y2="240" stroke="#333" stroke-width="2" marker-end="url(#arrow-black)"/>
+                <text x="430" y="255" font-size="14" fill="#333">y</text>
+
+                <!-- Markers for arrows -->
+                <defs>
+                    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#e74c3c"/>
+                    </marker>
+                    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#27ae60"/>
+                    </marker>
+                    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#9b59b6"/>
+                    </marker>
+                    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#f39c12"/>
+                    </marker>
+                    <marker id="arrow-black" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+                    </marker>
+                </defs>
+            </svg>
+            <p style="margin-top: 15px; color: #666;"><strong>Key insight:</strong> Breaking weight into components lets us analyze motion along the slope. Net force = mg sin θ - F_friction determines if the car accelerates down the slope.</p>
+        </section>
+
+        <section class="card">
+            <h2>Key Forces in Dynamics</h2>
+
+            <h3>1. Weight (F_g)</h3>
+            <p>The force of gravity pulling an object downward.</p>
+            <p style="margin-left: 20px;"><strong>Formula:</strong> F_g = mg (where g = 9.8 m/s² on Earth)</p>
+
+            <h3 style="margin-top: 20px;">2. Normal Force (F_N)</h3>
+            <p>The support force perpendicular to a surface. It prevents objects from falling through surfaces.</p>
+            <p style="margin-left: 20px;"><strong>Note:</strong> Normal force equals weight only when on a flat, horizontal surface with no other vertical forces.</p>
+
+            <h3 style="margin-top: 20px;">3. Friction (F_f)</h3>
+            <p>The force that opposes motion between surfaces in contact.</p>
+            <p style="margin-left: 20px;"><strong>Formula:</strong> F_f = μF_N (where μ is the coefficient of friction)</p>
+            <p style="margin-left: 20px;"><strong>Static friction:</strong> Prevents motion from starting (μ_s)</p>
+            <p style="margin-left: 20px;"><strong>Kinetic friction:</strong> Opposes motion already happening (μ_k)</p>
+
+            <h3 style="margin-top: 20px;">4. Tension (F_T)</h3>
+            <p>The pulling force transmitted through a rope, cable, or chain.</p>
+            <p style="margin-left: 20px;"><strong>Note:</strong> Tension is the same throughout a massless rope.</p>
+
+            <h3 style="margin-top: 20px;">5. Applied Force (F_app)</h3>
+            <p>Any external force applied to an object (pushing, pulling, etc.).</p>
+        </section>
+
+        <section class="example-box">
+            <h2>Example 1: Accelerating a Car</h2>
+            <p><strong>Problem:</strong> A 1,500 kg car accelerates from rest. The engine provides 4,500 N of forward force, while air resistance and rolling friction total 1,200 N backward. What is the car's acceleration?</p>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <ol>
+                <li><strong>Draw a free-body diagram (mental or on paper):</strong>
+                    <ul style="margin-left: 20px;">
+                        <li>Forward force (engine): 4,500 N →</li>
+                        <li>Backward force (resistance): 1,200 N ←</li>
+                    </ul>
+                </li>
+                <li><strong>Calculate net force:</strong>
+                    <p style="margin-left: 20px;">ΣF = 4,500 - 1,200 = 3,300 N forward</p>
+                </li>
+                <li><strong>Apply Newton's Second Law:</strong>
+                    <p style="margin-left: 20px;">F = ma</p>
+                    <p style="margin-left: 20px;">3,300 = 1,500a</p>
+                    <p style="margin-left: 20px;">a = 3,300 / 1,500 = 2.2 m/s²</p>
+                </li>
+            </ol>
+
+            <div style="background: white; padding: 15px; margin-top: 15px; border-radius: 5px; text-align: center;">
+                <p style="font-size: 1.4em; color: #27ae60; font-weight: bold;">Answer: 2.2 m/s²</p>
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Real-world insight:</strong> High-performance cars minimize air resistance (aerodynamic design) and rolling friction (low-resistance tires) to maximize acceleration from engine force.</p>
+        </section>
+
+        <section class="example-box">
+            <h2>Example 2: Roller Coaster Loop</h2>
+            <p><strong>Problem:</strong> A 600 kg roller coaster car enters a vertical loop (radius = 10 m) at the bottom with a speed of 20 m/s. What is the normal force from the track at the bottom of the loop?</p>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <ol>
+                <li><strong>Identify forces at the bottom:</strong>
+                    <ul style="margin-left: 20px;">
+                        <li>Weight: F_g = mg = (600)(9.8) = 5,880 N (downward)</li>
+                        <li>Normal force: F_N (upward)</li>
+                        <li>Net force must point toward center (upward) to maintain circular motion</li>
+                    </ul>
+                </li>
+                <li><strong>For circular motion:</strong>
+                    <p style="margin-left: 20px;">F_net = mv²/r (centripetal force)</p>
+                    <p style="margin-left: 20px;">F_net = (600)(20²)/10 = 24,000 N (upward)</p>
+                </li>
+                <li><strong>Apply Newton's Second Law (vertical direction):</strong>
+                    <p style="margin-left: 20px;">F_N - F_g = F_net</p>
+                    <p style="margin-left: 20px;">F_N - 5,880 = 24,000</p>
+                    <p style="margin-left: 20px;">F_N = 29,880 N</p>
+                </li>
+            </ol>
+
+            <div style="background: white; padding: 15px; margin-top: 15px; border-radius: 5px; text-align: center;">
+                <p style="font-size: 1.4em; color: #27ae60; font-weight: bold;">Answer: 29,880 N</p>
+                <p style="font-size: 1.1em; color: #666;">That's 5× the car's weight! Riders experience about 5g of acceleration.</p>
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Real-world insight:</strong> Roller coaster designers limit g-forces to 5-6g to ensure safety and rider comfort. Fighter pilots experience similar forces but with special suits to prevent blackouts.</p>
+        </section>
+
+        <section class="interactive-box">
+            <h2>Quick Check: Test Your Understanding</h2>
+            <p><strong>Question:</strong> A 50 kg box sits on a horizontal floor. You push it with 200 N of force, but it doesn't move. What is the friction force?</p>
+
+            <button onclick="toggleAnswer('quick-check')">Show Answer</button>
+            <div id="quick-check" class="answer">
+                <p><strong>Answer: 200 N (opposite to your push)</strong></p>
+                <p><strong>Explanation:</strong></p>
+                <p>Since the box isn't moving, acceleration = 0.</p>
+                <p>By Newton's Second Law: ΣF = ma = 0</p>
+                <p>Therefore: F_push - F_friction = 0</p>
+                <p>F_friction = 200 N (static friction matches your push until you overcome it)</p>
+            </div>
+        </section>
+
+        <section class="practice-box">
+            <h2>Practice Questions</h2>
+
+            <div class="question">
+                <p><strong>Question 1 (Easy):</strong> If a net force of 20 N acts on a 4 kg object, what is its acceleration?</p>
+                <button onclick="toggleAnswer('q1')">Show Answer</button>
+                <div id="q1" class="answer">
+                    <p><strong>Answer: 5 m/s²</strong></p>
+                    <p>F = ma → 20 = 4a → a = 5 m/s²</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 2 (Medium):</strong> A 2,000 kg truck decelerates at -3 m/s². What net force is acting on it?</p>
+                <button onclick="toggleAnswer('q2')">Show Answer</button>
+                <div id="q2" class="answer">
+                    <p><strong>Answer: -6,000 N</strong></p>
+                    <p>F = ma = (2000)(-3) = -6,000 N</p>
+                    <p>Negative indicates the force opposes motion (braking force).</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 3 (Medium):</strong> A 10 kg object hangs from a rope. What is the tension in the rope when the object is at rest?</p>
+                <button onclick="toggleAnswer('q3')">Show Answer</button>
+                <div id="q3" class="answer">
+                    <p><strong>Answer: 98 N</strong></p>
+                    <p>At rest, tension must equal weight.</p>
+                    <p>T = mg = (10)(9.8) = 98 N</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 4 (Hard):</strong> A 30 kg sled is pulled across snow by a rope at 25° above horizontal with 150 N of force. If friction is 40 N, what is the sled's acceleration?</p>
+                <button onclick="toggleAnswer('q4')">Show Answer</button>
+                <div id="q4" class="answer">
+                    <p><strong>Answer: 3.2 m/s²</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>Horizontal component of pull: F_x = 150 cos(25°) = 136 N</p>
+                    <p>Net horizontal force: 136 - 40 = 96 N</p>
+                    <p>a = F/m = 96/30 = 3.2 m/s²</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 5 (Hard):</strong> A 1,000 kg car rounds a flat curve (radius = 50 m) at 20 m/s. What friction force is needed to prevent skidding?</p>
+                <button onclick="toggleAnswer('q5')">Show Answer</button>
+                <div id="q5" class="answer">
+                    <p><strong>Answer: 8,000 N</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>Friction must provide centripetal force.</p>
+                    <p>F_friction = mv²/r = (1000)(20²)/50</p>
+                    <p>F_friction = 400,000/50 = 8,000 N</p>
+                    <p>This is why cars skid on icy curves - ice reduces friction below what's needed.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="summary-box">
+            <h2>Quick Summary</h2>
+            <ul>
+                <li><strong>Dynamics</strong> explains how forces cause motion</li>
+                <li><strong>Newton's First Law:</strong> Objects resist changes in motion (inertia)</li>
+                <li><strong>Newton's Second Law:</strong> F = ma links force, mass, and acceleration</li>
+                <li><strong>Newton's Third Law:</strong> Action-reaction pairs are equal and opposite</li>
+                <li><strong>Free-body diagrams</strong> help visualize all forces acting on an object</li>
+                <li>Key forces: weight, normal, friction, tension, applied force</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Real-World Connection: Car Crash Safety</h2>
+            <p>Modern cars are marvels of force engineering:</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Crumple Zones:</strong> Designed to deform during impact, extending collision time and reducing peak force (F = ma, so larger Δt means smaller F)</li>
+                <li><strong>Airbags:</strong> Deploy in 20-30 milliseconds, distributing impact force over a larger area and longer time</li>
+                <li><strong>Seatbelts:</strong> Apply restraining force gradually rather than letting you hit the dashboard (sudden, large force)</li>
+                <li><strong>Side-Impact Bars:</strong> Reinforce doors to resist lateral collision forces</li>
+            </ul>
+            <p style="margin-top: 15px;">A 70 kg person in a 50 km/h (14 m/s) crash stopping in 0.1 s experiences: F = ma = m(Δv/Δt) = 70(14/0.1) = 9,800 N. That's 10× their body weight! Crumple zones extend this time to 0.5-1 s, reducing peak forces by 5-10×, which can be the difference between life and death.</p>
+        </section>
+
+        <section class="challenge-box">
+            <h2>Challenge Problem</h2>
+            <p><strong>The Elevator Problem:</strong></p>
+            <p>You're standing on a bathroom scale (which measures normal force) in an elevator. Your mass is 70 kg.</p>
+
+            <p style="margin-top: 15px;"><strong>Part A:</strong> What does the scale read when the elevator accelerates upward at 2 m/s²?</p>
+            <p><strong>Part B:</strong> What does it read when accelerating downward at 2 m/s²?</p>
+            <p><strong>Part C:</strong> At what downward acceleration would you feel weightless (scale reads zero)?</p>
+
+            <button onclick="toggleAnswer('challenge-hint')">Show Hint</button>
+            <div id="challenge-hint" class="hint">
+                <p><strong>Hint:</strong> The scale reads the normal force, not your weight.</p>
+                <p>Free-body diagram: F_N (upward) and F_g (downward)</p>
+                <p>Net force = ma (positive upward)</p>
+                <p>F_N - F_g = ma</p>
+            </div>
+
+            <button onclick="toggleAnswer('challenge')">Show Full Solution</button>
+            <div id="challenge" class="answer">
+                <p><strong>Part A: Accelerating upward at 2 m/s²</strong></p>
+                <p>F_N - mg = ma</p>
+                <p>F_N = m(g + a) = 70(9.8 + 2) = 70(11.8) = 826 N</p>
+                <p><strong>Scale reads: 826 N (84.3 kg equivalent) - you feel heavier!</strong></p>
+
+                <p style="margin-top: 15px;"><strong>Part B: Accelerating downward at 2 m/s²</strong></p>
+                <p>F_N - mg = m(-a) [negative because downward]</p>
+                <p>F_N = m(g - a) = 70(9.8 - 2) = 70(7.8) = 546 N</p>
+                <p><strong>Scale reads: 546 N (55.7 kg equivalent) - you feel lighter!</strong></p>
+
+                <p style="margin-top: 15px;"><strong>Part C: Weightless (F_N = 0)</strong></p>
+                <p>0 - mg = m(-a)</p>
+                <p>-mg = -ma</p>
+                <p>a = g = 9.8 m/s² downward</p>
+                <p><strong>At 9.8 m/s² downward acceleration (free fall), scale reads 0 - you're weightless!</strong></p>
+
+                <p style="margin-top: 15px;"><strong>Real-world:</strong> This is how NASA creates "zero-gravity" training. Aircraft fly in parabolic arcs with downward acceleration = g, giving astronauts 20-30 seconds of weightlessness.</p>
+            </div>
+        </section>
+
+        <div class="lesson-nav">
+            <a href="lesson-1-kinematics.html">Previous Lesson: Kinematics</a>
+            <a href="lesson-3-energy-and-momentum.html">Next Lesson: Energy and Momentum</a>
+        </div>
+    </main>
+
+    <script>
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === 'none' || element.style.display === '') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

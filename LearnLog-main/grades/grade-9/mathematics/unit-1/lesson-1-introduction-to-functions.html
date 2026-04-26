@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1: Introduction to Functions - Grade 9 Math</title>
+    <link rel="stylesheet" href="../../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Lesson 1: Introduction to Functions</h1>
+            <p>Understanding the Language of Algorithms</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="../../../../index.html">Home</a>
+            <a href="../../index.html">Grade 9</a>
+            <a href="../index.html">Mathematics</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="card">
+            <h2>What is a Function?</h2>
+            <p>A function is a special relationship where each input has exactly one output. Think of it like your phone's screen brightness: when you set it to 50%, you get a specific brightness level every time.</p>
+
+            <div style="background: #f0f7ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3>Real-World Example: Social Media Likes</h3>
+                <p>On Instagram, each post has a like count. The function could be:</p>
+                <p style="font-family: monospace; background: white; padding: 10px; border-radius: 4px;">
+                    f(post_id) = number_of_likes
+                </p>
+                <p>Post #12345 might have 247 likes. Every time you check that post, you'll see the same number (until someone new likes it).</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Function Notation</h2>
+            <p>We write functions using notation like <strong>f(x)</strong>, which reads as "f of x" or "the function f at x".</p>
+
+            <div style="margin: 20px 0;">
+                <h3>TikTok View Count Example</h3>
+                <p>If a video gets 10 views per hour:</p>
+                <p style="font-family: monospace; background: #f5f5f5; padding: 15px; border-radius: 4px;">
+                    f(x) = 10x<br>
+                    where x = hours since posting
+                </p>
+                <ul>
+                    <li>f(1) = 10 views after 1 hour</li>
+                    <li>f(5) = 50 views after 5 hours</li>
+                    <li>f(24) = 240 views after 1 day</li>
+                </ul>
+            </div>
+
+            <svg width="100%" height="300" style="background: white; border: 1px solid #ddd; border-radius: 8px;">
+                <line x1="50" y1="250" x2="550" y2="250" stroke="#333" stroke-width="2"/>
+                <line x1="50" y1="250" x2="50" y2="50" stroke="#333" stroke-width="2"/>
+
+                <text x="300" y="280" text-anchor="middle" font-size="14">Hours (x)</text>
+                <text x="20" y="150" text-anchor="middle" font-size="14" transform="rotate(-90 20 150)">Views</text>
+
+                <line x1="50" y1="250" x2="450" y2="50" stroke="#2563eb" stroke-width="3"/>
+
+                <circle cx="50" cy="250" r="5" fill="#dc2626"/>
+                <circle cx="130" cy="210" r="5" fill="#dc2626"/>
+                <circle cx="210" cy="170" r="5" fill="#dc2626"/>
+                <circle cx="290" cy="130" r="5" fill="#dc2626"/>
+                <circle cx="370" cy="90" r="5" fill="#dc2626"/>
+
+                <text x="60" y="245" font-size="12">0</text>
+                <text x="130" y="245" font-size="12">2</text>
+                <text x="210" y="245" font-size="12">4</text>
+                <text x="290" y="245" font-size="12">6</text>
+                <text x="370" y="245" font-size="12">8</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>App Algorithm Example: Spotify Recommendation</h2>
+            <p>Spotify uses functions to recommend songs. Simplified version:</p>
+
+            <div style="background: #1db954; color: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3>Recommendation Score Function</h3>
+                <p style="font-family: monospace; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px;">
+                    score(song) = (0.4 × genre_match) + (0.3 × popularity) + (0.3 × tempo_match)
+                </p>
+                <p>Example for a song you might like:</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li>Genre Match: 0.9 (you love pop)</li>
+                    <li>Popularity: 0.7 (moderately popular)</li>
+                    <li>Tempo Match: 0.8 (upbeat like you prefer)</li>
+                    <li><strong>Total Score: (0.4×0.9) + (0.3×0.7) + (0.3×0.8) = 0.81</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Domain and Range</h2>
+            <p><strong>Domain:</strong> All possible inputs (x-values)<br>
+            <strong>Range:</strong> All possible outputs (y-values or f(x) values)</p>
+
+            <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3>YouTube Video Length Example</h3>
+                <p>A YouTube video player shows time elapsed:</p>
+                <p style="font-family: monospace;">f(seconds_watched) = progress_percentage</p>
+                <p>For a 300-second (5-minute) video:</p>
+                <ul>
+                    <li><strong>Domain:</strong> 0 to 300 seconds (you can't watch negative time or past the end)</li>
+                    <li><strong>Range:</strong> 0% to 100% (progress bar fills from empty to full)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Practice Problems</h2>
+
+            <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3>Problem 1: Discord Server Growth</h3>
+                <p>A Discord server gains 15 new members each day. Write a function for total members after x days, starting with 50 members.</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #2563eb;">Show Solution</summary>
+                    <div style="margin-top: 10px; padding: 10px; background: white; border-radius: 4px;">
+                        <p><strong>f(x) = 50 + 15x</strong></p>
+                        <p>Where x = days</p>
+                        <p>After 10 days: f(10) = 50 + 15(10) = 200 members</p>
+                    </div>
+                </details>
+            </div>
+
+            <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3>Problem 2: Gaming XP System</h3>
+                <p>In a game, you earn 100 XP per level completed. If g(n) represents total XP after n levels, find g(7).</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #2563eb;">Show Solution</summary>
+                    <div style="margin-top: 10px; padding: 10px; background: white; border-radius: 4px;">
+                        <p><strong>g(n) = 100n</strong></p>
+                        <p>g(7) = 100 × 7 = 700 XP</p>
+                    </div>
+                </details>
+            </div>
+
+            <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3>Problem 3: Netflix Download Time</h3>
+                <p>Downloading a movie takes 2 minutes per GB. Write a function for download time based on file size. What's the domain and range for movies between 1-5 GB?</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #2563eb;">Show Solution</summary>
+                    <div style="margin-top: 10px; padding: 10px; background: white; border-radius: 4px;">
+                        <p><strong>t(g) = 2g</strong> (where g = gigabytes)</p>
+                        <p><strong>Domain:</strong> 1 ≤ g ≤ 5 (file sizes from 1 to 5 GB)</p>
+                        <p><strong>Range:</strong> 2 ≤ t ≤ 10 (download time from 2 to 10 minutes)</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>Functions map each input to exactly one output</li>
+                <li>Apps and algorithms use functions constantly (recommendations, scoring, timing)</li>
+                <li>Function notation: f(x) means "the output when input is x"</li>
+                <li>Domain = possible inputs, Range = possible outputs</li>
+                <li>Real-world functions often have practical limits on their domain and range</li>
+            </ul>
+        </section>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <a href="lesson-2-linear-functions.html" class="card" style="display: inline-block; padding: 15px 30px; text-decoration: none;">
+                Next: Lesson 2 - Linear Functions →
+            </a>
+        </div>
+    </main>
+</body>
+</html>

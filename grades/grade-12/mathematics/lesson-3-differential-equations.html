@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3: Differential Equations - Grade 12 Mathematics</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Differential Equations</h1>
+            <p>Lesson 3 - Advanced Calculus</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="../../../index.html">Home</a>
+            <a href="../index.html">Grade 12</a>
+            <a href="index.html">Mathematics</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="card">
+            <h2>Introduction to Differential Equations</h2>
+            <p>Differential equations relate functions to their derivatives and are fundamental to modeling dynamic systems in physics, biology, economics, and engineering. Rather than finding values, we solve for entire functions that describe how systems change over time. This lesson covers first-order differential equations and their applications.</p>
+        </section>
+
+        <section class="card">
+            <h2>1. What is a Differential Equation?</h2>
+            <p>A differential equation contains derivatives of an unknown function. The order is determined by the highest derivative present.</p>
+
+            <h3>Examples</h3>
+            <ul>
+                <li><strong>First-order:</strong> dy/dx = 2x (rate of change depends on x)</li>
+                <li><strong>First-order:</strong> dy/dx = y (rate of change depends on y itself)</li>
+                <li><strong>Second-order:</strong> d²y/dx² + y = 0 (harmonic oscillator)</li>
+            </ul>
+
+            <h3>Solution Types</h3>
+            <ul>
+                <li><strong>General solution:</strong> Contains arbitrary constants (family of curves)</li>
+                <li><strong>Particular solution:</strong> Satisfies initial conditions (specific curve)</li>
+            </ul>
+
+            <svg viewBox="0 0 400 250" style="max-width: 500px; margin: 20px auto; display: block;">
+                <line x1="50" y1="200" x2="350" y2="200" stroke="#34495e" stroke-width="2"/>
+                <line x1="50" y1="200" x2="50" y2="50" stroke="#34495e" stroke-width="2"/>
+                <path d="M 60 180 Q 150 120 240 90 Q 300 70 340 60" stroke="#bdc3c7" stroke-width="2" fill="none" opacity="0.5"/>
+                <path d="M 60 150 Q 150 100 240 80 Q 300 65 340 55" stroke="#bdc3c7" stroke-width="2" fill="none" opacity="0.5"/>
+                <path d="M 60 130 Q 150 90 240 70 Q 300 55 340 50" stroke="#3498db" stroke-width="3" fill="none"/>
+                <path d="M 60 110 Q 150 75 240 60 Q 300 48 340 45" stroke="#bdc3c7" stroke-width="2" fill="none" opacity="0.5"/>
+                <path d="M 60 95 Q 150 65 240 55 Q 300 43 340 42" stroke="#bdc3c7" stroke-width="2" fill="none" opacity="0.5"/>
+                <circle cx="60" cy="130" r="4" fill="#e74c3c"/>
+                <text x="65" y="135" font-size="11" fill="#e74c3c">Initial condition</text>
+                <text x="250" y="75" font-size="12" fill="#3498db">Particular solution</text>
+                <text x="180" y="160" font-size="12" fill="#95a5a6">General solution family</text>
+                <text x="350" y="220" font-size="12" fill="#2c3e50">x</text>
+                <text x="30" y="40" font-size="12" fill="#2c3e50">y</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>2. Separable Differential Equations</h2>
+            <p>A separable equation can be written as dy/dx = g(x)·h(y), allowing separation of variables.</p>
+
+            <h3>Method</h3>
+            <ol>
+                <li>Separate variables: (1/h(y)) dy = g(x) dx</li>
+                <li>Integrate both sides: ∫(1/h(y)) dy = ∫g(x) dx</li>
+                <li>Solve for y if possible</li>
+            </ol>
+
+            <h3>Example 1: Exponential Growth</h3>
+            <p>Solve dy/dx = 0.5y with initial condition y(0) = 100</p>
+
+            <div class="example-box">
+                <p><strong>Solution:</strong></p>
+                <p>Separate: (1/y) dy = 0.5 dx</p>
+                <p>Integrate: ∫(1/y) dy = ∫0.5 dx</p>
+                <p>ln|y| = 0.5x + C</p>
+                <p>y = Ae^(0.5x) where A = e^C</p>
+                <p>Apply y(0) = 100: 100 = Ae⁰ → A = 100</p>
+                <p>Particular solution: y = 100e^(0.5x)</p>
+            </div>
+
+            <svg viewBox="0 0 400 250" style="max-width: 500px; margin: 20px auto; display: block;">
+                <line x1="50" y1="200" x2="350" y2="200" stroke="#34495e" stroke-width="2"/>
+                <line x1="50" y1="200" x2="50" y2="30" stroke="#34495e" stroke-width="2"/>
+                <path d="M 50 190 Q 150 150 200 100 Q 250 50 300 30" stroke="#3498db" stroke-width="3" fill="none"/>
+                <circle cx="50" cy="190" r="4" fill="#e74c3c"/>
+                <text x="55" y="195" font-size="11" fill="#e74c3c">y(0) = 100</text>
+                <text x="240" y="60" font-size="12" fill="#3498db">Exponential growth</text>
+                <text x="350" y="220" font-size="12" fill="#2c3e50">x (time)</text>
+                <text x="20" y="30" font-size="12" fill="#2c3e50">y</text>
+                <line x1="45" y1="190" x2="55" y2="190" stroke="#95a5a6" stroke-width="1"/>
+                <text x="25" y="195" font-size="10" fill="#2c3e50">100</text>
+            </svg>
+
+            <h3>Example 2: Newton's Law of Cooling</h3>
+            <p>An object cools according to dT/dt = -k(T - T_ambient). If T(0) = 100°C, T_ambient = 20°C, and k = 0.1/min, find T(t).</p>
+
+            <div class="example-box">
+                <p><strong>Solution:</strong></p>
+                <p>Rewrite: dT/dt = -0.1(T - 20)</p>
+                <p>Separate: dT/(T - 20) = -0.1 dt</p>
+                <p>Integrate: ln|T - 20| = -0.1t + C</p>
+                <p>T - 20 = Ae^(-0.1t)</p>
+                <p>Apply T(0) = 100: 80 = A</p>
+                <p>Solution: T(t) = 20 + 80e^(-0.1t)</p>
+                <p>As t → ∞, T → 20°C (ambient temperature)</p>
+            </div>
+
+            <svg viewBox="0 0 400 250" style="max-width: 500px; margin: 20px auto; display: block;">
+                <line x1="50" y1="200" x2="350" y2="200" stroke="#34495e" stroke-width="2"/>
+                <line x1="50" y1="200" x2="50" y2="30" stroke="#34495e" stroke-width="2"/>
+                <line x1="50" y1="140" x2="350" y2="140" stroke="#e74c3c" stroke-width="1" stroke-dasharray="5,5"/>
+                <path d="M 50 40 Q 120 60 180 90 Q 240 115 340 135" stroke="#3498db" stroke-width="3" fill="none"/>
+                <circle cx="50" cy="40" r="4" fill="#2ecc71"/>
+                <text x="55" y="35" font-size="11" fill="#2ecc71">T(0) = 100°C</text>
+                <text x="320" y="135" font-size="12" fill="#3498db">Cooling curve</text>
+                <text x="310" y="140" font-size="11" fill="#e74c3c">20°C (ambient)</text>
+                <text x="350" y="220" font-size="12" fill="#2c3e50">t (min)</text>
+                <text x="20" y="30" font-size="12" fill="#2c3e50">T (°C)</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>3. Linear First-Order Equations</h2>
+            <p>Standard form: dy/dx + P(x)y = Q(x)</p>
+            <p>Solution uses an integrating factor: μ(x) = e^(∫P(x)dx)</p>
+
+            <h3>Method</h3>
+            <ol>
+                <li>Write in standard form</li>
+                <li>Find integrating factor μ(x) = e^(∫P(x)dx)</li>
+                <li>Multiply both sides by μ(x)</li>
+                <li>Left side becomes d/dx[μ(x)y]</li>
+                <li>Integrate and solve for y</li>
+            </ol>
+
+            <h3>Example: Electric Circuit</h3>
+            <p>An RL circuit with resistance R = 10Ω and inductance L = 2H has voltage V = 50V. Find current I(t) if I(0) = 0.</p>
+            <p>Differential equation: L(dI/dt) + RI = V → dI/dt + 5I = 25</p>
+
+            <div class="example-box">
+                <p><strong>Solution:</strong></p>
+                <p>P(t) = 5, Q(t) = 25</p>
+                <p>Integrating factor: μ = e^(∫5 dt) = e^(5t)</p>
+                <p>Multiply: e^(5t)(dI/dt) + 5e^(5t)I = 25e^(5t)</p>
+                <p>d/dt[e^(5t)I] = 25e^(5t)</p>
+                <p>Integrate: e^(5t)I = 5e^(5t) + C</p>
+                <p>I = 5 + Ce^(-5t)</p>
+                <p>Apply I(0) = 0: C = -5</p>
+                <p>Solution: I(t) = 5(1 - e^(-5t)) amperes</p>
+            </div>
+
+            <svg viewBox="0 0 400 250" style="max-width: 500px; margin: 20px auto; display: block;">
+                <line x1="50" y1="200" x2="350" y2="200" stroke="#34495e" stroke-width="2"/>
+                <line x1="50" y1="200" x2="50" y2="30" stroke="#34495e" stroke-width="2"/>
+                <line x1="50" y1="50" x2="350" y2="50" stroke="#e74c3c" stroke-width="1" stroke-dasharray="5,5"/>
+                <path d="M 50 200 Q 100 130 150 80 Q 200 60 300 52" stroke="#3498db" stroke-width="3" fill="none"/>
+                <text x="310" y="50" font-size="11" fill="#e74c3c">I = 5A (steady state)</text>
+                <text x="180" y="120" font-size="12" fill="#3498db">Current rise</text>
+                <text x="350" y="220" font-size="12" fill="#2c3e50">t (seconds)</text>
+                <text x="15" y="30" font-size="12" fill="#2c3e50">I (A)</text>
+                <circle cx="50" cy="200" r="4" fill="#2ecc71"/>
+                <text x="55" y="215" font-size="10" fill="#2ecc71">I(0) = 0</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>4. Population Models</h2>
+
+            <h3>Exponential Growth (Malthusian Model)</h3>
+            <p>dP/dt = kP (growth rate proportional to population)</p>
+            <p>Solution: P(t) = P₀e^(kt)</p>
+
+            <h3>Logistic Growth Model</h3>
+            <p>Accounts for carrying capacity K (environmental limits):</p>
+            <p>dP/dt = kP(1 - P/K)</p>
+
+            <div class="example-box">
+                <p><strong>Solution (using separation of variables and partial fractions):</strong></p>
+                <p>P(t) = K/(1 + Ae^(-kt)) where A = (K - P₀)/P₀</p>
+            </div>
+
+            <svg viewBox="0 0 400 300" style="max-width: 500px; margin: 20px auto; display: block;">
+                <line x1="50" y1="250" x2="350" y2="250" stroke="#34495e" stroke-width="2"/>
+                <line x1="50" y1="250" x2="50" y2="30" stroke="#34495e" stroke-width="2"/>
+                <line x1="50" y1="80" x2="350" y2="80" stroke="#e74c3c" stroke-width="1" stroke-dasharray="5,5"/>
+                <path d="M 50 240 Q 100 220 150 180 Q 200 110 250 85 Q 300 75 350 80" stroke="#3498db" stroke-width="3" fill="none"/>
+                <path d="M 50 240 Q 150 180 200 100 Q 250 30 350 20" stroke="#95a5a6" stroke-width="2" stroke-dasharray="3,3" fill="none"/>
+                <circle cx="200" cy="110" r="4" fill="#2ecc71"/>
+                <text x="205" y="115" font-size="11" fill="#2ecc71">Inflection point (P = K/2)</text>
+                <text x="320" y="75" font-size="11" fill="#e74c3c">K (carrying capacity)</text>
+                <text x="250" y="150" font-size="12" fill="#3498db">Logistic growth</text>
+                <text x="280" y="40" font-size="11" fill="#95a5a6">Exponential (unrealistic)</text>
+                <text x="350" y="270" font-size="12" fill="#2c3e50">Time</text>
+                <text x="15" y="25" font-size="12" fill="#2c3e50">Population</text>
+            </svg>
+
+            <h3>Example: Bacteria Culture</h3>
+            <p>A bacteria population grows logistically with k = 0.8/hour and K = 10,000. If P(0) = 1,000, find P(t).</p>
+
+            <div class="example-box">
+                <p><strong>Solution:</strong></p>
+                <p>A = (10,000 - 1,000)/1,000 = 9</p>
+                <p>P(t) = 10,000/(1 + 9e^(-0.8t))</p>
+                <p>At t = 5 hours: P(5) = 10,000/(1 + 9e^(-4)) ≈ 9,950 bacteria</p>
+                <p>Population approaches carrying capacity of 10,000</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>5. Mixing Problems</h2>
+            <p>These involve tracking concentration of substances in tanks or containers.</p>
+
+            <h3>Example: Salt Tank</h3>
+            <p>A 100-liter tank initially contains 20 kg of salt. Pure water flows in at 5 L/min and the mixture flows out at 5 L/min. Find the salt amount S(t).</p>
+
+            <svg viewBox="0 0 400 300" style="max-width: 500px; margin: 20px auto; display: block;">
+                <rect x="140" y="100" width="120" height="140" fill="none" stroke="#34495e" stroke-width="3" rx="5"/>
+                <path d="M 100 80 L 140 80 L 140 100" stroke="#3498db" stroke-width="3" fill="none"/>
+                <path d="M 95 75 L 100 80 L 105 75" fill="#3498db"/>
+                <text x="60" y="75" font-size="12" fill="#3498db">5 L/min (pure water)</text>
+                <path d="M 260 230 L 300 230" stroke="#e74c3c" stroke-width="3" fill="none"/>
+                <path d="M 295 225 L 300 230 L 295 235" fill="#e74c3c"/>
+                <text x="270" y="220" font-size="12" fill="#e74c3c">5 L/min (mixture)</text>
+                <rect x="150" y="140" width="100" height="80" fill="rgba(52, 152, 219, 0.3)"/>
+                <text x="170" y="185" font-size="14" fill="#2c3e50">S(t) kg salt</text>
+                <text x="170" y="205" font-size="12" fill="#2c3e50">100 L total</text>
+            </svg>
+
+            <div class="example-box">
+                <p><strong>Solution:</strong></p>
+                <p>Rate of change: dS/dt = (rate in) - (rate out)</p>
+                <p>Rate in = 0 kg/min (pure water)</p>
+                <p>Rate out = (S/100) kg/L × 5 L/min = S/20 kg/min</p>
+                <p>dS/dt = -S/20</p>
+                <p>This is separable: dS/S = -dt/20</p>
+                <p>ln|S| = -t/20 + C</p>
+                <p>S = Ae^(-t/20)</p>
+                <p>Apply S(0) = 20: A = 20</p>
+                <p>Solution: S(t) = 20e^(-t/20) kg</p>
+                <p>After 20 minutes: S(20) = 20e^(-1) ≈ 7.36 kg</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>6. Applications in Economics</h2>
+
+            <h3>Continuous Compound Interest</h3>
+            <p>If money grows continuously at rate r: dA/dt = rA</p>
+            <p>Solution: A(t) = A₀e^(rt)</p>
+
+            <h3>Supply and Demand Dynamics</h3>
+            <p>Price adjustment based on excess demand:</p>
+            <p>dP/dt = k(D(P) - S(P))</p>
+
+            <h3>Example: Investment Growth</h3>
+            <p>$10,000 invested at 6% annual rate compounded continuously. Find value after 10 years.</p>
+
+            <div class="example-box">
+                <p><strong>Solution:</strong></p>
+                <p>dA/dt = 0.06A with A(0) = 10,000</p>
+                <p>A(t) = 10,000e^(0.06t)</p>
+                <p>A(10) = 10,000e^(0.6) ≈ $18,221</p>
+            </div>
+
+            <svg viewBox="0 0 400 250" style="max-width: 500px; margin: 20px auto; display: block;">
+                <line x1="50" y1="200" x2="350" y2="200" stroke="#34495e" stroke-width="2"/>
+                <line x1="50" y1="200" x2="50" y2="30" stroke="#34495e" stroke-width="2"/>
+                <path d="M 50 180 Q 120 150 180 120 Q 240 90 340 40" stroke="#2ecc71" stroke-width="3" fill="none"/>
+                <circle cx="50" cy="180" r="4" fill="#3498db"/>
+                <circle cx="340" cy="40" r="4" fill="#e74c3c"/>
+                <text x="30" y="185" font-size="10" fill="#3498db">$10,000</text>
+                <text x="310" y="30" font-size="10" fill="#e74c3c">$18,221</text>
+                <text x="200" y="110" font-size="12" fill="#2ecc71">Continuous growth</text>
+                <text x="350" y="220" font-size="12" fill="#2c3e50">Years</text>
+                <text x="15" y="25" font-size="12" fill="#2c3e50">Value ($)</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>Practice Problems</h2>
+
+            <div class="example-box">
+                <h3>Problem 1: Separable Equation</h3>
+                <p>Solve dy/dx = xy² with y(0) = 1</p>
+            </div>
+
+            <div class="example-box">
+                <h3>Problem 2: Linear Equation</h3>
+                <p>Solve dy/dx + 3y = 6e^(-3x) with y(0) = 2</p>
+            </div>
+
+            <div class="example-box">
+                <h3>Problem 3: Population Model</h3>
+                <p>A population grows logistically with k = 0.05/day and K = 5,000. If P(0) = 500, when will the population reach 4,000?</p>
+            </div>
+
+            <div class="example-box">
+                <h3>Problem 4: Cooling Problem</h3>
+                <p>A cup of coffee at 95°C is placed in a room at 22°C. After 5 minutes, it cools to 70°C. When will it reach 50°C?</p>
+            </div>
+
+            <div class="example-box">
+                <h3>Problem 5: Mixing Problem</h3>
+                <p>A 200-liter tank contains 50 kg of salt. Brine with 0.5 kg/L salt flows in at 4 L/min. The mixture flows out at 4 L/min. Find S(t).</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>Differential equations model dynamic systems where rates of change are known</li>
+                <li>Separable equations: rewrite as f(y)dy = g(x)dx and integrate both sides</li>
+                <li>Linear first-order: use integrating factor μ(x) = e^(∫P(x)dx)</li>
+                <li>Exponential growth: unlimited increase, dP/dt = kP</li>
+                <li>Logistic growth: approaches carrying capacity, dP/dt = kP(1 - P/K)</li>
+                <li>Applications span physics (cooling, circuits), biology (populations), economics (interest, price dynamics)</li>
+                <li>Initial conditions determine the particular solution from the general solution family</li>
+            </ul>
+        </section>
+
+        <nav class="lesson-nav">
+            <a href="lesson-2-integration-techniques.html">← Previous: Integration Techniques</a>
+            <a href="lesson-4-calculus-applications.html">Next Lesson: Calculus Applications →</a>
+        </nav>
+    </main>
+</body>
+</html>

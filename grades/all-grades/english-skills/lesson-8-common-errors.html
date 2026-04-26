@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8: Common Grammar Errors - Grammar Essentials</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #fa709a;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        h2 {
+            color: #fee140;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-left: 5px solid #fa709a;
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #fa709a;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .error-card {
+            background: white;
+            border: 2px solid #fa709a;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .error-title {
+            font-size: 1.4em;
+            color: #fa709a;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .example-box {
+            background: #fff5f8;
+            border-left: 4px solid #fa709a;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .wrong {
+            background: #ffe6e6;
+            border-left: 4px solid #ff4444;
+        }
+
+        .right {
+            background: #e6ffe6;
+            border-left: 4px solid #44ff44;
+        }
+
+        .text-fail {
+            background: #fff3e6;
+            border-left: 4px solid #ff9800;
+        }
+
+        .label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+            font-size: 1.05em;
+        }
+
+        .red { color: #ff4444; }
+        .green { color: #22aa22; }
+        .orange { color: #ff9800; }
+        .pink { color: #fa709a; }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .comparison-item {
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .comparison-item.wrong-side {
+            background: #ffe6e6;
+            border: 2px solid #ff4444;
+        }
+
+        .comparison-item.right-side {
+            background: #e6ffe6;
+            border: 2px solid #44ff44;
+        }
+
+        .social-media-example {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+        }
+
+        .email-example {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .email-header {
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .tip {
+            background: #fff9e6;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .tip strong {
+            color: #f57c00;
+        }
+
+        .trick-box {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .trick-box h4 {
+            margin-bottom: 10px;
+            color: #155724;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #fa709a;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background: #fff5f8;
+        }
+
+        .severity-high {
+            background: #ffe6e6;
+        }
+
+        .severity-medium {
+            background: #fff9e6;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        .practice-section {
+            background: #e8f5e9;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #fa709a;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: #fee140;
+            color: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .icon {
+            font-size: 2em;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lesson 8: Common Grammar Errors</h1>
+        <p class="subtitle">Mistakes Everyone Makes (and How to Fix Them)</p>
+
+        <h2>The Top 20 Grammar Mistakes</h2>
+
+        <div class="error-card">
+            <div class="error-title"><span class="icon">1️⃣</span>Your vs. You're</div>
+
+            <div class="comparison">
+                <div class="comparison-item wrong-side">
+                    <div class="label red">WRONG</div>
+                    <p>"Your going to love this!"</p>
+                    <p>"Is that you're phone?"</p>
+                </div>
+                <div class="comparison-item right-side">
+                    <div class="label green">RIGHT</div>
+                    <p><strong>You're</strong> going to love this! (You are)</p>
+                    <p>Is that <strong>your</strong> phone? (possession)</p>
+                </div>
+            </div>
+
+            <div class="trick-box">
+                <h4>Memory Trick:</h4>
+                <p><strong>You're</strong> = You are (apostrophe replaces 'a')</p>
+                <p><strong>Your</strong> = ownership (like "my," "his," "her")</p>
+            </div>
+        </div>
+
+        <div class="error-card">
+            <div class="error-title"><span class="icon">2️⃣</span>Its vs. It's</div>
+
+            <div class="example-box text-fail">
+                <div class="label orange">Social Media Fail:</div>
+                <p>"The app lost it's data"</p>
+                <p>"Its going to rain today"</p>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Correct:</div>
+                <p>The app lost <strong>its</strong> data (possession)</p>
+                <p><strong>It's</strong> going to rain today (It is)</p>
+            </div>
+
+            <div class="trick-box">
+                <h4>Memory Trick:</h4>
+                <p><strong>It's</strong> = It is OR It has</p>
+                <p><strong>Its</strong> = belonging to it (no apostrophe, like "his" or "hers")</p>
+            </div>
+        </div>
+
+        <div class="error-card">
+            <div class="error-title"><span class="icon">3️⃣</span>Their, There, They're</div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Word</th>
+                        <th>Meaning</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Their</strong></td>
+                        <td>Possession (belongs to them)</td>
+                        <td><strong>Their</strong> presentation was excellent.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>There</strong></td>
+                        <td>Location OR "there is/are"</td>
+                        <td>Put it over <strong>there</strong>. <strong>There</strong> are two options.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>They're</strong></td>
+                        <td>They are</td>
+                        <td><strong>They're</strong> coming to the meeting.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="example-box wrong">
+                <div class="label red">Text Message Fails:</div>
+                <p>"Their going to be late"</p>
+                <p>"The files are over they're"</p>
+                <p>"There presentation needs work"</p>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Fixed:</div>
+                <p><strong>They're</strong> going to be late (They are)</p>
+                <p>The files are over <strong>there</strong> (location)</p>
+                <p><strong>Their</strong> presentation needs work (belongs to them)</p>
+            </div>
+        </div>
+
+        <div class="error-card">
+            <div class="error-title"><span class="icon">4️⃣</span>Then vs. Than</div>
+
+            <div class="comparison">
+                <div class="comparison-item right-side">
+                    <div class="label green">THEN = Time/Sequence</div>
+                    <p>First save the file, <strong>then</strong> close the app.</p>
+                    <p>We had lunch, <strong>then</strong> went to the meeting.</p>
+                </div>
+                <div class="comparison-item right-side">
+                    <div class="label green">THAN = Comparison</div>
+                    <p>This laptop is better <strong>than</strong> that one.</p>
+                    <p>I'd rather email <strong>than</strong> call.</p>
+                </div>
+            </div>
+
+            <div class="example-box text-fail">
+                <div class="label orange">Email Mistake:</div>
+                <p>"This option is cheaper then the other one"</p>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Correct:</div>
+                <p>This option is cheaper <strong>than</strong> the other one</p>
+            </div>
+        </div>
+
+        <div class="error-card">
+            <div class="error-title"><span class="icon">5️⃣</span>Affect vs. Effect</div>
+
+            <div class="comparison">
+                <div class="comparison-item right-side">
+                    <div class="label green">AFFECT = Verb (to influence)</div>
+                    <p>The bug <strong>affects</strong> all users.</p>
+                    <p>How will this <strong>affect</strong> the timeline?</p>
+                </div>
+                <div class="comparison-item right-side">
+                    <div class="label green">EFFECT = Noun (result)</div>
+                    <p>The update had a positive <strong>effect</strong>.</p>
+                    <p>What <strong>effect</strong> will this have?</p>
+                </div>
+            </div>
+
+            <div class="trick-box">
+                <h4>Memory Trick:</h4>
+                <p><strong>A</strong>ffect = <strong>A</strong>ction (verb)</p>
+                <p><strong>E</strong>ffect = <strong>E</strong>nd result (noun)</p>
+            </div>
+        </div>
+
+        <div class="error-card">
+            <div class="error-title"><span class="icon">6️⃣</span>Could of / Should of / Would of</div>
+
+            <div class="example-box wrong">
+                <div class="label red">Common Mistakes:</div>
+                <p>"I could of finished it yesterday"</p>
+                <p>"You should of told me earlier"</p>
+                <p>"We would of won if we tried harder"</p>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Correct (Always "HAVE"):</div>
+                <p>I could <strong>have</strong> finished it yesterday (or "could've")</p>
+                <p>You should <strong>have</strong> told me earlier (or "should've")</p>
+                <p>We would <strong>have</strong> won if we tried harder (or "would've")</p>
+            </div>
+
+            <div class="tip">
+                <strong>Why this happens:</strong> "Could've" sounds like "could of" when spoken, but it's actually a contraction of "could have"!
+            </div>
+        </div>
+
+        <div class="error-card">
+            <div class="error-title"><span class="icon">7️⃣</span>Me vs. I</div>
+
+            <div class="example-box wrong">
+                <div class="label red">Wrong:</div>
+                <p>"Me and Sarah will handle the project"</p>
+                <p>"Between you and I, this won't work"</p>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Correct:</div>
+                <p><strong>Sarah and I</strong> will handle the project</p>
+                <p>Between you and <strong>me</strong>, this won't work</p>
+            </div>
+
+            <div class="trick-box">
+                <h4>The Test:</h4>
+                <p>Remove the other person and see if it still makes sense:</p>
+                <ul>
+                    <li>"Me will handle" ✗ → "I will handle" ✓</li>
+                    <li>"Between I" ✗ → "Between me" ✓</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="error-card">
+            <div class="error-title"><span class="icon">8️⃣</span>Who vs. Whom</div>
+
+            <div class="comparison">
+                <div class="comparison-item right-side">
+                    <div class="label green">WHO = Subject (does the action)</div>
+                    <p><strong>Who</strong> sent this email?</p>
+                    <p><strong>Who</strong> is responsible?</p>
+                </div>
+                <div class="comparison-item right-side">
+                    <div class="label green">WHOM = Object (receives action)</div>
+                    <p>To <strong>whom</strong> should I send this?</p>
+                    <p><strong>Whom</strong> did you contact?</p>
+                </div>
+            </div>
+
+            <div class="trick-box">
+                <h4>Easy Test:</h4>
+                <p>Replace with he/him:</p>
+                <ul>
+                    <li><strong>He</strong> sent it → use <strong>WHO</strong></li>
+                    <li>Send it to <strong>him</strong> → use <strong>WHOM</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="error-card">
+            <div class="error-title"><span class="icon">9️⃣</span>Apostrophes with Plurals</div>
+
+            <div class="example-box wrong">
+                <div class="label red">Social Media Fails:</div>
+                <p>"The 1990's were great"</p>
+                <p>"I have two phone's"</p>
+                <p>"All manager's must attend"</p>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Correct:</div>
+                <p>The <strong>1990s</strong> were great (plural, not possessive)</p>
+                <p>I have two <strong>phones</strong> (plural)</p>
+                <p>All <strong>managers</strong> must attend (plural)</p>
+            </div>
+
+            <div class="tip">
+                <strong>Rule:</strong> Use apostrophes for possession, NOT for plurals!
+                <ul>
+                    <li>Plural: <strong>phones</strong>, <strong>managers</strong>, <strong>1990s</strong></li>
+                    <li>Possessive: <strong>phone's</strong> screen, <strong>manager's</strong> office</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="error-card">
+            <div class="error-title"><span class="icon">🔟</span>Loose vs. Lose</div>
+
+            <div class="comparison">
+                <div class="comparison-item right-side">
+                    <div class="label green">LOOSE = Not tight</div>
+                    <p>The cable is <strong>loose</strong>.</p>
+                    <p>This shirt fits <strong>loose</strong>.</p>
+                </div>
+                <div class="comparison-item right-side">
+                    <div class="label green">LOSE = Misplace or fail</div>
+                    <p>Don't <strong>lose</strong> this file!</p>
+                    <p>We might <strong>lose</strong> the game.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Professional Email Killers</h2>
+
+        <div class="error-card">
+            <div class="error-title">Subject-Verb Agreement</div>
+
+            <div class="email-example">
+                <div class="email-header">❌ Unprofessional Email:</div>
+                <p>"The team are working on the project. Each of them have their own tasks. The data show interesting results."</p>
+            </div>
+
+            <div class="email-example">
+                <div class="email-header">✅ Professional Email:</div>
+                <p>"The team <strong>is</strong> working on the project. Each of them <strong>has</strong> their own tasks. The data <strong>shows</strong> interesting results."</p>
+            </div>
+
+            <div class="tip">
+                <strong>Tricky Words:</strong>
+                <ul>
+                    <li><strong>Team, group, company</strong> = singular (use "is," "has")</li>
+                    <li><strong>Everyone, each, somebody</strong> = singular</li>
+                    <li><strong>Data</strong> = can be singular or plural (modern usage: singular)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="error-card">
+            <div class="error-title">Dangling Modifiers</div>
+
+            <div class="example-box wrong">
+                <div class="label red">Confusing:</div>
+                <p>"After reviewing the report, the errors were obvious."</p>
+                <p style="font-size: 0.9em; color: #666; margin-top: 5px;">(The errors reviewed the report?)</p>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Clear:</div>
+                <p>"After reviewing the report, <strong>I found</strong> the errors were obvious."</p>
+                <p>"After <strong>I reviewed</strong> the report, the errors were obvious."</p>
+            </div>
+        </div>
+
+        <div class="error-card">
+            <div class="error-title">Double Negatives</div>
+
+            <div class="example-box wrong">
+                <div class="label red">Wrong:</div>
+                <p>"I don't have no time"</p>
+                <p>"We can't get nothing done"</p>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Correct:</div>
+                <p>I don't have <strong>any</strong> time</p>
+                <p>I have <strong>no</strong> time</p>
+                <p>We can't get <strong>anything</strong> done</p>
+            </div>
+        </div>
+
+        <h2>Quick Reference: Most Common Errors</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Error Type</th>
+                    <th>Wrong</th>
+                    <th>Right</th>
+                    <th>Severity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="severity-high">
+                    <td>Your/You're</td>
+                    <td>Your the best</td>
+                    <td>You're the best</td>
+                    <td>🔴 High</td>
+                </tr>
+                <tr class="severity-high">
+                    <td>Its/It's</td>
+                    <td>Its been fun</td>
+                    <td>It's been fun</td>
+                    <td>🔴 High</td>
+                </tr>
+                <tr class="severity-high">
+                    <td>Their/There/They're</td>
+                    <td>Their late</td>
+                    <td>They're late</td>
+                    <td>🔴 High</td>
+                </tr>
+                <tr class="severity-medium">
+                    <td>Then/Than</td>
+                    <td>Better then that</td>
+                    <td>Better than that</td>
+                    <td>🟡 Medium</td>
+                </tr>
+                <tr class="severity-high">
+                    <td>Could of</td>
+                    <td>Could of done it</td>
+                    <td>Could have done it</td>
+                    <td>🔴 High</td>
+                </tr>
+                <tr class="severity-medium">
+                    <td>Affect/Effect</td>
+                    <td>What's the affect?</td>
+                    <td>What's the effect?</td>
+                    <td>🟡 Medium</td>
+                </tr>
+                <tr class="severity-medium">
+                    <td>Loose/Lose</td>
+                    <td>Don't loose this</td>
+                    <td>Don't lose this</td>
+                    <td>🟡 Medium</td>
+                </tr>
+                <tr class="severity-high">
+                    <td>A lot</td>
+                    <td>Alot of work</td>
+                    <td>A lot of work</td>
+                    <td>🔴 High</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="practice-section">
+            <h3>Final Practice: Find and Fix the Errors</h3>
+            <p><strong>Each sentence has 1-2 errors. Can you spot them?</strong></p>
+            <ol>
+                <li>"Me and my team could of finished it sooner then expected."</li>
+                <li>"Your going to loose you're access if you don't update it."</li>
+                <li>"Their are alot of issue's with the new software."</li>
+                <li>"The data show that its effecting all user's."</li>
+                <li>"Between you and I, this should of been done differently."</li>
+            </ol>
+
+            <details style="margin-top: 20px;">
+                <summary style="cursor: pointer; font-weight: bold; color: #fa709a; font-size: 1.1em;">Show Corrected Versions</summary>
+                <div style="margin-top: 15px; padding: 15px; background: white; border-radius: 10px; border: 2px solid #44ff44;">
+                    <ol>
+                        <li>"<strong>My team and I</strong> could <strong>have</strong> finished it sooner <strong>than</strong> expected."</li>
+                        <li>"<strong>You're</strong> going to <strong>lose</strong> <strong>your</strong> access if you don't update it."</li>
+                        <li>"<strong>There</strong> are <strong>a lot</strong> of <strong>issues</strong> with the new software."</li>
+                        <li>"The data <strong>shows</strong> that <strong>it's affecting</strong> all <strong>users</strong>."</li>
+                        <li>"Between you and <strong>me</strong>, this should <strong>have</strong> been done differently."</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+        <div class="tip">
+            <strong>Pro Tips to Avoid Errors:</strong>
+            <ul>
+                <li>📱 <strong>Reread before sending</strong> - Even quick texts deserve a glance</li>
+                <li>✍️ <strong>Use autocorrect wisely</strong> - But don't trust it blindly (it often confuses their/there/they're!)</li>
+                <li>📚 <strong>Read more</strong> - Seeing correct grammar helps you internalize it</li>
+                <li>🔍 <strong>When in doubt, Google it</strong> - No shame in checking!</li>
+                <li>💼 <strong>Professional emails matter</strong> - Take extra time with work communications</li>
+            </ul>
+        </div>
+
+        <div class="social-media-example">
+            <h3 style="color: white; margin-bottom: 15px;">Remember:</h3>
+            <p style="font-size: 1.1em;">Grammar mistakes in casual texts with friends? Totally fine.</p>
+            <p style="font-size: 1.1em; margin-top: 10px;">Grammar mistakes in job applications, professional emails, or school papers? Can cost you opportunities.</p>
+            <p style="font-size: 1.1em; margin-top: 10px; font-weight: bold;">Know your audience, and choose your words carefully!</p>
+        </div>
+
+        <a href="../index.html" class="back-link">← Back to English Skills</a>
+    </div>
+</body>
+</html>

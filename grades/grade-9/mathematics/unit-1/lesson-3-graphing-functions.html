@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3: Graphing Functions - Grade 9 Math</title>
+    <link rel="stylesheet" href="../../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Lesson 3: Graphing Functions</h1>
+            <p>Visualizing Data Like the Apps You Use</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="../../../../index.html">Home</a>
+            <a href="../../index.html">Grade 9</a>
+            <a href="../index.html">Mathematics</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="card">
+            <h2>Why Graph Functions?</h2>
+            <p>Every app you use displays data visually. Graphs make patterns obvious that would be hidden in numbers alone:</p>
+            <ul>
+                <li>Spotify shows your listening history as a graph</li>
+                <li>Instagram analytics display follower growth over time</li>
+                <li>Fitness apps chart your workout progress</li>
+                <li>Games show your skill rating trending up or down</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>The Coordinate Plane</h2>
+            <p>Graphs use two axes to plot points: x (horizontal) and y (vertical).</p>
+
+            <svg width="100%" height="400" style="background: white; border: 1px solid #ddd; border-radius: 8px; margin: 20px 0;">
+                <line x1="50" y1="200" x2="550" y2="200" stroke="#333" stroke-width="2"/>
+                <line x1="300" y1="50" x2="300" y2="350" stroke="#333" stroke-width="2"/>
+
+                <polygon points="550,200 540,195 540,205" fill="#333"/>
+                <polygon points="300,50 295,60 305,60" fill="#333"/>
+
+                <text x="520" y="190" font-size="14" font-weight="bold">x-axis</text>
+                <text x="310" y="70" font-size="14" font-weight="bold">y-axis</text>
+
+                <text x="380" y="130" font-size="16" fill="#10b981" font-weight="bold">Quadrant I</text>
+                <text x="150" y="130" font-size="16" fill="#3b82f6" font-weight="bold">Quadrant II</text>
+                <text x="150" y="280" font-size="16" fill="#ef4444" font-weight="bold">Quadrant III</text>
+                <text x="370" y="280" font-size="16" fill="#f59e0b" font-weight="bold">Quadrant IV</text>
+
+                <circle cx="400" cy="120" r="6" fill="#10b981"/>
+                <text x="410" y="115" font-size="12">(3, 4)</text>
+
+                <circle cx="180" cy="140" r="6" fill="#3b82f6"/>
+                <text x="135" y="145" font-size="12">(-4, 3)</text>
+
+                <circle cx="200" cy="260" r="6" fill="#ef4444"/>
+                <text x="150" y="265" font-size="12">(-3, -3)</text>
+
+                <circle cx="420" cy="280" r="6" fill="#f59e0b"/>
+                <text x="430" y="275" font-size="12">(4, -4)</text>
+
+                <text x="290" y="215" font-size="12" font-weight="bold">Origin (0,0)</text>
+
+                <text x="350" y="215" font-size="11">1</text>
+                <text x="400" y="215" font-size="11">2</text>
+                <text x="450" y="215" font-size="11">3</text>
+                <text x="250" y="215" font-size="11">-1</text>
+                <text x="200" y="215" font-size="11">-2</text>
+
+                <text x="305" y="180" font-size="11">1</text>
+                <text x="305" y="160" font-size="11">2</text>
+                <text x="305" y="140" font-size="11">3</text>
+                <text x="305" y="220" font-size="11">-1</text>
+                <text x="305" y="240" font-size="11">-2</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>Plotting Points: Discord Activity Example</h2>
+            <p>Track how many messages you send in a Discord server each day:</p>
+
+            <div style="background: #5865f2; color: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3>Daily Message Count</h3>
+                <table style="width: 100%; color: white;">
+                    <tr style="background: rgba(0,0,0,0.3);">
+                        <th style="padding: 10px;">Day (x)</th>
+                        <th style="padding: 10px;">Messages (y)</th>
+                        <th style="padding: 10px;">Point (x,y)</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; text-align: center;">1</td>
+                        <td style="padding: 10px; text-align: center;">10</td>
+                        <td style="padding: 10px; text-align: center;">(1, 10)</td>
+                    </tr>
+                    <tr style="background: rgba(0,0,0,0.2);">
+                        <td style="padding: 10px; text-align: center;">2</td>
+                        <td style="padding: 10px; text-align: center;">25</td>
+                        <td style="padding: 10px; text-align: center;">(2, 25)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; text-align: center;">3</td>
+                        <td style="padding: 10px; text-align: center;">15</td>
+                        <td style="padding: 10px; text-align: center;">(3, 15)</td>
+                    </tr>
+                    <tr style="background: rgba(0,0,0,0.2);">
+                        <td style="padding: 10px; text-align: center;">4</td>
+                        <td style="padding: 10px; text-align: center;">30</td>
+                        <td style="padding: 10px; text-align: center;">(4, 30)</td>
+                    </tr>
+                </table>
+            </div>
+
+            <svg width="100%" height="350" style="background: white; border: 1px solid #ddd; border-radius: 8px;">
+                <line x1="50" y1="300" x2="550" y2="300" stroke="#333" stroke-width="2"/>
+                <line x1="50" y1="300" x2="50" y2="50" stroke="#333" stroke-width="2"/>
+
+                <text x="300" y="330" text-anchor="middle" font-size="14" font-weight="bold">Day</text>
+                <text x="20" y="175" text-anchor="middle" font-size="14" font-weight="bold" transform="rotate(-90 20 175)">Messages</text>
+
+                <circle cx="150" cy="250" r="8" fill="#5865f2"/>
+                <circle cx="250" cy="175" r="8" fill="#5865f2"/>
+                <circle cx="350" cy="225" r="8" fill="#5865f2"/>
+                <circle cx="450" cy="150" r="8" fill="#5865f2"/>
+
+                <line x1="150" y1="250" x2="250" y2="175" stroke="#5865f2" stroke-width="2" stroke-dasharray="5,5"/>
+                <line x1="250" y1="175" x2="350" y2="225" stroke="#5865f2" stroke-width="2" stroke-dasharray="5,5"/>
+                <line x1="350" y1="225" x2="450" y2="150" stroke="#5865f2" stroke-width="2" stroke-dasharray="5,5"/>
+
+                <text x="150" y="310" text-anchor="middle" font-size="12">1</text>
+                <text x="250" y="310" text-anchor="middle" font-size="12">2</text>
+                <text x="350" y="310" text-anchor="middle" font-size="12">3</text>
+                <text x="450" y="310" text-anchor="middle" font-size="12">4</text>
+
+                <text x="40" y="255" text-anchor="end" font-size="11">10</text>
+                <text x="40" y="230" text-anchor="end" font-size="11">15</text>
+                <text x="40" y="205" text-anchor="end" font-size="11">20</text>
+                <text x="40" y="180" text-anchor="end" font-size="11">25</text>
+                <text x="40" y="155" text-anchor="end" font-size="11">30</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>Graphing Linear Functions</h2>
+            <p>Remember y = mx + b? Let's graph it step by step.</p>
+
+            <div style="background: #f0f7ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3>Example: Netflix Viewing Time</h3>
+                <p>You watch 2 hours of Netflix per day, starting from 0:</p>
+                <p style="font-family: monospace; font-size: 18px; font-weight: bold;">h(d) = 2d + 0</p>
+                <p>where d = days, h = total hours watched</p>
+
+                <h4>Step 1: Find the y-intercept (b = 0)</h4>
+                <p>Start at origin (0, 0)</p>
+
+                <h4>Step 2: Use slope (m = 2)</h4>
+                <p>For every 1 day right, go up 2 hours</p>
+
+                <h4>Step 3: Plot points and connect</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li>(0, 0) - Day 0: 0 hours</li>
+                    <li>(1, 2) - Day 1: 2 hours</li>
+                    <li>(2, 4) - Day 2: 4 hours</li>
+                    <li>(3, 6) - Day 3: 6 hours</li>
+                </ul>
+            </div>
+
+            <svg width="100%" height="350" style="background: white; border: 1px solid #ddd; border-radius: 8px; margin: 20px 0;">
+                <line x1="50" y1="300" x2="550" y2="300" stroke="#333" stroke-width="2"/>
+                <line x1="50" y1="300" x2="50" y2="50" stroke="#333" stroke-width="2"/>
+
+                <text x="300" y="330" text-anchor="middle" font-size="14">Days (d)</text>
+                <text x="20" y="175" text-anchor="middle" font-size="14" transform="rotate(-90 20 175)">Hours (h)</text>
+
+                <line x1="50" y1="300" x2="450" y2="100" stroke="#e11d48" stroke-width="3"/>
+
+                <circle cx="50" cy="300" r="7" fill="#dc2626"/>
+                <text x="60" y="295" font-size="12">(0,0)</text>
+
+                <circle cx="150" cy="233" r="7" fill="#dc2626"/>
+                <text x="160" y="228" font-size="12">(1,2)</text>
+
+                <circle cx="250" cy="167" r="7" fill="#dc2626"/>
+                <text x="260" y="162" font-size="12">(2,4)</text>
+
+                <circle cx="350" cy="100" r="7" fill="#dc2626"/>
+                <text x="360" y="95" font-size="12">(3,6)</text>
+
+                <text x="150" y="315" text-anchor="middle" font-size="12">1</text>
+                <text x="250" y="315" text-anchor="middle" font-size="12">2</text>
+                <text x="350" y="315" text-anchor="middle" font-size="12">3</text>
+                <text x="450" y="315" text-anchor="middle" font-size="12">4</text>
+
+                <text x="40" y="304" text-anchor="end" font-size="11">0</text>
+                <text x="40" y="237" text-anchor="end" font-size="11">2</text>
+                <text x="40" y="170" text-anchor="end" font-size="11">4</text>
+                <text x="40" y="103" text-anchor="end" font-size="11">6</text>
+            </svg>
+        </section>
+
+        <section class="card">
+            <h2>Gaming Example: Fortnite Match Stats</h2>
+            <p>Track your eliminations per match over 5 games:</p>
+
+            <svg width="100%" height="400" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; padding: 20px;">
+                <rect x="0" y="0" width="100%" height="60" fill="rgba(0,0,0,0.3)" rx="5"/>
+                <text x="50%" y="35" text-anchor="middle" font-size="20" fill="white" font-weight="bold">FORTNITE MATCH PERFORMANCE</text>
+
+                <line x1="60" y1="320" x2="540" y2="320" stroke="white" stroke-width="2"/>
+                <line x1="60" y1="320" x2="60" y2="80" stroke="white" stroke-width="2"/>
+
+                <text x="300" y="360" text-anchor="middle" font-size="14" fill="white">Match Number</text>
+                <text x="30" y="200" text-anchor="middle" font-size="14" fill="white" transform="rotate(-90 30 200)">Eliminations</text>
+
+                <circle cx="100" cy="260" r="8" fill="#fbbf24"/>
+                <circle cx="180" cy="200" r="8" fill="#fbbf24"/>
+                <circle cx="260" cy="230" r="8" fill="#fbbf24"/>
+                <circle cx="340" cy="170" r="8" fill="#fbbf24"/>
+                <circle cx="420" cy="140" r="8" fill="#fbbf24"/>
+
+                <polyline points="100,260 180,200 260,230 340,170 420,140"
+                          stroke="#fbbf24" stroke-width="3" fill="none"/>
+
+                <polyline points="60,320 100,260 180,200 260,230 340,170 420,140 540,140 540,320"
+                          fill="rgba(251,191,36,0.2)"/>
+
+                <text x="100" y="340" text-anchor="middle" font-size="12" fill="white">1</text>
+                <text x="180" y="340" text-anchor="middle" font-size="12" fill="white">2</text>
+                <text x="260" y="340" text-anchor="middle" font-size="12" fill="white">3</text>
+                <text x="340" y="340" text-anchor="middle" font-size="12" fill="white">4</text>
+                <text x="420" y="340" text-anchor="middle" font-size="12" fill="white">5</text>
+
+                <text x="50" y="263" text-anchor="end" font-size="11" fill="white">2</text>
+                <text x="50" y="233" text-anchor="end" font-size="11" fill="white">3</text>
+                <text x="50" y="203" text-anchor="end" font-size="11" fill="white">4</text>
+                <text x="50" y="173" text-anchor="end" font-size="11" fill="white">5</text>
+                <text x="50" y="143" text-anchor="end" font-size="11" fill="white">6</text>
+            </svg>
+
+            <p style="margin-top: 20px;">This graph shows you're improving! Your eliminations trend upward from match 1 to match 5.</p>
+        </section>
+
+        <section class="card">
+            <h2>Interpreting Graphs: Strava Running App</h2>
+            <p>Your running pace over distance:</p>
+
+            <svg width="100%" height="350" style="background: white; border: 1px solid #ddd; border-radius: 8px;">
+                <line x1="50" y1="300" x2="550" y2="300" stroke="#333" stroke-width="2"/>
+                <line x1="50" y1="300" x2="50" y2="50" stroke="#333" stroke-width="2"/>
+
+                <text x="300" y="330" text-anchor="middle" font-size="14">Distance (km)</text>
+                <text x="20" y="175" text-anchor="middle" font-size="14" transform="rotate(-90 20 175)">Pace (min/km)</text>
+
+                <polyline points="50,150 150,155 250,170 350,195 450,235"
+                          stroke="#fc5200" stroke-width="3" fill="none"/>
+
+                <circle cx="50" cy="150" r="6" fill="#fc5200"/>
+                <circle cx="150" cy="155" r="6" fill="#fc5200"/>
+                <circle cx="250" cy="170" r="6" fill="#fc5200"/>
+                <circle cx="350" cy="195" r="6" fill="#fc5200"/>
+                <circle cx="450" cy="235" r="6" fill="#fc5200"/>
+
+                <text x="150" y="310" text-anchor="middle" font-size="12">2</text>
+                <text x="250" y="310" text-anchor="middle" font-size="12">4</text>
+                <text x="350" y="310" text-anchor="middle" font-size="12">6</text>
+                <text x="450" y="310" text-anchor="middle" font-size="12">8</text>
+
+                <text x="40" y="155" text-anchor="end" font-size="11">5:00</text>
+                <text x="40" y="195" text-anchor="end" font-size="11">6:00</text>
+                <text x="40" y="235" text-anchor="end" font-size="11">7:00</text>
+
+                <rect x="400" y="70" width="120" height="60" fill="#fef3c7" stroke="#f59e0b" rx="5"/>
+                <text x="460" y="90" text-anchor="middle" font-size="12" font-weight="bold">Insight:</text>
+                <text x="460" y="110" text-anchor="middle" font-size="11">Pace slowing =</text>
+                <text x="460" y="125" text-anchor="middle" font-size="11">getting tired</text>
+            </svg>
+
+            <p>As distance increases, your pace slows down (takes more minutes per km) - you're getting tired!</p>
+        </section>
+
+        <section class="card">
+            <h2>Practice Problems</h2>
+
+            <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3>Problem 1: Plot This Function</h3>
+                <p>Graph y = 3x - 1 by plotting at least 3 points.</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #2563eb;">Show Solution</summary>
+                    <div style="margin-top: 10px; padding: 10px; background: white; border-radius: 4px;">
+                        <p><strong>Points to plot:</strong></p>
+                        <ul>
+                            <li>x = 0: y = 3(0) - 1 = -1 → (0, -1)</li>
+                            <li>x = 1: y = 3(1) - 1 = 2 → (1, 2)</li>
+                            <li>x = 2: y = 3(2) - 1 = 5 → (2, 5)</li>
+                        </ul>
+                        <p>Connect with a straight line going up steeply (slope = 3)</p>
+                    </div>
+                </details>
+            </div>
+
+            <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3>Problem 2: TikTok Followers</h3>
+                <p>Your TikTok has 100 followers and gains 50 per day. Write the function and identify 3 points on the graph.</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #2563eb;">Show Solution</summary>
+                    <div style="margin-top: 10px; padding: 10px; background: white; border-radius: 4px;">
+                        <p><strong>F(d) = 50d + 100</strong></p>
+                        <p><strong>Points:</strong></p>
+                        <ul>
+                            <li>(0, 100) - Start with 100 followers</li>
+                            <li>(1, 150) - After 1 day</li>
+                            <li>(5, 350) - After 5 days</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3>Problem 3: Interpret the Graph</h3>
+                <p>A graph shows phone battery % over time. It starts at (0, 100) and ends at (5, 0). What does this mean? What's the slope?</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #2563eb;">Show Solution</summary>
+                    <div style="margin-top: 10px; padding: 10px; background: white; border-radius: 4px;">
+                        <p><strong>Meaning:</strong> Phone started at 100% battery and died (0%) after 5 hours</p>
+                        <p><strong>Slope:</strong> m = (0 - 100)/(5 - 0) = -100/5 = -20% per hour</p>
+                        <p>Battery drains 20% every hour</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>Graphs visualize functions using x and y coordinates</li>
+                <li>Plot points by finding (x, y) pairs from the function</li>
+                <li>Linear functions create straight lines</li>
+                <li>Slope determines steepness: steep = big changes, flat = small changes</li>
+                <li>Every app uses graphs to show data trends (followers, stats, progress)</li>
+            </ul>
+        </section>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+            <a href="lesson-2-linear-functions.html" class="card" style="padding: 15px 30px; text-decoration: none;">
+                ← Previous: Linear Functions
+            </a>
+            <a href="lesson-4-function-applications.html" class="card" style="padding: 15px 30px; text-decoration: none;">
+                Next: Function Applications →
+            </a>
+        </div>
+    </main>
+</body>
+</html>

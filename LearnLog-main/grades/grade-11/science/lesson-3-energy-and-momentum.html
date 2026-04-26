@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3: Energy and Momentum - Grade 11 Science</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Energy and Momentum</h1>
+            <p>Grade 11 | Science | Unit 1: Advanced Physics</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="../../../index.html">Home</a>
+            <a href="../index.html">Grade 11</a>
+            <a href="index.html">Science</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hook-box">
+            <p>Two cars collide head-on at an intersection. Car A is 1,200 kg going 20 m/s. Car B is 1,800 kg going 15 m/s. After the crash, they stick together. How fast are they moving? Conservation of momentum gives us the exact answer - the same physics that protects you in a collision.</p>
+        </section>
+
+        <section class="objectives">
+            <h2>Learning Objectives</h2>
+            <p>By the end of this lesson, you will be able to:</p>
+            <ul>
+                <li>Apply conservation of energy to solve mechanical problems</li>
+                <li>Calculate kinetic and potential energy in various scenarios</li>
+                <li>Use conservation of momentum to analyze collisions</li>
+                <li>Distinguish between elastic and inelastic collisions</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>What You'll Learn</h2>
+            <p><strong>Energy</strong> and <strong>momentum</strong> are conserved quantities - they can't be created or destroyed, only transferred or transformed. These conservation laws are among the most powerful tools in physics, allowing us to solve complex problems without tracking every force.</p>
+            <p style="margin-top: 15px;">From billiard balls to car crashes to rocket launches, energy and momentum conservation explain it all.</p>
+        </section>
+
+        <section class="card">
+            <h2>Why This Matters</h2>
+            <p>Conservation laws drive technology and safety:</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Car Safety:</strong> Crumple zones absorb kinetic energy to protect passengers</li>
+                <li><strong>Sports:</strong> Baseball bats, golf clubs, and tennis rackets optimized for energy transfer</li>
+                <li><strong>Renewable Energy:</strong> Converting wind/water kinetic energy to electrical energy</li>
+                <li><strong>Space Exploration:</strong> Momentum conservation enables rocket propulsion</li>
+                <li><strong>Amusement Rides:</strong> Energy transformations between potential and kinetic create thrills</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Core Concept: Energy</h2>
+
+            <h3>Kinetic Energy (KE)</h3>
+            <p>Energy of motion.</p>
+            <div class="step">
+                <strong>Formula:</strong> KE = ½mv²
+                <p style="margin-top: 10px;"><strong>Example:</strong> A 1,000 kg car at 20 m/s has KE = ½(1000)(20²) = 200,000 J</p>
+            </div>
+
+            <h3 style="margin-top: 25px;">Potential Energy (PE)</h3>
+            <p>Stored energy due to position or configuration.</p>
+            <div class="step">
+                <strong>Gravitational PE:</strong> PE = mgh (mass × gravity × height)
+                <p style="margin-top: 10px;"><strong>Example:</strong> A 50 kg person 10 m high has PE = (50)(9.8)(10) = 4,900 J</p>
+            </div>
+
+            <h3 style="margin-top: 25px;">Conservation of Mechanical Energy</h3>
+            <p>In the absence of friction and air resistance:</p>
+            <div class="step">
+                <strong>Formula:</strong> KE₁ + PE₁ = KE₂ + PE₂
+                <p style="margin-top: 10px;">Total mechanical energy remains constant - energy transforms between kinetic and potential but the sum never changes.</p>
+            </div>
+        </section>
+
+        <section class="visual-container">
+            <h2>Visual: Energy Transformation on a Roller Coaster</h2>
+            <svg width="700" height="450" xmlns="http://www.w3.org/2000/svg">
+                <text x="350" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Energy Conservation: Roller Coaster</text>
+
+                <!-- Track path -->
+                <path d="M 50 150 L 150 150 Q 200 80, 250 80 L 300 80 Q 350 150, 400 200 Q 450 280, 500 300 L 650 300"
+                      stroke="#666" stroke-width="4" fill="none"/>
+
+                <!-- Ground reference -->
+                <line x1="30" y1="400" x2="670" y2="400" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+                <text x="350" y="430" text-anchor="middle" font-size="14" fill="#666">Ground (h = 0, PE = 0)</text>
+
+                <!-- Position A: Start (high PE, low KE) -->
+                <circle cx="150" cy="150" r="20" fill="#e74c3c"/>
+                <text x="150" y="120" text-anchor="middle" font-size="16" fill="#e74c3c" font-weight="bold">A</text>
+                <text x="150" y="100" text-anchor="middle" font-size="13" fill="#e74c3c">h = 25 m</text>
+                <text x="150" y="210" text-anchor="middle" font-size="12" fill="#333">PE = high</text>
+                <text x="150" y="225" text-anchor="middle" font-size="12" fill="#333">KE = low</text>
+                <text x="150" y="240" text-anchor="middle" font-size="12" fill="#333">v = 5 m/s</text>
+
+                <!-- Position B: Peak (highest PE, lowest KE) -->
+                <circle cx="250" cy="80" r="20" fill="#9b59b6"/>
+                <text x="250" y="50" text-anchor="middle" font-size="16" fill="#9b59b6" font-weight="bold">B</text>
+                <text x="250" y="30" text-anchor="middle" font-size="13" fill="#9b59b6">h = 32 m</text>
+                <text x="280" y="70" text-anchor="start" font-size="12" fill="#333">PE = MAX</text>
+                <text x="280" y="85" text-anchor="start" font-size="12" fill="#333">KE = MIN</text>
+
+                <!-- Position C: Valley (low PE, high KE) -->
+                <circle cx="400" cy="200" r="20" fill="#3498db"/>
+                <text x="400" y="170" text-anchor="middle" font-size="16" fill="#3498db" font-weight="bold">C</text>
+                <text x="400" y="150" text-anchor="middle" font-size="13" fill="#3498db">h = 20 m</text>
+                <text x="400" y="260" text-anchor="middle" font-size="12" fill="#333">PE = med</text>
+                <text x="400" y="275" text-anchor="middle" font-size="12" fill="#333">KE = high</text>
+                <text x="400" y="290" text-anchor="middle" font-size="12" fill="#333">v = 15 m/s</text>
+
+                <!-- Position D: Bottom (lowest PE, highest KE) -->
+                <circle cx="500" cy="300" r="20" fill="#27ae60"/>
+                <text x="500" y="270" text-anchor="middle" font-size="16" fill="#27ae60" font-weight="bold">D</text>
+                <text x="500" y="250" text-anchor="middle" font-size="13" fill="#27ae60">h = 10 m</text>
+                <text x="500" y="360" text-anchor="middle" font-size="12" fill="#333">PE = low</text>
+                <text x="500" y="375" text-anchor="middle" font-size="12" fill="#333">KE = MAX</text>
+                <text x="500" y="390" text-anchor="middle" font-size="12" fill="#333">v = 20 m/s</text>
+
+                <!-- Energy bars -->
+                <text x="80" y="360" font-size="14" fill="#333" font-weight="bold">Total Energy (constant):</text>
+
+                <!-- Legend -->
+                <rect x="550" y="80" width="15" height="15" fill="#f39c12"/>
+                <text x="570" y="92" font-size="12" fill="#333">Potential Energy</text>
+                <rect x="550" y="100" width="15" height="15" fill="#3498db"/>
+                <text x="570" y="112" font-size="12" fill="#333">Kinetic Energy</text>
+            </svg>
+            <p style="margin-top: 15px; color: #666;"><strong>Key insight:</strong> Total energy (KE + PE) stays constant. As the car descends, PE converts to KE. As it climbs, KE converts back to PE.</p>
+        </section>
+
+        <section class="card">
+            <h2>Core Concept: Momentum</h2>
+
+            <h3>Momentum (p)</h3>
+            <p>The quantity of motion an object has.</p>
+            <div class="step">
+                <strong>Formula:</strong> p = mv (mass × velocity)
+                <p style="margin-top: 10px;"><strong>Example:</strong> A 1,500 kg car at 20 m/s has p = (1500)(20) = 30,000 kg·m/s</p>
+            </div>
+
+            <h3 style="margin-top: 25px;">Conservation of Momentum</h3>
+            <p>In a closed system (no external forces), total momentum before = total momentum after.</p>
+            <div class="step">
+                <strong>Formula:</strong> Σp_before = Σp_after
+                <p style="margin-top: 10px;">This is especially powerful for analyzing collisions.</p>
+            </div>
+
+            <h3 style="margin-top: 25px;">Impulse (J)</h3>
+            <p>Change in momentum, equal to force applied over time.</p>
+            <div class="step">
+                <strong>Formula:</strong> J = Δp = FΔt
+                <p style="margin-top: 10px;">Same momentum change can result from large force over short time OR small force over long time.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Types of Collisions</h2>
+
+            <h3>Elastic Collision</h3>
+            <p>Both momentum and kinetic energy are conserved.</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li>Objects bounce off each other</li>
+                <li>Example: Billiard balls, atomic particles</li>
+                <li>No energy lost to deformation or heat</li>
+            </ul>
+
+            <h3 style="margin-top: 20px;">Inelastic Collision</h3>
+            <p>Momentum is conserved, but kinetic energy is NOT conserved (some converts to heat, sound, deformation).</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li>Objects may stick together (perfectly inelastic)</li>
+                <li>Example: Car crashes, clay balls colliding</li>
+                <li>Energy "lost" is actually transformed to other forms</li>
+            </ul>
+        </section>
+
+        <section class="example-box">
+            <h2>Example 1: Pendulum Energy Conservation</h2>
+            <p><strong>Problem:</strong> A 2 kg pendulum is released from a height of 1.5 m. What is its maximum speed at the lowest point? (Ignore air resistance)</p>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <ol>
+                <li><strong>Identify energy at release point (top):</strong>
+                    <ul style="margin-left: 20px;">
+                        <li>PE = mgh = (2)(9.8)(1.5) = 29.4 J</li>
+                        <li>KE = 0 (released from rest)</li>
+                        <li>Total energy = 29.4 J</li>
+                    </ul>
+                </li>
+                <li><strong>Energy at lowest point (bottom):</strong>
+                    <ul style="margin-left: 20px;">
+                        <li>PE = 0 (h = 0)</li>
+                        <li>KE = ? (all energy is now kinetic)</li>
+                        <li>Total energy = 29.4 J (same as before)</li>
+                    </ul>
+                </li>
+                <li><strong>Solve for velocity:</strong>
+                    <p style="margin-left: 20px;">KE = ½mv²</p>
+                    <p style="margin-left: 20px;">29.4 = ½(2)v²</p>
+                    <p style="margin-left: 20px;">29.4 = v²</p>
+                    <p style="margin-left: 20px;">v = 5.4 m/s</p>
+                </li>
+            </ol>
+
+            <div style="background: white; padding: 15px; margin-top: 15px; border-radius: 5px; text-align: center;">
+                <p style="font-size: 1.4em; color: #27ae60; font-weight: bold;">Answer: 5.4 m/s</p>
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Real-world insight:</strong> Pendulum clocks use this energy transformation. The pendulum swings with constant total energy, making it a reliable timekeeper.</p>
+        </section>
+
+        <section class="example-box">
+            <h2>Example 2: Car Collision (Inelastic)</h2>
+            <p><strong>Problem:</strong> Car A (1,200 kg) traveling east at 20 m/s collides with Car B (1,800 kg) traveling west at 15 m/s. They stick together after the collision. What is their combined velocity after impact?</p>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <ol>
+                <li><strong>Define positive direction (east = +):</strong>
+                    <ul style="margin-left: 20px;">
+                        <li>Car A: m₁ = 1,200 kg, v₁ = +20 m/s</li>
+                        <li>Car B: m₂ = 1,800 kg, v₂ = -15 m/s (west is negative)</li>
+                    </ul>
+                </li>
+                <li><strong>Calculate total momentum before:</strong>
+                    <p style="margin-left: 20px;">p_before = m₁v₁ + m₂v₂</p>
+                    <p style="margin-left: 20px;">p_before = (1200)(20) + (1800)(-15)</p>
+                    <p style="margin-left: 20px;">p_before = 24,000 - 27,000 = -3,000 kg·m/s</p>
+                </li>
+                <li><strong>Apply conservation of momentum:</strong>
+                    <p style="margin-left: 20px;">p_after = p_before</p>
+                    <p style="margin-left: 20px;">(m₁ + m₂)v_final = -3,000</p>
+                    <p style="margin-left: 20px;">(3,000)v_final = -3,000</p>
+                    <p style="margin-left: 20px;">v_final = -1 m/s</p>
+                </li>
+            </ol>
+
+            <div style="background: white; padding: 15px; margin-top: 15px; border-radius: 5px; text-align: center;">
+                <p style="font-size: 1.4em; color: #27ae60; font-weight: bold;">Answer: 1 m/s west (negative indicates westward)</p>
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Real-world insight:</strong> The heavier car (B) had more momentum, so the combined wreckage moves in Car B's original direction. This is why head-on collisions with trucks are so dangerous - the truck's momentum dominates.</p>
+        </section>
+
+        <section class="interactive-box">
+            <h2>Quick Check: Test Your Understanding</h2>
+            <p><strong>Question:</strong> A 0.5 kg ball is dropped from 5 m. What is its kinetic energy just before hitting the ground?</p>
+
+            <button onclick="toggleAnswer('quick-check')">Show Answer</button>
+            <div id="quick-check" class="answer">
+                <p><strong>Answer: 24.5 J</strong></p>
+                <p><strong>Solution:</strong></p>
+                <p>At top: PE = mgh = (0.5)(9.8)(5) = 24.5 J, KE = 0</p>
+                <p>At bottom: PE = 0, KE = ?</p>
+                <p>Energy conservation: KE_bottom = PE_top = 24.5 J</p>
+            </div>
+        </section>
+
+        <section class="practice-box">
+            <h2>Practice Questions</h2>
+
+            <div class="question">
+                <p><strong>Question 1 (Easy):</strong> What is the kinetic energy of a 10 kg object moving at 5 m/s?</p>
+                <button onclick="toggleAnswer('q1')">Show Answer</button>
+                <div id="q1" class="answer">
+                    <p><strong>Answer: 125 J</strong></p>
+                    <p>KE = ½mv² = ½(10)(5²) = ½(10)(25) = 125 J</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 2 (Medium):</strong> A 60 kg person climbs 10 m up a ladder. How much potential energy did they gain?</p>
+                <button onclick="toggleAnswer('q2')">Show Answer</button>
+                <div id="q2" class="answer">
+                    <p><strong>Answer: 5,880 J</strong></p>
+                    <p>PE = mgh = (60)(9.8)(10) = 5,880 J</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 3 (Medium):</strong> A 1,000 kg car traveling at 15 m/s. What is its momentum?</p>
+                <button onclick="toggleAnswer('q3')">Show Answer</button>
+                <div id="q3" class="answer">
+                    <p><strong>Answer: 15,000 kg·m/s</strong></p>
+                    <p>p = mv = (1000)(15) = 15,000 kg·m/s</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 4 (Hard):</strong> A 3 kg ball moving at 8 m/s collides with a stationary 5 kg ball. If they stick together, what is their combined velocity?</p>
+                <button onclick="toggleAnswer('q4')">Show Answer</button>
+                <div id="q4" class="answer">
+                    <p><strong>Answer: 3 m/s</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>p_before = (3)(8) + (5)(0) = 24 kg·m/s</p>
+                    <p>p_after = (3 + 5)v = 8v</p>
+                    <p>24 = 8v → v = 3 m/s</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 5 (Hard):</strong> A roller coaster car starts from rest at 40 m height. What is its speed at 10 m height? (Ignore friction)</p>
+                <button onclick="toggleAnswer('q5')">Show Answer</button>
+                <div id="q5" class="answer">
+                    <p><strong>Answer: 24.2 m/s</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>Energy at 40 m: E = mgh = mg(40)</p>
+                    <p>Energy at 10 m: E = mgh + ½mv² = mg(10) + ½mv²</p>
+                    <p>Conservation: mg(40) = mg(10) + ½mv²</p>
+                    <p>Cancel m: g(30) = ½v²</p>
+                    <p>v² = 2g(30) = 2(9.8)(30) = 588</p>
+                    <p>v = 24.2 m/s</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="summary-box">
+            <h2>Quick Summary</h2>
+            <ul>
+                <li><strong>Energy</strong> is the capacity to do work; it can transform but total is conserved</li>
+                <li><strong>KE = ½mv²</strong> (energy of motion); <strong>PE = mgh</strong> (gravitational potential energy)</li>
+                <li><strong>Momentum p = mv</strong>; conserved in collisions</li>
+                <li><strong>Elastic collisions:</strong> KE and momentum conserved</li>
+                <li><strong>Inelastic collisions:</strong> Only momentum conserved (KE transforms to heat/deformation)</li>
+                <li><strong>Impulse J = FΔt = Δp:</strong> Extending collision time reduces peak force</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Real-World Connection: Baseball Physics</h2>
+            <p>When a bat hits a baseball, energy and momentum are both at play:</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Momentum Transfer:</strong> The bat (heavier, slower) transfers momentum to the ball (lighter, faster)</li>
+                <li><strong>Energy Transfer:</strong> Not all bat KE transfers to the ball - some becomes sound (crack!), vibration (sting in hands), and heat</li>
+                <li><strong>Sweet Spot:</strong> Hitting the bat's sweet spot maximizes energy transfer and minimizes vibration, launching the ball farther</li>
+                <li><strong>Exit Velocity:</strong> MLB home runs require exit velocities of 95+ mph, achieved through optimal energy and momentum transfer</li>
+            </ul>
+            <p style="margin-top: 15px;">A 0.145 kg baseball hit by a 0.9 kg bat (swing speed 80 mph) can exit at 110 mph. The collision lasts about 1 millisecond, with peak forces exceeding 8,000 N - enough to compress the ball to half its diameter!</p>
+        </section>
+
+        <section class="challenge-box">
+            <h2>Challenge Problem</h2>
+            <p><strong>The Ballistic Pendulum:</strong></p>
+            <p>A 10 g bullet is fired into a 2 kg wooden block suspended by strings (a ballistic pendulum). The bullet embeds in the block, and they swing upward together to a maximum height of 0.5 m. What was the bullet's initial speed?</p>
+
+            <p style="margin-top: 15px;"><strong>Solve this two-step problem using both momentum and energy conservation.</strong></p>
+
+            <button onclick="toggleAnswer('challenge-hint')">Show Hint</button>
+            <div id="challenge-hint" class="hint">
+                <p><strong>Hint:</strong> This is a two-phase problem:</p>
+                <p><strong>Phase 1 (collision):</strong> Use momentum conservation to find velocity just after impact</p>
+                <p><strong>Phase 2 (swing):</strong> Use energy conservation to relate velocity after impact to max height</p>
+                <p>Work backward from Phase 2 to find the velocity after collision, then use that in Phase 1 to find bullet speed.</p>
+            </div>
+
+            <button onclick="toggleAnswer('challenge')">Show Full Solution</button>
+            <div id="challenge" class="answer">
+                <p><strong>Phase 2: Energy conservation during swing</strong></p>
+                <p>At bottom (just after collision): KE = ½(m_bullet + m_block)v²</p>
+                <p>At top (max height): PE = (m_bullet + m_block)gh</p>
+                <p>Conservation: ½v² = gh</p>
+                <p>v² = 2gh = 2(9.8)(0.5) = 9.8</p>
+                <p>v = 3.13 m/s (velocity of block+bullet just after collision)</p>
+
+                <p style="margin-top: 15px;"><strong>Phase 1: Momentum conservation during collision</strong></p>
+                <p>Before: p = m_bullet × v_bullet (block at rest)</p>
+                <p>After: p = (m_bullet + m_block) × v</p>
+                <p>m_bullet × v_bullet = (m_bullet + m_block) × v</p>
+                <p>Convert: m_bullet = 0.01 kg, m_block = 2 kg</p>
+                <p>(0.01)v_bullet = (0.01 + 2)(3.13)</p>
+                <p>(0.01)v_bullet = (2.01)(3.13) = 6.29</p>
+                <p>v_bullet = 629 m/s</p>
+
+                <div style="background: white; padding: 15px; margin-top: 15px; border-radius: 5px; text-align: center;">
+                    <p style="font-size: 1.4em; color: #27ae60; font-weight="bold">Answer: 629 m/s (about 1,400 mph!)</p>
+                </div>
+
+                <p style="margin-top: 15px;"><strong>Real-world:</strong> This is how ballistic pendulums historically measured bullet velocities before modern chronographs. The tiny bullet transfers its momentum to the massive block, allowing us to measure the much slower combined velocity and work backward.</p>
+            </div>
+        </section>
+
+        <div class="lesson-nav">
+            <a href="lesson-2-dynamics.html">Previous Lesson: Dynamics</a>
+            <a href="lesson-4-waves-and-optics.html">Next Lesson: Waves and Optics</a>
+        </div>
+    </main>
+
+    <script>
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === 'none' || element.style.display === '') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

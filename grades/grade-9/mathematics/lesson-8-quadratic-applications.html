@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8: Quadratic Applications - Grade 9 Math</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <style>
+        .applications-hero {
+            background: linear-gradient(135deg, #f857a6 0%, #ff5858 100%);
+            padding: 30px;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .application-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .app-card {
+            background: white;
+            border: 3px solid #f857a6;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
+        }
+        .app-icon {
+            font-size: 3em;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .problem-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .solution-steps {
+            background: #f0f4ff;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            margin: 15px 0;
+        }
+        .step {
+            background: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 3px solid #f857a6;
+        }
+        .graph-visual {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .practice-challenge {
+            background: #fff3e0;
+            padding: 20px;
+            border: 2px solid #ff9800;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        .difficulty-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 5px;
+        }
+        .easy { background: #c8e6c9; color: #2e7d32; }
+        .medium { background: #fff9c4; color: #f57f17; }
+        .hard { background: #ffcdd2; color: #c62828; }
+        .solution {
+            display: none;
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .show-solution {
+            background: #f857a6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .real-world-tip {
+            background: #e1f5fe;
+            border-left: 4px solid #0277bd;
+            padding: 15px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lesson 8: Quadratic Applications</h1>
+        <p>Solving Real-World Problems with Quadratics</p>
+    </header>
+
+    <main>
+        <section class="lesson-intro">
+            <div class="applications-hero">
+                <h2>Where Are Quadratics Used?</h2>
+                <p>Quadratic equations model countless real-world situations!</p>
+                <p style="margin-top: 20px;">From sports to architecture to business, parabolas are everywhere</p>
+            </div>
+
+            <div class="application-grid">
+                <div class="app-card">
+                    <div class="app-icon">🏀</div>
+                    <h3>Projectile Motion</h3>
+                    <p>Balls, rockets, water fountains</p>
+                    <p><strong>Key:</strong> Height vs. time or distance</p>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-icon">📐</div>
+                    <h3>Area Optimization</h3>
+                    <p>Fences, gardens, building layouts</p>
+                    <p><strong>Key:</strong> Maximizing area with constraints</p>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-icon">💰</div>
+                    <h3>Business & Economics</h3>
+                    <p>Profit, revenue, cost analysis</p>
+                    <p><strong>Key:</strong> Finding maximum profit</p>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-icon">🎢</div>
+                    <h3>Engineering & Design</h3>
+                    <p>Bridges, roller coasters, arches</p>
+                    <p><strong>Key:</strong> Structural curves</p>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-icon">🎮</div>
+                    <h3>Gaming Physics</h3>
+                    <p>Jumping, throwing, collisions</p>
+                    <p><strong>Key:</strong> Realistic movement</p>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-icon">📱</div>
+                    <h3>Technology</h3>
+                    <p>Satellite dishes, antennas, optics</p>
+                    <p><strong>Key:</strong> Signal focusing</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h2>Application 1: Projectile Motion</h2>
+            <div class="problem-box">
+                <h3>⚽ Problem: Soccer Goal Kick</h3>
+                <p>A soccer player kicks a ball. Its height (in meters) after t seconds is:</p>
+                <p style="font-size: 1.4em; text-align: center; margin: 15px 0;"><strong>h(t) = -5t² + 20t + 1</strong></p>
+                <p><strong>Questions:</strong></p>
+                <ol>
+                    <li>What is the maximum height of the ball?</li>
+                    <li>When does the ball reach maximum height?</li>
+                    <li>When does the ball hit the ground?</li>
+                    <li>What is the initial height (at t = 0)?</li>
+                </ol>
+            </div>
+
+            <div class="solution-steps">
+                <h3>Solution</h3>
+
+                <div class="step">
+                    <h4>Question 1 & 2: Maximum Height (Vertex)</h4>
+                    <p><strong>Find time at maximum:</strong> t = -b/2a = -20/2(-5) = -20/-10 = 2 seconds</p>
+                    <p><strong>Find maximum height:</strong> h(2) = -5(2)² + 20(2) + 1</p>
+                    <p>= -5(4) + 40 + 1 = -20 + 40 + 1 = 21 meters</p>
+                    <p><strong>Answer:</strong> Maximum height is 21 meters at t = 2 seconds</p>
+                </div>
+
+                <div class="step">
+                    <h4>Question 3: When Ball Hits Ground (h = 0)</h4>
+                    <p>-5t² + 20t + 1 = 0</p>
+                    <p>Using quadratic formula: a = -5, b = 20, c = 1</p>
+                    <p>t = (-20 ± √(400 - 4(-5)(1))) / 2(-5)</p>
+                    <p>t = (-20 ± √420) / -10</p>
+                    <p>t = (-20 ± 20.49) / -10</p>
+                    <p>t = 0.49/-10 = -0.049 (reject, negative time)</p>
+                    <p>t = -40.49/-10 = 4.05 seconds</p>
+                    <p><strong>Answer:</strong> Ball lands at approximately 4.05 seconds</p>
+                </div>
+
+                <div class="step">
+                    <h4>Question 4: Initial Height</h4>
+                    <p>h(0) = -5(0)² + 20(0) + 1 = 1 meter</p>
+                    <p><strong>Answer:</strong> Ball was kicked from 1 meter high</p>
+                </div>
+            </div>
+
+            <div class="graph-visual">
+                <h4>Soccer Ball Trajectory</h4>
+                <svg width="600" height="350" viewBox="-1 -1 12 8">
+                    <rect x="-1" y="6.5" width="12" height="0.1" fill="#4CAF50"/>
+                    <text x="5" y="7.5" font-size="0.5" fill="#666" text-anchor="middle">Ground</text>
+
+                    <path d="M 0 1 Q 2 5.5 4.05 0" stroke="#ff5858" stroke-width="0.15" fill="none"/>
+
+                    <circle cx="0" cy="1" r="0.15" fill="#2196F3"/>
+                    <text x="0.3" y="0.7" font-size="0.5" fill="#2196F3">Kick (0s, 1m)</text>
+
+                    <circle cx="2" cy="5.5" r="0.2" fill="#9C27B0"/>
+                    <text x="2.3" y="5.2" font-size="0.5" fill="#9C27B0">Peak (2s, 21m)</text>
+
+                    <circle cx="4.05" cy="0" r="0.15" fill="#F44336"/>
+                    <text x="4.3" y="0.4" font-size="0.5" fill="#F44336">Land (4.05s)</text>
+
+                    <line x1="2" y1="0" x2="2" y2="6.5" stroke="#999" stroke-width="0.03" stroke-dasharray="0.1,0.1"/>
+
+                    <text x="0" y="7" font-size="0.4" fill="#666">0</text>
+                    <text x="2" y="7" font-size="0.4" fill="#666">2</text>
+                    <text x="4" y="7" font-size="0.4" fill="#666">4</text>
+                    <text x="5.5" y="7" font-size="0.4" fill="#666">Time (s)</text>
+                </svg>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h2>Application 2: Area Optimization</h2>
+            <div class="problem-box">
+                <h3>📐 Problem: Garden Fence</h3>
+                <p>You have 60 meters of fencing to enclose a rectangular garden against a wall. You only need to fence three sides (the wall serves as the fourth side).</p>
+                <p><strong>Question:</strong> What dimensions maximize the garden area?</p>
+            </div>
+
+            <div class="solution-steps">
+                <h3>Solution</h3>
+
+                <div class="step">
+                    <h4>Step 1: Set Up Variables</h4>
+                    <p>Let x = width of garden (perpendicular to wall)</p>
+                    <p>Let y = length of garden (parallel to wall)</p>
+                    <p>Fencing constraint: 2x + y = 60</p>
+                    <p>Therefore: y = 60 - 2x</p>
+                </div>
+
+                <div class="step">
+                    <h4>Step 2: Create Area Function</h4>
+                    <p>Area = length × width = x × y</p>
+                    <p>A(x) = x(60 - 2x)</p>
+                    <p>A(x) = 60x - 2x²</p>
+                    <p>A(x) = -2x² + 60x</p>
+                </div>
+
+                <div class="step">
+                    <h4>Step 3: Find Maximum (Vertex)</h4>
+                    <p>This is a parabola opening downward (a = -2 < 0)</p>
+                    <p>x = -b/2a = -60/2(-2) = -60/-4 = 15 meters</p>
+                    <p>y = 60 - 2(15) = 60 - 30 = 30 meters</p>
+                    <p>Maximum area = 15 × 30 = 450 m²</p>
+                </div>
+
+                <div class="step">
+                    <h4>Answer</h4>
+                    <p><strong>Width: 15 meters</strong></p>
+                    <p><strong>Length: 30 meters</strong></p>
+                    <p><strong>Maximum Area: 450 square meters</strong></p>
+                </div>
+            </div>
+
+            <div class="graph-visual">
+                <h4>Area Function: A(x) = -2x² + 60x</h4>
+                <svg width="500" height="400" viewBox="-5 -50 40 500">
+                    <line x1="-5" y1="450" x2="35" y2="450" stroke="#666" stroke-width="1"/>
+                    <line x1="0" y1="-50" x2="0" y2="500" stroke="#666" stroke-width="1"/>
+
+                    <path d="M 0 0 Q 15 -450 30 0" stroke="#f857a6" stroke-width="2" fill="none" transform="translate(0, 450)"/>
+
+                    <circle cx="15" cy="0" r="3" fill="#9C27B0" transform="translate(0, 450)"/>
+                    <text x="17" y="5" font-size="12" fill="#9C27B0" transform="translate(0, 450)">Max (15, 450)</text>
+
+                    <text x="0" y="465" font-size="10" fill="#666">0</text>
+                    <text x="15" y="465" font-size="10" fill="#666">15</text>
+                    <text x="30" y="465" font-size="10" fill="#666">30</text>
+                    <text x="18" y="480" font-size="10" fill="#666">Width (m)</text>
+
+                    <text x="-4" y="455" font-size="8" fill="#666" text-anchor="end">0</text>
+                    <text x="-4" y="230" font-size="8" fill="#666" text-anchor="end">450</text>
+                </svg>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h2>Application 3: Business - Profit Maximization</h2>
+            <div class="problem-box">
+                <h3>💰 Problem: T-Shirt Sales</h3>
+                <p>A company sells t-shirts. Their profit equation is:</p>
+                <p style="font-size: 1.4em; text-align: center; margin: 15px 0;"><strong>P(x) = -2x² + 80x - 200</strong></p>
+                <p>where x is the selling price in dollars and P is daily profit in dollars.</p>
+                <p><strong>Questions:</strong></p>
+                <ol>
+                    <li>What price maximizes profit?</li>
+                    <li>What is the maximum daily profit?</li>
+                    <li>At what prices does the company break even (P = 0)?</li>
+                </ol>
+            </div>
+
+            <div class="solution-steps">
+                <h3>Solution</h3>
+
+                <div class="step">
+                    <h4>Question 1 & 2: Maximum Profit</h4>
+                    <p>x = -b/2a = -80/2(-2) = -80/-4 = $20</p>
+                    <p>P(20) = -2(20)² + 80(20) - 200</p>
+                    <p>= -2(400) + 1600 - 200 = -800 + 1600 - 200 = $600</p>
+                    <p><strong>Answer:</strong> Price at $20 gives maximum profit of $600</p>
+                </div>
+
+                <div class="step">
+                    <h4>Question 3: Break-Even Points</h4>
+                    <p>-2x² + 80x - 200 = 0</p>
+                    <p>Divide by -2: x² - 40x + 100 = 0</p>
+                    <p>Using quadratic formula:</p>
+                    <p>x = (40 ± √(1600 - 400)) / 2</p>
+                    <p>x = (40 ± √1200) / 2</p>
+                    <p>x = (40 ± 34.64) / 2</p>
+                    <p>x = 37.32 or x = 2.68</p>
+                    <p><strong>Answer:</strong> Break even at $2.68 or $37.32</p>
+                </div>
+            </div>
+
+            <div class="real-world-tip">
+                <h4>💡 Business Insight</h4>
+                <p>Prices between $2.68 and $37.32 generate profit. Below $2.68, you're selling too cheap. Above $37.32, the high price drives away customers. The sweet spot is $20!</p>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h2>Application 4: Gaming - Jump Physics</h2>
+            <div class="problem-box">
+                <h3>🎮 Problem: Video Game Character Jump</h3>
+                <p>In a platformer game, a character's jump height is modeled by:</p>
+                <p style="font-size: 1.4em; text-align: center; margin: 15px 0;"><strong>h(t) = -16t² + 32t</strong></p>
+                <p>where h is height in pixels and t is time in seconds.</p>
+                <p><strong>Questions:</strong></p>
+                <ol>
+                    <li>How high does the character jump?</li>
+                    <li>How long is the character in the air?</li>
+                    <li>At what time(s) is the character at 12 pixels high?</li>
+                </ol>
+            </div>
+
+            <div class="solution-steps">
+                <h3>Solution</h3>
+
+                <div class="step">
+                    <h4>Question 1: Maximum Jump Height</h4>
+                    <p>t = -32/2(-16) = -32/-32 = 1 second</p>
+                    <p>h(1) = -16(1)² + 32(1) = -16 + 32 = 16 pixels</p>
+                    <p><strong>Answer:</strong> Peak jump is 16 pixels at 1 second</p>
+                </div>
+
+                <div class="step">
+                    <h4>Question 2: Air Time</h4>
+                    <p>-16t² + 32t = 0</p>
+                    <p>-16t(t - 2) = 0</p>
+                    <p>t = 0 (start) or t = 2 (land)</p>
+                    <p><strong>Answer:</strong> Character is in air for 2 seconds</p>
+                </div>
+
+                <div class="step">
+                    <h4>Question 3: When at 12 Pixels</h4>
+                    <p>-16t² + 32t = 12</p>
+                    <p>-16t² + 32t - 12 = 0</p>
+                    <p>Divide by -4: 4t² - 8t + 3 = 0</p>
+                    <p>Factor: (2t - 1)(2t - 3) = 0</p>
+                    <p>t = 0.5 seconds (going up) or t = 1.5 seconds (coming down)</p>
+                    <p><strong>Answer:</strong> At 12 pixels at 0.5s and 1.5s</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="practice-section">
+            <h2>Practice Challenges</h2>
+
+            <div class="practice-challenge">
+                <span class="difficulty-badge easy">EASY</span>
+                <h3>Problem 1: Water Fountain</h3>
+                <p>A water fountain's stream follows h(d) = -d² + 4d, where d is horizontal distance in feet and h is height in feet.</p>
+                <p><strong>a)</strong> What is the maximum height of the water?</p>
+                <p><strong>b)</strong> How far from the fountain does the water land?</p>
+
+                <button class="show-solution" onclick="toggleSolution('sol1')">Show Solution</button>
+                <div id="sol1" class="solution">
+                    <p><strong>a) Maximum height:</strong></p>
+                    <p>d = -4/2(-1) = 2 feet</p>
+                    <p>h(2) = -(2)² + 4(2) = -4 + 8 = 4 feet</p>
+                    <p><strong>Answer: 4 feet high</strong></p>
+
+                    <p><strong>b) Landing distance:</strong></p>
+                    <p>-d² + 4d = 0</p>
+                    <p>-d(d - 4) = 0</p>
+                    <p>d = 0 or d = 4</p>
+                    <p><strong>Answer: Lands 4 feet away</strong></p>
+                </div>
+            </div>
+
+            <div class="practice-challenge">
+                <span class="difficulty-badge medium">MEDIUM</span>
+                <h3>Problem 2: Parking Lot Design</h3>
+                <p>A rectangular parking lot is to be built with 200 meters of fencing on three sides (one side is against a building). Find the dimensions that maximize the area.</p>
+
+                <button class="show-solution" onclick="toggleSolution('sol2')">Show Solution</button>
+                <div id="sol2" class="solution">
+                    <p>Let x = width, y = length</p>
+                    <p>Constraint: 2x + y = 200, so y = 200 - 2x</p>
+                    <p>Area: A(x) = x(200 - 2x) = -2x² + 200x</p>
+                    <p>Maximum: x = -200/2(-2) = 50 meters</p>
+                    <p>y = 200 - 2(50) = 100 meters</p>
+                    <p><strong>Answer: 50m × 100m = 5000 m²</strong></p>
+                </div>
+            </div>
+
+            <div class="practice-challenge">
+                <span class="difficulty-badge medium">MEDIUM</span>
+                <h3>Problem 3: Basketball Shot</h3>
+                <p>A basketball player shoots from 15 feet away. The ball's height is h(x) = -0.06x² + 1.2x + 6, where x is horizontal distance.</p>
+                <p><strong>a)</strong> Does the ball clear a 10-foot high defender at x = 5 feet?</p>
+                <p><strong>b)</strong> What's the ball's maximum height?</p>
+
+                <button class="show-solution" onclick="toggleSolution('sol3')">Show Solution</button>
+                <div id="sol3" class="solution">
+                    <p><strong>a) Height at x = 5:</strong></p>
+                    <p>h(5) = -0.06(25) + 1.2(5) + 6 = -1.5 + 6 + 6 = 10.5 feet</p>
+                    <p><strong>Yes, clears 10-foot defender!</strong></p>
+
+                    <p><strong>b) Maximum height:</strong></p>
+                    <p>x = -1.2/2(-0.06) = -1.2/-0.12 = 10 feet</p>
+                    <p>h(10) = -0.06(100) + 1.2(10) + 6 = -6 + 12 + 6 = 12 feet</p>
+                    <p><strong>Answer: Maximum is 12 feet</strong></p>
+                </div>
+            </div>
+
+            <div class="practice-challenge">
+                <span class="difficulty-badge hard">HARD</span>
+                <h3>Problem 4: Concert Revenue</h3>
+                <p>A concert venue holds 500 people. At $30 per ticket, it sells out. For each $2 increase in price, 20 fewer tickets are sold. Find the ticket price that maximizes revenue.</p>
+
+                <button class="show-solution" onclick="toggleSolution('sol4')">Show Solution</button>
+                <div id="sol4" class="solution">
+                    <p>Let x = number of $2 increases</p>
+                    <p>Price: 30 + 2x</p>
+                    <p>Tickets sold: 500 - 20x</p>
+                    <p>Revenue: R(x) = (30 + 2x)(500 - 20x)</p>
+                    <p>= 15000 - 600x + 1000x - 40x²</p>
+                    <p>= -40x² + 400x + 15000</p>
+                    <p>Maximum: x = -400/2(-40) = -400/-80 = 5</p>
+                    <p>Optimal price: 30 + 2(5) = $40</p>
+                    <p>Tickets sold: 500 - 20(5) = 400</p>
+                    <p>Max revenue: 40 × 400 = $16,000</p>
+                    <p><strong>Answer: $40 ticket price maximizes revenue at $16,000</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-summary">
+            <h2>Key Problem-Solving Steps</h2>
+            <ol>
+                <li><strong>Read carefully</strong> - Identify what you're solving for</li>
+                <li><strong>Define variables</strong> - Let x represent something meaningful</li>
+                <li><strong>Set up equation</strong> - Write the quadratic relationship</li>
+                <li><strong>Identify what you need</strong> - Maximum? Root? Specific value?</li>
+                <li><strong>Use the right tool</strong> - Vertex for max/min, formula for roots</li>
+                <li><strong>Check your answer</strong> - Does it make sense in context?</li>
+                <li><strong>Answer the question</strong> - Include units and full explanation</li>
+            </ol>
+
+            <div class="real-world-tip">
+                <h4>🎯 Success Tips</h4>
+                <ul>
+                    <li>Draw diagrams to visualize the problem</li>
+                    <li>Check if your answer is physically reasonable (no negative time, etc.)</li>
+                    <li>Maximum/minimum almost always means find the vertex</li>
+                    <li>When it hits the ground/breaks even means set equation to zero</li>
+                    <li>Always include units in your final answer</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="navigation">
+            <a href="lesson-7-graphing-parabolas.html" class="nav-button">← Previous: Graphing Parabolas</a>
+            <a href="../index.html" class="nav-button">Back to Grade 9 Math →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LearnLog. Grade 9 Mathematics - Unit 2: Quadratic Equations</p>
+    </footer>
+
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

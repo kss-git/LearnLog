@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5: Data Analysis | Grade 10 Mathematics</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 4px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #16a085;
+        }
+        .concept-box {
+            background-color: #e8f4f8;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .example-box {
+            background-color: #fff9e6;
+            border-left: 5px solid #f39c12;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .practice-box {
+            background-color: #e8f8f5;
+            border-left: 5px solid #1abc9c;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .formula {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+        }
+        .svg-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lesson 5: Data Analysis</h1>
+
+        <h2>Learning Objectives</h2>
+        <ul>
+            <li>Calculate and interpret measures of central tendency (mean, median, mode)</li>
+            <li>Calculate and interpret measures of spread (range, variance, standard deviation)</li>
+            <li>Analyze real-world datasets from sports and social media</li>
+            <li>Identify outliers and understand their impact on statistics</li>
+        </ul>
+
+        <h2>1. Measures of Central Tendency</h2>
+
+        <div class="concept-box">
+            <h3>What is Central Tendency?</h3>
+            <p>Central tendency measures help us find the "center" or "typical value" of a dataset. The three main measures are:</p>
+            <ul>
+                <li><strong>Mean</strong>: The average of all values</li>
+                <li><strong>Median</strong>: The middle value when data is ordered</li>
+                <li><strong>Mode</strong>: The most frequently occurring value</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 1: Basketball Player Stats</h3>
+            <p>Here are the points scored by a basketball player in their last 15 games:</p>
+            <p><strong>Data:</strong> 18, 22, 25, 19, 31, 22, 28, 22, 20, 35, 19, 22, 24, 21, 22</p>
+
+            <h4>Calculating the Mean:</h4>
+            <div class="formula">
+                Mean = Sum of all values ÷ Number of values<br>
+                Mean = (18 + 22 + 25 + 19 + 31 + 22 + 28 + 22 + 20 + 35 + 19 + 22 + 24 + 21 + 22) ÷ 15<br>
+                Mean = 350 ÷ 15 = <strong>23.33 points</strong>
+            </div>
+
+            <h4>Finding the Median:</h4>
+            <p>First, order the data: 18, 19, 19, 20, 21, 22, 22, <span style="background-color: #ffeb3b;">22</span>, 22, 22, 24, 25, 28, 31, 35</p>
+            <p><strong>Median = 22 points</strong> (the middle value, 8th position)</p>
+
+            <h4>Finding the Mode:</h4>
+            <p><strong>Mode = 22 points</strong> (appears 6 times, more than any other value)</p>
+        </div>
+
+        <div class="svg-container">
+            <svg width="700" height="300" viewBox="0 0 700 300">
+                <!-- Title -->
+                <text x="350" y="25" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+                    Basketball Player Performance
+                </text>
+
+                <!-- Bars -->
+                <rect x="30" y="120" width="30" height="100" fill="#3498db"/>
+                <rect x="70" y="90" width="30" height="130" fill="#3498db"/>
+                <rect x="110" y="70" width="30" height="150" fill="#3498db"/>
+                <rect x="150" y="100" width="30" height="120" fill="#3498db"/>
+                <rect x="190" y="30" width="30" height="190" fill="#e74c3c"/>
+                <rect x="230" y="90" width="30" height="130" fill="#3498db"/>
+                <rect x="270" y="50" width="30" height="170" fill="#3498db"/>
+                <rect x="310" y="90" width="30" height="130" fill="#2ecc71"/>
+                <rect x="350" y="110" width="30" height="110" fill="#3498db"/>
+                <rect x="390" y="20" width="30" height="200" fill="#e74c3c"/>
+                <rect x="430" y="100" width="30" height="120" fill="#3498db"/>
+                <rect x="470" y="90" width="30" height="130" fill="#2ecc71"/>
+                <rect x="510" y="80" width="30" height="140" fill="#3498db"/>
+                <rect x="550" y="100" width="30" height="120" fill="#3498db"/>
+                <rect x="590" y="90" width="30" height="130" fill="#2ecc71"/>
+
+                <!-- Values -->
+                <text x="45" y="240" font-size="12" text-anchor="middle">18</text>
+                <text x="85" y="240" font-size="12" text-anchor="middle">22</text>
+                <text x="125" y="240" font-size="12" text-anchor="middle">25</text>
+                <text x="165" y="240" font-size="12" text-anchor="middle">19</text>
+                <text x="205" y="240" font-size="12" text-anchor="middle">31</text>
+                <text x="245" y="240" font-size="12" text-anchor="middle">22</text>
+                <text x="285" y="240" font-size="12" text-anchor="middle">28</text>
+                <text x="325" y="240" font-size="12" text-anchor="middle" fill="#2ecc71" font-weight="bold">22</text>
+                <text x="365" y="240" font-size="12" text-anchor="middle">20</text>
+                <text x="405" y="240" font-size="12" text-anchor="middle">35</text>
+                <text x="445" y="240" font-size="12" text-anchor="middle">19</text>
+                <text x="485" y="240" font-size="12" text-anchor="middle" fill="#2ecc71" font-weight="bold">22</text>
+                <text x="525" y="240" font-size="12" text-anchor="middle">24</text>
+                <text x="565" y="240" font-size="12" text-anchor="middle">21</text>
+                <text x="605" y="240" font-size="12" text-anchor="middle" fill="#2ecc71" font-weight="bold">22</text>
+
+                <!-- Mean line -->
+                <line x1="30" y1="95" x2="620" y2="95" stroke="#f39c12" stroke-width="3" stroke-dasharray="5,5"/>
+                <text x="640" y="100" font-size="14" fill="#f39c12" font-weight="bold">Mean: 23.33</text>
+
+                <!-- Legend -->
+                <rect x="30" y="260" width="15" height="15" fill="#3498db"/>
+                <text x="50" y="272" font-size="12">Regular game</text>
+                <rect x="150" y="260" width="15" height="15" fill="#e74c3c"/>
+                <text x="170" y="272" font-size="12">High-scoring (outliers)</text>
+                <rect x="310" y="260" width="15" height="15" fill="#2ecc71"/>
+                <text x="330" y="272" font-size="12">Mode (22 points)</text>
+            </svg>
+        </div>
+
+        <h2>2. Measures of Spread</h2>
+
+        <div class="concept-box">
+            <h3>Why Do We Need Measures of Spread?</h3>
+            <p>Two datasets can have the same mean but very different distributions. Measures of spread tell us how "spread out" the data is from the center.</p>
+            <ul>
+                <li><strong>Range</strong>: Maximum value - Minimum value</li>
+                <li><strong>Variance</strong>: Average of squared differences from the mean</li>
+                <li><strong>Standard Deviation</strong>: Square root of variance (in same units as data)</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 2: Social Media Engagement Comparison</h3>
+            <p>Two influencers post content daily. Here are their likes over 7 days:</p>
+
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Influencer A</th>
+                    <th>Influencer B</th>
+                </tr>
+                <tr><td>Monday</td><td>500</td><td>300</td></tr>
+                <tr><td>Tuesday</td><td>520</td><td>450</td></tr>
+                <tr><td>Wednesday</td><td>490</td><td>200</td></tr>
+                <tr><td>Thursday</td><td>510</td><td>600</td></tr>
+                <tr><td>Friday</td><td>505</td><td>350</td></tr>
+                <tr><td>Saturday</td><td>495</td><td>700</td></tr>
+                <tr><td>Sunday</td><td>480</td><td>400</td></tr>
+                <tr><th>Mean</th><th>500</th><th>428.57</th></tr>
+            </table>
+
+            <h4>Calculating Range:</h4>
+            <p><strong>Influencer A:</strong> Range = 520 - 480 = 40 likes</p>
+            <p><strong>Influencer B:</strong> Range = 700 - 200 = 500 likes</p>
+
+            <h4>Calculating Standard Deviation for Influencer A:</h4>
+            <div class="formula">
+                Step 1: Find differences from mean: 0, 20, -10, 10, 5, -5, -20<br>
+                Step 2: Square each difference: 0, 400, 100, 100, 25, 25, 400<br>
+                Step 3: Find average (variance): 1050 ÷ 7 = 150<br>
+                Step 4: Take square root: √150 ≈ <strong>12.25 likes</strong>
+            </div>
+
+            <p><strong>Interpretation:</strong> Influencer A has very consistent engagement (low standard deviation), while Influencer B's posts vary widely in popularity (high standard deviation).</p>
+        </div>
+
+        <div class="svg-container">
+            <svg width="700" height="350" viewBox="0 0 700 350">
+                <!-- Title -->
+                <text x="350" y="25" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+                    Social Media Engagement Comparison
+                </text>
+
+                <!-- Grid lines -->
+                <line x1="80" y1="50" x2="80" y2="280" stroke="#ddd" stroke-width="2"/>
+                <line x1="80" y1="280" x2="650" y2="280" stroke="#ddd" stroke-width="2"/>
+
+                <!-- Y-axis labels -->
+                <text x="70" y="285" font-size="12" text-anchor="end">0</text>
+                <text x="70" y="238" font-size="12" text-anchor="end">200</text>
+                <text x="70" y="191" font-size="12" text-anchor="end">400</text>
+                <text x="70" y="144" font-size="12" text-anchor="end">600</text>
+                <text x="70" y="97" font-size="12" text-anchor="end">800</text>
+
+                <!-- Influencer A line (consistent) -->
+                <polyline points="120,91 200,87 280,93 360,89 440,90 520,92 600,95"
+                          fill="none" stroke="#3498db" stroke-width="3"/>
+
+                <!-- Influencer B line (variable) -->
+                <polyline points="120,163 200,119 280,210 360,49 440,147 520,28 600,119"
+                          fill="none" stroke="#e74c3c" stroke-width="3"/>
+
+                <!-- Data points Influencer A -->
+                <circle cx="120" cy="91" r="5" fill="#3498db"/>
+                <circle cx="200" cy="87" r="5" fill="#3498db"/>
+                <circle cx="280" cy="93" r="5" fill="#3498db"/>
+                <circle cx="360" cy="89" r="5" fill="#3498db"/>
+                <circle cx="440" cy="90" r="5" fill="#3498db"/>
+                <circle cx="520" cy="92" r="5" fill="#3498db"/>
+                <circle cx="600" cy="95" r="5" fill="#3498db"/>
+
+                <!-- Data points Influencer B -->
+                <circle cx="120" cy="163" r="5" fill="#e74c3c"/>
+                <circle cx="200" cy="119" r="5" fill="#e74c3c"/>
+                <circle cx="280" cy="210" r="5" fill="#e74c3c"/>
+                <circle cx="360" cy="49" r="5" fill="#e74c3c"/>
+                <circle cx="440" cy="147" r="5" fill="#e74c3c"/>
+                <circle cx="520" cy="28" r="5" fill="#e74c3c"/>
+                <circle cx="600" cy="119" r="5" fill="#e74c3c"/>
+
+                <!-- X-axis labels -->
+                <text x="120" y="300" font-size="11" text-anchor="middle">Mon</text>
+                <text x="200" y="300" font-size="11" text-anchor="middle">Tue</text>
+                <text x="280" y="300" font-size="11" text-anchor="middle">Wed</text>
+                <text x="360" y="300" font-size="11" text-anchor="middle">Thu</text>
+                <text x="440" y="300" font-size="11" text-anchor="middle">Fri</text>
+                <text x="520" y="300" font-size="11" text-anchor="middle">Sat</text>
+                <text x="600" y="300" font-size="11" text-anchor="middle">Sun</text>
+
+                <!-- Legend -->
+                <line x1="120" y1="320" x2="170" y2="320" stroke="#3498db" stroke-width="3"/>
+                <text x="180" y="325" font-size="12">Influencer A (consistent, SD = 12.25)</text>
+                <line x1="120" y1="340" x2="170" y2="340" stroke="#e74c3c" stroke-width="3"/>
+                <text x="180" y="345" font-size="12">Influencer B (variable, SD = 181.97)</text>
+            </svg>
+        </div>
+
+        <h2>3. Outliers and Their Impact</h2>
+
+        <div class="concept-box">
+            <h3>What Are Outliers?</h3>
+            <p>Outliers are data points that are significantly different from other observations. They can:</p>
+            <ul>
+                <li>Dramatically affect the mean</li>
+                <li>Have little effect on the median</li>
+                <li>Increase the standard deviation</li>
+            </ul>
+            <p><strong>When to use median vs mean:</strong> Use the median when data has outliers; use the mean for normal distributions.</p>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 3: Gaming Scores</h3>
+            <p>A gamer's scores over 10 matches:</p>
+            <p><strong>Regular games:</strong> 1200, 1350, 1280, 1420, 1310, 1390, 1260, 1330, 1370</p>
+            <p><strong>With one lucky game:</strong> 1200, 1350, 1280, 1420, 1310, 1390, 1260, 1330, 1370, <span style="color: #e74c3c; font-weight: bold;">4500</span></p>
+
+            <table>
+                <tr>
+                    <th>Measure</th>
+                    <th>Without Outlier</th>
+                    <th>With Outlier (4500)</th>
+                    <th>Change</th>
+                </tr>
+                <tr>
+                    <td>Mean</td>
+                    <td>1323.33</td>
+                    <td>1641</td>
+                    <td style="color: #e74c3c;">+317.67 (24%)</td>
+                </tr>
+                <tr>
+                    <td>Median</td>
+                    <td>1330</td>
+                    <td>1340</td>
+                    <td style="color: #27ae60;">+10 (0.75%)</td>
+                </tr>
+                <tr>
+                    <td>Mode</td>
+                    <td>None</td>
+                    <td>None</td>
+                    <td>No change</td>
+                </tr>
+            </table>
+
+            <p><strong>Conclusion:</strong> The median (1340) better represents the typical performance than the mean (1641).</p>
+        </div>
+
+        <h2>4. Analyzing Real-World Data</h2>
+
+        <div class="example-box">
+            <h3>Example 4: School Poll Data</h3>
+            <p>Students were asked: "How many hours per week do you spend on social media?"</p>
+
+            <table>
+                <tr>
+                    <th>Hours per Week</th>
+                    <th>Number of Students</th>
+                </tr>
+                <tr><td>0-5</td><td>12</td></tr>
+                <tr><td>6-10</td><td>28</td></tr>
+                <tr><td>11-15</td><td>35</td></tr>
+                <tr><td>16-20</td><td>18</td></tr>
+                <tr><td>21-25</td><td>5</td></tr>
+                <tr><td>26+</td><td>2</td></tr>
+            </table>
+
+            <p><strong>Modal class:</strong> 11-15 hours (most common response)</p>
+            <p><strong>Estimated mean:</strong> Using midpoints of each interval ≈ 12.8 hours</p>
+            <p><strong>Interpretation:</strong> Most students spend between 11-15 hours per week on social media, with relatively few spending over 20 hours.</p>
+        </div>
+
+        <div class="practice-box">
+            <h3>Practice Problems</h3>
+
+            <p><strong>1.</strong> A soccer team's goals per game over 12 matches: 2, 1, 3, 2, 0, 4, 2, 1, 2, 5, 2, 1</p>
+            <ul>
+                <li>Calculate the mean, median, and mode</li>
+                <li>Calculate the range and standard deviation</li>
+                <li>Which measure best represents typical performance? Why?</li>
+            </ul>
+
+            <p><strong>2.</strong> YouTube video views for two creators over a week:</p>
+            <ul>
+                <li>Creator X: 5000, 5200, 4900, 5100, 5300, 5000, 4800</li>
+                <li>Creator Y: 2000, 8000, 3000, 7500, 2500, 9000, 1000</li>
+            </ul>
+            <p>Compare their mean views and standard deviations. What does this tell you about consistency?</p>
+
+            <p><strong>3.</strong> A student's test scores: 78, 82, 85, 79, 92, 81, 88, 35 (was sick)</p>
+            <ul>
+                <li>Calculate mean with and without the outlier</li>
+                <li>Which measure (mean or median) should the teacher use for grading? Explain.</li>
+            </ul>
+
+            <p><strong>4.</strong> Survey data shows daily screen time (minutes): 120, 180, 150, 200, 165, 190, 175, 145, 210, 160</p>
+            <ul>
+                <li>Calculate all measures of central tendency</li>
+                <li>Calculate variance and standard deviation</li>
+                <li>Identify any potential outliers</li>
+            </ul>
+        </div>
+
+        <h2>Key Takeaways</h2>
+        <ul>
+            <li>Mean is sensitive to outliers; median is resistant to outliers</li>
+            <li>Standard deviation measures consistency - low SD means consistent data</li>
+            <li>Always look at both central tendency AND spread to understand data fully</li>
+            <li>Real-world context matters when interpreting statistics</li>
+            <li>Choose the right measure for your purpose: mean for normal data, median for skewed data</li>
+        </ul>
+
+        <div style="margin-top: 30px; padding: 20px; background-color: #ecf0f1; border-radius: 5px;">
+            <h3>Next Steps</h3>
+            <p>In Lesson 6, we'll explore probability basics and learn how to calculate the chances of different outcomes in games, sports, and everyday life!</p>
+        </div>
+    </div>
+</body>
+</html>

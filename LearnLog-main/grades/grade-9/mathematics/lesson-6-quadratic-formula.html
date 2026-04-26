@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6: The Quadratic Formula - Grade 9 Math</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <style>
+        .formula-hero {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 30px;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .formula-hero h2 {
+            font-size: 2.5em;
+            margin: 20px 0;
+        }
+        .discriminant-box {
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discriminant-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .discriminant-table th,
+        .discriminant-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .discriminant-table th {
+            background: #f093fb;
+            color: white;
+        }
+        .example-card {
+            background: white;
+            border: 2px solid #f5576c;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .step {
+            background: #fff0f5;
+            border-left: 4px solid #f5576c;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .calculator-sim {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+        }
+        .input-group {
+            margin: 10px 0;
+        }
+        .input-group label {
+            display: inline-block;
+            width: 50px;
+        }
+        .input-group input {
+            width: 100px;
+            padding: 5px;
+            font-size: 1em;
+        }
+        .calc-button {
+            background: #f5576c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        .result-display {
+            background: #34495e;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            min-height: 50px;
+        }
+        .practice-problem {
+            background: #f0f8ff;
+            padding: 15px;
+            border-left: 4px solid #f093fb;
+            margin: 10px 0;
+        }
+        .solution {
+            display: none;
+            background: #d4edda;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .show-solution {
+            background: #f5576c;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lesson 6: The Quadratic Formula</h1>
+        <p>The Ultimate Tool for Solving Any Quadratic Equation</p>
+    </header>
+
+    <main>
+        <section class="lesson-intro">
+            <div class="formula-hero">
+                <h2>The Quadratic Formula</h2>
+                <p style="font-size: 1.5em; margin: 20px 0;">For ax² + bx + c = 0:</p>
+                <h2>x = (-b ± √(b² - 4ac)) / 2a</h2>
+                <p style="margin-top: 20px;">This formula solves ANY quadratic equation, even when factoring is difficult or impossible!</p>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h2>Why the Quadratic Formula?</h2>
+            <p>While factoring works great for simple quadratics, many equations can't be factored easily:</p>
+            <ul>
+                <li>🚫 x² + 3x + 1 = 0 (doesn't factor nicely)</li>
+                <li>🚫 2x² - 5x - 2 = 0 (complex factoring)</li>
+                <li>✅ The quadratic formula solves these instantly!</li>
+            </ul>
+
+            <div class="example-card">
+                <h3>Understanding the Formula Components</h3>
+                <p>For the equation <strong>ax² + bx + c = 0</strong>:</p>
+                <ul>
+                    <li><strong>a</strong> = coefficient of x² term</li>
+                    <li><strong>b</strong> = coefficient of x term</li>
+                    <li><strong>c</strong> = constant term</li>
+                    <li><strong>±</strong> means we get two solutions (one with +, one with -)</li>
+                    <li><strong>b² - 4ac</strong> is called the "discriminant" (tells us about solutions)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h2>The Discriminant: Predicting Solutions</h2>
+            <div class="discriminant-box">
+                <p>The discriminant <strong>Δ = b² - 4ac</strong> tells us what type of solutions to expect:</p>
+
+                <table class="discriminant-table">
+                    <thead>
+                        <tr>
+                            <th>Discriminant Value</th>
+                            <th>Number of Solutions</th>
+                            <th>Type of Solutions</th>
+                            <th>Graph Behavior</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Δ > 0</td>
+                            <td>2 real solutions</td>
+                            <td>Two different numbers</td>
+                            <td>Parabola crosses x-axis twice</td>
+                        </tr>
+                        <tr>
+                            <td>Δ = 0</td>
+                            <td>1 real solution</td>
+                            <td>One repeated number</td>
+                            <td>Parabola touches x-axis once</td>
+                        </tr>
+                        <tr>
+                            <td>Δ < 0</td>
+                            <td>0 real solutions</td>
+                            <td>No real numbers work</td>
+                            <td>Parabola doesn't touch x-axis</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h2>Step-by-Step Examples</h2>
+
+            <div class="example-card">
+                <h3>Example 1: x² + 5x + 6 = 0</h3>
+                <div class="step">
+                    <strong>Step 1:</strong> Identify a, b, c
+                    <p>a = 1, b = 5, c = 6</p>
+                </div>
+                <div class="step">
+                    <strong>Step 2:</strong> Check discriminant
+                    <p>Δ = b² - 4ac = (5)² - 4(1)(6) = 25 - 24 = 1</p>
+                    <p>Since Δ > 0, we have 2 real solutions</p>
+                </div>
+                <div class="step">
+                    <strong>Step 3:</strong> Apply formula
+                    <p>x = (-5 ± √1) / 2(1)</p>
+                    <p>x = (-5 ± 1) / 2</p>
+                </div>
+                <div class="step">
+                    <strong>Step 4:</strong> Solve both cases
+                    <p>x = (-5 + 1) / 2 = -4/2 = -2</p>
+                    <p>x = (-5 - 1) / 2 = -6/2 = -3</p>
+                </div>
+                <p><strong>Solutions: x = -2 or x = -3</strong></p>
+                <p><em>Note: This could also be factored as (x + 2)(x + 3) = 0</em></p>
+            </div>
+
+            <div class="example-card">
+                <h3>Example 2: 2x² - 7x + 3 = 0</h3>
+                <div class="step">
+                    <strong>Step 1:</strong> Identify a, b, c
+                    <p>a = 2, b = -7, c = 3</p>
+                </div>
+                <div class="step">
+                    <strong>Step 2:</strong> Check discriminant
+                    <p>Δ = (-7)² - 4(2)(3) = 49 - 24 = 25</p>
+                    <p>Δ > 0, so 2 real solutions</p>
+                </div>
+                <div class="step">
+                    <strong>Step 3:</strong> Apply formula
+                    <p>x = (7 ± √25) / 2(2)</p>
+                    <p>x = (7 ± 5) / 4</p>
+                </div>
+                <div class="step">
+                    <strong>Step 4:</strong> Solve
+                    <p>x = (7 + 5) / 4 = 12/4 = 3</p>
+                    <p>x = (7 - 5) / 4 = 2/4 = 0.5</p>
+                </div>
+                <p><strong>Solutions: x = 3 or x = 0.5</strong></p>
+            </div>
+
+            <div class="example-card">
+                <h3>Example 3: x² + 4x + 1 = 0 (Irrational Solutions)</h3>
+                <div class="step">
+                    <strong>Step 1:</strong> a = 1, b = 4, c = 1
+                </div>
+                <div class="step">
+                    <strong>Step 2:</strong> Δ = (4)² - 4(1)(1) = 16 - 4 = 12
+                </div>
+                <div class="step">
+                    <strong>Step 3:</strong> x = (-4 ± √12) / 2
+                </div>
+                <div class="step">
+                    <strong>Step 4:</strong> Simplify √12 = √(4 × 3) = 2√3
+                    <p>x = (-4 ± 2√3) / 2 = -2 ± √3</p>
+                </div>
+                <p><strong>Solutions: x = -2 + √3 ≈ -0.27 or x = -2 - √3 ≈ -3.73</strong></p>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h2>Real-World Application: Sports Physics</h2>
+            <div class="formula-hero">
+                <h3>⚽ Soccer Ball Kick</h3>
+                <p style="color: white;">A soccer ball is kicked with height equation:</p>
+                <p style="font-size: 1.3em;"><strong>h(t) = -4.9t² + 15t + 1</strong></p>
+                <p>When does the ball hit the ground (h = 0)?</p>
+            </div>
+
+            <div class="example-card">
+                <h3>Solution</h3>
+                <div class="step">
+                    <strong>Equation:</strong> -4.9t² + 15t + 1 = 0
+                    <p>a = -4.9, b = 15, c = 1</p>
+                </div>
+                <div class="step">
+                    <strong>Discriminant:</strong> Δ = (15)² - 4(-4.9)(1) = 225 + 19.6 = 244.6
+                </div>
+                <div class="step">
+                    <strong>Formula:</strong> t = (-15 ± √244.6) / 2(-4.9)
+                    <p>t = (-15 ± 15.64) / -9.8</p>
+                </div>
+                <div class="step">
+                    <strong>Solutions:</strong>
+                    <p>t = (-15 + 15.64) / -9.8 = -0.065 (not physical, negative time)</p>
+                    <p>t = (-15 - 15.64) / -9.8 = 3.13 seconds</p>
+                </div>
+                <p><strong>Answer: The ball lands after approximately 3.13 seconds</strong></p>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h2>Interactive Quadratic Formula Calculator</h2>
+            <div class="calculator-sim">
+                <h3>Quadratic Equation Solver</h3>
+                <p>Enter coefficients for ax² + bx + c = 0:</p>
+
+                <div class="input-group">
+                    <label for="coef-a">a:</label>
+                    <input type="number" id="coef-a" value="1" step="0.1">
+                </div>
+                <div class="input-group">
+                    <label for="coef-b">b:</label>
+                    <input type="number" id="coef-b" value="5" step="0.1">
+                </div>
+                <div class="input-group">
+                    <label for="coef-c">c:</label>
+                    <input type="number" id="coef-c" value="6" step="0.1">
+                </div>
+
+                <button class="calc-button" onclick="solveQuadratic()">Solve</button>
+
+                <div class="result-display" id="result">
+                    Results will appear here...
+                </div>
+            </div>
+        </section>
+
+        <section class="practice-section">
+            <h2>Practice Problems</h2>
+
+            <div class="practice-problem">
+                <h3>Problem 1: Basic</h3>
+                <p>Solve: x² - 3x - 10 = 0</p>
+                <button class="show-solution" onclick="toggleSolution('sol1')">Show Solution</button>
+                <div id="sol1" class="solution">
+                    <p>a = 1, b = -3, c = -10</p>
+                    <p>Δ = (-3)² - 4(1)(-10) = 9 + 40 = 49</p>
+                    <p>x = (3 ± √49) / 2 = (3 ± 7) / 2</p>
+                    <p>x = 10/2 = 5 or x = -4/2 = -2</p>
+                    <p><strong>Answer: x = 5 or x = -2</strong></p>
+                </div>
+            </div>
+
+            <div class="practice-problem">
+                <h3>Problem 2: With Leading Coefficient</h3>
+                <p>Solve: 3x² + 8x - 3 = 0</p>
+                <button class="show-solution" onclick="toggleSolution('sol2')">Show Solution</button>
+                <div id="sol2" class="solution">
+                    <p>a = 3, b = 8, c = -3</p>
+                    <p>Δ = (8)² - 4(3)(-3) = 64 + 36 = 100</p>
+                    <p>x = (-8 ± √100) / 6 = (-8 ± 10) / 6</p>
+                    <p>x = 2/6 = 1/3 or x = -18/6 = -3</p>
+                    <p><strong>Answer: x = 1/3 or x = -3</strong></p>
+                </div>
+            </div>
+
+            <div class="practice-problem">
+                <h3>Problem 3: One Solution</h3>
+                <p>Solve: x² - 6x + 9 = 0</p>
+                <button class="show-solution" onclick="toggleSolution('sol3')">Show Solution</button>
+                <div id="sol3" class="solution">
+                    <p>a = 1, b = -6, c = 9</p>
+                    <p>Δ = (-6)² - 4(1)(9) = 36 - 36 = 0</p>
+                    <p>One solution! x = (6 ± 0) / 2 = 3</p>
+                    <p><strong>Answer: x = 3 (double root)</strong></p>
+                </div>
+            </div>
+
+            <div class="practice-problem">
+                <h3>Problem 4: Application</h3>
+                <p>A ball's height is h(t) = -5t² + 20t + 2. When is it at ground level?</p>
+                <button class="show-solution" onclick="toggleSolution('sol4')">Show Solution</button>
+                <div id="sol4" class="solution">
+                    <p>Set h(t) = 0: -5t² + 20t + 2 = 0</p>
+                    <p>a = -5, b = 20, c = 2</p>
+                    <p>Δ = 400 - 4(-5)(2) = 400 + 40 = 440</p>
+                    <p>t = (-20 ± √440) / -10 = (-20 ± 20.98) / -10</p>
+                    <p>t ≈ 4.10 seconds (positive solution)</p>
+                    <p><strong>Answer: Ball lands at about 4.1 seconds</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-summary">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>The quadratic formula solves any quadratic equation: x = (-b ± √(b² - 4ac)) / 2a</li>
+                <li>The discriminant (b² - 4ac) predicts the number and type of solutions</li>
+                <li>Always check the discriminant before solving</li>
+                <li>Use ± to find both solutions (if they exist)</li>
+                <li>Real-world problems often produce one meaningful solution (positive time, positive distance, etc.)</li>
+            </ul>
+        </section>
+
+        <div class="navigation">
+            <a href="lesson-5-factoring-quadratics.html" class="nav-button">← Previous: Factoring</a>
+            <a href="lesson-7-graphing-parabolas.html" class="nav-button">Next: Graphing Parabolas →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LearnLog. Grade 9 Mathematics - Unit 2: Quadratic Equations</p>
+    </footer>
+
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function solveQuadratic() {
+            const a = parseFloat(document.getElementById('coef-a').value);
+            const b = parseFloat(document.getElementById('coef-b').value);
+            const c = parseFloat(document.getElementById('coef-c').value);
+            const resultDiv = document.getElementById('result');
+
+            if (a === 0) {
+                resultDiv.innerHTML = '<p style="color: #e74c3c;">Error: a cannot be 0 (not quadratic)</p>';
+                return;
+            }
+
+            const discriminant = b * b - 4 * a * c;
+
+            let result = `<p>Equation: ${a}x² + ${b}x + ${c} = 0</p>`;
+            result += `<p>Discriminant: Δ = ${discriminant.toFixed(2)}</p>`;
+
+            if (discriminant > 0) {
+                const sqrtD = Math.sqrt(discriminant);
+                const x1 = (-b + sqrtD) / (2 * a);
+                const x2 = (-b - sqrtD) / (2 * a);
+                result += `<p style="color: #2ecc71;">Two real solutions:</p>`;
+                result += `<p>x₁ = ${x1.toFixed(4)}</p>`;
+                result += `<p>x₂ = ${x2.toFixed(4)}</p>`;
+            } else if (discriminant === 0) {
+                const x = -b / (2 * a);
+                result += `<p style="color: #f39c12;">One real solution:</p>`;
+                result += `<p>x = ${x.toFixed(4)}</p>`;
+            } else {
+                result += `<p style="color: #e74c3c;">No real solutions (Δ < 0)</p>`;
+                result += `<p>Complex solutions exist but are beyond Grade 9</p>`;
+            }
+
+            resultDiv.innerHTML = result;
+        }
+    </script>
+</body>
+</html>

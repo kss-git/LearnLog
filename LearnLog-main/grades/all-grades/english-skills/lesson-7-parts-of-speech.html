@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7: Parts of Speech - Grammar Essentials</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #4facfe;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        h2 {
+            color: #00f2fe;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-left: 5px solid #4facfe;
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #4facfe;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .pos-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #4facfe;
+        }
+
+        .pos-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .pos-icon {
+            font-size: 2.5em;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .pos-title {
+            flex: 1;
+        }
+
+        .pos-title h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .pos-definition {
+            color: #666;
+            font-style: italic;
+        }
+
+        .example-box {
+            background: #fff;
+            border-left: 4px solid #4facfe;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .wrong {
+            background: #ffe6e6;
+            border-left: 4px solid #ff4444;
+        }
+
+        .right {
+            background: #e6ffe6;
+            border-left: 4px solid #44ff44;
+        }
+
+        .text-fail {
+            background: #fff3e6;
+            border-left: 4px solid #ff9800;
+        }
+
+        .label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .red { color: #ff4444; }
+        .green { color: #22aa22; }
+        .orange { color: #ff9800; }
+
+        .sentence-breakdown {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .word-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            margin: 5px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+
+        .noun { background: #ffeb3b; color: #333; }
+        .pronoun { background: #ff9800; color: white; }
+        .verb { background: #4caf50; color: white; }
+        .adjective { background: #2196f3; color: white; }
+        .adverb { background: #9c27b0; color: white; }
+        .preposition { background: #f44336; color: white; }
+        .conjunction { background: #00bcd4; color: white; }
+        .interjection { background: #e91e63; color: white; }
+
+        .diagram-container {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .tip {
+            background: #fff9e6;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .tip strong {
+            color: #f57c00;
+        }
+
+        .interactive-quiz {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #4facfe;
+            color: white;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .social-media-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .social-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #4facfe;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: #00f2fe;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .pos-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lesson 7: Parts of Speech</h1>
+        <p class="subtitle">The Building Blocks of Every Sentence</p>
+
+        <div class="sentence-breakdown">
+            <p style="font-size: 1.2em; margin-bottom: 15px; text-align: center;">
+                <span class="word-tag interjection">Wow</span>
+                <span class="word-tag pronoun">I</span>
+                <span class="word-tag adverb">really</span>
+                <span class="word-tag verb">love</span>
+                <span class="word-tag adjective">creative</span>
+                <span class="word-tag noun">writing</span>
+                <span class="word-tag conjunction">and</span>
+                <span class="word-tag pronoun">it</span>
+                <span class="word-tag verb">helps</span>
+                <span class="word-tag pronoun">me</span>
+                <span class="word-tag verb">communicate</span>
+                <span class="word-tag adverb">effectively</span>
+            </p>
+            <p style="text-align: center; color: #666; font-size: 0.9em;">
+                Every word has a job to do in a sentence!
+            </p>
+        </div>
+
+        <h2>The 8 Parts of Speech</h2>
+
+        <div class="pos-card">
+            <div class="pos-header">
+                <div class="pos-icon noun">📦</div>
+                <div class="pos-title">
+                    <h3>1. NOUNS</h3>
+                    <p class="pos-definition">Person, place, thing, or idea</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Common nouns:</strong> phone, email, meeting, idea</p>
+                <p><strong>Proper nouns:</strong> Google, Microsoft, LinkedIn, iPhone</p>
+                <p><strong>Abstract nouns:</strong> happiness, freedom, success, love</p>
+            </div>
+
+            <div class="example-box text-fail">
+                <div class="label orange">Text Message:</div>
+                <p>"cant find my <span class="word-tag noun">phone</span> need to get to the <span class="word-tag noun">store</span>"</p>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Professional Email:</div>
+                <p>"I need to purchase a new <span class="word-tag noun">laptop</span> for the <span class="word-tag noun">presentation</span> next <span class="word-tag noun">week</span>."</p>
+            </div>
+        </div>
+
+        <div class="pos-card">
+            <div class="pos-header">
+                <div class="pos-icon pronoun">👤</div>
+                <div class="pos-title">
+                    <h3>2. PRONOUNS</h3>
+                    <p class="pos-definition">Takes the place of a noun</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Personal:</strong> I, you, he, she, it, we, they</p>
+                <p><strong>Possessive:</strong> my, your, his, her, its, our, their</p>
+                <p><strong>Demonstrative:</strong> this, that, these, those</p>
+                <p><strong>Relative:</strong> who, whom, whose, which, that</p>
+            </div>
+
+            <div class="example-box wrong">
+                <div class="label red">Common Mistake:</div>
+                <p>"Me and John will handle the project."</p>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Correct:</div>
+                <p><strong><span class="word-tag pronoun">John and I</span> will handle the project.</strong></p>
+                <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                    Pro tip: Remove "John" and see if it still makes sense. "Me will handle" is wrong, but "I will handle" is correct!
+                </p>
+            </div>
+
+            <div class="example-box text-fail">
+                <div class="label orange">Social Media Fail:</div>
+                <p>"Your the best!"</p>
+                <p>"Its been a great day"</p>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Fixed:</div>
+                <p><strong><span class="word-tag pronoun">You're</span> the best!</strong> (You are)</p>
+                <p><strong><span class="word-tag pronoun">It's</span> been a great day</strong> (It has)</p>
+            </div>
+        </div>
+
+        <div class="pos-card">
+            <div class="pos-header">
+                <div class="pos-icon verb">⚡</div>
+                <div class="pos-title">
+                    <h3>3. VERBS</h3>
+                    <p class="pos-definition">Action or state of being</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Action verbs:</strong> run, write, email, tweet, post, message</p>
+                <p><strong>Linking verbs:</strong> am, is, are, was, were, be, being, been</p>
+                <p><strong>Helping verbs:</strong> can, could, will, would, shall, should, may, might, must</p>
+            </div>
+
+            <div class="diagram-container">
+                <svg viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
+                    <text x="250" y="30" text-anchor="middle" font-size="18" font-weight="bold">The team is working on the project</text>
+
+                    <line x1="250" y1="35" x2="250" y2="60" stroke="#333" stroke-width="2"/>
+                    <line x1="150" y1="60" x2="350" y2="60" stroke="#333" stroke-width="2"/>
+
+                    <line x1="150" y1="60" x2="150" y2="80" stroke="#333" stroke-width="2"/>
+                    <line x1="250" y1="60" x2="250" y2="80" stroke="#333" stroke-width="2"/>
+                    <line x1="350" y1="60" x2="350" y2="80" stroke="#333" stroke-width="2"/>
+
+                    <rect x="90" y="85" width="120" height="30" fill="#ffeb3b" rx="5"/>
+                    <text x="150" y="105" text-anchor="middle" font-size="14">Noun: team</text>
+
+                    <rect x="190" y="85" width="120" height="30" fill="#4caf50" rx="5"/>
+                    <text x="250" y="105" text-anchor="middle" font-size="14" fill="white">Verb: is working</text>
+
+                    <rect x="290" y="85" width="120" height="30" fill="#ffeb3b" rx="5"/>
+                    <text x="350" y="105" text-anchor="middle" font-size="14">Noun: project</text>
+                </svg>
+            </div>
+
+            <div class="example-box text-fail">
+                <div class="label orange">Text Confusion:</div>
+                <p>"The meeting starting soon"</p>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Clear Communication:</div>
+                <p><strong>The meeting <span class="word-tag verb">is starting</span> soon.</strong> (helping verb + action verb)</p>
+            </div>
+        </div>
+
+        <div class="pos-card">
+            <div class="pos-header">
+                <div class="pos-icon adjective">🎨</div>
+                <div class="pos-title">
+                    <h3>4. ADJECTIVES</h3>
+                    <p class="pos-definition">Describes or modifies a noun</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Quality:</strong> amazing, terrible, beautiful, ugly</p>
+                <p><strong>Quantity:</strong> many, few, several, some</p>
+                <p><strong>Size:</strong> big, small, huge, tiny</p>
+                <p><strong>Color:</strong> red, blue, bright, dark</p>
+            </div>
+
+            <div class="social-media-examples">
+                <div class="social-card">
+                    <p style="font-size: 0.9em; color: #666;">Plain:</p>
+                    <p>"Had a day at work"</p>
+                </div>
+                <div class="social-card">
+                    <p style="font-size: 0.9em; color: #666;">With adjectives:</p>
+                    <p>"Had a <span class="word-tag adjective">challenging</span> day at <span class="word-tag adjective">productive</span> work"</p>
+                </div>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Professional Examples:</div>
+                <p>"We need a <span class="word-tag adjective">comprehensive</span> solution."</p>
+                <p>"The <span class="word-tag adjective">quarterly</span> report shows <span class="word-tag adjective">impressive</span> results."</p>
+            </div>
+        </div>
+
+        <div class="pos-card">
+            <div class="pos-header">
+                <div class="pos-icon adverb">🚀</div>
+                <div class="pos-title">
+                    <h3>5. ADVERBS</h3>
+                    <p class="pos-definition">Modifies verbs, adjectives, or other adverbs (often ends in -ly)</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <p><strong>How:</strong> quickly, slowly, carefully, easily</p>
+                <p><strong>When:</strong> now, later, soon, yesterday</p>
+                <p><strong>Where:</strong> here, there, everywhere, outside</p>
+                <p><strong>To what extent:</strong> very, quite, too, extremely</p>
+            </div>
+
+            <div class="example-box text-fail">
+                <div class="label orange">Weak Writing:</div>
+                <p>"I worked on the project."</p>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Stronger with Adverbs:</div>
+                <p>"I <span class="word-tag adverb">carefully</span> worked on the project <span class="word-tag adverb">yesterday</span>."</p>
+            </div>
+
+            <div class="tip">
+                <strong>Caution:</strong> Don't overuse adverbs! "Very, really, extremely" can weaken your writing. Instead of "very big," try "enormous" or "massive."
+            </div>
+        </div>
+
+        <div class="pos-card">
+            <div class="pos-header">
+                <div class="pos-icon preposition">🔗</div>
+                <div class="pos-title">
+                    <h3>6. PREPOSITIONS</h3>
+                    <p class="pos-definition">Shows relationship between nouns (location, time, direction)</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Location:</strong> in, on, at, under, over, between, among</p>
+                <p><strong>Time:</strong> before, after, during, since, until</p>
+                <p><strong>Direction:</strong> to, from, toward, through, across</p>
+            </div>
+
+            <div class="diagram-container">
+                <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="150" y="80" width="100" height="60" fill="#90caf9" stroke="#1976d2" stroke-width="2"/>
+                    <text x="200" y="115" text-anchor="middle" font-size="16" fill="#1565c0">Box</text>
+
+                    <circle cx="200" cy="50" r="15" fill="#f44336"/>
+                    <text x="200" y="30" text-anchor="middle" font-size="12">on the box</text>
+
+                    <circle cx="200" cy="160" r="15" fill="#4caf50"/>
+                    <text x="200" y="185" text-anchor="middle" font-size="12">under the box</text>
+
+                    <circle cx="110" cy="110" r="15" fill="#ff9800"/>
+                    <text x="60" y="115" text-anchor="middle" font-size="12">beside</text>
+
+                    <circle cx="290" cy="110" r="15" fill="#9c27b0"/>
+                    <text x="340" y="115" text-anchor="middle" font-size="12">next to</text>
+                </svg>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Email Examples:</div>
+                <p>"The meeting is <span class="word-tag preposition">at</span> 3pm."</p>
+                <p>"I'll send it <span class="word-tag preposition">by</span> Friday."</p>
+                <p>"Place the files <span class="word-tag preposition">on</span> the server."</p>
+            </div>
+        </div>
+
+        <div class="pos-card">
+            <div class="pos-header">
+                <div class="pos-icon conjunction">🔀</div>
+                <div class="pos-title">
+                    <h3>7. CONJUNCTIONS</h3>
+                    <p class="pos-definition">Connects words, phrases, or clauses</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Coordinating (FANBOYS):</strong> for, and, nor, but, or, yet, so</p>
+                <p><strong>Subordinating:</strong> because, although, while, if, when, since</p>
+                <p><strong>Correlative:</strong> both/and, either/or, neither/nor, not only/but also</p>
+            </div>
+
+            <div class="example-box text-fail">
+                <div class="label orange">Run-on Text:</div>
+                <p>"I sent the email I didn't get a reply I'm sending it again"</p>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Fixed with Conjunctions:</div>
+                <p>"I sent the email, <span class="word-tag conjunction">but</span> I didn't get a reply, <span class="word-tag conjunction">so</span> I'm sending it again."</p>
+            </div>
+        </div>
+
+        <div class="pos-card">
+            <div class="pos-header">
+                <div class="pos-icon interjection">💥</div>
+                <div class="pos-title">
+                    <h3>8. INTERJECTIONS</h3>
+                    <p class="pos-definition">Express emotion or exclamation</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Common:</strong> wow, oh, ouch, hey, yay, ugh, hmm, oops</p>
+            </div>
+
+            <div class="example-box text-fail">
+                <div class="label orange">Too Casual for Work Email:</div>
+                <p>"OMG I totally forgot about the meeting!!!"</p>
+            </div>
+
+            <div class="example-box right">
+                <div class="label green">Professional Alternative:</div>
+                <p>"I apologize—I completely forgot about the meeting. Can we reschedule?"</p>
+                <p style="margin-top: 10px;"><em>Save interjections for casual texts, not professional emails!</em></p>
+            </div>
+        </div>
+
+        <h2>Putting It All Together</h2>
+
+        <div class="sentence-breakdown">
+            <p style="font-size: 1.1em; margin-bottom: 20px; text-align: center;">
+                <span class="word-tag interjection">Hey</span>,
+                <span class="word-tag pronoun">I</span>
+                <span class="word-tag adverb">quickly</span>
+                <span class="word-tag verb">finished</span>
+                <span class="word-tag adjective">that</span>
+                <span class="word-tag adjective">urgent</span>
+                <span class="word-tag noun">report</span>
+                <span class="word-tag conjunction">and</span>
+                <span class="word-tag verb">sent</span>
+                <span class="word-tag pronoun">it</span>
+                <span class="word-tag preposition">to</span>
+                <span class="word-tag adjective">the</span>
+                <span class="word-tag noun">team</span>
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Part of Speech</th>
+                        <th>Word(s)</th>
+                        <th>Function</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="word-tag interjection">Interjection</span></td>
+                        <td>Hey</td>
+                        <td>Gets attention</td>
+                    </tr>
+                    <tr>
+                        <td><span class="word-tag pronoun">Pronoun</span></td>
+                        <td>I, it</td>
+                        <td>Replaces nouns</td>
+                    </tr>
+                    <tr>
+                        <td><span class="word-tag adverb">Adverb</span></td>
+                        <td>quickly</td>
+                        <td>Describes how the action was done</td>
+                    </tr>
+                    <tr>
+                        <td><span class="word-tag verb">Verb</span></td>
+                        <td>finished, sent</td>
+                        <td>Shows action</td>
+                    </tr>
+                    <tr>
+                        <td><span class="word-tag adjective">Adjective</span></td>
+                        <td>that, urgent, the</td>
+                        <td>Describes nouns</td>
+                    </tr>
+                    <tr>
+                        <td><span class="word-tag noun">Noun</span></td>
+                        <td>report, team</td>
+                        <td>Names things</td>
+                    </tr>
+                    <tr>
+                        <td><span class="word-tag conjunction">Conjunction</span></td>
+                        <td>and</td>
+                        <td>Connects ideas</td>
+                    </tr>
+                    <tr>
+                        <td><span class="word-tag preposition">Preposition</span></td>
+                        <td>to</td>
+                        <td>Shows relationship</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="interactive-quiz">
+            <h3>Practice Exercise</h3>
+            <p><strong>Identify the part of speech for each underlined word:</strong></p>
+            <ol>
+                <li>"The <u>quick</u> response impressed the client."</li>
+                <li>"She <u>confidently</u> presented her ideas."</li>
+                <li>"Wow, that was <u>amazing</u>!"</li>
+                <li>"The meeting will start <u>after</u> lunch."</li>
+                <li>"I want coffee <u>and</u> a bagel."</li>
+            </ol>
+
+            <details style="margin-top: 15px;">
+                <summary style="cursor: pointer; font-weight: bold; color: #4facfe;">Show Answers</summary>
+                <div style="margin-top: 10px; padding: 10px; background: white; border-radius: 5px;">
+                    <ol>
+                        <li><span class="word-tag adjective">Adjective</span> (describes "response")</li>
+                        <li><span class="word-tag adverb">Adverb</span> (describes "presented")</li>
+                        <li><span class="word-tag adjective">Adjective</span> (describes "that")</li>
+                        <li><span class="word-tag preposition">Preposition</span> (shows time relationship)</li>
+                        <li><span class="word-tag conjunction">Conjunction</span> (connects "coffee" and "bagel")</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+        <div class="tip">
+            <strong>Pro Tip:</strong> Understanding parts of speech helps you:
+            <ul>
+                <li>Write clearer sentences</li>
+                <li>Avoid grammar mistakes in emails</li>
+                <li>Use autocorrect more effectively</li>
+                <li>Communicate more professionally</li>
+            </ul>
+        </div>
+
+        <a href="../index.html" class="back-link">← Back to English Skills</a>
+    </div>
+</body>
+</html>

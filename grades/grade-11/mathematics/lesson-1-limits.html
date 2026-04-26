@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1: Limits - Grade 11 Mathematics</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>📐 Lesson 1: Limits</h1>
+            <p>The Foundation of Calculus</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <a href="index.html" class="btn">← Back to Mathematics</a>
+            <h2>What is a Limit?</h2>
+            <p>A limit describes what value a function approaches as the input gets closer and closer to a certain point. It's like asking: "Where is this function heading?"</p>
+            <p>We write: <strong>lim<sub>x→a</sub> f(x) = L</strong></p>
+            <p>This means: "As x gets closer to a, f(x) gets closer to L"</p>
+        </section>
+
+        <section class="card">
+            <h2>📊 Visualizing Limits</h2>
+            <p>Consider the function f(x) = (x² - 1)/(x - 1). What happens as x approaches 1?</p>
+
+            <svg width="100%" height="300" viewBox="0 0 500 300" style="max-width: 600px; margin: 20px auto; display: block; background: #f8f9fa; border-radius: 8px;">
+                <!-- Grid -->
+                <line x1="50" y1="250" x2="450" y2="250" stroke="#ccc" stroke-width="1"/>
+                <line x1="250" y1="50" x2="250" y2="250" stroke="#ccc" stroke-width="1"/>
+
+                <!-- Axes -->
+                <line x1="50" y1="250" x2="450" y2="250" stroke="#333" stroke-width="2"/>
+                <line x1="250" y1="50" x2="250" y2="250" stroke="#333" stroke-width="2"/>
+
+                <!-- Axis labels -->
+                <text x="460" y="255" font-size="14" fill="#333">x</text>
+                <text x="255" y="40" font-size="14" fill="#333">y</text>
+
+                <!-- X-axis marks -->
+                <text x="145" y="270" font-size="12" fill="#666">0</text>
+                <text x="245" y="270" font-size="12" fill="#666">1</text>
+                <text x="345" y="270" font-size="12" fill="#666">2</text>
+
+                <!-- Y-axis marks -->
+                <text x="220" y="205" font-size="12" fill="#666">1</text>
+                <text x="220" y="155" font-size="12" fill="#666">2</text>
+
+                <!-- Function curve (y = x + 1, excluding point at x=1) -->
+                <path d="M 50,250 L 240,160" stroke="#667eea" stroke-width="3" fill="none"/>
+                <path d="M 260,160 L 450,70" stroke="#667eea" stroke-width="3" fill="none"/>
+
+                <!-- Hole at (1, 2) -->
+                <circle cx="250" cy="160" r="4" fill="white" stroke="#667eea" stroke-width="2"/>
+
+                <!-- Limit point -->
+                <circle cx="250" cy="160" r="6" fill="#ff6b6b" opacity="0.3"/>
+                <text x="270" y="155" font-size="14" fill="#ff6b6b" font-weight="bold">lim = 2</text>
+
+                <!-- Title -->
+                <text x="250" y="30" font-size="16" fill="#333" text-anchor="middle" font-weight="bold">f(x) = (x² - 1)/(x - 1)</text>
+            </svg>
+
+            <p style="margin-top: 20px;"><strong>Notice:</strong> Even though f(1) is undefined (division by zero!), the limit as x approaches 1 is 2. We can simplify: (x² - 1)/(x - 1) = (x+1)(x-1)/(x-1) = x + 1, which equals 2 when x = 1.</p>
+        </section>
+
+        <section class="card">
+            <h2>🚗 Real-World Example: Velocity</h2>
+            <p>Imagine a car traveling along a straight road. Its position at time t seconds is given by s(t) = 5t² meters.</p>
+            <p><strong>Question:</strong> What is the car's velocity at exactly t = 2 seconds?</p>
+
+            <div style="background: #f0f7ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <p><strong>Solution using limits:</strong></p>
+                <p>Velocity = rate of change of position = lim<sub>h→0</sub> [s(2+h) - s(2)]/h</p>
+                <p>= lim<sub>h→0</sub> [5(2+h)² - 5(2)²]/h</p>
+                <p>= lim<sub>h→0</sub> [5(4 + 4h + h²) - 20]/h</p>
+                <p>= lim<sub>h→0</sub> [20 + 20h + 5h² - 20]/h</p>
+                <p>= lim<sub>h→0</sub> [20h + 5h²]/h</p>
+                <p>= lim<sub>h→0</sub> (20 + 5h) = <strong>20 m/s</strong></p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>📝 Types of Limits</h2>
+            <div style="display: grid; gap: 15px; margin-top: 20px;">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                    <h4 style="color: #667eea; margin-top: 0;">1. Two-Sided Limit</h4>
+                    <p>lim<sub>x→a</sub> f(x) exists when the function approaches the same value from both left and right.</p>
+                </div>
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                    <h4 style="color: #667eea; margin-top: 0;">2. One-Sided Limits</h4>
+                    <p>lim<sub>x→a⁺</sub> f(x) (from the right) and lim<sub>x→a⁻</sub> f(x) (from the left)</p>
+                </div>
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                    <h4 style="color: #667eea; margin-top: 0;">3. Infinite Limits</h4>
+                    <p>lim<sub>x→a</sub> f(x) = ∞ when the function grows without bound.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>🎯 Practice Problems</h2>
+
+            <div style="background: #fff9e6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                <h4 style="margin-top: 0;">Problem 1: Basic Limit</h4>
+                <p>Find: lim<sub>x→3</sub> (x² + 2x - 1)</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #667eea; font-weight: bold;">Show Solution</summary>
+                    <p style="margin-top: 10px;">Simply substitute x = 3:</p>
+                    <p>(3)² + 2(3) - 1 = 9 + 6 - 1 = <strong>14</strong></p>
+                </details>
+            </div>
+
+            <div style="background: #fff9e6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                <h4 style="margin-top: 0;">Problem 2: Limit with Factoring</h4>
+                <p>Find: lim<sub>x→2</sub> (x² - 4)/(x - 2)</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #667eea; font-weight: bold;">Show Solution</summary>
+                    <p style="margin-top: 10px;">Factor the numerator:</p>
+                    <p>(x² - 4)/(x - 2) = (x + 2)(x - 2)/(x - 2) = x + 2</p>
+                    <p>Now substitute: 2 + 2 = <strong>4</strong></p>
+                </details>
+            </div>
+
+            <div style="background: #fff9e6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                <h4 style="margin-top: 0;">Problem 3: One-Sided Limit</h4>
+                <p>For f(x) = |x|/x, find: lim<sub>x→0⁺</sub> f(x) and lim<sub>x→0⁻</sub> f(x)</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #667eea; font-weight: bold;">Show Solution</summary>
+                    <p style="margin-top: 10px;">From the right (x > 0): |x|/x = x/x = <strong>1</strong></p>
+                    <p>From the left (x < 0): |x|/x = -x/x = <strong>-1</strong></p>
+                    <p>Since the limits differ, lim<sub>x→0</sub> f(x) does not exist!</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>🌟 Challenge Problem</h2>
+            <div style="background: #ffe6e6; padding: 20px; border-radius: 8px;">
+                <p><strong>Advanced:</strong> A ball is thrown upward from the ground with initial velocity 30 m/s. Its height is h(t) = 30t - 5t² meters. Use limits to find the instantaneous velocity at t = 3 seconds.</p>
+                <details style="margin-top: 15px;">
+                    <summary style="cursor: pointer; color: #ff6b6b; font-weight: bold;">Show Solution</summary>
+                    <p style="margin-top: 10px;">v(3) = lim<sub>h→0</sub> [h(3+h) - h(3)]/h</p>
+                    <p>= lim<sub>h→0</sub> [30(3+h) - 5(3+h)² - (90 - 45)]/h</p>
+                    <p>= lim<sub>h→0</sub> [90 + 30h - 5(9 + 6h + h²) - 45]/h</p>
+                    <p>= lim<sub>h→0</sub> [90 + 30h - 45 - 30h - 5h² - 45]/h</p>
+                    <p>= lim<sub>h→0</sub> [-5h²]/h = lim<sub>h→0</sub> -5h = <strong>0 m/s</strong></p>
+                    <p>The ball has stopped momentarily at its maximum height!</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>🔑 Key Takeaways</h2>
+            <ul style="margin-left: 30px; margin-top: 15px;">
+                <li>Limits describe the behavior of functions as we approach a point</li>
+                <li>A limit can exist even when the function value doesn't</li>
+                <li>Limits are the foundation for derivatives and integrals</li>
+                <li>We use limits to find instantaneous rates of change (like velocity)</li>
+            </ul>
+            <div style="margin-top: 20px;">
+                <a href="lesson-2-derivatives-basics.html" class="btn">Next: Derivatives Basics →</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

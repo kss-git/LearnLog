@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8: Making Predictions | Grade 10 Mathematics</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 4px solid #27ae60;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #229954;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #16a085;
+        }
+        .concept-box {
+            background-color: #d5f4e6;
+            border-left: 5px solid #27ae60;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .example-box {
+            background-color: #fff9e6;
+            border-left: 5px solid #f39c12;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .practice-box {
+            background-color: #e8f8f5;
+            border-left: 5px solid #1abc9c;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .warning-box {
+            background-color: #fadbd8;
+            border-left: 5px solid #e74c3c;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #27ae60;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .formula {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            font-size: 15px;
+        }
+        .svg-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lesson 8: Making Predictions</h1>
+
+        <h2>Learning Objectives</h2>
+        <ul>
+            <li>Use statistical data to make informed predictions</li>
+            <li>Understand and calculate expected value</li>
+            <li>Apply trend analysis to forecast future outcomes</li>
+            <li>Recognize limitations and uncertainty in predictions</li>
+            <li>Make data-driven decisions in real-world scenarios</li>
+        </ul>
+
+        <h2>1. Expected Value</h2>
+
+        <div class="concept-box">
+            <h3>What is Expected Value?</h3>
+            <p>Expected value (EV) is the average outcome you would expect if you repeated an event many times. It helps us make decisions when outcomes are uncertain.</p>
+
+            <div class="formula">
+                Expected Value = Σ (Probability of outcome × Value of outcome)<br>
+                EV = P₁ × V₁ + P₂ × V₂ + P₃ × V₃ + ...
+            </div>
+
+            <p><strong>Key insight:</strong> Expected value tells us the long-term average, not what will happen in a single trial.</p>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 1: Gaming Tournament Prize Money</h3>
+            <p>You're entering an esports tournament with the following prize structure:</p>
+
+            <table>
+                <tr>
+                    <th>Placement</th>
+                    <th>Prize</th>
+                    <th>Your Probability</th>
+                </tr>
+                <tr><td>1st Place</td><td>$1,000</td><td>10% (0.10)</td></tr>
+                <tr><td>2nd Place</td><td>$500</td><td>15% (0.15)</td></tr>
+                <tr><td>3rd Place</td><td>$250</td><td>25% (0.25)</td></tr>
+                <tr><td>No Prize</td><td>$0</td><td>50% (0.50)</td></tr>
+            </table>
+
+            <p><strong>Entry fee: $75</strong></p>
+
+            <h4>Calculating Expected Value:</h4>
+            <div class="formula">
+                EV = (0.10 × $1,000) + (0.15 × $500) + (0.25 × $250) + (0.50 × $0)<br>
+                EV = $100 + $75 + $62.50 + $0<br>
+                EV = <strong>$237.50</strong><br><br>
+
+                Expected profit = EV - Entry fee<br>
+                Expected profit = $237.50 - $75 = <strong>$162.50</strong>
+            </div>
+
+            <p><strong>Decision:</strong> With an expected profit of $162.50, entering the tournament is statistically favorable. Over many tournaments with similar odds, you would average a profit of $162.50 per tournament.</p>
+        </div>
+
+        <div class="svg-container">
+            <svg width="700" height="350" viewBox="0 0 700 350">
+                <!-- Title -->
+                <text x="350" y="25" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+                    Tournament Expected Value Breakdown
+                </text>
+
+                <!-- Bars showing contribution to EV -->
+                <rect x="80" y="80" width="120" height="200" fill="#f39c12"/>
+                <text x="140" y="60" font-size="16" font-weight="bold" text-anchor="middle">$100</text>
+                <text x="140" y="300" font-size="12" text-anchor="middle">1st Place</text>
+                <text x="140" y="315" font-size="11" text-anchor="middle">10% × $1000</text>
+
+                <rect x="230" y="130" width="120" height="150" fill="#3498db"/>
+                <text x="290" y="110" font-size="16" font-weight="bold" text-anchor="middle">$75</text>
+                <text x="290" y="300" font-size="12" text-anchor="middle">2nd Place</text>
+                <text x="290" y="315" font-size="11" text-anchor="middle">15% × $500</text>
+
+                <rect x="380" y="180" width="120" height="100" fill="#9b59b6"/>
+                <text x="440" y="160" font-size="16" font-weight="bold" text-anchor="middle">$62.50</text>
+                <text x="440" y="300" font-size="12" text-anchor="middle">3rd Place</text>
+                <text x="440" y="315" font-size="11" text-anchor="middle">25% × $250</text>
+
+                <rect x="530" y="280" width="120" height="0" fill="#95a5a6" stroke="#95a5a6" stroke-width="2"/>
+                <text x="590" y="260" font-size="16" font-weight="bold" text-anchor="middle">$0</text>
+                <text x="590" y="300" font-size="12" text-anchor="middle">No Prize</text>
+                <text x="590" y="315" font-size="11" text-anchor="middle">50% × $0</text>
+
+                <!-- Total EV line -->
+                <line x1="50" y1="50" x2="680" y2="50" stroke="#27ae60" stroke-width="3"/>
+                <text x="350" y="40" font-size="16" font-weight="bold" text-anchor="middle" fill="#27ae60">
+                    Total Expected Value = $237.50
+                </text>
+            </svg>
+        </div>
+
+        <h2>2. Using Trends to Make Predictions</h2>
+
+        <div class="concept-box">
+            <h3>Trend Analysis</h3>
+            <p>When data shows a clear pattern over time, we can extend that pattern to predict future values. This is called <strong>extrapolation</strong>.</p>
+            <ul>
+                <li><strong>Linear trend:</strong> Data increases/decreases at a constant rate</li>
+                <li><strong>Exponential trend:</strong> Data increases/decreases at an accelerating rate</li>
+                <li><strong>Seasonal trend:</strong> Data follows repeating patterns</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 2: YouTube Channel Growth Prediction</h3>
+            <p>A content creator's subscriber count over 6 months:</p>
+
+            <table>
+                <tr>
+                    <th>Month</th>
+                    <th>Subscribers</th>
+                    <th>Monthly Growth</th>
+                </tr>
+                <tr><td>January</td><td>1,000</td><td>-</td></tr>
+                <tr><td>February</td><td>1,500</td><td>+500</td></tr>
+                <tr><td>March</td><td>2,000</td><td>+500</td></tr>
+                <tr><td>April</td><td>2,500</td><td>+500</td></tr>
+                <tr><td>May</td><td>3,000</td><td>+500</td></tr>
+                <tr><td>June</td><td>3,500</td><td>+500</td></tr>
+            </table>
+
+            <h4>Making a Prediction:</h4>
+            <p>The channel grows by approximately <strong>500 subscribers per month</strong> (linear trend).</p>
+
+            <div class="formula">
+                Prediction for July = June subscribers + Monthly growth<br>
+                Prediction for July = 3,500 + 500 = <strong>4,000 subscribers</strong><br><br>
+
+                Prediction for December (6 months later):<br>
+                December = 3,500 + (6 × 500) = <strong>6,500 subscribers</strong>
+            </div>
+        </div>
+
+        <div class="svg-container">
+            <svg width="700" height="400" viewBox="0 0 700 400">
+                <!-- Title -->
+                <text x="350" y="25" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+                    Linear Growth Prediction
+                </text>
+
+                <!-- Axes -->
+                <line x1="80" y1="60" x2="80" y2="320" stroke="#333" stroke-width="2"/>
+                <line x1="80" y1="320" x2="650" y2="320" stroke="#333" stroke-width="2"/>
+
+                <!-- Y-axis labels -->
+                <text x="70" y="325" font-size="11" text-anchor="end">0</text>
+                <text x="70" y="268" font-size="11" text-anchor="end">2K</text>
+                <text x="70" y="211" font-size="11" text-anchor="end">4K</text>
+                <text x="70" y="154" font-size="11" text-anchor="end">6K</text>
+                <text x="70" y="97" font-size="11" text-anchor="end">8K</text>
+
+                <!-- Grid -->
+                <line x1="80" y1="268" x2="650" y2="268" stroke="#ddd" stroke-width="1"/>
+                <line x1="80" y1="211" x2="650" y2="211" stroke="#ddd" stroke-width="1"/>
+                <line x1="80" y1="154" x2="650" y2="154" stroke="#ddd" stroke-width="1"/>
+
+                <!-- Historical data line (solid) -->
+                <polyline points="130,291 200,277 270,263 340,249 410,234 480,220"
+                          fill="none" stroke="#3498db" stroke-width="3"/>
+
+                <!-- Predicted data line (dashed) -->
+                <polyline points="480,220 550,206 620,192"
+                          fill="none" stroke="#e74c3c" stroke-width="3" stroke-dasharray="8,4"/>
+
+                <!-- Historical data points -->
+                <circle cx="130" cy="291" r="5" fill="#3498db"/>
+                <circle cx="200" cy="277" r="5" fill="#3498db"/>
+                <circle cx="270" cy="263" r="5" fill="#3498db"/>
+                <circle cx="340" cy="249" r="5" fill="#3498db"/>
+                <circle cx="410" cy="234" r="5" fill="#3498db"/>
+                <circle cx="480" cy="220" r="6" fill="#3498db" stroke="#2c3e50" stroke-width="2"/>
+
+                <!-- Predicted data points -->
+                <circle cx="550" cy="206" r="6" fill="#e74c3c"/>
+                <circle cx="620" cy="192" r="6" fill="#e74c3c"/>
+
+                <!-- Labels -->
+                <text x="130" y="340" font-size="10" text-anchor="middle">Jan</text>
+                <text x="200" y="340" font-size="10" text-anchor="middle">Feb</text>
+                <text x="270" y="340" font-size="10" text-anchor="middle">Mar</text>
+                <text x="340" y="340" font-size="10" text-anchor="middle">Apr</text>
+                <text x="410" y="340" font-size="10" text-anchor="middle">May</text>
+                <text x="480" y="340" font-size="10" text-anchor="middle">Jun</text>
+                <text x="550" y="340" font-size="10" text-anchor="middle" fill="#e74c3c" font-weight="bold">Jul</text>
+                <text x="620" y="340" font-size="10" text-anchor="middle" fill="#e74c3c" font-weight="bold">Aug</text>
+
+                <!-- Value labels -->
+                <text x="130" y="283" font-size="10" text-anchor="middle">1K</text>
+                <text x="200" y="269" font-size="10" text-anchor="middle">1.5K</text>
+                <text x="270" y="255" font-size="10" text-anchor="middle">2K</text>
+                <text x="340" y="241" font-size="10" text-anchor="middle">2.5K</text>
+                <text x="410" y="226" font-size="10" text-anchor="middle">3K</text>
+                <text x="480" y="212" font-size="10" text-anchor="middle">3.5K</text>
+                <text x="550" y="198" font-size="10" text-anchor="middle" fill="#e74c3c" font-weight="bold">4K</text>
+                <text x="620" y="184" font-size="10" text-anchor="middle" fill="#e74c3c" font-weight="bold">4.5K</text>
+
+                <!-- Axis labels -->
+                <text x="40" y="190" font-size="13" font-weight="bold" transform="rotate(-90 40 190)">Subscribers</text>
+                <text x="365" y="370" font-size="13" font-weight="bold" text-anchor="middle">Month</text>
+
+                <!-- Legend -->
+                <rect x="120" y="360" width="200" height="30" fill="white" stroke="#333" stroke-width="1" rx="3"/>
+                <line x1="130" y1="375" x2="160" y2="375" stroke="#3498db" stroke-width="3"/>
+                <text x="170" y="380" font-size="11">Historical Data</text>
+
+                <rect x="340" y="360" width="200" height="30" fill="white" stroke="#333" stroke-width="1" rx="3"/>
+                <line x1="350" y1="375" x2="380" y2="375" stroke="#e74c3c" stroke-width="3" stroke-dasharray="8,4"/>
+                <text x="390" y="380" font-size="11">Prediction</text>
+            </svg>
+        </div>
+
+        <h2>3. Probability in Decision Making</h2>
+
+        <div class="example-box">
+            <h3>Example 3: Basketball Free Throw Strategy</h3>
+            <p>Your team is down by 2 points with 10 seconds left. You're fouled and get 2 free throws. Historical data shows:</p>
+            <ul>
+                <li>Player A makes 85% of free throws</li>
+                <li>Player B makes 70% of free throws</li>
+            </ul>
+
+            <h4>Scenario Analysis:</h4>
+
+            <p><strong>If Player A shoots both:</strong></p>
+            <div class="formula">
+                P(Make both) = 0.85 × 0.85 = 0.72 or 72%<br>
+                P(Make exactly 1) = 2 × (0.85 × 0.15) = 0.26 or 26%<br>
+                P(Miss both) = 0.15 × 0.15 = 0.02 or 2%
+            </div>
+
+            <p><strong>If Player B shoots both:</strong></p>
+            <div class="formula">
+                P(Make both) = 0.70 × 0.70 = 0.49 or 49%<br>
+                P(Make exactly 1) = 2 × (0.70 × 0.30) = 0.42 or 42%<br>
+                P(Miss both) = 0.30 × 0.30 = 0.09 or 9%
+            </div>
+
+            <p><strong>Decision:</strong> Player A should take the shots because there's a 72% chance of tying the game (making both) compared to only 49% for Player B.</p>
+        </div>
+
+        <div class="svg-container">
+            <svg width="700" height="300" viewBox="0 0 700 300">
+                <!-- Title -->
+                <text x="350" y="25" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+                    Free Throw Probability Comparison
+                </text>
+
+                <!-- Player A bars -->
+                <text x="200" y="60" font-size="16" font-weight="bold" text-anchor="middle" fill="#27ae60">
+                    Player A (85% shooter)
+                </text>
+
+                <rect x="50" y="80" width="300" height="50" fill="#27ae60" rx="5"/>
+                <text x="200" y="110" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+                    Make Both: 72%
+                </text>
+
+                <rect x="50" y="140" width="130" height="40" fill="#f39c12" rx="5"/>
+                <text x="115" y="165" font-size="14" text-anchor="middle" fill="white">
+                    Make 1: 26%
+                </text>
+
+                <rect x="50" y="190" width="10" height="30" fill="#e74c3c" rx="3"/>
+                <text x="70" y="210" font-size="12">Miss Both: 2%</text>
+
+                <!-- Player B bars -->
+                <text x="500" y="60" font-size="16" font-weight="bold" text-anchor="middle" fill="#3498db">
+                    Player B (70% shooter)
+                </text>
+
+                <rect x="350" y="80" width="245" height="50" fill="#3498db" rx="5"/>
+                <text x="472" y="110" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+                    Make Both: 49%
+                </text>
+
+                <rect x="350" y="140" width="210" height="40" fill="#f39c12" rx="5"/>
+                <text x="455" y="165" font-size="14" text-anchor="middle" fill="white">
+                    Make 1: 42%
+                </text>
+
+                <rect x="350" y="190" width="45" height="30" fill="#e74c3c" rx="3"/>
+                <text x="400" y="210" font-size="12">Miss Both: 9%</text>
+
+                <!-- Recommendation -->
+                <rect x="150" y="250" width="400" height="35" fill="#d5f4e6" stroke="#27ae60" stroke-width="2" rx="5"/>
+                <text x="350" y="275" font-size="15" font-weight="bold" text-anchor="middle" fill="#27ae60">
+                    Choose Player A - 23% higher chance to tie the game!
+                </text>
+            </svg>
+        </div>
+
+        <h2>4. Poll Predictions and Sampling</h2>
+
+        <div class="concept-box">
+            <h3>Making Predictions from Samples</h3>
+            <p>We often can't survey everyone in a population, so we use a representative sample to make predictions about the whole group.</p>
+
+            <div class="formula">
+                Predicted proportion = (Sample proportion) × (Total population)
+            </div>
+
+            <p><strong>Important:</strong> Larger samples generally give more accurate predictions.</p>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 4: School Election Poll</h3>
+            <p>There are 1,200 students in your school. A poll of 200 randomly selected students shows:</p>
+
+            <table>
+                <tr>
+                    <th>Candidate</th>
+                    <th>Votes in Sample</th>
+                    <th>Sample Percentage</th>
+                </tr>
+                <tr><td>Candidate A</td><td>95</td><td>47.5%</td></tr>
+                <tr><td>Candidate B</td><td>75</td><td>37.5%</td></tr>
+                <tr><td>Candidate C</td><td>30</td><td>15%</td></tr>
+            </table>
+
+            <h4>Predicting Total Votes:</h4>
+            <div class="formula">
+                Candidate A: 0.475 × 1,200 = <strong>570 votes</strong><br>
+                Candidate B: 0.375 × 1,200 = <strong>450 votes</strong><br>
+                Candidate C: 0.15 × 1,200 = <strong>180 votes</strong>
+            </div>
+
+            <p><strong>Prediction:</strong> Based on the poll, Candidate A is likely to win with approximately 570 votes.</p>
+        </div>
+
+        <h2>5. Limitations and Uncertainty</h2>
+
+        <div class="warning-box">
+            <h3>When Predictions Can Fail</h3>
+            <ul>
+                <li><strong>Biased samples:</strong> Your sample doesn't represent the population</li>
+                <li><strong>External changes:</strong> Conditions change after you collect data</li>
+                <li><strong>Small sample size:</strong> Not enough data to be confident</li>
+                <li><strong>Outliers:</strong> Unusual events skew predictions</li>
+                <li><strong>Wrong model:</strong> Assuming linear growth when it's actually exponential</li>
+            </ul>
+
+            <p><strong>Golden Rule:</strong> Always state the assumptions behind your predictions and acknowledge uncertainty!</p>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 5: App Download Prediction Gone Wrong</h3>
+
+            <p><strong>Scenario:</strong> An app had these daily downloads:</p>
+            <p>Day 1: 100, Day 2: 150, Day 3: 200, Day 4: 250</p>
+
+            <p><strong>Linear prediction for Day 30:</strong></p>
+            <div class="formula">
+                Growth rate = 50 downloads/day<br>
+                Prediction: 100 + (29 × 50) = 1,550 downloads
+            </div>
+
+            <p><strong>What actually happened:</strong> 380 downloads on Day 30</p>
+
+            <p><strong>Why the prediction failed:</strong></p>
+            <ul>
+                <li>Initial growth was from friends/family (not sustainable)</li>
+                <li>No ongoing marketing after launch week</li>
+                <li>Assumed constant growth rate (unrealistic for most apps)</li>
+            </ul>
+
+            <p><strong>Lesson:</strong> Consider the context, not just the numbers. Early trends don't always continue!</p>
+        </div>
+
+        <h2>6. Real-World Decision Making</h2>
+
+        <div class="practice-box">
+            <h3>Practice Problems</h3>
+
+            <p><strong>1. Loot Box Analysis:</strong></p>
+            <p>A game offers a loot box for $5 with these possible rewards:</p>
+            <ul>
+                <li>Common skin (worth $3): 60% chance</li>
+                <li>Rare skin (worth $10): 30% chance</li>
+                <li>Epic skin (worth $25): 8% chance</li>
+                <li>Legendary skin (worth $100): 2% chance</li>
+            </ul>
+            <p>Calculate the expected value. Should you buy the box?</p>
+
+            <p><strong>2. Weather Prediction:</strong></p>
+            <p>Over the past 50 days, it rained on 15 days. Based on this data:</p>
+            <ul>
+                <li>What's the probability it will rain tomorrow?</li>
+                <li>Out of the next 20 days, how many rainy days would you predict?</li>
+            </ul>
+
+            <p><strong>3. Streaming Service Growth:</strong></p>
+            <p>A creator's average viewers per stream:</p>
+            <p>Week 1: 50, Week 2: 65, Week 3: 80, Week 4: 95, Week 5: 110</p>
+            <ul>
+                <li>What's the weekly growth rate?</li>
+                <li>Predict viewers for Week 8</li>
+                <li>What assumptions are you making?</li>
+            </ul>
+
+            <p><strong>4. Survey Prediction:</strong></p>
+            <p>Your school has 800 students. You survey 100 students about lunch preferences:</p>
+            <ul>
+                <li>Pizza: 45 students</li>
+                <li>Burgers: 30 students</li>
+                <li>Salad: 15 students</li>
+                <li>Other: 10 students</li>
+            </ul>
+            <p>How many pizzas should the cafeteria prepare daily? Explain your reasoning.</p>
+
+            <p><strong>5. Investment Decision:</strong></p>
+            <p>You have $100 to invest. Option A has a 70% chance of returning $130 and 30% chance of losing everything. Option B guarantees $105. Which is better based on expected value? What other factors might influence your decision?</p>
+        </div>
+
+        <h2>Key Takeaways</h2>
+        <ul>
+            <li>Expected value helps make decisions when outcomes are uncertain</li>
+            <li>Trends can be used to predict future values, but context matters</li>
+            <li>Larger, representative samples give better predictions</li>
+            <li>Always consider limitations: bias, sample size, changing conditions</li>
+            <li>Mathematical predictions should be combined with common sense and domain knowledge</li>
+            <li>State your assumptions and acknowledge uncertainty in predictions</li>
+        </ul>
+
+        <div style="margin-top: 30px; padding: 20px; background-color: #d5f4e6; border-radius: 5px; border-left: 5px solid #27ae60;">
+            <h3>Congratulations!</h3>
+            <p>You've completed Unit 2: Statistics and Probability! You now have the tools to:</p>
+            <ul>
+                <li>Analyze data using measures of central tendency and spread</li>
+                <li>Calculate probabilities for simple and compound events</li>
+                <li>Create and interpret statistical graphs</li>
+                <li>Make informed predictions and decisions using data</li>
+            </ul>
+            <p><strong>Real-world application:</strong> These skills are used daily in sports analytics, social media marketing, game design, finance, and scientific research. You're now equipped to think critically about statistics you encounter in the news, online, and in your daily life!</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7: Genetic Mutations - Grade 10 Science</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Lesson 7: Genetic Mutations</h1>
+            <p>Changes in the Genetic Code</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="../../../index.html">Home</a>
+            <a href="../index.html">Grade 10</a>
+            <a href="index.html">Science</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="card">
+            <h2>Introduction</h2>
+            <p>A genetic mutation is a permanent change in the DNA sequence. Mutations are the ultimate source of all genetic variation and evolution, but they can also cause disease. Not all mutations are bad - some are beneficial, many are neutral, and some are harmful. Understanding mutations helps us comprehend both human diversity and genetic diseases.</p>
+        </section>
+
+        <section class="card">
+            <h2>What Causes Mutations?</h2>
+            <p>Mutations can occur naturally or be induced by environmental factors:</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 20px 0;">
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 4px solid #2196F3;">
+                    <h3 style="color: #1565C0; margin-top: 0;">Spontaneous Mutations</h3>
+                    <p>Occur naturally during DNA replication</p>
+                    <ul style="margin-bottom: 0;">
+                        <li>DNA copying errors</li>
+                        <li>Random chemical changes</li>
+                        <li>Occur in ~1 in 10 million base pairs</li>
+                    </ul>
+                </div>
+                <div style="background: #fff3e0; padding: 20px; border-radius: 8px; border-left: 4px solid #FF9800;">
+                    <h3 style="color: #E65100; margin-top: 0;">Induced Mutations</h3>
+                    <p>Caused by external factors (mutagens)</p>
+                    <ul style="margin-bottom: 0;">
+                        <li>UV radiation from sunlight</li>
+                        <li>X-rays and gamma rays</li>
+                        <li>Chemicals (tobacco smoke, benzene)</li>
+                        <li>Viruses</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: #fff3cd; padding: 15px; border-radius: 8px; border-left: 4px solid #FFC107; margin-top: 20px;">
+                <p style="margin: 0;"><strong>Real-World Connection:</strong> This is why dermatologists recommend sunscreen! UV radiation can cause mutations in skin cells, potentially leading to skin cancer.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Types of Mutations</h2>
+
+            <h3>Point Mutations (Single Base Changes)</h3>
+            <p>A change in just one DNA base pair can have varying effects:</p>
+
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h4 style="margin-top: 0;">1. Substitution (One base replaces another)</h4>
+
+                <div style="font-family: monospace; background: white; padding: 15px; border-radius: 4px; margin: 15px 0;">
+                    <div><strong>Original DNA:</strong> ...ATG-<span style="color: #E74C3C;">C</span>AC-GTA...</div>
+                    <div><strong>Mutated DNA:</strong> ...ATG-<span style="color: #27AE60;">T</span>AC-GTA...</div>
+                </div>
+
+                <p><strong>Types of Substitution Effects:</strong></p>
+                <ul>
+                    <li><strong>Silent Mutation:</strong> No change in protein (due to genetic code redundancy)</li>
+                    <li><strong>Missense Mutation:</strong> Different amino acid in protein</li>
+                    <li><strong>Nonsense Mutation:</strong> Creates a stop signal, protein is cut short</li>
+                </ul>
+            </div>
+
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h4 style="margin-top: 0;">2. Insertion (Extra base added)</h4>
+
+                <div style="font-family: monospace; background: white; padding: 15px; border-radius: 4px; margin: 15px 0;">
+                    <div><strong>Original DNA:</strong> ...ATG-CAC-GTA...</div>
+                    <div><strong>Mutated DNA:</strong> ...ATG-C<span style="color: #E74C3C;">T</span>AC-GTA...</div>
+                </div>
+
+                <p>Causes a <strong>frameshift</strong> - changes all amino acids downstream!</p>
+            </div>
+
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h4 style="margin-top: 0;">3. Deletion (Base removed)</h4>
+
+                <div style="font-family: monospace; background: white; padding: 15px; border-radius: 4px; margin: 15px 0;">
+                    <div><strong>Original DNA:</strong> ...ATG-CAC-GTA...</div>
+                    <div><strong>Mutated DNA:</strong> ...ATG-<span style="text-decoration: line-through; color: #999;">C</span>AC-GTA...</div>
+                </div>
+
+                <p>Also causes a <strong>frameshift</strong> - usually very harmful!</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Chromosomal Mutations (Large-Scale Changes)</h2>
+            <p>These mutations affect larger segments of chromosomes or entire chromosomes:</p>
+
+            <div style="display: flex; justify-content: center; margin: 30px 0;">
+                <svg width="500" height="400" viewBox="0 0 500 400">
+                    <!-- Normal chromosome -->
+                    <text x="50" y="30" font-size="16" font-weight="bold" fill="#333">Normal:</text>
+                    <rect x="50" y="40" width="200" height="30" fill="#4A90E2" opacity="0.7" stroke="#333" stroke-width="2"/>
+                    <text x="150" y="62" font-size="14" fill="white" text-anchor="middle">A B C D E F</text>
+
+                    <!-- Deletion -->
+                    <text x="50" y="100" font-size="16" font-weight="bold" fill="#333">Deletion:</text>
+                    <rect x="50" y="110" width="150" height="30" fill="#E74C3C" opacity="0.7" stroke="#333" stroke-width="2"/>
+                    <text x="125" y="132" font-size="14" fill="white" text-anchor="middle">A B D E F</text>
+                    <text x="210" y="132" font-size="12" fill="#666">(C is lost)</text>
+
+                    <!-- Duplication -->
+                    <text x="50" y="170" font-size="16" font-weight="bold" fill="#333">Duplication:</text>
+                    <rect x="50" y="180" width="250" height="30" fill="#9C27B0" opacity="0.7" stroke="#333" stroke-width="2"/>
+                    <text x="175" y="202" font-size="14" fill="white" text-anchor="middle">A B C C D E F</text>
+                    <text x="310" y="202" font-size="12" fill="#666">(C copied)</text>
+
+                    <!-- Inversion -->
+                    <text x="50" y="240" font-size="16" font-weight="bold" fill="#333">Inversion:</text>
+                    <rect x="50" y="250" width="200" height="30" fill="#FF9800" opacity="0.7" stroke="#333" stroke-width="2"/>
+                    <text x="150" y="272" font-size="14" fill="white" text-anchor="middle">A B E D C F</text>
+                    <text x="260" y="272" font-size="12" fill="#666">(C-D-E flipped)</text>
+
+                    <!-- Translocation -->
+                    <text x="50" y="310" font-size="16" font-weight="bold" fill="#333">Translocation:</text>
+                    <rect x="50" y="320" width="100" height="30" fill="#4CAF50" opacity="0.7" stroke="#333" stroke-width="2"/>
+                    <text x="100" y="342" font-size="14" fill="white" text-anchor="middle">A B C</text>
+                    <rect x="160" y="320" width="100" height="30" fill="#00BCD4" opacity="0.7" stroke="#333" stroke-width="2"/>
+                    <text x="210" y="342" font-size="14" fill="white" text-anchor="middle">D E F</text>
+                    <text x="270" y="342" font-size="12" fill="#666">(moved to different chromosome)</text>
+                </svg>
+            </div>
+
+            <div style="background: #ffe6e6; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                <h3 style="margin-top: 0; color: #C62828;">Down Syndrome Example</h3>
+                <p>Down syndrome is caused by having an extra copy of chromosome 21 (trisomy 21). Instead of the normal two copies, individuals have three copies. This chromosomal mutation affects physical development and cognitive ability. It occurs in about 1 in 700 births.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Mutations and Disease: Real Examples</h2>
+
+            <h3>Sickle Cell Anemia</h3>
+            <p>A single point mutation changes one amino acid in hemoglobin:</p>
+            <ul>
+                <li><strong>Mutation:</strong> GAG → GTG (glutamic acid → valine)</li>
+                <li><strong>Effect:</strong> Red blood cells become crescent-shaped</li>
+                <li><strong>Symptoms:</strong> Pain, fatigue, organ damage</li>
+                <li><strong>Interesting fact:</strong> Carriers (one mutated gene) have resistance to malaria!</li>
+            </ul>
+
+            <h3>Cystic Fibrosis</h3>
+            <p>Deletion of three DNA bases causes this disease:</p>
+            <ul>
+                <li><strong>Mutation:</strong> Deletion removes one amino acid from CFTR protein</li>
+                <li><strong>Effect:</strong> Thick mucus builds up in lungs and digestive system</li>
+                <li><strong>Prevalence:</strong> Most common in people of European descent</li>
+            </ul>
+
+            <h3>Cancer and Mutations</h3>
+            <p>Cancer occurs when mutations accumulate in genes that control cell division:</p>
+            <ul>
+                <li><strong>Tumor suppressor genes:</strong> Normally stop uncontrolled growth (e.g., p53)</li>
+                <li><strong>Oncogenes:</strong> Promote cell division; mutations can make them overactive</li>
+                <li><strong>Multiple hits:</strong> Usually requires several mutations over time</li>
+            </ul>
+
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                <h3 style="margin-top: 0; color: #2E7D32;">BRCA1 and BRCA2 Genes</h3>
+                <p>Mutations in these tumor suppressor genes dramatically increase breast and ovarian cancer risk. Genetic testing can identify carriers, allowing for preventive monitoring or treatment. Actress Angelina Jolie famously underwent preventive surgery after testing positive for a BRCA1 mutation.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Beneficial and Neutral Mutations</h2>
+            <p>Not all mutations are harmful! In fact, they're essential for evolution.</p>
+
+            <h3>Beneficial Mutations:</h3>
+            <ul>
+                <li><strong>Lactose Tolerance:</strong> A mutation allows some adults to digest milk - advantageous in dairy-farming cultures</li>
+                <li><strong>HIV Resistance:</strong> Some people have a mutation (CCR5-Δ32) that makes them resistant to HIV infection</li>
+                <li><strong>High-Altitude Adaptation:</strong> Tibetan populations have mutations helping them thrive at high elevations</li>
+                <li><strong>Low LDL Cholesterol:</strong> Some mutations naturally lower "bad" cholesterol, reducing heart disease risk</li>
+            </ul>
+
+            <h3>Neutral Mutations:</h3>
+            <p>Most mutations have no effect on survival or reproduction:</p>
+            <ul>
+                <li>Occur in non-coding DNA (doesn't make proteins)</li>
+                <li>Silent mutations (don't change the amino acid)</li>
+                <li>Create genetic diversity used in DNA fingerprinting and ancestry tests</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Somatic vs. Germline Mutations</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;">
+                <div style="background: #fce4ec; padding: 20px; border-radius: 8px; border-left: 4px solid #E91E63;">
+                    <h3 style="color: #880E4F; margin-top: 0;">Somatic Mutations</h3>
+                    <p><strong>Where:</strong> Body cells (skin, liver, lung, etc.)</p>
+                    <p><strong>Inherited?</strong> NO - only affect individual</p>
+                    <p><strong>Example:</strong> Skin cancer from UV exposure</p>
+                </div>
+                <div style="background: #e8eaf6; padding: 20px; border-radius: 8px; border-left: 4px solid #3F51B5;">
+                    <h3 style="color: #1A237E; margin-top: 0;">Germline Mutations</h3>
+                    <p><strong>Where:</strong> Egg or sperm cells</p>
+                    <p><strong>Inherited?</strong> YES - passed to offspring</p>
+                    <p><strong>Example:</strong> Inherited BRCA mutations</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Detecting and Testing for Mutations</h2>
+            <p>Modern medicine can identify many genetic mutations:</p>
+
+            <h3>Genetic Testing Methods:</h3>
+            <ul>
+                <li><strong>DNA Sequencing:</strong> Reads entire genes to find mutations</li>
+                <li><strong>PCR (Polymerase Chain Reaction):</strong> Amplifies specific DNA regions for analysis</li>
+                <li><strong>Karyotyping:</strong> Examines chromosomes under microscope to detect large-scale changes</li>
+                <li><strong>Prenatal Testing:</strong> Amniocentesis or chorionic villus sampling can detect mutations before birth</li>
+            </ul>
+
+            <div style="background: #e1f5fe; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                <h3 style="margin-top: 0;">Ethical Considerations</h3>
+                <p>Genetic testing raises important questions:</p>
+                <ul>
+                    <li>Should you be tested for diseases with no cure?</li>
+                    <li>Who has access to your genetic information?</li>
+                    <li>Could genetic information lead to discrimination?</li>
+                    <li>What do you do with information about disease risk?</li>
+                </ul>
+                <p style="margin-bottom: 0;"><em>In many countries, laws like GINA (Genetic Information Nondiscrimination Act) protect against genetic discrimination in employment and insurance.</em></p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Practice Questions</h2>
+            <ol>
+                <li>Explain the difference between a point mutation and a chromosomal mutation. Which is likely to have a larger effect?</li>
+                <li>Why are frameshift mutations (insertions/deletions) usually more harmful than substitution mutations?</li>
+                <li>How can the same mutation (sickle cell) be both harmful and beneficial depending on circumstances?</li>
+                <li>If a mutation occurs in your skin cell from sun exposure, will your children inherit it? Explain.</li>
+                <li>Research: What is the "Philadelphia chromosome" and what disease is it associated with?</li>
+                <li>Design a public health campaign explaining why UV protection is important at the molecular level.</li>
+            </ol>
+        </section>
+
+        <section class="card">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>Mutations are permanent changes in DNA sequence caused by errors or environmental factors</li>
+                <li>Point mutations change single bases; chromosomal mutations affect larger DNA segments</li>
+                <li>Mutations can be beneficial, neutral, or harmful depending on their effects</li>
+                <li>Germline mutations are inherited; somatic mutations are not</li>
+                <li>Many genetic diseases result from specific mutations that can now be detected through genetic testing</li>
+                <li>Mutations are the source of genetic variation and drive evolution</li>
+                <li>Understanding mutations has important medical and ethical implications</li>
+            </ul>
+        </section>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <a href="lesson-8-genetic-engineering.html" style="display: inline-block; padding: 12px 24px; background: #4A90E2; color: white; text-decoration: none; border-radius: 6px;">Next: Genetic Engineering →</a>
+        </div>
+    </main>
+</body>
+</html>

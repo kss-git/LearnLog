@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1: Kinematics - Grade 11 Science</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Kinematics</h1>
+            <p>Grade 11 | Science | Unit 1: Advanced Physics</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="../../../index.html">Home</a>
+            <a href="../index.html">Grade 11</a>
+            <a href="index.html">Science</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hook-box">
+            <p>A car traveling at 100 km/h suddenly slams on the brakes. Will it stop in time to avoid a collision 50 meters ahead? This isn't a guessing game - kinematics gives us the exact answer, and it's the same math used in autonomous vehicles to prevent thousands of crashes every day.</p>
+        </section>
+
+        <section class="objectives">
+            <h2>Learning Objectives</h2>
+            <p>By the end of this lesson, you will be able to:</p>
+            <ul>
+                <li>Analyze motion using position-time and velocity-time graphs</li>
+                <li>Apply kinematic equations to solve real-world problems</li>
+                <li>Calculate displacement, velocity, and acceleration from motion data</li>
+                <li>Interpret the physical meaning of slopes and areas on motion graphs</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>What You'll Learn</h2>
+            <p><strong>Kinematics</strong> is the study of motion without considering the forces that cause it. Think of it as the language we use to describe how things move - whether it's a Formula 1 car accelerating on a straightaway, a basketball arcing through the air, or a phone dropping from your hand.</p>
+            <p style="margin-top: 15px;">We'll focus on <strong>one-dimensional motion</strong> (movement along a straight line) and master the tools to predict exactly where an object will be at any moment.</p>
+        </section>
+
+        <section class="card">
+            <h2>Why This Matters</h2>
+            <p>Kinematics is everywhere:</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Crash Investigation:</strong> Police use kinematics to reconstruct accidents and determine fault</li>
+                <li><strong>Self-Driving Cars:</strong> Tesla and Waymo calculate braking distances in milliseconds</li>
+                <li><strong>Sports Analytics:</strong> Track sprint times, reaction speeds, and optimal acceleration</li>
+                <li><strong>Space Exploration:</strong> NASA calculates rocket trajectories for Mars missions</li>
+                <li><strong>Safety Engineering:</strong> Design airbag deployment timing and crumple zone effectiveness</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Core Concept: The Big Three Variables</h2>
+
+            <h3>1. Position (x or d)</h3>
+            <p><strong>Position</strong> tells us where an object is relative to a reference point. Measured in meters (m).</p>
+            <div class="step">
+                <strong>Example:</strong> Your car is at the 150 m mark on the highway (with the on-ramp as the reference point).
+            </div>
+
+            <h3 style="margin-top: 25px;">2. Velocity (v)</h3>
+            <p><strong>Velocity</strong> is how fast position changes over time. It has both magnitude and direction. Measured in m/s.</p>
+            <div class="step">
+                <strong>Formula:</strong> v = Δx / Δt (change in position divided by change in time)
+                <p style="margin-top: 10px;"><strong>Example:</strong> A race car travels 200 m in 4 s → v = 200/4 = 50 m/s</p>
+            </div>
+
+            <h3 style="margin-top: 25px;">3. Acceleration (a)</h3>
+            <p><strong>Acceleration</strong> is how fast velocity changes over time. Measured in m/s².</p>
+            <div class="step">
+                <strong>Formula:</strong> a = Δv / Δt (change in velocity divided by change in time)
+                <p style="margin-top: 10px;"><strong>Example:</strong> A car speeds up from 0 to 30 m/s in 6 s → a = 30/6 = 5 m/s²</p>
+            </div>
+        </section>
+
+        <section class="visual-container">
+            <h2>Visual: Position-Time Graph</h2>
+            <svg width="700" height="400" xmlns="http://www.w3.org/2000/svg">
+                <text x="350" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Car Motion: Position vs Time</text>
+
+                <!-- Axes -->
+                <line x1="60" y1="350" x2="650" y2="350" stroke="#333" stroke-width="2"/>
+                <line x1="60" y1="50" x2="60" y2="350" stroke="#333" stroke-width="2"/>
+
+                <!-- Arrow heads -->
+                <polygon points="650,350 640,345 640,355" fill="#333"/>
+                <polygon points="60,50 55,60 65,60" fill="#333"/>
+
+                <!-- Labels -->
+                <text x="350" y="385" text-anchor="middle" font-size="14" fill="#666">Time (s)</text>
+                <text x="25" y="200" text-anchor="middle" font-size="14" fill="#666" transform="rotate(-90, 25, 200)">Position (m)</text>
+
+                <!-- X-axis values -->
+                <text x="60" y="370" text-anchor="middle" font-size="12" fill="#333">0</text>
+                <text x="180" y="370" text-anchor="middle" font-size="12" fill="#333">2</text>
+                <text x="300" y="370" text-anchor="middle" font-size="12" fill="#333">4</text>
+                <text x="420" y="370" text-anchor="middle" font-size="12" fill="#333">6</text>
+                <text x="540" y="370" text-anchor="middle" font-size="12" fill="#333">8</text>
+
+                <!-- Y-axis values -->
+                <text x="45" y="350" text-anchor="end" font-size="12" fill="#333">0</text>
+                <text x="45" y="275" text-anchor="end" font-size="12" fill="#333">20</text>
+                <text x="45" y="200" text-anchor="end" font-size="12" fill="#333">40</text>
+                <text x="45" y="125" text-anchor="end" font-size="12" fill="#333">60</text>
+                <text x="45" y="50" text-anchor="end" font-size="12" fill="#333">80</text>
+
+                <!-- Grid lines -->
+                <line x1="60" y1="275" x2="650" y2="275" stroke="#ddd" stroke-width="1"/>
+                <line x1="60" y1="200" x2="650" y2="200" stroke="#ddd" stroke-width="1"/>
+                <line x1="60" y1="125" x2="650" y2="125" stroke="#ddd" stroke-width="1"/>
+
+                <!-- Motion curve (accelerating car) -->
+                <path d="M 60 350 Q 180 280, 300 200 T 540 50" stroke="#e74c3c" stroke-width="3" fill="none"/>
+
+                <!-- Data points -->
+                <circle cx="60" cy="350" r="5" fill="#e74c3c"/>
+                <circle cx="180" cy="275" r="5" fill="#e74c3c"/>
+                <circle cx="300" cy="200" r="5" fill="#e74c3c"/>
+                <circle cx="420" cy="125" r="5" fill="#e74c3c"/>
+                <circle cx="540" cy="50" r="5" fill="#e74c3c"/>
+
+                <!-- Annotations -->
+                <text x="150" y="150" font-size="14" fill="#27ae60" font-weight="bold">Steep slope = Fast motion</text>
+                <line x1="140" y1="155" x2="350" y2="180" stroke="#27ae60" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                <text x="400" y="300" font-size="14" fill="#3498db" font-weight="bold">Curved = Acceleration</text>
+
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+                        <polygon points="0 0, 10 5, 0 10" fill="#27ae60"/>
+                    </marker>
+                </defs>
+            </svg>
+            <p style="margin-top: 15px; color: #666;"><strong>Key insight:</strong> The slope of a position-time graph gives you velocity. A steeper slope means faster motion. A curve means the object is accelerating.</p>
+        </section>
+
+        <section class="visual-container">
+            <h2>Visual: Velocity-Time Graph</h2>
+            <svg width="700" height="400" xmlns="http://www.w3.org/2000/svg">
+                <text x="350" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Car Braking: Velocity vs Time</text>
+
+                <!-- Axes -->
+                <line x1="60" y1="350" x2="650" y2="350" stroke="#333" stroke-width="2"/>
+                <line x1="60" y1="50" x2="60" y2="350" stroke="#333" stroke-width="2"/>
+
+                <!-- Arrow heads -->
+                <polygon points="650,350 640,345 640,355" fill="#333"/>
+                <polygon points="60,50 55,60 65,60" fill="#333"/>
+
+                <!-- Labels -->
+                <text x="350" y="385" text-anchor="middle" font-size="14" fill="#666">Time (s)</text>
+                <text x="25" y="200" text-anchor="middle" font-size="14" fill="#666" transform="rotate(-90, 25, 200)">Velocity (m/s)</text>
+
+                <!-- X-axis values -->
+                <text x="60" y="370" text-anchor="middle" font-size="12" fill="#333">0</text>
+                <text x="200" y="370" text-anchor="middle" font-size="12" fill="#333">2</text>
+                <text x="340" y="370" text-anchor="middle" font-size="12" fill="#333">4</text>
+                <text x="480" y="370" text-anchor="middle" font-size="12" fill="#333">6</text>
+                <text x="620" y="370" text-anchor="middle" font-size="12" fill="#333">8</text>
+
+                <!-- Y-axis values -->
+                <text x="45" y="350" text-anchor="end" font-size="12" fill="#333">0</text>
+                <text x="45" y="260" text-anchor="end" font-size="12" fill="#333">10</text>
+                <text x="45" y="170" text-anchor="end" font-size="12" fill="#333">20</text>
+                <text x="45" y="80" text-anchor="end" font-size="12" fill="#333">30</text>
+
+                <!-- Grid lines -->
+                <line x1="60" y1="260" x2="650" y2="260" stroke="#ddd" stroke-width="1"/>
+                <line x1="60" y1="170" x2="650" y2="170" stroke="#ddd" stroke-width="1"/>
+                <line x1="60" y1="80" x2="650" y2="80" stroke="#ddd" stroke-width="1"/>
+
+                <!-- Braking line -->
+                <line x1="60" y1="80" x2="480" y2="350" stroke="#3498db" stroke-width="3"/>
+
+                <!-- Shaded area under curve -->
+                <polygon points="60,80 60,350 480,350" fill="#3498db" opacity="0.2"/>
+
+                <!-- Data points -->
+                <circle cx="60" cy="80" r="5" fill="#3498db"/>
+                <circle cx="480" cy="350" r="5" fill="#3498db"/>
+
+                <!-- Annotations -->
+                <text x="150" y="120" font-size="14" fill="#e74c3c" font-weight="bold">Negative slope = Deceleration</text>
+                <text x="250" y="250" font-size="14" fill="#27ae60" font-weight="bold">Area = Displacement</text>
+            </svg>
+            <p style="margin-top: 15px; color: #666;"><strong>Key insight:</strong> The slope of a velocity-time graph gives you acceleration. The area under the curve gives you displacement.</p>
+        </section>
+
+        <section class="card">
+            <h2>The Kinematic Equations</h2>
+            <p>When acceleration is constant, we can use these four powerful equations:</p>
+
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <p style="font-size: 1.2em; margin-bottom: 15px;"><strong>1.</strong> v = v₀ + at</p>
+                <p style="margin-left: 20px; color: #666;">Use when you know initial velocity, acceleration, and time.</p>
+
+                <p style="font-size: 1.2em; margin: 20px 0 15px 0;"><strong>2.</strong> x = x₀ + v₀t + ½at²</p>
+                <p style="margin-left: 20px; color: #666;">Use when you know initial position, velocity, acceleration, and time.</p>
+
+                <p style="font-size: 1.2em; margin: 20px 0 15px 0;"><strong>3.</strong> v² = v₀² + 2a(x - x₀)</p>
+                <p style="margin-left: 20px; color: #666;">Use when you don't know time (ideal for braking distance problems).</p>
+
+                <p style="font-size: 1.2em; margin: 20px 0 15px 0;"><strong>4.</strong> x = x₀ + ½(v₀ + v)t</p>
+                <p style="margin-left: 20px; color: #666;">Use when you know average velocity.</p>
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Variables:</strong></p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li>x = final position, x₀ = initial position</li>
+                <li>v = final velocity, v₀ = initial velocity</li>
+                <li>a = acceleration</li>
+                <li>t = time</li>
+            </ul>
+        </section>
+
+        <section class="example-box">
+            <h2>Example 1: Car Crash Analysis</h2>
+            <p><strong>Problem:</strong> A car is traveling at 30 m/s (about 108 km/h) when the driver sees an obstacle and hits the brakes. The car decelerates at -8 m/s². How far does the car travel before stopping?</p>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <ol>
+                <li><strong>Identify what we know:</strong>
+                    <ul style="margin-left: 20px;">
+                        <li>v₀ = 30 m/s (initial velocity)</li>
+                        <li>v = 0 m/s (final velocity - the car stops)</li>
+                        <li>a = -8 m/s² (negative because it's slowing down)</li>
+                        <li>x - x₀ = ? (displacement - what we're solving for)</li>
+                    </ul>
+                </li>
+                <li><strong>Choose the right equation:</strong>
+                    <p style="margin-left: 20px;">We don't know time, so use: v² = v₀² + 2a(x - x₀)</p>
+                </li>
+                <li><strong>Substitute and solve:</strong>
+                    <div style="margin-left: 20px; margin-top: 10px;">
+                        <p>0² = 30² + 2(-8)(x - x₀)</p>
+                        <p>0 = 900 - 16(x - x₀)</p>
+                        <p>16(x - x₀) = 900</p>
+                        <p>x - x₀ = 56.25 m</p>
+                    </div>
+                </li>
+            </ol>
+
+            <div style="background: white; padding: 15px; margin-top: 15px; border-radius: 5px; text-align: center;">
+                <p style="font-size: 1.4em; color: #27ae60; font-weight: bold;">Answer: 56.25 meters</p>
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Real-world insight:</strong> This is why highway safety guidelines recommend maintaining a following distance of at least 2 seconds. At 30 m/s, you'd travel 60 m in 2 seconds - just enough to brake safely if the car ahead stops suddenly.</p>
+        </section>
+
+        <section class="example-box">
+            <h2>Example 2: Drag Racing</h2>
+            <p><strong>Problem:</strong> A drag racer accelerates from rest at 12 m/s² for 5 seconds. What is the racer's final velocity, and how far did they travel?</p>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <p><strong>Part A: Final velocity</strong></p>
+            <ol>
+                <li>Known: v₀ = 0 m/s, a = 12 m/s², t = 5 s</li>
+                <li>Use: v = v₀ + at</li>
+                <li>v = 0 + (12)(5) = 60 m/s</li>
+            </ol>
+
+            <p style="margin-top: 20px;"><strong>Part B: Distance traveled</strong></p>
+            <ol>
+                <li>Known: v₀ = 0 m/s, a = 12 m/s², t = 5 s, x₀ = 0</li>
+                <li>Use: x = x₀ + v₀t + ½at²</li>
+                <li>x = 0 + 0(5) + ½(12)(5²)</li>
+                <li>x = ½(12)(25) = 150 m</li>
+            </ol>
+
+            <div style="background: white; padding: 15px; margin-top: 15px; border-radius: 5px; text-align: center;">
+                <p style="font-size: 1.4em; color: #27ae60; font-weight: bold;">Final velocity: 60 m/s (216 km/h)</p>
+                <p style="font-size: 1.4em; color: #27ae60; font-weight: bold;">Distance: 150 meters</p>
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Real-world insight:</strong> Professional drag racers reach speeds over 530 km/h in just 4 seconds, covering about 300 meters. The acceleration forces are so intense (5g+) that drivers need specialized safety equipment.</p>
+        </section>
+
+        <section class="interactive-box">
+            <h2>Quick Check: Test Your Understanding</h2>
+            <p><strong>Question:</strong> A ball is thrown upward with an initial velocity of 20 m/s. If gravity causes a downward acceleration of -10 m/s², how long until the ball reaches its maximum height? (Hint: At maximum height, velocity = 0)</p>
+
+            <button onclick="toggleAnswer('quick-check')">Show Answer</button>
+            <div id="quick-check" class="answer">
+                <p><strong>Answer: 2 seconds</strong></p>
+                <p><strong>Solution:</strong></p>
+                <p>Use v = v₀ + at</p>
+                <p>0 = 20 + (-10)t</p>
+                <p>10t = 20</p>
+                <p>t = 2 s</p>
+                <p>At the peak, the ball momentarily stops (v = 0) before falling back down.</p>
+            </div>
+        </section>
+
+        <section class="practice-box">
+            <h2>Practice Questions</h2>
+
+            <div class="question">
+                <p><strong>Question 1 (Easy):</strong> What does the slope of a position-time graph represent?</p>
+                <p>A) Acceleration<br>B) Velocity<br>C) Displacement<br>D) Force</p>
+                <button onclick="toggleAnswer('q1')">Show Answer</button>
+                <div id="q1" class="answer">
+                    <p><strong>Answer: B) Velocity</strong></p>
+                    <p>The slope (rise/run) of a position-time graph is Δx/Δt, which is the definition of velocity.</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 2 (Medium):</strong> A train accelerates from 10 m/s to 30 m/s in 8 seconds. What is its acceleration?</p>
+                <button onclick="toggleAnswer('q2')">Show Answer</button>
+                <div id="q2" class="answer">
+                    <p><strong>Answer: 2.5 m/s²</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>a = Δv / Δt = (30 - 10) / 8 = 20 / 8 = 2.5 m/s²</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 3 (Medium):</strong> A cyclist accelerates from rest at 2 m/s² for 6 seconds. How far do they travel?</p>
+                <button onclick="toggleAnswer('q3')">Show Answer</button>
+                <div id="q3" class="answer">
+                    <p><strong>Answer: 36 meters</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>x = v₀t + ½at²</p>
+                    <p>x = 0(6) + ½(2)(6²)</p>
+                    <p>x = 0 + ½(2)(36)</p>
+                    <p>x = 36 m</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 4 (Hard):</strong> A car traveling at 25 m/s needs to stop within 40 meters. What minimum deceleration is required?</p>
+                <button onclick="toggleAnswer('q4')">Show Answer</button>
+                <div id="q4" class="answer">
+                    <p><strong>Answer: -7.8 m/s²</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>Use v² = v₀² + 2a(x - x₀)</p>
+                    <p>0² = 25² + 2a(40)</p>
+                    <p>0 = 625 + 80a</p>
+                    <p>a = -625/80 = -7.8 m/s²</p>
+                    <p>Negative indicates deceleration (slowing down).</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 5 (Hard):</strong> A rocket accelerates upward from rest at 15 m/s² for 4 seconds, then the engine cuts off. How high does the rocket go? (Assume gravity = -10 m/s²)</p>
+                <button onclick="toggleAnswer('q5')">Show Answer</button>
+                <div id="q5" class="answer">
+                    <p><strong>Answer: 300 meters</strong></p>
+                    <p><strong>Solution (two phases):</strong></p>
+                    <p><strong>Phase 1 (engine on):</strong></p>
+                    <p>x₁ = ½(15)(4²) = 120 m</p>
+                    <p>v = 0 + 15(4) = 60 m/s (velocity when engine cuts)</p>
+                    <p><strong>Phase 2 (coasting up):</strong></p>
+                    <p>v² = v₀² + 2a(x - x₀)</p>
+                    <p>0² = 60² + 2(-10)(x₂)</p>
+                    <p>x₂ = 3600/20 = 180 m</p>
+                    <p><strong>Total:</strong> 120 + 180 = 300 m</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="summary-box">
+            <h2>Quick Summary</h2>
+            <ul>
+                <li><strong>Kinematics</strong> describes motion using position, velocity, and acceleration</li>
+                <li>Position-time graphs: slope = velocity; velocity-time graphs: slope = acceleration, area = displacement</li>
+                <li>Four kinematic equations let us solve for any variable when acceleration is constant</li>
+                <li>Always check your signs: positive = forward/up, negative = backward/down</li>
+                <li>Real applications: crash investigation, self-driving cars, space missions, sports analytics</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Real-World Connection: Autonomous Vehicles</h2>
+            <p>Self-driving cars use kinematics constantly:</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Braking Distance:</strong> Calculate stopping distance based on current speed and road conditions</li>
+                <li><strong>Collision Avoidance:</strong> Predict whether another car will enter your path</li>
+                <li><strong>Smooth Acceleration:</strong> Optimize passenger comfort by controlling acceleration rates</li>
+                <li><strong>Merge Planning:</strong> Time acceleration to match highway traffic speed</li>
+            </ul>
+            <p style="margin-top: 15px;">A Tesla's Autopilot system makes these kinematic calculations thousands of times per second, using the same physics you just learned. The difference? You're solving one problem at a time; the car's computer is solving them for every object around you simultaneously.</p>
+        </section>
+
+        <section class="challenge-box">
+            <h2>Challenge Problem</h2>
+            <p><strong>The Safe Following Distance Problem:</strong></p>
+            <p>Two cars are traveling at 25 m/s with 30 meters between them. The lead car suddenly brakes with deceleration of -6 m/s². The driver of the following car has a reaction time of 0.8 seconds before applying brakes with the same deceleration.</p>
+
+            <p style="margin-top: 15px;"><strong>Will the cars collide? If so, at what speed? If not, what is the minimum separation distance?</strong></p>
+
+            <button onclick="toggleAnswer('challenge-hint')">Show Hint</button>
+            <div id="challenge-hint" class="hint">
+                <p><strong>Hint:</strong> Break the problem into three phases:</p>
+                <p>1. Lead car braking (0 to t seconds)</p>
+                <p>2. Following car reaction time (0 to 0.8 s) - still moving at constant velocity</p>
+                <p>3. Following car braking (0.8 s to t seconds)</p>
+                <p>Find when both cars have the same velocity, then compare positions.</p>
+            </div>
+
+            <button onclick="toggleAnswer('challenge')">Show Full Solution</button>
+            <div id="challenge" class="answer">
+                <p><strong>Step 1: How long until lead car stops?</strong></p>
+                <p>v = v₀ + at → 0 = 25 + (-6)t → t = 4.17 s</p>
+
+                <p style="margin-top: 15px;"><strong>Step 2: Lead car position when stopped</strong></p>
+                <p>x = v₀t + ½at² = 25(4.17) + ½(-6)(4.17²) = 52.1 m</p>
+
+                <p style="margin-top: 15px;"><strong>Step 3: Following car during reaction time (0-0.8s)</strong></p>
+                <p>Distance traveled: 25(0.8) = 20 m</p>
+                <p>Position: 30 + 20 = 50 m behind start (gap now 52.1 - 50 = 2.1 m)</p>
+
+                <p style="margin-top: 15px;"><strong>Step 4: Following car braking (needs to stop in 2.1 m)</strong></p>
+                <p>Braking distance from 25 m/s: v² = v₀² + 2ax</p>
+                <p>0 = 625 + 2(-6)x → x = 52.1 m</p>
+
+                <p style="margin-top: 15px;"><strong>Conclusion:</strong></p>
+                <p style="color: #e74c3c; font-weight: bold;">COLLISION! The following car needs 52.1 m to stop but only has 2.1 m.</p>
+
+                <p style="margin-top: 15px;"><strong>Impact velocity:</strong></p>
+                <p>v² = 25² + 2(-6)(2.1) = 625 - 25.2 = 599.8</p>
+                <p>v = 24.5 m/s (88 km/h) - a severe crash!</p>
+
+                <p style="margin-top: 15px;"><strong>Lesson:</strong> The "2-second rule" exists because human reaction time + braking distance require substantial following distance. At 25 m/s, a 2-second gap would be 50 meters - enough to avoid this collision.</p>
+            </div>
+        </section>
+
+        <div class="lesson-nav">
+            <a href="index.html">Back to Unit</a>
+            <a href="lesson-2-dynamics.html">Next Lesson: Dynamics</a>
+        </div>
+    </main>
+
+    <script>
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === 'none' || element.style.display === '') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

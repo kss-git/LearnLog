@@ -41,4 +41,3 @@ LearnLog-main/
 ---
 Made for students who want to actually enjoy learning math! 🎓
 
-

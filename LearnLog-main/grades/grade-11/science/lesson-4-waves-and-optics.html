@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4: Waves and Optics - Grade 11 Science</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Waves and Optics</h1>
+            <p>Grade 11 | Science | Unit 1: Advanced Physics</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="../../../index.html">Home</a>
+            <a href="../index.html">Grade 11</a>
+            <a href="index.html">Science</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hook-box">
+            <p>Your internet connection travels through hair-thin glass fibers at the speed of light using total internal reflection. Your noise-canceling headphones create "anti-sound" waves that perfectly cancel unwanted noise. Wave physics isn't abstract theory - it's the foundation of modern communication and audio technology.</p>
+        </section>
+
+        <section class="objectives">
+            <h2>Learning Objectives</h2>
+            <p>By the end of this lesson, you will be able to:</p>
+            <ul>
+                <li>Describe wave properties: wavelength, frequency, amplitude, and speed</li>
+                <li>Distinguish between transverse and longitudinal waves</li>
+                <li>Apply the wave equation v = fλ to solve problems</li>
+                <li>Explain interference, diffraction, and the Doppler effect</li>
+                <li>Understand reflection, refraction, and total internal reflection</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>What You'll Learn</h2>
+            <p><strong>Waves</strong> are disturbances that transfer energy through space without transferring matter. From ocean waves to sound waves to light waves, the same fundamental principles apply.</p>
+            <p style="margin-top: 15px;"><strong>Optics</strong> is the study of light behavior - how it reflects, refracts, and interacts with materials. Understanding optics explains everything from eyeglasses to fiber optic internet.</p>
+        </section>
+
+        <section class="card">
+            <h2>Why This Matters</h2>
+            <p>Waves and optics power modern life:</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Telecommunications:</strong> Fiber optics transmit internet data as light pulses at 200,000 km/s</li>
+                <li><strong>Audio Engineering:</strong> Concert halls designed using wave interference and resonance principles</li>
+                <li><strong>Medical Imaging:</strong> Ultrasound uses sound waves to visualize internal organs</li>
+                <li><strong>Wireless Tech:</strong> WiFi, Bluetooth, cell phones all use electromagnetic waves</li>
+                <li><strong>Music Production:</strong> Understanding frequencies and harmonics creates better sound</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Core Concept: Wave Properties</h2>
+
+            <h3>Wavelength (λ)</h3>
+            <p>Distance between successive wave peaks. Measured in meters.</p>
+
+            <h3 style="margin-top: 20px;">Frequency (f)</h3>
+            <p>Number of complete waves passing a point per second. Measured in Hertz (Hz = cycles/second).</p>
+
+            <h3 style="margin-top: 20px;">Amplitude (A)</h3>
+            <p>Maximum displacement from equilibrium. Determines wave energy and intensity.</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li>Sound: Larger amplitude = louder sound</li>
+                <li>Light: Larger amplitude = brighter light</li>
+            </ul>
+
+            <h3 style="margin-top: 20px;">Wave Speed (v)</h3>
+            <p>How fast the wave disturbance propagates.</p>
+            <div class="step">
+                <strong>Universal Wave Equation:</strong> v = fλ
+                <p style="margin-top: 10px;">Speed = frequency × wavelength</p>
+                <p><strong>Example:</strong> Sound at 440 Hz (musical note A) with wavelength 0.78 m travels at v = (440)(0.78) = 343 m/s</p>
+            </div>
+        </section>
+
+        <section class="visual-container">
+            <h2>Visual: Wave Anatomy</h2>
+            <svg width="700" height="350" xmlns="http://www.w3.org/2000/svg">
+                <text x="350" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Transverse Wave Properties</text>
+
+                <!-- Equilibrium line -->
+                <line x1="50" y1="175" x2="650" y2="175" stroke="#999" stroke-width="2" stroke-dasharray="5,5"/>
+                <text x="660" y="180" font-size="12" fill="#999">Equilibrium</text>
+
+                <!-- Wave -->
+                <path d="M 50 175 Q 100 75, 150 175 T 350 175 T 550 175 T 650 175"
+                      stroke="#3498db" stroke-width="4" fill="none"/>
+
+                <!-- Wavelength annotation -->
+                <line x1="150" y1="175" x2="350" y2="175" stroke="#e74c3c" stroke-width="2" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+                <text x="250" y="165" text-anchor="middle" font-size="16" fill="#e74c3c" font-weight="bold">λ (wavelength)</text>
+
+                <!-- Amplitude annotation -->
+                <line x1="100" y1="175" x2="100" y2="75" stroke="#27ae60" stroke-width="2" marker-start="url(#arrow-start-green)" marker-end="url(#arrow-end-green)"/>
+                <text x="75" y="130" text-anchor="end" font-size="16" fill="#27ae60" font-weight="bold">A</text>
+                <text x="75" y="150" text-anchor="end" font-size="12" fill="#27ae60">(amplitude)</text>
+
+                <!-- Crest and Trough labels -->
+                <circle cx="100" cy="75" r="5" fill="#9b59b6"/>
+                <text x="100" y="55" text-anchor="middle" font-size="14" fill="#9b59b6" font-weight="bold">Crest</text>
+
+                <circle cx="250" cy="275" r="5" fill="#f39c12"/>
+                <text x="250" y="310" text-anchor="middle" font-size="14" fill="#f39c12" font-weight="bold">Trough</text>
+
+                <!-- Direction of wave travel -->
+                <line x1="500" y1="290" x2="600" y2="290" stroke="#333" stroke-width="3" marker-end="url(#arrow-black)"/>
+                <text x="550" y="320" text-anchor="middle" font-size="14" fill="#333">Wave direction</text>
+
+                <!-- Period annotation -->
+                <text x="450" y="220" font-size="14" fill="#666">Period (T) = time for one complete wave</text>
+                <text x="450" y="240" font-size="14" fill="#666">Frequency (f) = 1/T (waves per second)</text>
+
+                <!-- Markers -->
+                <defs>
+                    <marker id="arrow-start" markerWidth="10" markerHeight="10" refX="0" refY="5" orient="auto">
+                        <path d="M 10 0 L 10 10 L 0 5 z" fill="#e74c3c"/>
+                    </marker>
+                    <marker id="arrow-end" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto">
+                        <path d="M 0 0 L 0 10 L 10 5 z" fill="#e74c3c"/>
+                    </marker>
+                    <marker id="arrow-start-green" markerWidth="10" markerHeight="10" refX="5" refY="0" orient="auto">
+                        <path d="M 0 10 L 10 10 L 5 0 z" fill="#27ae60"/>
+                    </marker>
+                    <marker id="arrow-end-green" markerWidth="10" markerHeight="10" refX="5" refY="10" orient="auto">
+                        <path d="M 0 0 L 10 0 L 5 10 z" fill="#27ae60"/>
+                    </marker>
+                    <marker id="arrow-black" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+                    </marker>
+                </defs>
+            </svg>
+            <p style="margin-top: 15px; color: #666;"><strong>Key insight:</strong> In a transverse wave, particle motion is perpendicular to wave direction (like water waves or light). In a longitudinal wave, particle motion is parallel to wave direction (like sound).</p>
+        </section>
+
+        <section class="card">
+            <h2>Wave Behaviors</h2>
+
+            <h3>1. Reflection</h3>
+            <p>Wave bounces off a boundary. Angle of incidence = angle of reflection.</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Sound:</strong> Echoes from walls</li>
+                <li><strong>Light:</strong> Mirrors, shiny surfaces</li>
+            </ul>
+
+            <h3 style="margin-top: 20px;">2. Refraction</h3>
+            <p>Wave bends when entering a different medium (changes speed).</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Light:</strong> Pencil appears bent in water</li>
+                <li><strong>Sound:</strong> Temperature layers bend sound waves</li>
+            </ul>
+
+            <h3 style="margin-top: 20px;">3. Interference</h3>
+            <p>Two waves overlap and combine.</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Constructive:</strong> Waves in phase add up (louder sound, brighter light)</li>
+                <li><strong>Destructive:</strong> Waves out of phase cancel (quieter sound, dimmer light)</li>
+                <li><strong>Application:</strong> Noise-canceling headphones use destructive interference</li>
+            </ul>
+
+            <h3 style="margin-top: 20px;">4. Diffraction</h3>
+            <p>Waves bend around obstacles or through openings.</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li>Why you can hear around corners but not see around them (sound wavelength >> light wavelength)</li>
+            </ul>
+
+            <h3 style="margin-top: 20px;">5. Doppler Effect</h3>
+            <p>Observed frequency changes when source or observer moves.</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Example:</strong> Ambulance siren sounds higher pitched approaching, lower pitched receding</li>
+                <li><strong>Application:</strong> Police radar guns, astronomy (redshift/blueshift)</li>
+            </ul>
+        </section>
+
+        <section class="visual-container">
+            <h2>Visual: Total Internal Reflection in Fiber Optics</h2>
+            <svg width="700" height="400" xmlns="http://www.w3.org/2000/svg">
+                <text x="350" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Fiber Optic Cable: Light Transmission</text>
+
+                <!-- Fiber optic cable (core) -->
+                <rect x="50" y="150" width="600" height="100" fill="#e8f4f8" stroke="#3498db" stroke-width="2" rx="10"/>
+                <text x="350" y="140" text-anchor="middle" font-size="14" fill="#3498db" font-weight="bold">Glass Core (n = 1.5)</text>
+
+                <!-- Cladding labels -->
+                <text x="350" y="120" text-anchor="middle" font-size="12" fill="#666">Cladding (n = 1.45)</text>
+                <text x="350" y="290" text-anchor="middle" font-size="12" fill="#666">Cladding (n = 1.45)</text>
+
+                <!-- Light ray bouncing through fiber -->
+                <path d="M 60 200 L 150 180 L 240 220 L 330 180 L 420 220 L 510 180 L 600 200"
+                      stroke="#f39c12" stroke-width="3" fill="none"/>
+
+                <!-- Light ray arrows -->
+                <circle cx="60" cy="200" r="6" fill="#f39c12"/>
+                <polygon points="600,200 590,195 590,205" fill="#f39c12"/>
+
+                <!-- Reflection points -->
+                <circle cx="150" cy="180" r="4" fill="#e74c3c"/>
+                <circle cx="240" cy="220" r="4" fill="#e74c3c"/>
+                <circle cx="330" cy="180" r="4" fill="#e74c3c"/>
+                <circle cx="420" cy="220" r="4" fill="#e74c3c"/>
+                <circle cx="510" cy="180" r="4" fill="#e74c3c"/>
+
+                <!-- Angle annotation -->
+                <path d="M 150 180 L 150 150" stroke="#27ae60" stroke-width="2" stroke-dasharray="3,3"/>
+                <path d="M 150 180 L 180 170" stroke="#27ae60" stroke-width="2"/>
+                <path d="M 155 177 Q 160 173, 165 172" stroke="#27ae60" stroke-width="1" fill="none"/>
+                <text x="170" y="168" font-size="11" fill="#27ae60">θ</text>
+
+                <!-- Labels -->
+                <text x="100" y="330" font-size="14" fill="#f39c12" font-weight="bold">Light pulse (data signal)</text>
+                <text x="100" y="350" font-size="12" fill="#666">Total internal reflection keeps light trapped</text>
+                <text x="100" y="370" font-size="12" fill="#666">Data travels at ~200,000 km/s (2/3 speed of light in vacuum)</text>
+            </svg>
+            <p style="margin-top: 15px; color: #666;"><strong>Key insight:</strong> When light hits the core-cladding boundary at an angle greater than the critical angle, 100% reflects back - no light escapes. This allows data to travel thousands of kilometers with minimal loss.</p>
+        </section>
+
+        <section class="card">
+            <h2>Optics: Refraction and Snell's Law</h2>
+            <p>When light enters a different medium, it changes speed and bends.</p>
+
+            <h3>Index of Refraction (n)</h3>
+            <p>Measures how much a material slows down light.</p>
+            <div class="step">
+                <strong>Formula:</strong> n = c / v
+                <p style="margin-top: 10px;">Where c = speed of light in vacuum (3 × 10⁸ m/s), v = speed in material</p>
+                <p><strong>Examples:</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>Air: n ≈ 1.00</li>
+                    <li>Water: n = 1.33</li>
+                    <li>Glass: n = 1.5</li>
+                    <li>Diamond: n = 2.42</li>
+                </ul>
+            </div>
+
+            <h3 style="margin-top: 20px;">Snell's Law</h3>
+            <p>Predicts the angle of refraction.</p>
+            <div class="step">
+                <strong>Formula:</strong> n₁ sin θ₁ = n₂ sin θ₂
+                <p style="margin-top: 10px;">Where n₁, n₂ are indices of refraction, θ₁, θ₂ are angles from the normal (perpendicular to surface)</p>
+            </div>
+
+            <h3 style="margin-top: 20px;">Critical Angle and Total Internal Reflection</h3>
+            <p>When light travels from higher n to lower n (e.g., glass to air), there's an angle beyond which all light reflects - none refracts out.</p>
+            <div class="step">
+                <strong>Critical angle formula:</strong> sin θ_c = n₂ / n₁
+                <p style="margin-top: 10px;"><strong>Example:</strong> Glass (n=1.5) to air (n=1): sin θ_c = 1/1.5 = 0.667 → θ_c = 42°</p>
+                <p>Any angle > 42° results in total internal reflection - this is how fiber optics work!</p>
+            </div>
+        </section>
+
+        <section class="example-box">
+            <h2>Example 1: Sound Wave Speed</h2>
+            <p><strong>Problem:</strong> A guitar string vibrates at 330 Hz, producing a sound wave with wavelength 1.04 m. What is the speed of sound?</p>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <ol>
+                <li><strong>Given:</strong>
+                    <ul style="margin-left: 20px;">
+                        <li>f = 330 Hz</li>
+                        <li>λ = 1.04 m</li>
+                        <li>v = ?</li>
+                    </ul>
+                </li>
+                <li><strong>Apply wave equation:</strong>
+                    <p style="margin-left: 20px;">v = fλ</p>
+                    <p style="margin-left: 20px;">v = (330)(1.04)</p>
+                    <p style="margin-left: 20px;">v = 343 m/s</p>
+                </li>
+            </ol>
+
+            <div style="background: white; padding: 15px; margin-top: 15px; border-radius: 5px; text-align: center;">
+                <p style="font-size: 1.4em; color: #27ae60; font-weight: bold;">Answer: 343 m/s</p>
+                <p style="font-size: 1em; color: #666;">(This is the speed of sound in air at 20°C)</p>
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Real-world insight:</strong> This is why you can tune instruments by frequency alone - for a given medium (air at room temperature), wavelength and frequency are locked together by v = fλ.</p>
+        </section>
+
+        <section class="example-box">
+            <h2>Example 2: Refraction in Water</h2>
+            <p><strong>Problem:</strong> Light traveling in air (n=1.00) hits water (n=1.33) at a 40° angle from the normal. What is the angle of refraction in the water?</p>
+
+            <p style="margin-top: 20px;"><strong>Solution:</strong></p>
+            <ol>
+                <li><strong>Given:</strong>
+                    <ul style="margin-left: 20px;">
+                        <li>n₁ = 1.00 (air)</li>
+                        <li>θ₁ = 40°</li>
+                        <li>n₂ = 1.33 (water)</li>
+                        <li>θ₂ = ?</li>
+                    </ul>
+                </li>
+                <li><strong>Apply Snell's Law:</strong>
+                    <p style="margin-left: 20px;">n₁ sin θ₁ = n₂ sin θ₂</p>
+                    <p style="margin-left: 20px;">(1.00) sin 40° = (1.33) sin θ₂</p>
+                    <p style="margin-left: 20px;">0.643 = 1.33 sin θ₂</p>
+                    <p style="margin-left: 20px;">sin θ₂ = 0.643 / 1.33 = 0.483</p>
+                    <p style="margin-left: 20px;">θ₂ = sin⁻¹(0.483) = 28.9°</p>
+                </li>
+            </ol>
+
+            <div style="background: white; padding: 15px; margin-top: 15px; border-radius: 5px; text-align: center;">
+                <p style="font-size: 1.4em; color: #27ae60; font-weight: bold;">Answer: 28.9°</p>
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Real-world insight:</strong> The light bends toward the normal when entering a denser medium (higher n). This is why pools look shallower than they are, and why spearfishing requires aiming below the apparent fish position.</p>
+        </section>
+
+        <section class="interactive-box">
+            <h2>Quick Check: Test Your Understanding</h2>
+            <p><strong>Question:</strong> An FM radio station broadcasts at 100 MHz (100 million Hz). If radio waves travel at the speed of light (3 × 10⁸ m/s), what is the wavelength?</p>
+
+            <button onclick="toggleAnswer('quick-check')">Show Answer</button>
+            <div id="quick-check" class="answer">
+                <p><strong>Answer: 3 meters</strong></p>
+                <p><strong>Solution:</strong></p>
+                <p>v = fλ → λ = v/f</p>
+                <p>λ = (3 × 10⁸) / (100 × 10⁶)</p>
+                <p>λ = 3 m</p>
+                <p>This is why FM radio antennas are a few meters long - they're designed to match the wavelength!</p>
+            </div>
+        </section>
+
+        <section class="practice-box">
+            <h2>Practice Questions</h2>
+
+            <div class="question">
+                <p><strong>Question 1 (Easy):</strong> A wave has frequency 50 Hz and wavelength 6 m. What is its speed?</p>
+                <button onclick="toggleAnswer('q1')">Show Answer</button>
+                <div id="q1" class="answer">
+                    <p><strong>Answer: 300 m/s</strong></p>
+                    <p>v = fλ = (50)(6) = 300 m/s</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 2 (Medium):</strong> Sound travels at 343 m/s in air. What is the wavelength of a 686 Hz sound wave?</p>
+                <button onclick="toggleAnswer('q2')">Show Answer</button>
+                <div id="q2" class="answer">
+                    <p><strong>Answer: 0.5 m</strong></p>
+                    <p>v = fλ → λ = v/f = 343/686 = 0.5 m</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 3 (Medium):</strong> What is the speed of light in glass with refractive index n = 1.5?</p>
+                <button onclick="toggleAnswer('q3')">Show Answer</button>
+                <div id="q3" class="answer">
+                    <p><strong>Answer: 2 × 10⁸ m/s</strong></p>
+                    <p>n = c/v → v = c/n = (3 × 10⁸)/1.5 = 2 × 10⁸ m/s</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 4 (Hard):</strong> Light travels from water (n=1.33) to glass (n=1.5) at a 30° angle from normal. What is the refraction angle in glass?</p>
+                <button onclick="toggleAnswer('q4')">Show Answer</button>
+                <div id="q4" class="answer">
+                    <p><strong>Answer: 26.4°</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>n₁ sin θ₁ = n₂ sin θ₂</p>
+                    <p>(1.33) sin 30° = (1.5) sin θ₂</p>
+                    <p>0.665 = 1.5 sin θ₂</p>
+                    <p>sin θ₂ = 0.443 → θ₂ = 26.4°</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 5 (Hard):</strong> What is the critical angle for total internal reflection from glass (n=1.5) to air (n=1)?</p>
+                <button onclick="toggleAnswer('q5')">Show Answer</button>
+                <div id="q5" class="answer">
+                    <p><strong>Answer: 41.8°</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p>sin θ_c = n₂/n₁ = 1/1.5 = 0.667</p>
+                    <p>θ_c = sin⁻¹(0.667) = 41.8°</p>
+                    <p>Any angle > 41.8° results in total internal reflection.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="summary-box">
+            <h2>Quick Summary</h2>
+            <ul>
+                <li><strong>Wave equation:</strong> v = fλ (speed = frequency × wavelength)</li>
+                <li><strong>Transverse waves:</strong> Perpendicular motion (light, water); <strong>Longitudinal:</strong> Parallel motion (sound)</li>
+                <li><strong>Interference:</strong> Constructive (add) or destructive (cancel)</li>
+                <li><strong>Doppler effect:</strong> Frequency shifts when source/observer moves</li>
+                <li><strong>Snell's Law:</strong> n₁ sin θ₁ = n₂ sin θ₂ (predicts refraction)</li>
+                <li><strong>Total internal reflection:</strong> Light traps in fiber optics when θ > θ_critical</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Real-World Connection: Noise-Canceling Headphones</h2>
+            <p>Active noise-canceling technology is destructive interference in action:</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li><strong>Microphones:</strong> Detect incoming ambient noise waves</li>
+                <li><strong>Processing:</strong> Chip analyzes noise frequency and amplitude in real-time</li>
+                <li><strong>Anti-Noise Generation:</strong> Creates sound waves exactly 180° out of phase (inverted)</li>
+                <li><strong>Destructive Interference:</strong> Original noise + anti-noise = silence (waves cancel)</li>
+            </ul>
+            <p style="margin-top: 15px;">This works best for low-frequency, steady sounds (airplane engine hum, AC noise) because the processor can predict the wave pattern. Sudden, high-frequency sounds (clap, voice) are harder to cancel because they're unpredictable.</p>
+            <p style="margin-top: 10px;">Premium headphones like Sony WH-1000XM series sample ambient noise 700+ times per second, adjusting anti-noise waves in milliseconds to maintain near-perfect cancellation.</p>
+        </section>
+
+        <section class="challenge-box">
+            <h2>Challenge Problem</h2>
+            <p><strong>The Fiber Optic Data Problem:</strong></p>
+            <p>A fiber optic cable has a glass core (n = 1.48) surrounded by cladding (n = 1.45). The cable is 50 km long.</p>
+
+            <p style="margin-top: 15px;"><strong>Part A:</strong> What is the critical angle for total internal reflection?</p>
+            <p><strong>Part B:</strong> How long does it take a light pulse to travel the full 50 km cable?</p>
+            <p><strong>Part C:</strong> How many reflections does light make if each bounce travels 2 mm along the cable before reflecting?</p>
+
+            <button onclick="toggleAnswer('challenge-hint')">Show Hint</button>
+            <div id="challenge-hint" class="hint">
+                <p><strong>Hints:</strong></p>
+                <p><strong>Part A:</strong> Use sin θ_c = n_cladding / n_core</p>
+                <p><strong>Part B:</strong> First find speed of light in glass core using n = c/v, then use distance/speed</p>
+                <p><strong>Part C:</strong> Total distance / distance per reflection</p>
+            </div>
+
+            <button onclick="toggleAnswer('challenge')">Show Full Solution</button>
+            <div id="challenge" class="answer">
+                <p><strong>Part A: Critical angle</strong></p>
+                <p>sin θ_c = n₂/n₁ = 1.45/1.48 = 0.980</p>
+                <p>θ_c = sin⁻¹(0.980) = 78.6°</p>
+                <p><strong>Answer: 78.6° from normal</strong></p>
+
+                <p style="margin-top: 15px;"><strong>Part B: Travel time</strong></p>
+                <p>Speed in core: v = c/n = (3 × 10⁸)/1.48 = 2.03 × 10⁸ m/s</p>
+                <p>Distance: 50 km = 50,000 m</p>
+                <p>Time: t = d/v = 50,000 / (2.03 × 10⁸) = 2.46 × 10⁻⁴ s</p>
+                <p><strong>Answer: 0.246 milliseconds (or 246 microseconds)</strong></p>
+
+                <p style="margin-top: 15px;"><strong>Part C: Number of reflections</strong></p>
+                <p>Total distance: 50,000 m = 50,000,000 mm</p>
+                <p>Distance per reflection: 2 mm</p>
+                <p>Reflections: 50,000,000 / 2 = 25,000,000</p>
+                <p><strong>Answer: 25 million reflections!</strong></p>
+
+                <p style="margin-top: 15px;"><strong>Real-world significance:</strong> Despite 25 million reflections, the signal arrives in under a millisecond with minimal loss because total internal reflection is 100% efficient (no light escapes). This is why your internet can travel across continents at near light-speed!</p>
+            </div>
+        </section>
+
+        <div class="lesson-nav">
+            <a href="lesson-3-energy-and-momentum.html">Previous Lesson: Energy and Momentum</a>
+            <a href="index.html">Back to Unit</a>
+        </div>
+    </main>
+
+    <script>
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === 'none' || element.style.display === '') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
