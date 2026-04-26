@@ -1,151 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Grade 8 Math - Unit 2 Lesson 10</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: linear-gradient(to right, #f0f2f5, #ffffff);
-    }
-
-    header {
-      background: #6c5ce7;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .note {
-      background: #ffeaa7;
-      padding: 10px;
-      border-left: 6px solid #fdcb6e;
-      margin-bottom: 15px;
-      font-weight: bold;
-    }
-
-    .math {
-      font-size: 18px;
-      font-weight: bold;
-      background: #f1f2f6;
-      padding: 10px;
-      border-radius: 6px;
-      display: inline-block;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #2d3436;
-      color: white;
-      margin-top: 20px;
-    }
-
-    button {
-      padding: 10px 15px;
-      border: none;
-      background: #6c5ce7;
-      color: white;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #4b3cc4;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9: Solving Quadratic Equations - Grade 8 Math</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
 </head>
 
 <body>
+    <header class="header">
+        <div class="container">
+            <h1>Solving Quadratic Equations</h1>
+            <p>Grade 8 | Mathematics | Unit 2: Equations and Inequalities</p>
+        </div>
+    </header>
 
-<header>
-  <h1>Grade 8 Mathematics</h1>
-  <p>Unit 2 - Lesson 10: Absolute Value Equations</p>
-</header>
+    <nav class="nav">
+        <div class="container">
+            <a href="../../../index.html">🏠 Home</a>
+            <a href="../index.html">📚 Grade 8</a>
+            <a href="index.html">📐 Mathematics</a>
+        </div>
+    </nav>
 
-<div class="container">
+    <main class="container">
 
-  <div class="card">
-    <div class="note">
-      📌 This is an extra lesson
-    </div>
+        <!-- HOOK -->
+        <section class="hook-box">
+            <p>⚽ Imagine you kick a ball into the air. It goes up, reaches a peak, then comes down. That curved path is described by a quadratic equation. In this lesson, we learn how to find the exact points where these equations equal zero!</p>
+        </section>
 
-    <h2>📘 What is an Absolute Value Equation?</h2>
-    <p>An absolute value equation is an equation that contains an absolute value expression.</p>
+        <!-- OBJECTIVES -->
+        <section class="objectives">
+            <h2>🎯 Learning Objectives</h2>
+            <ul>
+                <li>Solve quadratic equations by factoring</li>
+                <li>Use the zero-product property</li>
+                <li>Find all solutions of quadratic equations</li>
+                <li>Check answers by substitution</li>
+            </ul>
+        </section>
 
-    <div class="math">|x| = a</div>
+        <!-- CONCEPT -->
+        <section class="card">
+            <h2>📚 What is a Quadratic Equation?</h2>
+            <p>A quadratic equation is an equation in the form:</p>
 
-    <p>This means the distance from zero is always positive.</p>
-  </div>
+            <p><strong>ax² + bx + c = 0</strong></p>
 
-  <div class="card">
-    <h2>🧠 Rule</h2>
-    <p>If:</p>
-    <div class="math">|x| = a</div>
+            <p>Where a ≠ 0 and the highest power of x is 2.</p>
+        </section>
 
-    <p>Then:</p>
-    <div class="math">x = a or x = -a</div>
-  </div>
+        <!-- RULE -->
+        <section class="card">
+            <h2>💡 Key Idea: Zero Product Property</h2>
+            <p>If:</p>
+            <p><strong>(x + a)(x + b) = 0</strong></p>
 
-  <div class="card">
-    <h2>🧠 Example 1</h2>
-    <p>Solve:</p>
-    <div class="math">|x| = 5</div>
+            <p>Then:</p>
+            <p><strong>x + a = 0 OR x + b = 0</strong></p>
 
-    <p>Solution:</p>
-    <div class="math">x = 5 or x = -5</div>
-  </div>
+            <p>This is the key to solving quadratic equations!</p>
+        </section>
 
-  <div class="card">
-    <h2>🧠 Example 2</h2>
-    <p>Solve:</p>
-    <div class="math">|x - 3| = 4</div>
+        <!-- EXAMPLE 1 -->
+        <section class="card">
+            <h2>🧠 Example 1</h2>
+            <p>Solve:</p>
+            <p><strong>x² + 5x + 6 = 0</strong></p>
 
-    <p>Split into two cases:</p>
-    <div class="math">x - 3 = 4  OR  x - 3 = -4</div>
+            <p>Factor:</p>
+            <p><strong>(x + 2)(x + 3) = 0</strong></p>
 
-    <p>Solutions:</p>
-    <div class="math">x = 7 or x = -1</div>
-  </div>
+            <p>Solutions:</p>
+            <p>x + 2 = 0 → x = -2</p>
+            <p>x + 3 = 0 → x = -3</p>
 
-  <div class="card">
-    <h2>🎯 Practice Problem</h2>
-    <p>Solve:</p>
-    <div class="math">|x + 2| = 6</div>
+            <p><strong>Final Answer:</strong> x = -2, -3</p>
+        </section>
 
-    <br><br>
-    <button onclick="showAnswer()">Show Answer</button>
-    <p id="answer"></p>
-  </div>
+        <!-- EXAMPLE 2 -->
+        <section class="card">
+            <h2>🧠 Example 2</h2>
+            <p>Solve:</p>
+            <p><strong>x² - x - 12 = 0</strong></p>
 
-</div>
+            <p>Factor:</p>
+            <p><strong>(x - 4)(x + 3) = 0</strong></p>
 
-<footer>
-  LearnLog – Extra Lesson on Solving Absolute Value Equations
-</footer>
+            <p>Solutions:</p>
+            <p>x - 4 = 0 → x = 4</p>
+            <p>x + 3 = 0 → x = -3</p>
 
-<script>
-function showAnswer() {
-  document.getElementById("answer").innerHTML =
-    "Answer: x = 4 or x = -8";
-}
-</script>
+            <p><strong>Final Answer:</strong> x = 4, -3</p>
+        </section>
+
+        <!-- PRACTICE -->
+        <section class="card">
+            <h2>🎯 Practice Problem</h2>
+            <p>Solve:</p>
+            <p><strong>x² + 7x + 10 = 0</strong></p>
+
+            <button onclick="showAnswer()">Show Answer</button>
+            <p id="answer"></p>
+        </section>
+
+        <!-- SUMMARY -->
+        <section class="card">
+            <h2>📌 Summary</h2>
+            <ul>
+                <li>Quadratic equations are in form ax² + bx + c = 0</li>
+                <li>Always try factoring first</li>
+                <li>Use zero-product property</li>
+                <li>Set each factor equal to zero</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>🏁 End of Lesson</h2>
+            <p>Great job! You’ve completed Lesson 9.</p>
+
+            <a href="index.html" class="btn">
+                ⬅ Back to Mathematics Home
+            </a>
+        </section>
+
+    </main>
+
+    <script>
+        function showAnswer() {
+            document.getElementById("answer").innerHTML =
+                "x = -5, x = -2";
+        }
+    </script>
 
 </body>
 </html>
