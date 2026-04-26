@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 9: Solving Quadratic Equations - Grade 8 Math</title>
+    <title>Lesson 9: Solving Absolute Value Equations - Grade 8 Math</title>
     <link rel="stylesheet" href="../../../assets/css/styles.css">
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-            <h1>Solving Quadratic Equations</h1>
+            <h1>Solving Absolute Value Equations</h1>
             <p>Grade 8 | Mathematics | Unit 2: Equations and Inequalities</p>
         </div>
     </header>
@@ -25,94 +25,78 @@
 
     <main class="container">
 
-        <!-- HOOK -->
+        <p style="font-weight:bold; color:#e67e22;">
+            ⭐ Extra Lesson (Optional)
+        </p>
+
         <section class="hook-box">
-            <p>⚽ Imagine you kick a ball into the air. It goes up, reaches a peak, then comes down. That curved path is described by a quadratic equation. In this lesson, we learn how to find the exact points where these equations equal zero!</p>
+            <p>🎯 Imagine you're throwing a dart. It lands 5 units away from the center — it could be +5 or -5. Absolute value measures distance from zero, not direction. That’s why we get TWO answers in these equations!</p>
         </section>
 
-        <!-- OBJECTIVES -->
         <section class="objectives">
             <h2>🎯 Learning Objectives</h2>
             <ul>
-                <li>Solve quadratic equations by factoring</li>
-                <li>Use the zero-product property</li>
-                <li>Find all solutions of quadratic equations</li>
-                <li>Check answers by substitution</li>
+                <li>Understand absolute value as distance from zero</li>
+                <li>Solve absolute value equations</li>
+                <li>Recognize two solutions from one equation</li>
+                <li>Check solutions by substitution</li>
             </ul>
         </section>
 
-        <!-- CONCEPT -->
         <section class="card">
-            <h2>📚 What is a Quadratic Equation?</h2>
-            <p>A quadratic equation is an equation in the form:</p>
+            <h2>📚 What is Absolute Value?</h2>
+            <p>Absolute value shows distance from zero.</p>
 
-            <p><strong>ax² + bx + c = 0</strong></p>
+            <p><strong>|x| = distance from 0</strong></p>
 
-            <p>Where a ≠ 0 and the highest power of x is 2.</p>
+            <p>|5| = 5</p>
+            <p>|-5| = 5</p>
         </section>
 
-        <!-- RULE -->
         <section class="card">
-            <h2>💡 Key Idea: Zero Product Property</h2>
-            <p>If:</p>
-            <p><strong>(x + a)(x + b) = 0</strong></p>
-
-            <p>Then:</p>
-            <p><strong>x + a = 0 OR x + b = 0</strong></p>
-
-            <p>This is the key to solving quadratic equations!</p>
+            <h2>💡 Key Idea</h2>
+            <p><strong>|x| = a</strong></p>
+            <p><strong>x = a OR x = -a</strong></p>
         </section>
 
-        <!-- EXAMPLE 1 -->
         <section class="card">
             <h2>🧠 Example 1</h2>
-            <p>Solve:</p>
-            <p><strong>x² + 5x + 6 = 0</strong></p>
-
-            <p>Factor:</p>
-            <p><strong>(x + 2)(x + 3) = 0</strong></p>
-
-            <p>Solutions:</p>
-            <p>x + 2 = 0 → x = -2</p>
-            <p>x + 3 = 0 → x = -3</p>
-
-            <p><strong>Final Answer:</strong> x = -2, -3</p>
+            <p>|x| = 7</p>
+            <p>x = 7, x = -7</p>
         </section>
 
-        <!-- EXAMPLE 2 -->
         <section class="card">
             <h2>🧠 Example 2</h2>
-            <p>Solve:</p>
-            <p><strong>x² - x - 12 = 0</strong></p>
-
-            <p>Factor:</p>
-            <p><strong>(x - 4)(x + 3) = 0</strong></p>
-
-            <p>Solutions:</p>
-            <p>x - 4 = 0 → x = 4</p>
-            <p>x + 3 = 0 → x = -3</p>
-
-            <p><strong>Final Answer:</strong> x = 4, -3</p>
+            <p>|x - 3| = 5</p>
+            <p>x - 3 = 5 → x = 8</p>
+            <p>x - 3 = -5 → x = -2</p>
+            <p><strong>Answer:</strong> x = 8, -2</p>
         </section>
 
-        <!-- PRACTICE -->
+        <section class="card">
+            <h2>🌍 Real-World Example</h2>
+            <ul>
+                <li>GPS distance</li>
+                <li>Temperature differences</li>
+                <li>Game score differences</li>
+                <li>Engineering tolerances</li>
+            </ul>
+        </section>
+
         <section class="card">
             <h2>🎯 Practice Problem</h2>
-            <p>Solve:</p>
-            <p><strong>x² + 7x + 10 = 0</strong></p>
+            <p>|x + 4| = 9</p>
 
             <button onclick="showAnswer()">Show Answer</button>
             <p id="answer"></p>
         </section>
 
-        <!-- SUMMARY -->
         <section class="card">
             <h2>📌 Summary</h2>
             <ul>
-                <li>Quadratic equations are in form ax² + bx + c = 0</li>
-                <li>Always try factoring first</li>
-                <li>Use zero-product property</li>
-                <li>Set each factor equal to zero</li>
+                <li>Absolute value = distance from zero</li>
+                <li>|x| always positive</li>
+                <li>Two solutions: x = a or x = -a</li>
             </ul>
         </section>
 
@@ -120,17 +104,14 @@
             <h2>🏁 End of Lesson</h2>
             <p>Great job! You’ve completed Lesson 9.</p>
 
-            <a href="index.html" class="btn">
-                ⬅ Back to Mathematics Home
-            </a>
+            <a href="index.html" class="btn">⬅ Back to Mathematics Home</a>
         </section>
 
     </main>
 
     <script>
         function showAnswer() {
-            document.getElementById("answer").innerHTML =
-                "x = -5, x = -2";
+            document.getElementById("answer").innerHTML = "x = 5, x = -13";
         }
     </script>
 
