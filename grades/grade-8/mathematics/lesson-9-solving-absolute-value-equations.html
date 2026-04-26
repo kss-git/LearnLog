@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grade 8 Math - Unit 2 Lesson 10</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #f0f2f5, #ffffff);
+    }
+
+    header {
+      background: #6c5ce7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .note {
+      background: #ffeaa7;
+      padding: 10px;
+      border-left: 6px solid #fdcb6e;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .math {
+      font-size: 18px;
+      font-weight: bold;
+      background: #f1f2f6;
+      padding: 10px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #2d3436;
+      color: white;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      background: #6c5ce7;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #4b3cc4;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Grade 8 Mathematics</h1>
+  <p>Unit 2 - Lesson 10: Absolute Value Equations</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <div class="note">
+      📌 This is an extra lesson
+    </div>
+
+    <h2>📘 What is an Absolute Value Equation?</h2>
+    <p>An absolute value equation is an equation that contains an absolute value expression.</p>
+
+    <div class="math">|x| = a</div>
+
+    <p>This means the distance from zero is always positive.</p>
+  </div>
+
+  <div class="card">
+    <h2>🧠 Rule</h2>
+    <p>If:</p>
+    <div class="math">|x| = a</div>
+
+    <p>Then:</p>
+    <div class="math">x = a or x = -a</div>
+  </div>
+
+  <div class="card">
+    <h2>🧠 Example 1</h2>
+    <p>Solve:</p>
+    <div class="math">|x| = 5</div>
+
+    <p>Solution:</p>
+    <div class="math">x = 5 or x = -5</div>
+  </div>
+
+  <div class="card">
+    <h2>🧠 Example 2</h2>
+    <p>Solve:</p>
+    <div class="math">|x - 3| = 4</div>
+
+    <p>Split into two cases:</p>
+    <div class="math">x - 3 = 4  OR  x - 3 = -4</div>
+
+    <p>Solutions:</p>
+    <div class="math">x = 7 or x = -1</div>
+  </div>
+
+  <div class="card">
+    <h2>🎯 Practice Problem</h2>
+    <p>Solve:</p>
+    <div class="math">|x + 2| = 6</div>
+
+    <br><br>
+    <button onclick="showAnswer()">Show Answer</button>
+    <p id="answer"></p>
+  </div>
+
+</div>
+
+<footer>
+  LearnLog – Extra Lesson on Absolute Value Equations
+</footer>
+
+<script>
+function showAnswer() {
+  document.getElementById("answer").innerHTML =
+    "Answer: x = 4 or x = -8";
+}
+</script>
+
+</body>
+</html>
